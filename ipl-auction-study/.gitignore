@@ -1,0 +1,23 @@
+# Ignore data files to prevent uploading massive CSVs to GitHub
+data/raw/
+data/processed/
+
+# Keep output images but ignore __pycache__
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and environment files
+.vscode/
+.idea/
+.env
+venv/
+.venv/
+env/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Any temporary test outputs
+_fuzzy_results.txt
