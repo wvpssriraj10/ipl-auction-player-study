@@ -74,14 +74,14 @@ Action: Validate source data first (Issue #3)
 
 ## Data Reliability Score
 
-| Component | Status | Score | Action |
-|-----------|--------|-------|--------|
-| Auction Prices | ❌ Unverified | 0% | Verify all 18 records |
-| Award Winners | ❌ Unverified | 0% | Verify all winners |
-| Player Names | ⚠ Low Confidence | 65% | Fix 2 players |
-| Ball-by-Ball | ? Unknown | 50% | Spot-check |
-| Aggregates | 🟡 Dependent | 75% | Check if source OK |
-| **Overall** | **⚠ UNVERIFIED** | **40%** | **DO NOT PUBLISH** |
+| Component     | Status              | Score | Action |
+|-----------    |--------             |-------  |--------|
+| Auction Prices| ❌ Unverified      | 0% | Verify all 18 records |
+| Award Winners | ❌ Unverified      | 0% | Verify all winners |
+| Player Names  | ⚠ Low Confidence   | 65% | Fix 2 players |
+| Ball-by-Ball  | ? Unknown | 50%     | Spot-check |
+| Aggregates    | 🟡 Dependent | 75% | Check if source OK |
+| **Overall**   | **⚠ UNVERIFIED**   | **40%** | **DO NOT PUBLISH** |
 
 ---
 

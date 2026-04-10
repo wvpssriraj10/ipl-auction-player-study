@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IPL Auction Intelligence - Data-driven analytics for cricket investment decisions." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>IPL Auction Intelligence | Cinematic Demo</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <!-- Navigation Header -->
+  <header class="top-nav" role="banner">
+    <div class="brand">IPL AUCTION INTELLIGENCE</div>
+    <nav aria-label="Main Navigation">
+      <a href="#services">Services</a>
+      <a href="#query">Console</a>
+      <a href="#numbers">By The Numbers</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero Section">
+    <video class="hero-video parallax" autoplay muted loop playsinline
+      src="https://cdn.coverr.co/videos/coverr-working-on-a-shipping-port-1579/1080p.mp4"
+      aria-hidden="true"></video>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="hero-content reveal">
+      <p class="hero-kicker">Decision Intelligence System</p>
+      <h1>AUCTION PRICING<br/>MEETS ON-FIELD REALITY</h1>
+      <p class="hero-sub">Gritty, data-first analytics for IPL investment decisions.</p>
+      <a href="#query" class="pill-btn">Enter Demo Console</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section" aria-labelledby="services-heading">
+    <div class="services-left reveal">
+      <h2 id="services-heading">SERVICES</h2>
+      <p>Sticky analytics core with high-speed, menu-driven exploration across player, team, and auction value layers.</p>
+    </div>
+    <div class="services-right">
+      <article class="service-card reveal">
+        <h3>Auction ROI Intelligence</h3>
+        <p>Measure value score and detect overpriced signings season-by-season.</p>
+      </article>
+      <article class="service-card reveal">
+        <h3>Batting/Bowling Profiling</h3>
+        <p>Slice by player and season with strike-rate and economy intelligence.</p>
+      </article>
+      <article class="service-card reveal">
+        <h3>Team-Level Readouts</h3>
+        <p>Track top outputs through highest-buy mappings and historical patterns.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Main Query Console Section -->
+  <main id="main-content">
+    <section id="query" class="container section reveal" aria-labelledby="console-heading">
+      <h2 id="console-heading" class="section-title">INTERACTIVE CONSOLE</h2>
+      
+      <!-- Query Form -->
+      <form class="card query-form" id="queryForm" aria-label="Data Query Form">
+        <fieldset>
+          <legend class="visually-hidden">Query Parameters</legend>
+          
+          <div class="grid">
+            <label for="categorySelect">
+              Category
+              <select id="categorySelect" aria-describedby="category-help">
+                <option>Team Records</option>
+                <option>Player Records - Batting</option>
+                <option>Player Records - Bowling</option>
+                <option>Auction Records</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label for="queryTypeSelect" id="queryTypeWrap">
+              Query Type
+              <select id="queryTypeSelect" aria-describedby="query-type-help"></select>
+            </label>
+
+            <label for="teamSelect" id="teamWrap" class="hidden">
+              Team
+              <select id="teamSelect"></select>
+            </label>
+
+            <label for="seasonSelect" id="seasonWrap">
+              Season
+              <select id="seasonSelect"></select>
+            </label>
+
+            <label for="playerSelect" id="playerWrap" class="hidden">
+              Player
+              <select id="playerSelect"></select>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="runBtn" type="button" class="pill-btn" aria-label="Execute Query">
+              Run Query
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Result Display -->
+      <section class="card result-section" aria-labelledby="result-heading" aria-live="polite" aria-atomic="true">
+        <h3 id="result-heading">Result</h3>
+        <pre id="resultBox" class="result-box" role="status" aria-label="Query Result Output">Loading data...</pre>
+      </section>
+    </section>
+  </main>
+
+  <!-- Statistics Section -->
+  <section id="numbers" class="section numbers reveal" aria-labelledby="stats-heading">
+    <h2 id="stats-heading" class="section-title">BY THE NUMBERS</h2>
+    <div class="numbers-grid" role="region" aria-label="Key Statistics">
+      <div class="number-box">
+        <span id="statSeasons" aria-label="Total Seasons">--</span>
+        <small>Seasons</small>
+      </div>
+      <div class="number-box">
+        <span id="statPlayers" aria-label="Total Players">--</span>
+        <small>Players</small>
+      </div>
+      <div class="number-box">
+        <span id="statDeliveries" aria-label="Player Seasons">--</span>
+        <small>Player-Seasons</small>
+      </div>
+      <div class="number-box">
+        <span id="statHitRate" aria-label="Hit Rate Percentage">--</span>
+        <small>Hit Rate %</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Marquee -->
+  <footer class="marquee-wrap" role="contentinfo" aria-label="Footer">
+    <div class="marquee-track" aria-hidden="true">
+      <span>IT'S A TOUR</span><span>IT'S A TOUR</span><span>IT'S A TOUR</span><span>IT'S A TOUR</span>
+      <span>IT'S A TOUR</span><span>IT'S A TOUR</span>
+    </div>
+  </footer>
+
+  <!-- Main Application Script -->
+  <script src="./app.js" defer></script>
+</body>
+</html>
