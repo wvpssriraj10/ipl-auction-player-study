@@ -38,8 +38,28 @@ df = pd.read_csv(RAW_CSV, low_memory=False)
 print(f"Loaded {len(df):,} deliveries")
 
 # ── Normalize season column ────────────────────────────────────
-# Collapse season variants (e.g. "2021/22", "2021 Phase 2") into 2021.
-df[COL_MAP["season"]] = df[COL_MAP["season"]].astype(str).str[:4].astype(int)
+# For "YYYY/YY" format (e.g. "2009/10", "2007/08"), use the SECOND year
+# because the IPL season is played in that year.
+# For plain "YYYY" or "YYYY Phase N", use the first 4 digits as-is.
+def normalize_season(val):
+    s = str(val).strip()
+    if "/" in s:
+        # "2009/10" → first_year=2009, suffix="10" → century from first_year → 2010
+        parts = s.split("/")
+        first_year = int(parts[0][:4])
+        suffix = parts[1].strip()
+        if len(suffix) == 2:
+            # Two-digit suffix: derive century from first year
+            century = (first_year // 100) * 100
+            return century + int(suffix)
+        elif len(suffix) == 4:
+            return int(suffix)
+        else:
+            return first_year  # fallback
+    else:
+        return int(s[:4])
+
+df[COL_MAP["season"]] = df[COL_MAP["season"]].apply(normalize_season)
 print(f"Normalized seasons: {sorted(df[COL_MAP['season']].unique())}")
 
 # Convenience aliases
@@ -186,10 +206,22 @@ else:
     innings_df = bat_runs[[C_SEASON, C_BATTER]].copy()
     innings_df["innings"] = np.nan
 
+# Team — most frequent batting_team per player-season
+if "batting_team" in bat_df.columns:
+    bat_team = (
+        bat_df.groupby([C_SEASON, C_BATTER])["batting_team"]
+        .agg(lambda x: x.mode().iloc[0] if len(x.mode()) > 0 else x.iloc[0])
+        .reset_index(name="team")
+    )
+else:
+    bat_team = bat_runs[[C_SEASON, C_BATTER]].copy()
+    bat_team["team"] = "Unknown"
+
 # Merge all batting components
 batting = bat_runs.merge(balls_faced, on=[C_SEASON, C_BATTER], how="left")
 batting = batting.merge(matches,      on=[C_SEASON, C_BATTER], how="left")
 batting = batting.merge(innings_df,   on=[C_SEASON, C_BATTER], how="left")
+batting = batting.merge(bat_team,     on=[C_SEASON, C_BATTER], how="left")
 
 # Strike rate
 batting["balls_faced"] = batting["balls_faced"].fillna(0).astype(int)
@@ -198,9 +230,25 @@ batting["strike_rate"] = np.where(
     (batting["total_runs"] / batting["balls_faced"] * 100).round(2),
     0.0
 )
+batting["batting_average"] = np.where(
+    batting["balls_faced"] > 0,
+    (batting["total_runs"] / batting["balls_faced"]).round(2),
+    0.0
+)
 
 # Rename batter column to "player" for consistency
 batting = batting.rename(columns={C_BATTER: "player", C_SEASON: "season"})
+
+TEAM_NAME_MAP = {
+    "Kings XI Punjab": "Punjab Kings",
+    "Delhi Daredevils": "Delhi Capitals",
+    "Royal Challengers Bangalore": "Royal Challengers Bengaluru",
+    "Rising Pune Supergiants": "Rising Pune Supergiant",
+    "Deccan Chargers": "Sunrisers Hyderabad"
+}
+
+if "team" in batting.columns:
+    batting["team"] = batting["team"].replace(TEAM_NAME_MAP)
 
 def warn_unrealistic_batting_totals(batting_df):
     high_totals = batting_df[batting_df["total_runs"] > 1000].sort_values(["season", "total_runs"], ascending=[True, False])
@@ -245,13 +293,32 @@ if C_EXTRAS_USE:
     legal_bowl = legal_bowl[~legal_bowl[C_EXTRAS_USE].isin(["wides", "noballs", "wide", "noball"])]
 balls_bowled = legal_bowl.groupby([C_SEASON, C_BOWLER]).size().reset_index(name="balls_bowled")
 
+# Dot balls: legal deliveries with 0 runs conceded
+dot_balls = legal_bowl[legal_bowl[C_TOTAL_RUNS_USE] == 0].groupby([C_SEASON, C_BOWLER]).size().reset_index(name="dot_balls")
+
 # Matches bowled
 matches_bowled = bowl_df.groupby([C_SEASON, C_BOWLER])[C_MATCH_ID].nunique().reset_index(name="matches_bowled")
+
+# Team — most frequent bowling_team per player-season
+# Note: bowling_team is the team the bowler plays for
+if "bowling_team" in bowl_df.columns:
+    bowl_team = (
+        bowl_df.groupby([C_SEASON, C_BOWLER])["bowling_team"]
+        .agg(lambda x: x.mode().iloc[0] if len(x.mode()) > 0 else x.iloc[0])
+        .reset_index(name="team")
+    )
+else:
+    bowl_team = wickets[[C_SEASON, C_BOWLER]].copy()
+    bowl_team["team"] = "Unknown"
 
 # Merge all bowling components
 bowling = wickets.merge(runs_conceded, on=[C_SEASON, C_BOWLER], how="left")
 bowling = bowling.merge(balls_bowled,  on=[C_SEASON, C_BOWLER], how="left")
+bowling = bowling.merge(dot_balls,     on=[C_SEASON, C_BOWLER], how="left")
 bowling = bowling.merge(matches_bowled, on=[C_SEASON, C_BOWLER], how="left")
+bowling = bowling.merge(bowl_team,     on=[C_SEASON, C_BOWLER], how="left")
+
+bowling["dot_balls"] = bowling["dot_balls"].fillna(0).astype(int)
 
 # Economy
 bowling["balls_bowled"] = bowling["balls_bowled"].fillna(0).astype(int)
@@ -262,6 +329,9 @@ bowling["economy"] = np.where(
 )
 
 bowling = bowling.rename(columns={C_BOWLER: "player", C_SEASON: "season"})
+
+if "team" in bowling.columns:
+    bowling["team"] = bowling["team"].replace(TEAM_NAME_MAP)
 
 print(f"\nBowling aggregate shape: {bowling.shape}")
 print(bowling.head(5).to_string())

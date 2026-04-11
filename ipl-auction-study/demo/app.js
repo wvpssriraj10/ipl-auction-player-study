@@ -21,7 +21,6 @@ const wraps = {
 // Statistics display elements
 const statSeasons = document.getElementById("statSeasons");
 const statPlayers = document.getElementById("statPlayers");
-const statDeliveries = document.getElementById("statDeliveries");
 const statHitRate = document.getElementById("statHitRate");
 
 // ============================================
@@ -75,6 +74,28 @@ const queryMap = {
 // ============================================
 
 /**
+ * Season mapping: now identity since data pipeline outputs correct IPL years.
+ * Awards, batting, bowling, and value data all use 2008-2025.
+ * Season 2020 may have no data (IPL 2020 not in raw dataset).
+ */
+function awardSeasonToDataSeason(awardSeason) {
+  const s = Number(awardSeason);
+  if (s === 2020) return 2020; // IPL 2020
+  return s;
+}
+
+function dataSeasonToAwardSeason(dataSeason) {
+  return Number(dataSeason);
+}
+
+/**
+ * Display-friendly season label
+ */
+function displaySeason(season) {
+  return String(season);
+}
+
+/**
  * Parse CSV data using PapaParse
  */
 function parseCSV(text) {
@@ -97,15 +118,37 @@ async function loadCSV(path) {
 
 /**
  * Set options in a select element
+ * @param {HTMLSelectElement} select
+ * @param {Array} options - the values
+ * @param {Function} [labelFn] - optional function to transform value -> display label
  */
-function setOptions(select, options) {
+function setOptions(select, options, labelFn) {
   select.innerHTML = "";
   options.forEach((opt) => {
     const el = document.createElement("option");
     el.value = String(opt);
-    el.textContent = String(opt);
+    el.textContent = labelFn ? labelFn(opt) : String(opt);
     select.appendChild(el);
   });
+}
+
+/**
+ * Fuzzy player name matching: handles abbreviated vs full names.
+ * e.g. "KP Pietersen" matches "Kevin Pietersen", "MS Dhoni" matches "MS Dhoni"
+ */
+function playerNamesMatch(dataName, awardName) {
+  if (!dataName || !awardName) return false;
+  const d = String(dataName).trim().toLowerCase();
+  const a = String(awardName).trim().toLowerCase();
+  // Exact match
+  if (d === a) return true;
+  // Last name match (handles cases like "KP Pietersen" vs "Kevin Pietersen")
+  const dParts = d.split(/\s+/);
+  const aParts = a.split(/\s+/);
+  const dLast = dParts[dParts.length - 1];
+  const aLast = aParts[aParts.length - 1];
+  if (dLast === aLast && dLast.length > 2) return true;
+  return false;
 }
 
 /**
@@ -154,6 +197,110 @@ function formatStats(value, decimals = 2) {
   return num(value).toFixed(decimals);
 }
 
+/**
+ * Display HTML in result box
+ */
+function displayHtmlResult(html) {
+  resultBox.innerHTML = html;
+}
+
+/**
+ * Returns player placeholder or initials
+ */
+function getPlayerImage(name) {
+  const n = String(name).trim();
+  const initials = n.split(' ').map(x => x[0]).join('').substring(0,2).toUpperCase();
+  return `<div class="player-image">${initials}</div>`;
+}
+
+/**
+ * Returns medal emoji for rank
+ */
+function getMedalEmoji(rank) {
+  if (rank === 1) return '🥇';
+  if (rank === 2) return '🥈';
+  if (rank === 3) return '🥉';
+  return `${rank}`;
+}
+
+/**
+ * Generates HTML for a player card
+ */
+function renderPlayerCard(playerData, team = 'Unknown') {
+  const name = playerData.player || playerData.highest_buy_player || 'Unknown Player';
+  const img = getPlayerImage(name);
+  
+  let statsHtml = '';
+  const addStat = (icon, value, label, forceShow = false) => {
+    const v = num(value);
+    if (v > 0 || forceShow) {
+      const displayVal = (label === 'SR' || label === 'Avg' || label === 'Econ' || label === 'MVP Pts' || label === 'Value Score') 
+        ? formatStats(v, (label === 'Econ' ? 2 : 1)) 
+        : v;
+      return `<div class="stat-item"><span class="stat-icon">${icon}</span><span class="stat-value">${displayVal}</span><span class="stat-label">${label}</span></div>`;
+    }
+    return '';
+  };
+
+  // Batting stats
+  const runs = playerData.runs ?? playerData.total_runs ?? 0;
+  statsHtml += addStat('🏃', runs, 'Runs');
+  statsHtml += addStat('⚡', playerData.strike_rate || playerData.sr || 0, 'SR');
+  statsHtml += addStat('📊', playerData.batting_average || playerData.avg || 0, 'Avg');
+
+  // Bowling stats
+  statsHtml += addStat('🎯', playerData.wickets || 0, 'Wickets');
+  statsHtml += addStat('📈', playerData.economy || playerData.eco || 0, 'Econ');
+  statsHtml += addStat('⚪', playerData.dot_balls || playerData.dotBalls || 0, 'Dots');
+
+  // Custom MVP points
+  if (playerData.totalPoints !== undefined) {
+    statsHtml += addStat('⭐', playerData.totalPoints, 'MVP Pts', true);
+  }
+  // Custom Value Score
+  if (playerData.value_score !== undefined) {
+    statsHtml += addStat('💎', playerData.value_score, 'Value Score', true);
+  }
+
+  // Generate class identifying team for left border color
+  // Default to first word of team name
+  const tClass = team === 'Unknown' ? 'Unknown' : String(team).split(' ')[0];
+
+  return `
+    <div class="player-card ${tClass}">
+      <div class="player-card-header">
+        ${img}
+        <div class="player-info">
+          <h4>${name}</h4>
+          <p>${team}</p>
+        </div>
+      </div>
+      <div class="stats-grid">
+        ${statsHtml}
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Generates an HTML table from array of row objects
+ */
+function renderPlayersTable(players, columns) {
+  let thead = '<tr><th>Rank</th>' + columns.map(c => `<th>${c.label}</th>`).join('') + '</tr>';
+  let tbody = players.map((p, i) => {
+    let rowHtml = `<td><span class="medal">${getMedalEmoji(i+1)}</span></td>`;
+    columns.forEach(c => {
+      let val = p[c.key];
+      if (c.formatter) val = c.formatter(val);
+      if (val === undefined || val === null) val = '-';
+      rowHtml += `<td>${val}</td>`;
+    });
+    return `<tr>${rowHtml}</tr>`;
+  }).join('');
+
+  return `<table class="results-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table>`;
+}
+
 // ============================================
 // UI UPDATE FUNCTIONS
 // ============================================
@@ -163,17 +310,25 @@ function formatStats(value, decimals = 2) {
  */
 function updatePlayers() {
   try {
-    const season = Number(seasonSelect.value);
+    const selectedSeason = Number(seasonSelect.value);
     const category = categorySelect.value;
+    // Map the selected season (from awards) to the data season
+    const dataSeason = awardSeasonToDataSeason(selectedSeason);
     let list = [];
+
+    if (dataSeason === null) {
+      // No performance data for this season
+      setOptions(playerSelect, ["No data for this season"]);
+      return;
+    }
 
     if (category === "Player Records - Batting") {
       list = state.batting
-        .filter((r) => Number(r.season) === season)
+        .filter((r) => Number(r.season) === dataSeason)
         .map((r) => r.player);
     } else if (category === "Player Records - Bowling") {
       list = state.bowling
-        .filter((r) => Number(r.season) === season)
+        .filter((r) => Number(r.season) === dataSeason)
         .map((r) => r.player);
     }
 
@@ -188,6 +343,23 @@ function updatePlayers() {
 }
 
 /**
+ * Toggle visibility of conditional fields based on category and query type
+ */
+function toggleFields() {
+  const category = categorySelect.value;
+  const qType = queryTypeSelect.value;
+
+  wraps.team.classList.toggle("hidden", category !== "Team Records");
+  
+  // Only show player dropdown if it's a player query AND the specific query involves a single player
+  const needsPlayer = category.startsWith("Player Records") && String(qType).includes("of a player in a season");
+  wraps.player.classList.toggle("hidden", !needsPlayer);
+  
+  wraps.season.classList.toggle("hidden", category === "Other");
+  wraps.query.classList.toggle("hidden", false);
+}
+
+/**
  * Update UI based on selected category
  */
 function updateUI() {
@@ -196,14 +368,8 @@ function updateUI() {
   // Update query type options
   setOptions(queryTypeSelect, queryMap[category] || []);
 
-  // Toggle visibility of conditional fields
-  wraps.team.classList.toggle("hidden", category !== "Team Records");
-  wraps.player.classList.toggle(
-    "hidden",
-    !category.startsWith("Player Records")
-  );
-  wraps.season.classList.toggle("hidden", category === "Other");
-  wraps.query.classList.toggle("hidden", false);
+  // Set field visibilities based on category and new query type
+  toggleFields();
 
   // Update player list if category requires it
   if (category.startsWith("Player Records")) {
@@ -220,14 +386,17 @@ function updateUI() {
  */
 function handleAuctionQuery() {
   const q = queryTypeSelect.value;
-  const season = Number(seasonSelect.value);
+  const season = Number(seasonSelect.value); // This is awards season (2008-2025)
+  const dataSeason = awardSeasonToDataSeason(season); // Map to perf data season
 
   const big = state.values.filter(
     (r) => r.is_big_buy === true || r.is_big_buy === "True"
   );
+  // Merge big buys with awards, using the season mapping
   const merged = big.map((r) => {
-    const a = state.awards.find((x) => Number(x.season) === Number(r.season)) || {};
-    return { ...r, ...a };
+    const awardSeason = dataSeasonToAwardSeason(r.season);
+    const a = state.awards.find((x) => Number(x.season) === awardSeason) || {};
+    return { ...r, awardSeason, ...a };
   });
 
   if (!merged.length) {
@@ -236,15 +405,28 @@ function handleAuctionQuery() {
   }
 
   if (q === "Was highest-paid player worth it for a season?") {
-    const row = merged.find((r) => Number(r.season) === season);
+    // Look up the value record using the DATA season (mapped from award season)
+    const row = merged.find((r) => Number(r.awardSeason) === season);
     if (!row) {
-      displayResult(`No data for season ${season}`);
+      // Check if the season exists in awards but just lacks performance data
+      const awardsRow = state.awards.find((a) => Number(a.season) === season);
+      if (awardsRow) {
+        // Show the awards info even when no performance data exists
+        const runs = num(awardsRow.buy_runs);
+        const wkts = num(awardsRow.buy_wickets);
+        const sr = awardsRow.buy_sr;
+        const eco = awardsRow.buy_economy;
+        const hasPerf = runs > 0 || wkts > 0;
+        displayResult(`${awardsRow.highest_buy_player} (${season}) — ${awardsRow.highest_buy_team}\n- Price: ₹${num(awardsRow.highest_buy_price_cr).toFixed(2)} Cr${hasPerf ? `\n- Runs: ${runs} | SR: ${sr ? formatStats(sr) : "N/A"}\n- Wickets: ${wkts} | Economy: ${eco ? formatStats(eco) : "N/A"}` : ""}\n\n⚠️ Detailed performance data for this player's season is not available in the dataset.\nThis may be because the player did not participate or data was not recorded.`);
+      } else {
+        displayResult(`No auction data found for season ${season}.`);
+      }
       return;
     }
-    displayResult(`${row.highest_buy_player} (${season})
+    displayResult(`${row.highest_buy_player} (${row.awardSeason}) — ${row.highest_buy_team || ""}
 - Price: ${formatCurrency(row.price_cr)}
-- Runs: ${num(row.buy_runs)} | SR: ${formatStats(row.buy_sr)}
-- Wickets: ${num(row.buy_wickets)} | Economy: ${formatStats(row.buy_economy)}
+- Runs: ${num(row.total_runs)} | SR: ${formatStats(row.strike_rate)}
+- Wickets: ${num(row.wickets)} | Economy: ${row.economy ? formatStats(row.economy) : "N/A"}
 - Value Score: ${formatStats(row.value_score)}
 
 Verdict: ${getValueVerdict(num(row.value_score))}
@@ -262,7 +444,7 @@ Insight: Combined batting + bowling contribution against auction price.`);
   if (q === "Best value highest-buy player") {
     const r = sortedDesc[0];
     displayResult(
-      `Best value highest-buy: ${r.player} (${r.season}) with value score ${formatStats(r.value_score)}.`
+      `Best value highest-buy: ${r.highest_buy_player || r.player} (${r.awardSeason}) — ${r.highest_buy_team || ""}\nValue Score: ${formatStats(r.value_score)} · Price: ${formatCurrency(r.price_cr)}\nVerdict: ${getValueVerdict(num(r.value_score))}`
     );
     return;
   }
@@ -270,16 +452,19 @@ Insight: Combined batting + bowling contribution against auction price.`);
   if (q === "Worst value highest-buy player") {
     const r = sortedAsc[0];
     displayResult(
-      `Worst value highest-buy: ${r.player} (${r.season}) with value score ${formatStats(r.value_score)}.`
+      `Worst value highest-buy: ${r.highest_buy_player || r.player} (${r.awardSeason}) — ${r.highest_buy_team || ""}\nValue Score: ${formatStats(r.value_score)} · Price: ${formatCurrency(r.price_cr)}\nVerdict: ${getValueVerdict(num(r.value_score))}`
     );
     return;
   }
 
   if (q === "Top 5 value-for-money highest-buys") {
     displayResult(
+      "Top 5 Best Value Auction Buys:\n" +
       sortedDesc
         .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} (${r.season}) - ${formatStats(r.value_score)}`)
+        .map((r, i) => {
+          return `${i + 1}. ${r.highest_buy_player || r.player} (${r.awardSeason}, ${r.highest_buy_team || ""}) — Score: ${formatStats(r.value_score)} · ₹${num(r.price_cr).toFixed(1)} Cr`;
+        })
         .join("\n")
     );
     return;
@@ -287,9 +472,12 @@ Insight: Combined batting + bowling contribution against auction price.`);
 
   if (q === "Bottom 5 overpriced highest-buys") {
     displayResult(
+      "Bottom 5 Overpriced Auction Buys:\n" +
       sortedAsc
         .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} (${r.season}) - ${formatStats(r.value_score)}`)
+        .map((r, i) => {
+          return `${i + 1}. ${r.highest_buy_player || r.player} (${r.awardSeason}, ${r.highest_buy_team || ""}) — Score: ${formatStats(r.value_score)} · ₹${num(r.price_cr).toFixed(1)} Cr`;
+        })
         .join("\n")
     );
     return;
@@ -313,61 +501,74 @@ Insight: Combined batting + bowling contribution against auction price.`);
  */
 function handleBattingQuery() {
   const q = queryTypeSelect.value;
-  const season = Number(seasonSelect.value);
+  const selectedSeason = Number(seasonSelect.value);
+  const dataSeason = awardSeasonToDataSeason(selectedSeason);
   const player = playerSelect.value;
 
-  const rows = state.batting.filter((r) => Number(r.season) === season);
+  if (dataSeason === null) {
+    displayResult(`No batting data available for season ${selectedSeason}.\n\n⚠️ Performance data for this IPL season is not present in the dataset.`);
+    return;
+  }
+
+  const rows = state.batting.filter((r) => Number(r.season) === dataSeason);
 
   if (!rows.length) {
-    displayResult(`No batting data available for season ${season}`);
+    displayResult(`No batting data available for season ${selectedSeason}`);
     return;
   }
 
   if (q === "Runs by a player in a season") {
     const r = rows.find((x) => String(x.player) === player);
-    displayResult(
-      r
-        ? `${player} (${season})\n- Runs: ${num(r.total_runs)}\n- Balls: ${num(r.balls_faced)}\n- Strike Rate: ${formatStats(r.strike_rate)}`
-        : `No batting record found for ${player} in ${season}.`
-    );
+    if (!r) {
+      displayResult(`No batting record found for ${player} in ${selectedSeason}.`);
+      return;
+    }
+    displayHtmlResult(renderPlayerCard(r, r.team));
     return;
   }
 
   if (q === "Top 5 batsmen in a season") {
-    displayResult(
-      [...rows]
-        .sort((a, b) => num(b.total_runs) - num(a.total_runs))
-        .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} - ${num(r.total_runs)} runs`)
-        .join("\n")
-    );
+    const top5 = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, 5);
+    const table = renderPlayersTable(top5, [
+      {label: 'Player', key: 'player'},
+      {label: 'Team', key: 'team'},
+      {label: 'Runs', key: 'total_runs'},
+      {label: 'Avg (R/B)', key: 'batting_average', formatter: v => formatStats(v, 2)},
+      {label: 'SR', key: 'strike_rate', formatter: v => formatStats(v, 1)}
+    ]);
+    displayHtmlResult(`<h4>🏏 Top 5 Batsmen (${selectedSeason})</h4><br>${table}`);
     return;
   }
 
   if (q === "Highest run scorer in a season") {
-    const r = [...rows].sort(
-      (a, b) => num(b.total_runs) - num(a.total_runs)
-    )[0];
-    displayResult(
-      r
-        ? `Highest run scorer in ${season}: ${r.player} (${num(r.total_runs)} runs).`
-        : "No data."
-    );
+    const r = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs))[0];
+    if (r) {
+      displayHtmlResult(`<h4>👑 Season Leader (${selectedSeason})</h4><br>${renderPlayerCard(r, r.team)}`);
+    } else {
+      displayResult("No data.");
+    }
     return;
   }
 
   if (q === "Best strike rate players (min 100 balls)") {
-    displayResult(
-      rows
-        .filter((r) => num(r.balls_faced) >= 100)
-        .sort((a, b) => num(b.strike_rate) - num(a.strike_rate))
-        .slice(0, 10)
-        .map(
-          (r, i) =>
-            `${i + 1}. ${r.player} - SR ${formatStats(r.strike_rate)}, Balls ${num(r.balls_faced)}`
-        )
-        .join("\n")
-    );
+    const filtered = rows
+      .filter((r) => num(r.balls_faced) >= 100)
+      .sort((a, b) => num(b.strike_rate) - num(a.strike_rate))
+      .slice(0, 10);
+    
+    if (!filtered.length) {
+      displayResult(`No batsmen with 100+ balls faced found in ${selectedSeason}.`);
+      return;
+    }
+
+    const table = renderPlayersTable(filtered, [
+      {label: 'Player', key: 'player'},
+      {label: 'SR', key: 'strike_rate', formatter: v => formatStats(v, 1)},
+      {label: 'Runs', key: 'total_runs'},
+      {label: 'Balls', key: 'balls_faced'},
+      {label: 'Avg', key: 'batting_average', formatter: v => formatStats(v, 2)}
+    ]);
+    displayHtmlResult(`<h4>🚀 Strike Rate Leaders (100+ Balls) - ${selectedSeason}</h4><br>${table}`);
     return;
   }
 }
@@ -377,120 +578,223 @@ function handleBattingQuery() {
  */
 function handleBowlingQuery() {
   const q = queryTypeSelect.value;
-  const season = Number(seasonSelect.value);
+  const selectedSeason = Number(seasonSelect.value);
+  const dataSeason = awardSeasonToDataSeason(selectedSeason);
   const player = playerSelect.value;
 
-  const rows = state.bowling.filter((r) => Number(r.season) === season);
+  if (dataSeason === null) {
+    displayResult(`No bowling data available for season ${selectedSeason}.\n\n⚠️ Performance data for this IPL season is not present in the dataset.`);
+    return;
+  }
+
+  const rows = state.bowling.filter((r) => Number(r.season) === dataSeason);
 
   if (!rows.length) {
-    displayResult(`No bowling data available for season ${season}`);
+    displayResult(`No bowling data available for season ${selectedSeason}`);
     return;
   }
 
   if (q === "Bowling stats of a player in a season") {
     const r = rows.find((x) => String(x.player) === player);
-    displayResult(
-      r
-        ? `${player} (${season})\n- Wickets: ${num(r.wickets)}\n- Balls: ${num(r.balls_bowled)}\n- Economy: ${formatStats(r.economy)}`
-        : `No bowling record found for ${player} in ${season}.`
-    );
+    if (!r) {
+      displayResult(`No bowling record found for ${player} in ${selectedSeason}.`);
+      return;
+    }
+    displayHtmlResult(renderPlayerCard(r, r.team));
     return;
   }
 
   if (q === "Most wickets in a season") {
-    displayResult(
-      [...rows]
-        .sort((a, b) => num(b.wickets) - num(a.wickets))
-        .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} - ${num(r.wickets)} wickets`)
-        .join("\n")
-    );
+    const top5 = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, 10);
+    const table = renderPlayersTable(top5, [
+      {label: 'Player', key: 'player'},
+      {label: 'Team', key: 'team'},
+      {label: 'Wickets', key: 'wickets'},
+      {label: 'Econ', key: 'economy', formatter: v => formatStats(v, 2)},
+      {label: 'Dots', key: 'dot_balls'}
+    ]);
+    displayHtmlResult(`<h4>🎯 Wicket Leaders (${selectedSeason})</h4><br>${table}`);
     return;
   }
 
   if (q === "Best bowler in a season (wickets)") {
-    const r = [...rows].sort(
-      (a, b) => num(b.wickets) - num(a.wickets) || num(a.economy) - num(b.economy)
-    )[0];
-    displayResult(
-      r
-        ? `Best bowler in ${season}: ${r.player} (${num(r.wickets)} wickets, economy ${formatStats(r.economy)}).`
-        : "No data."
-    );
+    const r = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets))[0];
+    if (r) {
+      displayHtmlResult(`<h4>🏆 Top Wicket Taker (${selectedSeason})</h4><br>${renderPlayerCard(r, r.team)}`);
+    } else {
+      displayResult("No data.");
+    }
     return;
   }
 
   if (q === "Best economy bowlers") {
-    displayResult(
-      rows
-        .filter((r) => num(r.balls_bowled) >= 120)
-        .sort((a, b) => num(a.economy) - num(b.economy))
-        .slice(0, 10)
-        .map(
-          (r, i) =>
-            `${i + 1}. ${r.player} - Economy ${formatStats(r.economy)}, Balls ${num(r.balls_bowled)}`
-        )
-        .join("\n")
-    );
+    const filtered = rows
+      .filter((r) => num(r.balls_bowled) >= 60)
+      .sort((a, b) => num(a.economy) - num(b.economy))
+      .slice(0, 10);
+    
+    if (!filtered.length) {
+      displayResult(`No bowlers with 60+ legal balls found in ${selectedSeason}.`);
+      return;
+    }
+
+    const table = renderPlayersTable(filtered, [
+      {label: 'Player', key: 'player'},
+      {label: 'Econ', key: 'economy', formatter: v => formatStats(v, 2)},
+      {label: 'Wickets', key: 'wickets'},
+      {label: 'Dots', key: 'dot_balls'}
+    ]);
+    displayHtmlResult(`<h4>🧤 Economy Specials (Min 10 Overs) - ${selectedSeason}</h4><br>${table}`);
     return;
   }
 }
 
 /**
  * Execute team records query
+ * We have team columns directly in batting/bowling aggregates.
  */
 function handleTeamQuery() {
   const q = queryTypeSelect.value;
-  const team = teamSelect.value;
-  const season = Number(seasonSelect.value);
+  const team = teamSelect.value; // e.g. "Chennai Super Kings"
+  const selectedSeason = Number(seasonSelect.value);
 
-  const big = state.values.filter(
-    (r) => r.is_big_buy === true || r.is_big_buy === "True"
-  );
-  const merged = big.map((r) => {
-    const a = state.awards.find((x) => Number(x.season) === Number(r.season)) || {};
-    return { ...r, ...a };
-  });
-  const scoped = merged.filter(
-    (r) => String(r.highest_buy_team || "").toLowerCase() === String(team).toLowerCase()
-  );
-
-  if (!scoped.length) {
-    displayResult(`No processed team-mapped records found for ${team}.`);
-    return;
-  }
+  // Maps full team names to arrays of possible acronyms used in the awards dataset
+  const getAwardAcronyms = (fullTeam) => {
+    const mapping = {
+      "Chennai Super Kings": ["CSK"],
+      "Deccan Chargers": ["DC"],
+      "Delhi Capitals": ["DD", "DC"], // Awards uses DD even for DC
+      "Gujarat Lions": ["GL"],
+      "Gujarat Titans": ["GT"],
+      "Kochi Tuskers Kerala": ["KTK"],
+      "Kolkata Knight Riders": ["KKR"],
+      "Lucknow Super Giants": ["LSG"],
+      "Mumbai Indians": ["MI"],
+      "Pune Warriors": ["PWI"],
+      "Punjab Kings": ["PBKS", "KXIP"],
+      "Rajasthan Royals": ["RR"],
+      "Rising Pune Supergiant": ["RPS"],
+      "Royal Challengers Bengaluru": ["RCB"],
+      "Sunrisers Hyderabad": ["SRH"]
+    };
+    return mapping[fullTeam] || [fullTeam.substring(0, 3).toUpperCase()];
+  };
 
   if (q === "Top batsmen in selected team") {
-    displayResult(
-      [...scoped]
-        .sort((a, b) => num(b.buy_runs) - num(a.buy_runs))
-        .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} (${r.season}) - ${num(r.buy_runs)} runs`)
-        .join("\n")
-    );
+    const dataSeason = awardSeasonToDataSeason(selectedSeason);
+    if (!dataSeason) {
+      displayResult(`No performance data available for ${selectedSeason}.`);
+      return;
+    }
+    const rows = state.batting.filter(r => Number(r.season) === dataSeason && String(r.team) === team);
+    if (!rows.length) {
+      displayResult(`No batting data found for ${team} in ${selectedSeason}.`);
+      return;
+    }
+    const topBatsmen = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, 5);
+    const tblHtml = renderPlayersTable(topBatsmen, [
+      { label: 'Player', key: 'player' },
+      { label: 'Runs', key: 'total_runs' },
+      { label: 'SR', key: 'strike_rate', formatter: v => formatStats(v, 1) },
+      { label: 'Avg', key: 'batting_average', formatter: v => formatStats(v, 1) },
+      { label: 'Sixes', key: 'sixes' }
+    ]);
+    const headerHtml = `<h4>🏏 Top batsmen for ${team} in ${selectedSeason}</h4><br>`;
+    displayHtmlResult(headerHtml + tblHtml);
     return;
   }
 
   if (q === "Top bowlers in selected team") {
-    displayResult(
-      [...scoped]
-        .sort((a, b) => num(b.buy_wickets) - num(a.buy_wickets))
-        .slice(0, 5)
-        .map((r, i) => `${i + 1}. ${r.player} (${r.season}) - ${num(r.buy_wickets)} wickets`)
-        .join("\n")
-    );
+    const dataSeason = awardSeasonToDataSeason(selectedSeason);
+    if (!dataSeason) {
+      displayResult(`No performance data available for ${selectedSeason}.`);
+      return;
+    }
+    const rows = state.bowling.filter(r => Number(r.season) === dataSeason && String(r.team) === team);
+    if (!rows.length) {
+      displayResult(`No bowling data found for ${team} in ${selectedSeason}.`);
+      return;
+    }
+    const topBowlers = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, 5);
+    const tblHtml = renderPlayersTable(topBowlers, [
+      { label: 'Player', key: 'player' },
+      { label: 'Wickets', key: 'wickets' },
+      { label: 'Econ', key: 'economy', formatter: v => formatStats(v, 2) },
+      { label: 'SR', key: 'bowling_strike_rate', formatter: v => formatStats(v, 1) },
+      { label: 'Dots', key: 'dot_balls' }
+    ]);
+    const headerHtml = `<h4>🎯 Top bowlers for ${team} in ${selectedSeason}</h4><br>`;
+    displayHtmlResult(headerHtml + tblHtml);
     return;
   }
 
   if (q === "Best player in selected team for a season") {
-    const one = scoped
-      .filter((r) => Number(r.season) === season)
-      .sort((a, b) => num(b.raw_score) - num(a.raw_score))[0];
-    displayResult(
-      one
-        ? `Best player in ${team} for ${season}: ${one.player} with raw score ${formatStats(one.raw_score)}.`
-        : `No ${team} highest-buy record for ${season}.`
-    );
+    const dataSeason = awardSeasonToDataSeason(selectedSeason);
+    if (!dataSeason) {
+      displayResult(`No performance data available for ${selectedSeason}.`);
+      return;
+    }
+
+    // Get all players who played for this team this season
+    const teamBatting = state.batting.filter(r => Number(r.season) === dataSeason && String(r.team) === team);
+    const teamBowling = state.bowling.filter(r => Number(r.season) === dataSeason && String(r.team) === team);
+
+    const players = new Set([...teamBatting.map(r => r.player), ...teamBowling.map(r => r.player)]);
+    
+    if (players.size === 0) {
+      displayResult(`No players found for ${team} in ${selectedSeason}.`);
+      return;
+    }
+
+    const mvpList = Array.from(players).map(player => {
+      const batStat = teamBatting.find(r => r.player === player) || {};
+      const bowlStat = teamBowling.find(r => r.player === player) || {};
+      
+      const wickets = num(bowlStat.wickets) || 0;
+      const sixes = num(batStat.sixes) || 0;
+      const fours = num(batStat.fours) || 0;
+      const dotBalls = num(bowlStat.dot_balls) || 0;
+      
+      // Calculate points based on standard IPL MVP system
+      const ptsWickets = wickets * 3.5;
+      const ptsSixes = sixes * 3.5;
+      const ptsFours = fours * 2.5;
+      const ptsDots = dotBalls * 1.0;
+      // Catch/Stumping = 2.5 pts (excluded as raw data lacks fielder identification)
+      
+      const totalPoints = ptsWickets + ptsSixes + ptsFours + ptsDots;
+
+      return {
+        player,
+        wickets, sixes, fours, dotBalls,
+        totalPoints,
+        economy: num(bowlStat.economy) || 0,
+        runs: num(batStat.total_runs) || 0,
+        avg: num(batStat.batting_average) || 0,
+        sr: num(batStat.strike_rate) || 0
+      };
+    }).sort((a, b) => b.totalPoints - a.totalPoints);
+
+    const mvp = mvpList[0];
+    
+    const headerHtml = `<h4 style="margin-bottom: 20px; color: var(--white); font-family: 'Archivo', sans-serif;">⭐ Most Valuable Player (MVP) for ${team} in ${selectedSeason}</h4>`;
+    let htmlResult = headerHtml + renderPlayerCard(mvp, team);
+
+    if (mvpList.length > 1) {
+      htmlResult += `<h5 style="margin-top: 24px; margin-bottom: 12px; color: var(--muted); font-size: 13px; text-transform: uppercase;">Runners-up Ranking</h5>`;
+      htmlResult += renderPlayersTable(mvpList.slice(1, 5), [
+        {label: 'Player', key: 'player'},
+        {label: 'Wickets', key: 'wickets'},
+        {label: 'Sixes', key: 'sixes'},
+        {label: 'Fours', key: 'fours'},
+        {label: 'Dots', key: 'dotBalls'},
+        {label: 'MVP Pts', key: 'totalPoints', formatter: v => formatStats(v, 1)}
+      ]);
+    }
+    
+    htmlResult += `<p style="margin-top: 16px; font-size: 11px; color: rgba(255,255,255,0.3);">(Note: Points based on 2024 standards. Fielding stats currently excluded).</p>`;
+
+    displayHtmlResult(htmlResult);
     return;
   }
 }
@@ -574,7 +878,6 @@ function renderTopNumbers() {
   try {
     const seasons = [...new Set(state.awards.map((r) => Number(r.season)))];
     const players = [...new Set(state.values.map((r) => r.player))];
-    const playerSeasons = state.values.length;
     const hit = state.awards.filter(
       (r) => r.won_any === true || r.won_any === "True"
     ).length;
@@ -582,7 +885,6 @@ function renderTopNumbers() {
 
     statSeasons.textContent = `${seasons.length}`;
     statPlayers.textContent = `${players.length}`;
-    statDeliveries.textContent = `${playerSeasons}`;
     statHitRate.textContent = `${hitRate.toFixed(1)}`;
   } catch (err) {
     console.error("Error rendering statistics:", err);
@@ -614,14 +916,24 @@ async function init() {
     state.bowling = bowling;
     state.values = values;
     state.awards = awards;
-    state.seasons = [...new Set(values.map((r) => Number(r.season)))].sort(
+    // Use awards seasons (2008-2025) as the canonical season list
+    // This ensures all IPL seasons are available, even if batting/bowling data is missing
+    state.seasons = [...new Set(awards.map((r) => Number(r.season)))].sort(
       (a, b) => a - b
     );
-    state.teams = [
-      ...new Set(awards.map((r) => r.highest_buy_team).filter(Boolean)),
-    ].sort();
+    
+    // Add all distinct valid teams from batting and bowling datasets
+    const allTeams = new Set([
+      ...batting.map(r => r.team),
+      ...bowling.map(r => r.team)
+    ]);
+    allTeams.delete("Unknown");
+    allTeams.delete(undefined);
+    allTeams.delete(null);
 
-    // Update UI
+    state.teams = [...allTeams].sort();
+
+    // Update UI — season dropdown uses awards seasons (2008-2025)
     setOptions(seasonSelect, state.seasons);
     setOptions(teamSelect, state.teams);
     updateUI();
@@ -647,6 +959,11 @@ async function init() {
 categorySelect.addEventListener("change", () => {
   updateUI();
   displayResult("Category changed. Select query type and run query.");
+});
+
+// Query type change listener
+queryTypeSelect.addEventListener("change", () => {
+  toggleFields();
 });
 
 // Season change listener
