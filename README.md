@@ -50,7 +50,7 @@ Production build:
 npm run build
 ```
 
-Output: `ipl-auction-study/dist/`.
+Output: `ipl-auction-study/demo/dist/` (Vite app root is `demo/`).
 
 ## Deploy on Vercel
 
@@ -60,7 +60,7 @@ Import [this GitHub repository](https://github.com/wvpssriraj10/ipl-auction-play
 
 1. **Root Directory** → **Edit** → set to `ipl-auction-study` → **Continue**.
 2. **Framework Preset** → **Vite** (not “Other”).
-3. Open **Build and Output Settings** → click **Override** toggles **off** so Vercel uses [`ipl-auction-study/vercel.json`](ipl-auction-study/vercel.json) (`npm ci`, `npm run build`, output `dist`).
+3. Open **Build and Output Settings** → click **Override** toggles **off** so Vercel uses [`ipl-auction-study/vercel.json`](ipl-auction-study/vercel.json) (`npm ci`, `npm run build`, output `demo/dist`).
 4. Deploy.
 
 ### Alternative: Root Directory = `.` (repository root)

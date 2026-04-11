@@ -3,5 +3,5 @@
   "framework": "vite",
   "installCommand": "cd ipl-auction-study && npm ci",
   "buildCommand": "cd ipl-auction-study && npm run build",
-  "outputDirectory": "ipl-auction-study/dist"
+  "outputDirectory": "ipl-auction-study/demo/dist"
 }
