@@ -424,10 +424,11 @@ function toggleFields() {
 
   wraps.team.classList.toggle("hidden", category !== "Team Records");
   
-  // Single-player batting/bowling queries (must match wording in queryMap)
+  // Single-player batting/bowling queries need an explicit player pick
   const needsPlayer =
     category.startsWith("Player Records") &&
-    /(of|by) a player in a season/.test(String(qType));
+    (String(qType).includes("of a player in a season") ||
+      String(qType).includes("by a player in a season"));
   wraps.player.classList.toggle("hidden", !needsPlayer);
   
   wraps.season.classList.toggle("hidden", category === "Other");
@@ -581,11 +582,7 @@ function handleBattingQuery() {
   }
 
   if (q === "Runs by a player in a season") {
-    if (
-      !player ||
-      player === "No players found" ||
-      player === "No data for this season"
-    ) {
+    if (!player || player === "N/A") {
       displayResult("Select a player from the Player dropdown, then run the query.");
       return;
     }
@@ -594,7 +591,17 @@ function handleBattingQuery() {
       displayResult(`No batting record found for ${player} in ${selectedSeason}.`);
       return;
     }
-    displayHtmlResult(renderPlayerCard(r, r.team));
+    const table = renderPlayersTable([r], [
+      { label: "Player", key: "player" },
+      { label: "Team", key: "team" },
+      { label: "Runs", key: "total_runs" },
+      { label: "Average", key: "batting_average", formatter: (v) => formatStats(v, 2) },
+      { label: "SR", key: "strike_rate", formatter: (v) => formatStats(v, 1) },
+      { label: "Balls", key: "balls_faced" },
+    ]);
+    displayHtmlResult(
+      `<h4>🏏 Batting — ${selectedSeason}</h4><p style="opacity:0.85;font-size:14px;margin:0 0 12px;">Runs by selected player</p>${table}`
+    );
     return;
   }
 
@@ -666,11 +673,7 @@ function handleBowlingQuery() {
   }
 
   if (q === "Bowling stats of a player in a season") {
-    if (
-      !player ||
-      player === "No players found" ||
-      player === "No data for this season"
-    ) {
+    if (!player || player === "N/A") {
       displayResult("Select a player from the Player dropdown, then run the query.");
       return;
     }
@@ -1049,9 +1052,6 @@ categorySelect.addEventListener("change", () => {
 // Query type change listener
 queryTypeSelect.addEventListener("change", () => {
   toggleFields();
-  if (categorySelect.value.startsWith("Player Records")) {
-    updatePlayers();
-  }
 });
 
 // Season change listener
