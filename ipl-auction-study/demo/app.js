@@ -424,8 +424,10 @@ function toggleFields() {
 
   wraps.team.classList.toggle("hidden", category !== "Team Records");
   
-  // Only show player dropdown if it's a player query AND the specific query involves a single player
-  const needsPlayer = category.startsWith("Player Records") && String(qType).includes("of a player in a season");
+  // Single-player batting/bowling queries (must match wording in queryMap)
+  const needsPlayer =
+    category.startsWith("Player Records") &&
+    /(of|by) a player in a season/.test(String(qType));
   wraps.player.classList.toggle("hidden", !needsPlayer);
   
   wraps.season.classList.toggle("hidden", category === "Other");
@@ -579,6 +581,14 @@ function handleBattingQuery() {
   }
 
   if (q === "Runs by a player in a season") {
+    if (
+      !player ||
+      player === "No players found" ||
+      player === "No data for this season"
+    ) {
+      displayResult("Select a player from the Player dropdown, then run the query.");
+      return;
+    }
     const r = rows.find((x) => String(x.player) === player);
     if (!r) {
       displayResult(`No batting record found for ${player} in ${selectedSeason}.`);
@@ -656,6 +666,14 @@ function handleBowlingQuery() {
   }
 
   if (q === "Bowling stats of a player in a season") {
+    if (
+      !player ||
+      player === "No players found" ||
+      player === "No data for this season"
+    ) {
+      displayResult("Select a player from the Player dropdown, then run the query.");
+      return;
+    }
     const r = rows.find((x) => String(x.player) === player);
     if (!r) {
       displayResult(`No bowling record found for ${player} in ${selectedSeason}.`);
@@ -1031,6 +1049,9 @@ categorySelect.addEventListener("change", () => {
 // Query type change listener
 queryTypeSelect.addEventListener("change", () => {
   toggleFields();
+  if (categorySelect.value.startsWith("Player Records")) {
+    updatePlayers();
+  }
 });
 
 // Season change listener
