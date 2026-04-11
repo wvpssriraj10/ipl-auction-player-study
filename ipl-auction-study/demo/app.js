@@ -962,6 +962,10 @@ function renderTopNumbers() {
  * Initialize application
  */
 async function init() {
+  // Run before data load so the page is not stuck at opacity:0 if fetch fails (e.g. missing CSV on host)
+  setupRevealAnimations();
+  applyScrollEffects();
+
   try {
     state.isLoading = true;
     displayResult("Loading data...");
@@ -1003,8 +1007,6 @@ async function init() {
     updatePlayers();
     updateTeams();
     renderTopNumbers();
-    setupRevealAnimations();
-    applyScrollEffects();
 
     state.isLoading = false;
     state.hasError = false;

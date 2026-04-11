@@ -52,6 +52,8 @@ npm run build
 
 Output: `ipl-auction-study/demo/dist/` (Vite app root is `demo/`).
 
+The demo loads CSVs from `/data/processed/…`. For static hosting (e.g. Vercel), copies of those files live under [`demo/public/data/processed/`](ipl-auction-study/demo/public/data/processed/) so they are included in the build. After re-running the Python pipeline locally, copy updated CSVs into that folder before deploying.
+
 ## Deploy on Vercel
 
 Import [this GitHub repository](https://github.com/wvpssriraj10/ipl-auction-player-study), branch `main`. Then use **one** of these setups (do not mix them).
