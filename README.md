@@ -6,6 +6,8 @@
 
 This repository combines **Python data pipelines** for IPL auction analysis with a **Vite-powered demo** under `ipl-auction-study/demo/`. Data verification write-ups live in [`docs/`](docs/).
 
+**Data for the live demo:** The built site loads **only** CSVs that are **committed in this repo** under [`ipl-auction-study/demo/public/data/processed/`](ipl-auction-study/demo/public/data/processed/). There is no separate production database or external data URL for those tables. Features such as an “IPL Teams” section should derive metrics from those same files (and other tracked outputs), not from files you add only on your machine.
+
 ## Repository layout
 
 ```
@@ -52,7 +54,7 @@ npm run build
 
 Output: `ipl-auction-study/demo/dist/` (Vite app root is `demo/`).
 
-The demo loads CSVs from `/data/processed/…`. For static hosting (e.g. Vercel), copies of those files live under [`demo/public/data/processed/`](ipl-auction-study/demo/public/data/processed/) so they are included in the build. After re-running the Python pipeline locally, copy updated CSVs into that folder before deploying.
+The demo loads CSVs from `/data/processed/…`, which Vite serves from [`demo/public/data/processed/`](ipl-auction-study/demo/public/data/processed/) (tracked in git). Regenerating data locally writes to `data/processed/` (often gitignored); to refresh what the **deployed** demo uses, update the files under `demo/public/data/processed/` and commit them so the site still uses **only repo contents**.
 
 ## Deploy on Vercel
 
