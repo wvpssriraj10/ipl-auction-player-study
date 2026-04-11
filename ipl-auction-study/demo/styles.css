@@ -434,55 +434,106 @@ input.player-search-input {
   background-image: none;
   padding-right: 14px;
   cursor: text;
+  width: 100%;
+  display: block;
 }
 
-.player-autocomplete {
+/* Match other form controls: full width inside grid cells */
+#playerWrap .player-autocomplete {
   position: relative;
+  width: 100%;
+  min-width: 0;
 }
 
 .player-suggestions {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% + 6px);
-  z-index: 40;
+  top: calc(100% + 8px);
+  z-index: 50;
   margin: 0;
-  padding: 6px 0;
+  padding: 4px 0;
   list-style: none;
-  max-height: 280px;
+  max-height: min(280px, 45vh);
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 12px;
-  border: 1px solid rgba(139, 92, 246, 0.35);
-  background: rgba(15, 18, 32, 0.96);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  background: rgba(12, 14, 24, 0.98);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(139, 92, 246, 0.08);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.5) rgba(15, 23, 42, 0.85);
+}
+
+.player-suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.player-suggestions::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 10px;
+  margin: 6px 2px 6px 0;
+}
+
+.player-suggestions::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(139, 92, 246, 0.55),
+    rgba(99, 102, 241, 0.45)
+  );
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.player-suggestions::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.75);
 }
 
 .player-suggestions li {
-  padding: 10px 14px;
+  padding: 10px 14px 10px 14px;
+  margin: 0 4px;
   font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--white);
   cursor: pointer;
   transition: background var(--transition-fast);
+  border-radius: 8px;
+  line-height: 1.35;
+}
+
+.player-suggestions li[role="option"]:first-of-type {
+  margin-top: 2px;
+}
+
+.player-suggestions li[role="option"]:last-of-type {
+  margin-bottom: 2px;
 }
 
 .player-suggestions li[aria-selected="true"],
-.player-suggestions li:hover {
-  background: rgba(139, 92, 246, 0.25);
+.player-suggestions li[role="option"]:hover {
+  background: rgba(139, 92, 246, 0.22);
 }
 
 .player-suggestions li mark {
-  background: rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.5);
   color: inherit;
-  padding: 0 2px;
+  padding: 0 3px;
   border-radius: 4px;
+  font-weight: 600;
 }
 
 .player-suggestions-empty {
   padding: 12px 14px;
+  margin: 4px 6px;
   font-size: 13px;
   color: var(--text-secondary);
   pointer-events: none;
+  border-radius: 8px;
 }
 
 .actions {
