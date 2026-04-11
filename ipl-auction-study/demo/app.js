@@ -5,7 +5,8 @@ const categorySelect = document.getElementById("categorySelect");
 const queryTypeSelect = document.getElementById("queryTypeSelect");
 const teamSelect = document.getElementById("teamSelect");
 const seasonSelect = document.getElementById("seasonSelect");
-const playerSelect = document.getElementById("playerSelect");
+const playerInput = document.getElementById("playerInput");
+const playerSuggestionsList = document.getElementById("playerSuggestionsList");
 const resultBox = document.getElementById("resultBox");
 const queryForm = document.getElementById("queryForm");
 const runBtn = document.getElementById("runBtn");
@@ -36,6 +37,11 @@ const state = {
   isLoading: true,
   hasError: false,
 };
+
+/** Canonical player names for the active season + batting/bowling category (for autocomplete). */
+let playerNamesList = [];
+let playerSuggestActiveIndex = -1;
+const MAX_PLAYER_SUGGESTIONS = 12;
 
 // ============================================
 // QUERY CONFIGURATION
@@ -350,40 +356,154 @@ function renderPlayersTable(players, columns) {
 // UI UPDATE FUNCTIONS
 // ============================================
 
+function hidePlayerSuggestions() {
+  playerSuggestActiveIndex = -1;
+  playerSuggestionsList.innerHTML = "";
+  playerSuggestionsList.hidden = true;
+  playerInput.setAttribute("aria-expanded", "false");
+}
+
+function filterPlayersByQuery(q) {
+  const t = q.trim().toLowerCase();
+  if (!playerNamesList.length) return [];
+  if (!t) {
+    return playerNamesList.slice(0, MAX_PLAYER_SUGGESTIONS);
+  }
+  return playerNamesList
+    .filter((p) => String(p).toLowerCase().includes(t))
+    .slice(0, MAX_PLAYER_SUGGESTIONS);
+}
+
+function buildSuggestionLabel(name, query) {
+  const n = String(name);
+  const q = query.trim();
+  if (!q) return document.createTextNode(n);
+  const lower = n.toLowerCase();
+  const t = q.toLowerCase();
+  const idx = lower.indexOf(t);
+  if (idx === -1) return document.createTextNode(n);
+  const frag = document.createDocumentFragment();
+  frag.append(document.createTextNode(n.slice(0, idx)));
+  const mark = document.createElement("mark");
+  mark.textContent = n.slice(idx, idx + t.length);
+  frag.append(mark, document.createTextNode(n.slice(idx + t.length)));
+  return frag;
+}
+
+function renderPlayerSuggestions(matches, query) {
+  playerSuggestionsList.innerHTML = "";
+  if (!matches.length) {
+    const li = document.createElement("li");
+    li.className = "player-suggestions-empty";
+    li.textContent = query.trim()
+      ? "No matching players for this season."
+      : "No players loaded.";
+    playerSuggestionsList.appendChild(li);
+    playerSuggestionsList.hidden = false;
+    playerInput.setAttribute("aria-expanded", "true");
+    return;
+  }
+  const maxIdx = matches.length - 1;
+  if (playerSuggestActiveIndex > maxIdx) playerSuggestActiveIndex = maxIdx;
+  if (playerSuggestActiveIndex < 0) playerSuggestActiveIndex = -1;
+
+  matches.forEach((name, i) => {
+    const li = document.createElement("li");
+    li.setAttribute("role", "option");
+    li.setAttribute("aria-selected", i === playerSuggestActiveIndex ? "true" : "false");
+    li.append(buildSuggestionLabel(name, query));
+    li.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      applyPlayerChoice(name);
+    });
+    playerSuggestionsList.appendChild(li);
+  });
+  playerSuggestionsList.hidden = false;
+  playerInput.setAttribute("aria-expanded", "true");
+}
+
+function applyPlayerChoice(name) {
+  playerInput.value = name;
+  hidePlayerSuggestions();
+}
+
+function showSuggestionsForCurrentInput() {
+  if (!playerInput || playerInput.disabled) return;
+  const matches = filterPlayersByQuery(playerInput.value);
+  renderPlayerSuggestions(matches, playerInput.value);
+}
+
 /**
- * Update player options based on selected season and category
+ * Resolve typed text to a canonical name in `playerNamesList` for queries.
+ */
+function resolvePlayerNameForQuery() {
+  const raw = playerInput.value.trim();
+  if (!raw || !playerNamesList.length) return "";
+  if (playerNamesList.includes(raw)) return raw;
+  const ci = playerNamesList.find(
+    (p) => String(p).toLowerCase() === raw.toLowerCase()
+  );
+  if (ci) return ci;
+  const t = raw.toLowerCase();
+  const includes = playerNamesList.filter((p) =>
+    String(p).toLowerCase().includes(t)
+  );
+  if (includes.length === 1) return includes[0];
+  return "";
+}
+
+/**
+ * Update player autocomplete list based on selected season and category
  */
 function updatePlayers() {
   try {
+    hidePlayerSuggestions();
     const selectedSeason = Number(seasonSelect.value);
     const category = categorySelect.value;
-    // Map the selected season (from awards) to the data season
     const dataSeason = awardSeasonToDataSeason(selectedSeason);
-    let list = [];
+
+    playerNamesList = [];
+    playerInput.disabled = false;
+    playerInput.placeholder = "Type player name…";
+    playerInput.value = "";
 
     if (dataSeason === null) {
-      // No performance data for this season
-      setOptions(playerSelect, ["No data for this season"]);
+      playerInput.disabled = true;
+      playerInput.placeholder = "No performance data for this season";
       return;
     }
 
     if (category === "Player Records - Batting") {
-      list = state.batting
-        .filter((r) => Number(r.season) === dataSeason)
-        .map((r) => r.player);
+      playerNamesList = [
+        ...new Set(
+          state.batting
+            .filter((r) => Number(r.season) === dataSeason)
+            .map((r) => r.player)
+        ),
+      ];
     } else if (category === "Player Records - Bowling") {
-      list = state.bowling
-        .filter((r) => Number(r.season) === dataSeason)
-        .map((r) => r.player);
+      playerNamesList = [
+        ...new Set(
+          state.bowling
+            .filter((r) => Number(r.season) === dataSeason)
+            .map((r) => r.player)
+        ),
+      ];
     }
 
-    list = [...new Set(list)].sort((a, b) =>
-      String(a).localeCompare(String(b))
-    );
-    setOptions(playerSelect, list.length ? list : ["No players found"]);
+    playerNamesList.sort((a, b) => String(a).localeCompare(String(b)));
+
+    if (!playerNamesList.length) {
+      playerInput.disabled = true;
+      playerInput.placeholder = "No players found for this season";
+    }
   } catch (err) {
     console.error("Error updating players:", err);
-    setOptions(playerSelect, ["N/A"]);
+    playerNamesList = [];
+    playerInput.value = "";
+    playerInput.placeholder = "Error loading players";
+    playerInput.disabled = true;
+    hidePlayerSuggestions();
   }
 }
 
@@ -570,7 +690,7 @@ function handleBattingQuery() {
   const q = queryTypeSelect.value;
   const selectedSeason = Number(seasonSelect.value);
   const dataSeason = awardSeasonToDataSeason(selectedSeason);
-  const player = playerSelect.value;
+  const player = resolvePlayerNameForQuery();
 
   if (dataSeason === null) {
     displayResult(`No batting data available for season ${selectedSeason}.\n\n⚠️ Performance data for this IPL season is not present in the dataset.`);
@@ -585,8 +705,10 @@ function handleBattingQuery() {
   }
 
   if (q === "Runs by a player in a season") {
-    if (!player || player === "N/A") {
-      displayResult("Select a player from the Player dropdown, then run the query.");
+    if (!player) {
+      displayResult(
+        "Type a player name and pick a suggestion, or type the full name exactly as in the dataset. If several players match, choose one from the list."
+      );
       return;
     }
     const r = rows.find((x) => String(x.player) === player);
@@ -670,7 +792,7 @@ function handleBowlingQuery() {
   const q = queryTypeSelect.value;
   const selectedSeason = Number(seasonSelect.value);
   const dataSeason = awardSeasonToDataSeason(selectedSeason);
-  const player = playerSelect.value;
+  const player = resolvePlayerNameForQuery();
 
   if (dataSeason === null) {
     displayResult(`No bowling data available for season ${selectedSeason}.\n\n⚠️ Performance data for this IPL season is not present in the dataset.`);
@@ -685,8 +807,10 @@ function handleBowlingQuery() {
   }
 
   if (q === "Bowling stats of a player in a season") {
-    if (!player || player === "N/A") {
-      displayResult("Select a player from the Player dropdown, then run the query.");
+    if (!player) {
+      displayResult(
+        "Type a player name and pick a suggestion, or type the full name exactly as in the dataset. If several players match, choose one from the list."
+      );
       return;
     }
     const r = rows.find((x) => String(x.player) === player);
@@ -1091,6 +1215,69 @@ queryForm.addEventListener("submit", (e) => {
 
 // Run button click listener
 runBtn.addEventListener("click", runQuery);
+
+// Player name autocomplete (replaces legacy <select>)
+playerInput.addEventListener("input", () => {
+  playerSuggestActiveIndex = -1;
+  showSuggestionsForCurrentInput();
+});
+
+playerInput.addEventListener("focus", () => {
+  playerSuggestActiveIndex = -1;
+  showSuggestionsForCurrentInput();
+});
+
+playerInput.addEventListener("blur", () => {
+  window.setTimeout(() => hidePlayerSuggestions(), 180);
+});
+
+playerInput.addEventListener("keydown", (e) => {
+  if (playerInput.disabled) return;
+  const matches = filterPlayersByQuery(playerInput.value);
+
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    if (!matches.length) return;
+    if (playerSuggestionsList.hidden) playerSuggestActiveIndex = -1;
+    playerSuggestActiveIndex = Math.min(
+      playerSuggestActiveIndex + 1,
+      matches.length - 1
+    );
+    renderPlayerSuggestions(matches, playerInput.value);
+    return;
+  }
+
+  if (e.key === "ArrowUp") {
+    e.preventDefault();
+    if (!matches.length) return;
+    if (playerSuggestActiveIndex <= 0) {
+      playerSuggestActiveIndex = matches.length - 1;
+    } else {
+      playerSuggestActiveIndex -= 1;
+    }
+    renderPlayerSuggestions(matches, playerInput.value);
+    return;
+  }
+
+  if (e.key === "Enter") {
+    if (!matches.length) return;
+    const pick =
+      playerSuggestActiveIndex >= 0
+        ? matches[playerSuggestActiveIndex]
+        : matches.length === 1
+          ? matches[0]
+          : null;
+    if (pick) {
+      e.preventDefault();
+      applyPlayerChoice(pick);
+    }
+    return;
+  }
+
+  if (e.key === "Escape") {
+    hidePlayerSuggestions();
+  }
+});
 
 // Scroll effects listener (passive for performance)
 window.addEventListener("scroll", applyScrollEffects, { passive: true });

@@ -430,6 +430,61 @@ select:disabled {
   cursor: not-allowed;
 }
 
+input.player-search-input {
+  background-image: none;
+  padding-right: 14px;
+  cursor: text;
+}
+
+.player-autocomplete {
+  position: relative;
+}
+
+.player-suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 40;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  max-height: 280px;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  background: rgba(15, 18, 32, 0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+.player-suggestions li {
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--white);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.player-suggestions li[aria-selected="true"],
+.player-suggestions li:hover {
+  background: rgba(139, 92, 246, 0.25);
+}
+
+.player-suggestions li mark {
+  background: rgba(139, 92, 246, 0.45);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+.player-suggestions-empty {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
 .actions {
   margin-top: 14px;
   display: flex;
