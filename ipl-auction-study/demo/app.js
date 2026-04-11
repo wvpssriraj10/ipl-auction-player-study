@@ -48,7 +48,7 @@ const queryMap = {
   ],
   "Player Records - Batting": [
     "Runs by a player in a season",
-    "Top 5 batsmen in a season",
+    "Top 10 batsmen in a season",
     "Highest run scorer in a season",
     "Best strike rate players (min 100 balls)",
   ],
@@ -62,12 +62,15 @@ const queryMap = {
     "Was highest-paid player worth it for a season?",
     "Best value highest-buy player",
     "Worst value highest-buy player",
-    "Top 5 value-for-money highest-buys",
-    "Bottom 5 overpriced highest-buys",
+    "Top 10 value-for-money highest-buys",
+    "Bottom 10 overpriced highest-buys",
     "How often did highest-buy players deliver good value?",
   ],
   "Other": ["Reserved for later"],
 };
+
+/** Rows to show for ranked list queries (tables). */
+const TABLE_TOP_N = 10;
 
 // ============================================
 // UTILITY FUNCTIONS
@@ -535,15 +538,15 @@ function handleAuctionQuery() {
     return;
   }
 
-  if (q === "Top 5 value-for-money highest-buys") {
-    const table = renderPlayersTable(sortedDesc.slice(0, 5), auctionTableColumns);
-    displayHtmlResult(`<h4>📈 Top 5 Best Value Buys</h4><br>${table}`);
+  if (q === "Top 10 value-for-money highest-buys") {
+    const table = renderPlayersTable(sortedDesc.slice(0, TABLE_TOP_N), auctionTableColumns);
+    displayHtmlResult(`<h4>📈 Top ${TABLE_TOP_N} Best Value Buys</h4><br>${table}`);
     return;
   }
 
-  if (q === "Bottom 5 overpriced highest-buys") {
-    const table = renderPlayersTable(sortedAsc.slice(0, 5), auctionTableColumns);
-    displayHtmlResult(`<h4>📉 Top 5 Most Overpriced Buys</h4><br>${table}`);
+  if (q === "Bottom 10 overpriced highest-buys") {
+    const table = renderPlayersTable(sortedAsc.slice(0, TABLE_TOP_N), auctionTableColumns);
+    displayHtmlResult(`<h4>📉 Top ${TABLE_TOP_N} Most Overpriced Buys</h4><br>${table}`);
     return;
   }
 
@@ -605,26 +608,35 @@ function handleBattingQuery() {
     return;
   }
 
-  if (q === "Top 5 batsmen in a season") {
-    const top5 = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, 5);
-    const table = renderPlayersTable(top5, [
+  if (q === "Top 10 batsmen in a season") {
+    const top = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, TABLE_TOP_N);
+    const table = renderPlayersTable(top, [
       {label: 'Player', key: 'player'},
       {label: 'Team', key: 'team'},
       {label: 'Runs', key: 'total_runs'},
       {label: 'Average', key: 'batting_average', formatter: v => formatStats(v, 2)},
       {label: 'SR', key: 'strike_rate', formatter: v => formatStats(v, 1)}
     ]);
-    displayHtmlResult(`<h4>🏏 Top 5 Batsmen (${selectedSeason})</h4><br>${table}`);
+    displayHtmlResult(`<h4>🏏 Top ${TABLE_TOP_N} Batsmen (${selectedSeason})</h4><br>${table}`);
     return;
   }
 
   if (q === "Highest run scorer in a season") {
-    const r = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs))[0];
-    if (r) {
-      displayHtmlResult(`<h4>👑 Season Leader (${selectedSeason})</h4><br>${renderPlayerCard(r, r.team)}`);
-    } else {
+    const top = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, TABLE_TOP_N);
+    if (!top.length) {
       displayResult("No data.");
+      return;
     }
+    const table = renderPlayersTable(top, [
+      { label: "Player", key: "player" },
+      { label: "Team", key: "team" },
+      { label: "Runs", key: "total_runs" },
+      { label: "Average", key: "batting_average", formatter: (v) => formatStats(v, 2) },
+      { label: "SR", key: "strike_rate", formatter: (v) => formatStats(v, 1) },
+    ]);
+    displayHtmlResult(
+      `<h4>👑 Top ${TABLE_TOP_N} run scorers (${selectedSeason})</h4><br>${table}`
+    );
     return;
   }
 
@@ -632,7 +644,7 @@ function handleBattingQuery() {
     const filtered = rows
       .filter((r) => num(r.balls_faced) >= 100)
       .sort((a, b) => num(b.strike_rate) - num(a.strike_rate))
-      .slice(0, 10);
+      .slice(0, TABLE_TOP_N);
     
     if (!filtered.length) {
       displayResult(`No batsmen with 100+ balls faced found in ${selectedSeason}.`);
@@ -646,7 +658,7 @@ function handleBattingQuery() {
       {label: 'Balls', key: 'balls_faced'},
       {label: 'Avg', key: 'batting_average', formatter: v => formatStats(v, 2)}
     ]);
-    displayHtmlResult(`<h4>🚀 Strike Rate Leaders (100+ Balls) - ${selectedSeason}</h4><br>${table}`);
+    displayHtmlResult(`<h4>🚀 Top ${TABLE_TOP_N} Strike Rate (100+ Balls) - ${selectedSeason}</h4><br>${table}`);
     return;
   }
 }
@@ -687,8 +699,8 @@ function handleBowlingQuery() {
   }
 
   if (q === "Most wickets in a season") {
-    const top5 = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, 10);
-    const table = renderPlayersTable(top5, [
+    const top = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, TABLE_TOP_N);
+    const table = renderPlayersTable(top, [
       {label: 'Player', key: 'player'},
       {label: 'Team', key: 'team'},
       {label: 'Wickets', key: 'wickets'},
@@ -697,17 +709,28 @@ function handleBowlingQuery() {
       {label: 'SR', key: 'bowling_strike_rate', formatter: v => formatStats(v, 1)},
       {label: 'Dots', key: 'dot_balls'}
     ]);
-    displayHtmlResult(`<h4>🎯 Wicket Leaders (${selectedSeason})</h4><br>${table}`);
+    displayHtmlResult(`<h4>🎯 Top ${TABLE_TOP_N} Wicket Takers (${selectedSeason})</h4><br>${table}`);
     return;
   }
 
   if (q === "Best bowler in a season (wickets)") {
-    const r = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets))[0];
-    if (r) {
-      displayHtmlResult(`<h4>🏆 Top Wicket Taker (${selectedSeason})</h4><br>${renderPlayerCard(r, r.team)}`);
-    } else {
+    const top = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, TABLE_TOP_N);
+    if (!top.length) {
       displayResult("No data.");
+      return;
     }
+    const table = renderPlayersTable(top, [
+      { label: "Player", key: "player" },
+      { label: "Team", key: "team" },
+      { label: "Wickets", key: "wickets" },
+      { label: "Econ", key: "economy", formatter: (v) => formatStats(v, 2) },
+      { label: "Avg", key: "bowling_average", formatter: (v) => formatStats(v, 2) },
+      { label: "SR", key: "bowling_strike_rate", formatter: (v) => formatStats(v, 1) },
+      { label: "Dots", key: "dot_balls" },
+    ]);
+    displayHtmlResult(
+      `<h4>🏆 Top ${TABLE_TOP_N} bowlers by wickets (${selectedSeason})</h4><br>${table}`
+    );
     return;
   }
 
@@ -715,7 +738,7 @@ function handleBowlingQuery() {
     const filtered = rows
       .filter((r) => num(r.balls_bowled) >= 60)
       .sort((a, b) => num(a.economy) - num(b.economy))
-      .slice(0, 10);
+      .slice(0, TABLE_TOP_N);
     
     if (!filtered.length) {
       displayResult(`No bowlers with 60+ legal balls found in ${selectedSeason}.`);
@@ -728,7 +751,7 @@ function handleBowlingQuery() {
       {label: 'Wickets', key: 'wickets'},
       {label: 'Dots', key: 'dot_balls'}
     ]);
-    displayHtmlResult(`<h4>🧤 Economy Specials (Min 10 Overs) - ${selectedSeason}</h4><br>${table}`);
+    displayHtmlResult(`<h4>🧤 Top ${TABLE_TOP_N} Economy (Min 10 Overs) - ${selectedSeason}</h4><br>${table}`);
     return;
   }
 }
@@ -775,7 +798,7 @@ function handleTeamQuery() {
       displayResult(`No batting data found for ${team} in ${selectedSeason}.`);
       return;
     }
-    const topBatsmen = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, 5);
+    const topBatsmen = [...rows].sort((a, b) => num(b.total_runs) - num(a.total_runs)).slice(0, TABLE_TOP_N);
     const tblHtml = renderPlayersTable(topBatsmen, [
       { label: 'Player', key: 'player' },
       { label: 'Runs', key: 'total_runs' },
@@ -783,7 +806,7 @@ function handleTeamQuery() {
       { label: 'Avg', key: 'batting_average', formatter: v => formatStats(v, 1) },
       { label: 'Sixes', key: 'sixes' }
     ]);
-    const headerHtml = `<h4>🏏 Top batsmen for ${team} in ${selectedSeason}</h4><br>`;
+    const headerHtml = `<h4>🏏 Top ${TABLE_TOP_N} batsmen for ${team} in ${selectedSeason}</h4><br>`;
     displayHtmlResult(headerHtml + tblHtml);
     return;
   }
@@ -799,7 +822,7 @@ function handleTeamQuery() {
       displayResult(`No bowling data found for ${team} in ${selectedSeason}.`);
       return;
     }
-    const topBowlers = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, 5);
+    const topBowlers = [...rows].sort((a, b) => num(b.wickets) - num(a.wickets)).slice(0, TABLE_TOP_N);
     const tblHtml = renderPlayersTable(topBowlers, [
       { label: 'Player', key: 'player' },
       { label: 'Wickets', key: 'wickets' },
@@ -807,7 +830,7 @@ function handleTeamQuery() {
       { label: 'SR', key: 'bowling_strike_rate', formatter: v => formatStats(v, 1) },
       { label: 'Dots', key: 'dot_balls' }
     ]);
-    const headerHtml = `<h4>🎯 Top bowlers for ${team} in ${selectedSeason}</h4><br>`;
+    const headerHtml = `<h4>🎯 Top ${TABLE_TOP_N} bowlers for ${team} in ${selectedSeason}</h4><br>`;
     displayHtmlResult(headerHtml + tblHtml);
     return;
   }
@@ -865,8 +888,8 @@ function handleTeamQuery() {
     let htmlResult = headerHtml + renderPlayerCard(mvp, team);
 
     if (mvpList.length > 1) {
-      htmlResult += `<h5 style="margin-top: 24px; margin-bottom: 12px; color: var(--muted); font-size: 13px; text-transform: uppercase;">Runners-up Ranking</h5>`;
-      htmlResult += renderPlayersTable(mvpList.slice(1, 5), [
+      htmlResult += `<h5 style="margin-top: 24px; margin-bottom: 12px; color: var(--muted); font-size: 13px; text-transform: uppercase;">Other top finishers (up to ${TABLE_TOP_N - 1} players)</h5>`;
+      htmlResult += renderPlayersTable(mvpList.slice(1, TABLE_TOP_N), [
         {label: 'Player', key: 'player'},
         {label: 'Wickets', key: 'wickets'},
         {label: 'Sixes', key: 'sixes'},
