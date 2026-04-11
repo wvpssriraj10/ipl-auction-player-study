@@ -178,6 +178,24 @@ function num(v, fallback = 0) {
 }
 
 /**
+ * CSV rows use present-day franchise names for every season. Remap to the brand used that IPL year.
+ * Matching/filters still use raw `team` from data — only user-facing labels change.
+ */
+function displayTeamName(team, season) {
+  if (team == null || team === "") return team;
+  const y = Number(season);
+  if (!Number.isFinite(y)) return String(team);
+  const t = String(team);
+  if (t === "Sunrisers Hyderabad" && y <= 2012) return "Deccan Chargers";
+  if (t === "Delhi Capitals" && y <= 2018) return "Delhi Daredevils";
+  if (t === "Punjab Kings" && y <= 2020) return "Kings XI Punjab";
+  if (t === "Royal Challengers Bengaluru" && y <= 2023) {
+    return "Royal Challengers Bangalore";
+  }
+  return t;
+}
+
+/**
  * Display message in result box
  */
 function displayResult(message) {
@@ -238,6 +256,7 @@ function getMedalEmoji(rank) {
 function renderPlayerCard(playerData, team = 'Unknown') {
   const name = playerData.player || playerData.highest_buy_player || 'Unknown Player';
   const img = getPlayerImage(name);
+  const accentTeam = playerData.team || playerData.highest_buy_team || team;
   
   let statsHtml = '';
   const addStat = (icon, value, label, forceShow = false) => {
@@ -271,9 +290,11 @@ function renderPlayerCard(playerData, team = 'Unknown') {
     statsHtml += addStat('💎', playerData.value_score, 'Value Score', true);
   }
 
-  // Generate class identifying team for left border color
-  // Default to first word of team name
-  const tClass = team === 'Unknown' ? 'Unknown' : String(team).split(' ')[0];
+  // Border accent uses canonical CSV franchise (stable CSS keys), not era display name
+  const tClass =
+    accentTeam == null || accentTeam === ""
+      ? "Unknown"
+      : String(accentTeam).split(" ")[0];
 
   return `
     <div class="player-card ${tClass}">
@@ -296,8 +317,9 @@ function renderPlayerCard(playerData, team = 'Unknown') {
  */
 function renderAuctionResultCard(data) {
   const name = data.highest_buy_player || data.player || "Unknown Player";
-  const team = data.highest_buy_team || data.team || "Unknown Team";
+  const rawTeam = data.highest_buy_team || data.team || "Unknown Team";
   const season = data.awardSeason || data.season || "";
+  const teamLabel = displayTeamName(rawTeam, season);
   const verdict = getValueVerdict(num(data.value_score));
   const vClass = verdict.toLowerCase().replace(' ', '-');
   const img = getPlayerImage(name);
@@ -309,7 +331,7 @@ function renderAuctionResultCard(data) {
     <div class="stat-item"><span class="stat-icon">💎</span><span class="stat-value">${formatStats(data.value_score)}</span><span class="stat-label">Value</span></div>
   `;
 
-  const tClass = String(team).split(' ')[0];
+  const tClass = String(rawTeam).split(' ')[0];
 
   return `
     <div class="player-card ${tClass}">
@@ -319,7 +341,7 @@ function renderAuctionResultCard(data) {
           <div class="verdict-badge ${vClass}">${verdict}</div>
           <h4>${name} (${season})</h4>
           <div class="price-tag">${formatCurrency(data.price_cr || data.highest_buy_price_cr)}</div>
-          <p>${team}</p>
+          <p>${teamLabel}</p>
         </div>
       </div>
       <div class="stats-grid">
@@ -342,7 +364,20 @@ function renderPlayersTable(players, columns) {
     let rowHtml = `<td><span class="medal">${getMedalEmoji(i+1)}</span></td>`;
     columns.forEach(c => {
       let val = p[c.key];
-      if (c.formatter) val = c.formatter(val);
+      if (
+        (c.key === "team" || c.key === "highest_buy_team") &&
+        val != null &&
+        val !== ""
+      ) {
+        const sy =
+          p.awardSeason !== undefined && p.awardSeason !== ""
+            ? p.awardSeason
+            : p.season;
+        if (sy !== undefined && sy !== "") {
+          val = displayTeamName(val, sy);
+        }
+      }
+      if (c.formatter) val = c.formatter(val, p);
       if (val === undefined || val === null) val = '-';
       rowHtml += `<td>${val}</td>`;
     });
@@ -367,7 +402,7 @@ function filterPlayersByQuery(q) {
   const t = q.trim().toLowerCase();
   if (!playerNamesList.length) return [];
   if (!t) {
-    return playerNamesList.slice(0, MAX_PLAYER_SUGGESTIONS);
+    return [];
   }
   return playerNamesList
     .filter((p) => String(p).toLowerCase().includes(t))
@@ -429,6 +464,10 @@ function applyPlayerChoice(name) {
 
 function showSuggestionsForCurrentInput() {
   if (!playerInput || playerInput.disabled) return;
+  if (!playerInput.value.trim()) {
+    hidePlayerSuggestions();
+    return;
+  }
   const matches = filterPlayersByQuery(playerInput.value);
   renderPlayerSuggestions(matches, playerInput.value);
 }
@@ -620,7 +659,8 @@ function handleAuctionQuery() {
         const sr = awardsRow.buy_sr;
         const eco = awardsRow.buy_economy;
         const hasPerf = runs > 0 || wkts > 0;
-        displayResult(`${awardsRow.highest_buy_player} (${season}) — ${awardsRow.highest_buy_team}\n- Price: ₹${num(awardsRow.highest_buy_price_cr).toFixed(2)} Cr${hasPerf ? `\n- Runs: ${runs} | SR: ${sr ? formatStats(sr) : "N/A"}\n- Wickets: ${wkts} | Economy: ${eco ? formatStats(eco) : "N/A"}` : ""}\n\n⚠️ Detailed performance data for this player's season is not available in the dataset.\nThis may be because the player did not participate or data was not recorded.`);
+        const teamLine = displayTeamName(awardsRow.highest_buy_team, season);
+        displayResult(`${awardsRow.highest_buy_player} (${season}) — ${teamLine}\n- Price: ₹${num(awardsRow.highest_buy_price_cr).toFixed(2)} Cr${hasPerf ? `\n- Runs: ${runs} | SR: ${sr ? formatStats(sr) : "N/A"}\n- Wickets: ${wkts} | Economy: ${eco ? formatStats(eco) : "N/A"}` : ""}\n\n⚠️ Detailed performance data for this player's season is not available in the dataset.\nThis may be because the player did not participate or data was not recorded.`);
       } else {
         displayResult(`No auction data found for season ${season}.`);
       }
@@ -818,7 +858,9 @@ function handleBowlingQuery() {
       displayResult(`No bowling record found for ${player} in ${selectedSeason}.`);
       return;
     }
-    displayHtmlResult(renderPlayerCard(r, r.team));
+    displayHtmlResult(
+      renderPlayerCard(r, displayTeamName(r.team, r.season))
+    );
     return;
   }
 
