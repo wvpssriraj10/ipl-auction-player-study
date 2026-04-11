@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "installCommand": "npm install --prefix ipl-auction-study",
-  "buildCommand": "npm run build --prefix ipl-auction-study",
+  "installCommand": "cd ipl-auction-study && npm ci",
+  "buildCommand": "cd ipl-auction-study && npm run build",
   "outputDirectory": "ipl-auction-study/dist"
 }

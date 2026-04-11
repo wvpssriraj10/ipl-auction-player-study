@@ -19,8 +19,10 @@ This repository combines **Python data pipelines** for IPL auction analysis with
 │   └── requirements.txt     # Python dependencies
 ├── react/                   # Optional React + Vite scaffold (not used for main deploy)
 ├── all_ipl_matches_from_json.csv
-└── vercel.json              # Tells Vercel to build the demo from repo root
+└── vercel.json              # Vercel when project root = repo root (see Deploy section)
 ```
+
+(`ipl-auction-study/vercel.json` is used when Vercel **Root Directory** is set to `ipl-auction-study`.)
 
 ## Local development
 
@@ -52,9 +54,25 @@ Output: `ipl-auction-study/dist/`.
 
 ## Deploy on Vercel
 
-1. Import [this GitHub repository](https://github.com/wvpssriraj10/ipl-auction-player-study).
-2. Leave **Root Directory** empty (repository root). Do **not** set it to `ipl-auction-study` when using the included `vercel.json` — the root file already runs `npm` with `--prefix ipl-auction-study`.
-3. Deploy. Framework should detect as **Vite**; install/build/output are defined in [`vercel.json`](vercel.json).
+Import [this GitHub repository](https://github.com/wvpssriraj10/ipl-auction-player-study), branch `main`. Then use **one** of these setups (do not mix them).
+
+### Recommended: Root Directory = `ipl-auction-study`
+
+1. **Root Directory** → **Edit** → set to `ipl-auction-study` → **Continue**.
+2. **Framework Preset** → **Vite** (not “Other”).
+3. Open **Build and Output Settings** → click **Override** toggles **off** so Vercel uses [`ipl-auction-study/vercel.json`](ipl-auction-study/vercel.json) (`npm ci`, `npm run build`, output `dist`).
+4. Deploy.
+
+### Alternative: Root Directory = `.` (repository root)
+
+1. Leave **Root Directory** as `./`.
+2. **Framework Preset** → **Vite**.
+3. **Turn off** all manual overrides for Install / Build / Output (let repo root [`vercel.json`](vercel.json) apply: `cd ipl-auction-study && npm ci`, etc.).
+4. Deploy.
+
+If you previously typed custom commands in the UI, they **replace** `vercel.json` and can cause `ENOENT` (wrong paths or stale settings). **Clear those overrides** or match the file exactly.
+
+Remove unrelated **Environment Variables** (for example placeholder `EXAMPLE_NAME`) unless you use them in code.
 
 ## Documentation
 
