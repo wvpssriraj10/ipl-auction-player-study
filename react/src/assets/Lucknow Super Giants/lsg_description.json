@@ -1,0 +1,132 @@
+{
+  "id": "lsg",
+  "name": "Lucknow Super Giants",
+  "short_name": "LSG",
+
+  "basic_info": {
+    "city": "Lucknow, Uttar Pradesh, India",
+    "founded": 2022,
+    "status": "active"
+  },
+
+  "identity": {
+    "colors": ["light blue", "orange"],
+    "nicknames": ["Super Giants"],
+    "meaning": "Represents strength, growth, and a modern cricketing identity"
+  },
+
+  "ownership": {
+    "current_owner": "RPSG Group (Sanjiv Goenka)",
+    "ownership_history": [
+      "Franchise awarded in 2021 as part of IPL expansion",
+      "Owned by RPSG Group, which previously owned Rising Pune Supergiant"
+    ]
+  },
+
+  "management": {
+    "captain": "KL Rahul",
+    "coach": "Justin Langer",
+    "notable_captains": [
+      "KL Rahul"
+    ]
+  },
+
+  "home_grounds": [
+    {
+      "name": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",
+      "location": "Lucknow",
+      "capacity": 50000,
+      "primary": true
+    }
+  ],
+
+  "history": {
+    "full_text": "Lucknow Super Giants (LSG) is one of the newest franchises in the Indian Premier League (IPL), established in 2022 as part of the league's expansion. Owned by the RPSG Group, the franchise brought back IPL presence to the city of Lucknow and built a competitive squad from the outset. Under the captaincy of KL Rahul, LSG quickly established itself as a strong contender by qualifying for the playoffs in its first two seasons. The team has been known for its balanced squad, combining experienced international players with emerging Indian talent. LSG's approach has focused on stability, consistency, and structured gameplay rather than overly aggressive strategies. Despite not yet winning an IPL title, the franchise has shown strong potential and has been considered one of the most promising new teams in the competition. The team continues to evolve, aiming to convert consistent performances into championship success.",
+
+    "timeline": [
+      "2021: Franchise announced as part of IPL expansion",
+      "2022: Debut season, qualified for playoffs",
+      "2023: Qualified for playoffs again",
+      "2024–present: Continued competitive performances and squad development"
+    ],
+
+    "key_eras": [
+      {
+        "period": "2022–2023",
+        "description": "Strong start with back-to-back playoff qualifications"
+      },
+      {
+        "period": "2024–present",
+        "description": "Development phase aiming for first IPL title"
+      }
+    ]
+  },
+
+  "honours": {
+    "ipl_titles": 0,
+    "title_years": [],
+    "finals": 0,
+    "final_years": [],
+    "playoff_appearances": 2
+  },
+
+  "performance": {
+    "overall": {
+      "matches": 45,
+      "wins": 25,
+      "losses": 18,
+      "no_result": 2,
+      "win_pct": 55.5
+    },
+
+    "season_highlights": [
+      {
+        "season": 2022,
+        "achievement": "Playoffs",
+        "note": "Strong debut season"
+      },
+      {
+        "season": 2023,
+        "achievement": "Playoffs",
+        "note": "Consistent performance in second season"
+      }
+    ],
+
+    "strengths": [
+      "Balanced squad composition",
+      "Consistent performances across seasons",
+      "Strong top-order batting",
+      "Disciplined bowling attack"
+    ],
+
+    "weaknesses": [
+      "Lack of IPL title experience",
+      "Occasional middle-order inconsistency",
+      "Limited experience in high-pressure knockout matches"
+    ],
+
+    "records": [
+      "Back-to-back playoff appearances in first two seasons",
+      "One of the most consistent new franchises"
+    ]
+  },
+
+  "rivalries": [
+    {
+      "team": "Gujarat Titans",
+      "details": "Emerging rivalry between two new franchises"
+    },
+    {
+      "team": "Chennai Super Kings",
+      "details": "Competitive matches against experienced franchise"
+    }
+  ],
+
+  "notable_players": [
+    "KL Rahul",
+    "Quinton de Kock",
+    "Marcus Stoinis",
+    "Nicholas Pooran",
+    "Ravi Bishnoi"
+  ]
+}
