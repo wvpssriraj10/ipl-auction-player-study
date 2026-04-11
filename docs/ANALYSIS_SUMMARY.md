@@ -320,11 +320,12 @@ In your project directory, you now have:
 
 ```
 ipl player project/
-├─ DATA_VERIFICATION_REPORT.md
-├─ VERIFICATION_CHECKLIST.md
-├─ DETAILED_VERIFICATION_GUIDE.md
-├─ DATA_INTEGRITY_ASSESSMENT.md
-└─ ANALYSIS_SUMMARY.md (this file)
+└─ docs/
+   ├─ DATA_VERIFICATION_REPORT.md
+   ├─ VERIFICATION_CHECKLIST.md
+   ├─ DETAILED_VERIFICATION_GUIDE.md
+   ├─ DATA_INTEGRITY_ASSESSMENT.md
+   └─ ANALYSIS_SUMMARY.md (this file)
 ```
 
 **Use these documents to verify your data systematically.**

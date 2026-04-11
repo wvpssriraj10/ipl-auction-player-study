@@ -1178,7 +1178,7 @@ td.badge-cell {{ white-space: nowrap; }}
 with open(REPORT_HTML, "w", encoding="utf-8") as f:
     f.write(html)
 
-print(f"✅ Presentation-ready HTML report generated!")
-print(f"   → {REPORT_HTML}")
+print(f"OK: Presentation-ready HTML report generated!")
+print(f"   -> {REPORT_HTML}")
 print(f"   File size: {os.path.getsize(REPORT_HTML) / 1024:.0f} KB")
-print(f"\n📌 Open in browser to view, or Print → Save as PDF for a PDF version.")
+print(f"\n[INFO] Open in browser to view, or Print -> Save as PDF for a PDF version.")

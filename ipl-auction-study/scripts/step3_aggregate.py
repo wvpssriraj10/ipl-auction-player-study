@@ -38,26 +38,24 @@ df = pd.read_csv(RAW_CSV, low_memory=False)
 print(f"Loaded {len(df):,} deliveries")
 
 # ── Normalize season column ────────────────────────────────────
-# For "YYYY/YY" format (e.g. "2009/10", "2007/08"), use the SECOND year
-# because the IPL season is played in that year.
-# For plain "YYYY" or "YYYY Phase N", use the first 4 digits as-is.
+# Correctly maps IPL season strings to 4-digit years.
+# "2020/21" -> 2020 (The COVID-split season)
+# "2007/08" -> 2008
+# "2009/10" -> 2010
 def normalize_season(val):
     s = str(val).strip()
     if "/" in s:
-        # "2009/10" → first_year=2009, suffix="10" → century from first_year → 2010
         parts = s.split("/")
-        first_year = int(parts[0][:4])
+        first_year_str = parts[0][:4]
+        # Exception for 2020
+        if first_year_str == "2020":
+            return 2020
+        # General pattern for others: usage of second year as season year
         suffix = parts[1].strip()
         if len(suffix) == 2:
-            # Two-digit suffix: derive century from first year
-            century = (first_year // 100) * 100
-            return century + int(suffix)
-        elif len(suffix) == 4:
-            return int(suffix)
-        else:
-            return first_year  # fallback
-    else:
-        return int(s[:4])
+            return int(first_year_str[:2] + suffix)
+        return int(suffix[:4])
+    return int(s[:4])
 
 df[COL_MAP["season"]] = df[COL_MAP["season"]].apply(normalize_season)
 print(f"Normalized seasons: {sorted(df[COL_MAP['season']].unique())}")
@@ -217,11 +215,21 @@ else:
     bat_team = bat_runs[[C_SEASON, C_BATTER]].copy()
     bat_team["team"] = "Unknown"
 
+# Dismissals (Outs)
+# Note: we filter for where the player_dismissed column is not null.
+# This captures all outs including run outs.
+outs = df[df["player_dismissed"].notna()].groupby([C_SEASON, "player_dismissed"]).size().reset_index(name="outs")
+outs = outs.rename(columns={"player_dismissed": C_BATTER})
+
 # Merge all batting components
 batting = bat_runs.merge(balls_faced, on=[C_SEASON, C_BATTER], how="left")
 batting = batting.merge(matches,      on=[C_SEASON, C_BATTER], how="left")
 batting = batting.merge(innings_df,   on=[C_SEASON, C_BATTER], how="left")
 batting = batting.merge(bat_team,     on=[C_SEASON, C_BATTER], how="left")
+batting = batting.merge(outs,         on=[C_SEASON, C_BATTER], how="left")
+
+# Fill missing outs with 0 (meaning the player was never dismissed)
+batting["outs"] = batting["outs"].fillna(0).astype(int)
 
 # Strike rate
 batting["balls_faced"] = batting["balls_faced"].fillna(0).astype(int)
@@ -230,10 +238,13 @@ batting["strike_rate"] = np.where(
     (batting["total_runs"] / batting["balls_faced"] * 100).round(2),
     0.0
 )
+
+# Batting Average (Standard definition: Runs / Outs)
+# If 0 outs, average equals total_runs (simplified convention for "infinity")
 batting["batting_average"] = np.where(
-    batting["balls_faced"] > 0,
-    (batting["total_runs"] / batting["balls_faced"]).round(2),
-    0.0
+    batting["outs"] > 0,
+    (batting["total_runs"] / batting["outs"]).round(2),
+    batting["total_runs"].astype(float)
 )
 
 # Rename batter column to "player" for consistency
@@ -320,12 +331,24 @@ bowling = bowling.merge(bowl_team,     on=[C_SEASON, C_BOWLER], how="left")
 
 bowling["dot_balls"] = bowling["dot_balls"].fillna(0).astype(int)
 
-# Economy
-bowling["balls_bowled"] = bowling["balls_bowled"].fillna(0).astype(int)
 bowling["economy"] = np.where(
     bowling["balls_bowled"] > 0,
     (bowling["runs_conceded"] / bowling["balls_bowled"] * 6).round(2),
     0.0
+)
+
+# Bowling Average (Runs / Wickets)
+bowling["bowling_average"] = np.where(
+    bowling["wickets"] > 0,
+    (bowling["runs_conceded"] / bowling["wickets"]).round(2),
+    bowling["runs_conceded"].astype(float) # Fallback for no wickets
+)
+
+# Bowling Strike Rate (Balls / Wickets)
+bowling["bowling_strike_rate"] = np.where(
+    bowling["wickets"] > 0,
+    (bowling["balls_bowled"] / bowling["wickets"]).round(2),
+    bowling["balls_bowled"].astype(float) # Fallback for no wickets
 )
 
 bowling = bowling.rename(columns={C_BOWLER: "player", C_SEASON: "season"})

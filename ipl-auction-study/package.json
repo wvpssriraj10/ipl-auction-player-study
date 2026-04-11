@@ -1,0 +1,14 @@
+{
+  "name": "ipl-auction-study",
+  "version": "1.0.0",
+  "description": "An analysis of IPL auction values vs performance",
+  "main": "demo/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build demo",
+    "preview": "vite preview demo"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}

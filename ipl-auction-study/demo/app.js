@@ -283,6 +283,48 @@ function renderPlayerCard(playerData, team = 'Unknown') {
 }
 
 /**
+ * Generates HTML for an auction result card
+ */
+function renderAuctionResultCard(data) {
+  const name = data.highest_buy_player || data.player || "Unknown Player";
+  const team = data.highest_buy_team || data.team || "Unknown Team";
+  const season = data.awardSeason || data.season || "";
+  const verdict = getValueVerdict(num(data.value_score));
+  const vClass = verdict.toLowerCase().replace(' ', '-');
+  const img = getPlayerImage(name);
+  
+  const statsHtml = `
+    <div class="stat-item"><span class="stat-icon">🏃</span><span class="stat-value">${num(data.total_runs)}</span><span class="stat-label">Runs</span></div>
+    <div class="stat-item"><span class="stat-icon">⚡</span><span class="stat-value">${formatStats(data.strike_rate || data.sr)}</span><span class="stat-label">SR</span></div>
+    <div class="stat-item"><span class="stat-icon">🎯</span><span class="stat-value">${num(data.wickets)}</span><span class="stat-label">Wkts</span></div>
+    <div class="stat-item"><span class="stat-icon">💎</span><span class="stat-value">${formatStats(data.value_score)}</span><span class="stat-label">Value</span></div>
+  `;
+
+  const tClass = String(team).split(' ')[0];
+
+  return `
+    <div class="player-card ${tClass}">
+      <div class="player-card-header">
+        ${img}
+        <div class="player-info">
+          <div class="verdict-badge ${vClass}">${verdict}</div>
+          <h4>${name} (${season})</h4>
+          <div class="price-tag">${formatCurrency(data.price_cr || data.highest_buy_price_cr)}</div>
+          <p>${team}</p>
+        </div>
+      </div>
+      <div class="stats-grid">
+        ${statsHtml}
+      </div>
+      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+        <strong>Insight:</strong> The <strong>Value Score</strong> reveals a player's true ROI. It is calculated by dividing their on-field productivity score by their auction price (in Crores). <br>
+        <em style="opacity:0.8; font-size: 12px;">Productivity Score = Batting [Runs × (Strike Rate / 100)] + Bowling [Wickets × (8 / Economy)]</em>
+      </div>
+    </div>
+  `;
+}
+
+/**
  * Generates an HTML table from array of row objects
  */
 function renderPlayersTable(players, columns) {
@@ -343,6 +385,37 @@ function updatePlayers() {
 }
 
 /**
+ * Update team options based on selected season
+ */
+function updateTeams() {
+  try {
+    const selectedSeason = Number(seasonSelect.value);
+    const dataSeason = awardSeasonToDataSeason(selectedSeason);
+    
+    if (dataSeason === null) {
+      setOptions(teamSelect, ["No teams for this season"]);
+      return;
+    }
+
+    // Extract all unique teams from batting and bowling datasets for the selected season
+    const seasonTeams = new Set([
+      ...state.batting.filter(r => Number(r.season) === dataSeason).map(r => r.team),
+      ...state.bowling.filter(r => Number(r.season) === dataSeason).map(r => r.team)
+    ]);
+    
+    seasonTeams.delete("Unknown");
+    seasonTeams.delete(undefined);
+    seasonTeams.delete(null);
+
+    const sortedTeams = [...seasonTeams].sort();
+    setOptions(teamSelect, sortedTeams.length ? sortedTeams : ["No teams found"]);
+  } catch (err) {
+    console.error("Error updating teams:", err);
+    setOptions(teamSelect, ["N/A"]);
+  }
+}
+
+/**
  * Toggle visibility of conditional fields based on category and query type
  */
 function toggleFields() {
@@ -374,6 +447,10 @@ function updateUI() {
   // Update player list if category requires it
   if (category.startsWith("Player Records")) {
     updatePlayers();
+  }
+  
+  if (category === "Team Records") {
+    updateTeams();
   }
 }
 
@@ -423,14 +500,7 @@ function handleAuctionQuery() {
       }
       return;
     }
-    displayResult(`${row.highest_buy_player} (${row.awardSeason}) — ${row.highest_buy_team || ""}
-- Price: ${formatCurrency(row.price_cr)}
-- Runs: ${num(row.total_runs)} | SR: ${formatStats(row.strike_rate)}
-- Wickets: ${num(row.wickets)} | Economy: ${row.economy ? formatStats(row.economy) : "N/A"}
-- Value Score: ${formatStats(row.value_score)}
-
-Verdict: ${getValueVerdict(num(row.value_score))}
-Insight: Combined batting + bowling contribution against auction price.`);
+    displayHtmlResult(renderAuctionResultCard(row));
     return;
   }
 
@@ -441,45 +511,36 @@ Insight: Combined batting + bowling contribution against auction price.`);
     (a, b) => num(a.value_score) - num(b.value_score)
   );
 
+  const auctionTableColumns = [
+    {label: 'Season', key: 'awardSeason'},
+    {label: 'Player', key: 'highest_buy_player'},
+    {label: 'Team', key: 'highest_buy_team'},
+    {label: 'Price', key: 'price_cr', formatter: v => formatCurrency(v)},
+    {label: 'Runs', key: 'total_runs'},
+    {label: 'Wkts', key: 'wickets'},
+    {label: 'Score', key: 'value_score', formatter: v => formatStats(v, 1)},
+    {label: 'Verdict', key: 'value_score', formatter: v => getValueVerdict(num(v))}
+  ];
+
   if (q === "Best value highest-buy player") {
-    const r = sortedDesc[0];
-    displayResult(
-      `Best value highest-buy: ${r.highest_buy_player || r.player} (${r.awardSeason}) — ${r.highest_buy_team || ""}\nValue Score: ${formatStats(r.value_score)} · Price: ${formatCurrency(r.price_cr)}\nVerdict: ${getValueVerdict(num(r.value_score))}`
-    );
+    displayHtmlResult(`<h4>💎 All-Time Best Value Buy</h4><br>${renderAuctionResultCard(sortedDesc[0])}`);
     return;
   }
 
   if (q === "Worst value highest-buy player") {
-    const r = sortedAsc[0];
-    displayResult(
-      `Worst value highest-buy: ${r.highest_buy_player || r.player} (${r.awardSeason}) — ${r.highest_buy_team || ""}\nValue Score: ${formatStats(r.value_score)} · Price: ${formatCurrency(r.price_cr)}\nVerdict: ${getValueVerdict(num(r.value_score))}`
-    );
+    displayHtmlResult(`<h4>⚠️ All-Time Worst Value Buy</h4><br>${renderAuctionResultCard(sortedAsc[0])}`);
     return;
   }
 
   if (q === "Top 5 value-for-money highest-buys") {
-    displayResult(
-      "Top 5 Best Value Auction Buys:\n" +
-      sortedDesc
-        .slice(0, 5)
-        .map((r, i) => {
-          return `${i + 1}. ${r.highest_buy_player || r.player} (${r.awardSeason}, ${r.highest_buy_team || ""}) — Score: ${formatStats(r.value_score)} · ₹${num(r.price_cr).toFixed(1)} Cr`;
-        })
-        .join("\n")
-    );
+    const table = renderPlayersTable(sortedDesc.slice(0, 5), auctionTableColumns);
+    displayHtmlResult(`<h4>📈 Top 5 Best Value Buys</h4><br>${table}`);
     return;
   }
 
   if (q === "Bottom 5 overpriced highest-buys") {
-    displayResult(
-      "Bottom 5 Overpriced Auction Buys:\n" +
-      sortedAsc
-        .slice(0, 5)
-        .map((r, i) => {
-          return `${i + 1}. ${r.highest_buy_player || r.player} (${r.awardSeason}, ${r.highest_buy_team || ""}) — Score: ${formatStats(r.value_score)} · ₹${num(r.price_cr).toFixed(1)} Cr`;
-        })
-        .join("\n")
-    );
+    const table = renderPlayersTable(sortedAsc.slice(0, 5), auctionTableColumns);
+    displayHtmlResult(`<h4>📉 Top 5 Most Overpriced Buys</h4><br>${table}`);
     return;
   }
 
@@ -533,7 +594,7 @@ function handleBattingQuery() {
       {label: 'Player', key: 'player'},
       {label: 'Team', key: 'team'},
       {label: 'Runs', key: 'total_runs'},
-      {label: 'Avg (R/B)', key: 'batting_average', formatter: v => formatStats(v, 2)},
+      {label: 'Average', key: 'batting_average', formatter: v => formatStats(v, 2)},
       {label: 'SR', key: 'strike_rate', formatter: v => formatStats(v, 1)}
     ]);
     displayHtmlResult(`<h4>🏏 Top 5 Batsmen (${selectedSeason})</h4><br>${table}`);
@@ -611,6 +672,8 @@ function handleBowlingQuery() {
       {label: 'Team', key: 'team'},
       {label: 'Wickets', key: 'wickets'},
       {label: 'Econ', key: 'economy', formatter: v => formatStats(v, 2)},
+      {label: 'Avg', key: 'bowling_average', formatter: v => formatStats(v, 2)},
+      {label: 'SR', key: 'bowling_strike_rate', formatter: v => formatStats(v, 1)},
       {label: 'Dots', key: 'dot_balls'}
     ]);
     displayHtmlResult(`<h4>🎯 Wicket Leaders (${selectedSeason})</h4><br>${table}`);
@@ -905,10 +968,10 @@ async function init() {
 
     // Load all required datasets
     const [batting, bowling, values, awards] = await Promise.all([
-      loadCSV("../data/processed/batting_agg.csv"),
-      loadCSV("../data/processed/bowling_agg.csv"),
-      loadCSV("../data/processed/player_value_scores.csv"),
-      loadCSV("../data/processed/ipl_awards_prices.csv"),
+      loadCSV("/data/processed/batting_agg.csv"),
+      loadCSV("/data/processed/bowling_agg.csv"),
+      loadCSV("/data/processed/player_value_scores.csv"),
+      loadCSV("/data/processed/ipl_awards_prices.csv"),
     ]);
 
     // Populate state
@@ -937,6 +1000,8 @@ async function init() {
     setOptions(seasonSelect, state.seasons);
     setOptions(teamSelect, state.teams);
     updateUI();
+    updatePlayers();
+    updateTeams();
     renderTopNumbers();
     setupRevealAnimations();
     applyScrollEffects();
@@ -969,6 +1034,7 @@ queryTypeSelect.addEventListener("change", () => {
 // Season change listener
 seasonSelect.addEventListener("change", () => {
   updatePlayers();
+  updateTeams();
 });
 
 // Form submission handler

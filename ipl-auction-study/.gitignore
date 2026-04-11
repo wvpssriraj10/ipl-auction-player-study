@@ -1,3 +1,8 @@
+# Node / Vite (do not commit dependencies or build output)
+node_modules/
+dist/
+demo/dist/
+
 # Ignore data files to prevent uploading massive CSVs to GitHub
 data/raw/
 data/processed/
