@@ -48,6 +48,24 @@ function renderGrid(gridEl, teams, onSelect) {
     btn.setAttribute('aria-selected', team.id === selectedId ? 'true' : 'false');
     if (team.id === selectedId) btn.classList.add('ipl-teams-card--active');
 
+    const bgLayer = document.createElement('span');
+    bgLayer.className = 'ipl-teams-card-bg';
+    bgLayer.setAttribute('aria-hidden', 'true');
+    if (team.bgUrl) {
+      btn.classList.add('ipl-teams-card--has-photo-bg');
+      bgLayer.style.backgroundImage = `url(${JSON.stringify(team.bgUrl)})`;
+    } else {
+      bgLayer.style.background = gradientFromColors(team.identity?.colors);
+      btn.classList.add('ipl-teams-card--has-gradient-bg');
+    }
+
+    const scrim = document.createElement('span');
+    scrim.className = 'ipl-teams-card-scrim';
+    scrim.setAttribute('aria-hidden', 'true');
+
+    const inner = document.createElement('span');
+    inner.className = 'ipl-teams-card-inner';
+
     const wrap = document.createElement('span');
     wrap.className = 'ipl-teams-card-logo-wrap';
     if (team.logoUrl) {
@@ -56,6 +74,7 @@ function renderGrid(gridEl, teams, onSelect) {
       img.alt = '';
       img.className = 'ipl-teams-card-logo';
       img.loading = 'lazy';
+      img.decoding = 'async';
       wrap.appendChild(img);
     } else {
       const fb = document.createElement('span');
@@ -74,7 +93,8 @@ function renderGrid(gridEl, teams, onSelect) {
     abbr.textContent = team.short_name || '';
     meta.append(name, abbr);
 
-    btn.append(wrap, meta);
+    inner.append(wrap, meta);
+    btn.append(bgLayer, scrim, inner);
     btn.addEventListener('click', () => {
       selectedId = team.id;
       gridEl.querySelectorAll('.ipl-teams-card').forEach((b) => {

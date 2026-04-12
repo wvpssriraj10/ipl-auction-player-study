@@ -50,32 +50,46 @@ export default function IplTeamsSection() {
         >
           {teams.map((team) => {
             const isActive = team.id === selected?.id
+            const photoBg = Boolean(team.bgUrl)
             return (
               <button
                 key={team.id}
                 type="button"
                 role="tab"
                 aria-selected={isActive}
-                className={`ipl-teams__card${isActive ? ' ipl-teams__card--active' : ''}`}
+                className={`ipl-teams__card${isActive ? ' ipl-teams__card--active' : ''}${photoBg ? ' ipl-teams__card--has-photo-bg' : ' ipl-teams__card--has-gradient-bg'}`}
                 onClick={() => setSelectedId(team.id)}
               >
-                <span className="ipl-teams__card-logo-wrap">
-                  {team.logoUrl ? (
-                    <img
-                      src={team.logoUrl}
-                      alt=""
-                      className="ipl-teams__card-logo"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <span className="ipl-teams__card-fallback" aria-hidden>
-                      {team.short_name}
-                    </span>
-                  )}
-                </span>
-                <span className="ipl-teams__card-meta">
-                  <span className="ipl-teams__card-name">{team.name}</span>
-                  <span className="ipl-teams__card-abbr">{team.short_name}</span>
+                <span
+                  className="ipl-teams__card-bg"
+                  aria-hidden
+                  style={
+                    photoBg
+                      ? { backgroundImage: `url(${team.bgUrl})` }
+                      : { background: gradientFromColors(team.identity?.colors) }
+                  }
+                />
+                <span className="ipl-teams__card-scrim" aria-hidden />
+                <span className="ipl-teams__card-inner">
+                  <span className="ipl-teams__card-logo-wrap">
+                    {team.logoUrl ? (
+                      <img
+                        src={team.logoUrl}
+                        alt=""
+                        className="ipl-teams__card-logo"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <span className="ipl-teams__card-fallback" aria-hidden>
+                        {team.short_name}
+                      </span>
+                    )}
+                  </span>
+                  <span className="ipl-teams__card-meta">
+                    <span className="ipl-teams__card-name">{team.name}</span>
+                    <span className="ipl-teams__card-abbr">{team.short_name}</span>
+                  </span>
                 </span>
               </button>
             )
