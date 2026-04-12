@@ -197,14 +197,26 @@ function renderDetail(detailEl, team) {
   `;
 }
 
-export async function initIplTeamsSection() {
+/**
+ * @param {object} [options]
+ * @param {string} [options.bundleUrl] - defaults to site-root data path (works with Vite base)
+ */
+export async function initIplTeamsSection(options = {}) {
   const grid = document.getElementById('iplTeamsGrid');
   const detail = document.getElementById('iplTeamsDetail');
   const errEl = document.getElementById('iplTeamsError');
   if (!grid || !detail) return;
 
+  const base = typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
+    ? import.meta.env.BASE_URL
+    : '/';
+  const prefix = base === '/' ? '/' : base.replace(/\/?$/, '/');
+  const bundleUrl =
+    options.bundleUrl ??
+    (prefix === '/' ? '/data/ipl-teams-bundle.json' : `${prefix}data/ipl-teams-bundle.json`);
+
   try {
-    const res = await fetch('/data/ipl-teams-bundle.json');
+    const res = await fetch(bundleUrl);
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const data = await res.json();
     const teams = data.teams || [];
