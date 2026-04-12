@@ -1152,6 +1152,7 @@ input.player-search-input {
   font: inherit;
   color: inherit;
   text-align: center;
+  isolation: isolate;
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast),
@@ -1162,6 +1163,7 @@ input.player-search-input {
 .ipl-teams-card-bg {
   position: absolute;
   inset: -6px;
+  z-index: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1181,6 +1183,7 @@ input.player-search-input {
 .ipl-teams-card-scrim {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(
     165deg,
     rgba(0, 0, 0, 0.45) 0%,
@@ -1200,7 +1203,7 @@ input.player-search-input {
 
 .ipl-teams-card-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1209,6 +1212,25 @@ input.player-search-input {
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+/* Sidebar (desktop): logo left, name + abbr right — avoids clipped / invisible text in narrow column */
+@media (min-width: 960px) {
+  .ipl-teams-grid .ipl-teams-card-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+  }
+
+  .ipl-teams-grid .ipl-teams-card-meta {
+    text-align: left;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .ipl-teams-card:hover {
@@ -1285,23 +1307,27 @@ input.player-search-input {
 }
 
 .ipl-teams-card-name {
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: rgba(248, 250, 252, 0.95);
-  line-height: 1.25;
+  color: #f8fafc;
+  line-height: 1.3;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .ipl-teams-card-abbr {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #c4b5fd;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  color: #e9d5ff;
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.95),
+    0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .ipl-teams-detail {
