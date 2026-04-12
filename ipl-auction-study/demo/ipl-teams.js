@@ -35,18 +35,38 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
+/**
+ * Globally normalizes team names to fix common typos in the source data (e.g., Guiarat -> Gujarat).
+ * Can be used on single names or blocks of text.
+ */
+function normalizeTeamText(text) {
+  if (typeof text !== 'string' || !text) return text || '';
+  return text
+    .replace(/Guiarat/gi, 'Gujarat')
+    .replace(/Raiasthan/gi, 'Rajasthan')
+    .replace(/Puniab/gi, 'Punjab');
+}
+
 let selectedId = null;
 
-function renderGrid(gridEl, teams, onSelect) {
+function renderGrid(gridEl, teams, onSelect, gridOpts = {}) {
+  const picker = Boolean(gridOpts.picker);
   gridEl.innerHTML = '';
   teams.forEach((team) => {
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.setAttribute('role', 'tab');
-    btn.className = 'ipl-teams-card';
+    btn.setAttribute('role', picker ? 'option' : 'tab');
+    btn.className = picker ? 'ipl-teams-card ipl-teams-card--picker' : 'ipl-teams-card';
     btn.dataset.teamId = team.id;
-    btn.setAttribute('aria-selected', team.id === selectedId ? 'true' : 'false');
-    if (team.id === selectedId) btn.classList.add('ipl-teams-card--active');
+    const label = normalizeTeamText(team.name) || team.short_name || 'Team';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute(
+      'aria-selected',
+      selectedId != null && team.id === selectedId ? 'true' : 'false',
+    );
+    if (selectedId != null && team.id === selectedId) {
+      btn.classList.add('ipl-teams-card--active');
+    }
 
     const bgLayer = document.createElement('span');
     bgLayer.className = 'ipl-teams-card-bg';
@@ -87,14 +107,18 @@ function renderGrid(gridEl, teams, onSelect) {
     meta.className = 'ipl-teams-card-meta';
     const name = document.createElement('span');
     name.className = 'ipl-teams-card-name';
-    name.textContent = team.name || '';
+    name.textContent = normalizeTeamText(team.name) || '';
     const abbr = document.createElement('span');
     abbr.className = 'ipl-teams-card-abbr';
     abbr.textContent = team.short_name || '';
     meta.append(name, abbr);
 
     inner.append(wrap, meta);
-    btn.append(bgLayer, scrim, inner);
+    const visual = document.createElement('span');
+    visual.className = 'ipl-teams-card-visual';
+    visual.setAttribute('aria-hidden', 'true');
+    visual.append(bgLayer, scrim);
+    btn.append(visual, inner);
     btn.addEventListener('click', () => {
       selectedId = team.id;
       gridEl.querySelectorAll('.ipl-teams-card').forEach((b) => {
@@ -102,6 +126,9 @@ function renderGrid(gridEl, teams, onSelect) {
         b.classList.toggle('ipl-teams-card--active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       });
+      // Switch to detail view mode
+      document.body.classList.add('ipl-teams-showing-detail');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       onSelect(team.id);
     });
     gridEl.appendChild(btn);
@@ -137,29 +164,68 @@ function renderDetail(detailEl, team) {
   const honours = team.honours || {};
   const perf = team.performance?.overall;
 
-  detailEl.innerHTML = `
-    <div class="ipl-teams-detail-bg${photoClass}" style="${bgStyle}" aria-hidden="true"></div>
-    <div class="ipl-teams-detail-scrim" aria-hidden="true"></div>
-    <div class="ipl-teams-detail-inner">
-      <header class="ipl-teams-detail-head">
-        ${
-          team.logoUrl
-            ? `<img src=${JSON.stringify(team.logoUrl)} alt="" class="ipl-teams-detail-logo" width="96" height="96" />`
-            : ''
-        }
-        <div class="ipl-teams-detail-titles">
-          <h3 class="ipl-teams-detail-title">${escapeHtml(team.name)}</h3>
-          <p class="ipl-teams-detail-sub">
-            <strong>${escapeHtml(team.short_name)}</strong>
-            <span class="ipl-teams-dot" aria-hidden="true">·</span>
-            ${escapeHtml(team.basic_info?.city ?? '')}
-          </p>
-          <div class="ipl-teams-badges">
-            <span class="${badgeClass}">${badgeLabel}</span>
-            ${years}
-          </div>
+  const titleYearPills =
+    honours.title_years?.length > 0
+      ? `<ul class="ipl-teams-title-year-pills" aria-label="IPL title years">${honours.title_years
+          .map(
+            (y) =>
+              `<li class="ipl-teams-title-year-pill">${escapeHtml(String(y))}</li>`,
+          )
+          .join('')}</ul>`
+      : '';
+
+  const statBar =
+    perf
+      ? `<div class="ipl-teams-stat-bar" role="group" aria-label="Overall record stats">
+        <div class="ipl-teams-stat-block">
+          <span class="ipl-teams-stat-value">${escapeHtml(String(perf.matches ?? '—'))}</span>
+          <span class="ipl-teams-stat-label">Matches</span>
         </div>
-      </header>
+        <div class="ipl-teams-stat-block">
+          <span class="ipl-teams-stat-value">${escapeHtml(String(perf.wins ?? '—'))}</span>
+          <span class="ipl-teams-stat-label">Wins</span>
+        </div>
+        <div class="ipl-teams-stat-block">
+          <span class="ipl-teams-stat-value">${escapeHtml(String(perf.win_pct ?? '—'))}${perf.win_pct != null ? '%' : ''}</span>
+          <span class="ipl-teams-stat-label">Win %</span>
+        </div>
+      </div>`
+      : '';
+
+  const playerPills =
+    team.notable_players?.length > 0
+      ? `<ul class="ipl-teams-player-pills" aria-label="Notable players">${team.notable_players
+          .map(
+            (n) =>
+              `<li class="ipl-teams-player-pill">${escapeHtml(n)}</li>`,
+          )
+          .join('')}</ul>`
+      : '';
+
+  const teamName = normalizeTeamText(team.name) || team.name || '';
+  const finalHtml = normalizeTeamText(`
+    <div class="ipl-teams-detail-hero">
+      <div class="ipl-teams-detail-bg${photoClass}" style="${bgStyle}" aria-hidden="true"></div>
+      <div class="ipl-teams-detail-scrim" aria-hidden="true"></div>
+      
+      <div class="ipl-teams-detail-header-row reveal">
+        <div class="ipl-teams-detail-logo-wrap">
+          <img src="${team.logoUrl || ''}" alt="" class="ipl-teams-detail-logo">
+        </div>
+        <div class="ipl-teams-detail-main">
+          <div class="ipl-teams-detail-top-meta">
+            <span class="ipl-teams-detail-abbr">${escapeHtml(team.short_name)}</span>
+            ${years}
+            <span class="ipl-teams-badge ipl-teams-badge--${team.basic_info?.status === 'active' ? 'success' : 'danger'}">
+              ${escapeHtml(team.basic_info?.status || 'Active')}
+            </span>
+          </div>
+          <h2 class="ipl-teams-detail-title">${escapeHtml(teamName)}</h2>
+          <p class="ipl-teams-detail-location">${escapeHtml(team.basic_info?.city)}</p>
+        </div>
+      </div>
+    </div>
+    <div class="ipl-teams-detail-inner">
       ${
         team.identity?.meaning
           ? `<p class="ipl-teams-tagline">${escapeHtml(team.identity.meaning)}</p>`
@@ -174,14 +240,11 @@ function renderDetail(detailEl, team) {
       </dl>
       <div class="ipl-teams-block">
         <h4>Honours</h4>
-        <p>
-          <strong>${escapeHtml(String(honours.ipl_titles ?? 0))}</strong> titles
-          ${
-            honours.title_years?.length
-              ? ` (${honours.title_years.map((y) => escapeHtml(String(y))).join(', ')})`
-              : ''
-          }
-          <span class="ipl-teams-dot"> · </span>
+        <p class="ipl-teams-honours-line">
+          <strong>${escapeHtml(String(honours.ipl_titles ?? 0))}</strong> IPL titles
+        </p>
+        ${titleYearPills}
+        <p class="ipl-teams-honours-meta">
           <strong>${escapeHtml(String(honours.finals ?? 0))}</strong> finals
           <span class="ipl-teams-dot"> · </span>
           <strong>${escapeHtml(String(honours.playoff_appearances ?? 0))}</strong> playoff runs
@@ -191,13 +254,7 @@ function renderDetail(detailEl, team) {
         perf
           ? `<div class="ipl-teams-block">
         <h4>Overall record</h4>
-        <p>
-          <strong>${escapeHtml(String(perf.matches))}</strong> matches
-          <span class="ipl-teams-dot"> · </span>
-          <strong>${escapeHtml(String(perf.wins))}</strong> wins
-          <span class="ipl-teams-dot"> · </span>
-          <strong>${escapeHtml(String(perf.win_pct))}%</strong> win rate
-        </p>
+        ${statBar}
       </div>`
           : ''
       }
@@ -207,14 +264,16 @@ function renderDetail(detailEl, team) {
       </div>
       ${
         team.notable_players?.length
-          ? `<div class="ipl-teams-block">
+          ? `<div class="ipl-teams-block ipl-teams-block--players">
         <h4>Notable players</h4>
-        <p class="ipl-teams-players">${escapeHtml(team.notable_players.join(', '))}</p>
+        ${playerPills}
       </div>`
           : ''
       }
     </div>
-  `;
+  `);
+
+  detailEl.innerHTML = finalHtml;
 }
 
 /**
@@ -244,23 +303,59 @@ async function fetchBundle(primaryUrl) {
 /**
  * @param {object} [options]
  * @param {string} [options.bundleUrl] - override bundle location
+ * @param {'split'|'fullscreen'} [options.layout] - fullscreen: icon grid then full-screen detail + Go back
  */
 export async function initIplTeamsSection(options = {}) {
   const grid = document.getElementById('iplTeamsGrid');
   const detail = document.getElementById('iplTeamsDetail');
   const errEl = document.getElementById('iplTeamsError');
+  const listStage = document.getElementById('iplTeamsListStage');
+  const detailStage = document.getElementById('iplTeamsDetailStage');
+  const backBtn = document.getElementById('iplTeamsBackBtn');
   if (!grid || !detail) return;
 
   const bundleUrl = options.bundleUrl ?? defaultBundleUrl();
+  const useFullscreen =
+    options.layout === 'fullscreen' && listStage && detailStage && backBtn;
 
   grid.innerHTML = '';
   grid.setAttribute('aria-busy', 'true');
+  if (useFullscreen) {
+    grid.setAttribute('aria-multiselectable', 'false');
+  }
   const loadingEl = document.createElement('p');
   loadingEl.className = 'ipl-teams-loading';
   loadingEl.textContent = 'Loading teams…';
   grid.appendChild(loadingEl);
-  detail.innerHTML =
-    '<p class="ipl-teams-detail-placeholder">Select a team to load details.</p>';
+  detail.innerHTML = useFullscreen
+    ? ''
+    : '<p class="ipl-teams-detail-placeholder">Select a team to load details.</p>';
+
+  function closeDetailView() {
+    if (!useFullscreen) return;
+    detailStage.hidden = true;
+    listStage.hidden = false;
+    document.body.classList.remove('ipl-teams-detail-open');
+    const sel = selectedId
+      ? [...grid.querySelectorAll('[data-team-id]')].find(
+          (b) => b.dataset.teamId === selectedId,
+        )
+      : null;
+    if (sel instanceof HTMLElement) sel.focus();
+  }
+
+  function openDetailView(team) {
+    if (useFullscreen) {
+      listStage.hidden = true;
+      detailStage.hidden = false;
+      document.body.classList.add('ipl-teams-detail-open');
+    }
+    renderDetail(detail, team);
+    if (useFullscreen) {
+      requestAnimationFrame(() => backBtn.focus());
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
 
   try {
     const res = await fetchBundle(bundleUrl);
@@ -269,12 +364,32 @@ export async function initIplTeamsSection(options = {}) {
     const teams = data.teams || [];
     if (!teams.length) throw new Error('No teams in bundle');
 
-    selectedId = teams[0].id;
-    renderGrid(grid, teams, (id) => {
-      const t = teams.find((x) => x.id === id);
-      if (t) renderDetail(detail, t);
-    });
-    renderDetail(detail, teams[0]);
+    selectedId = useFullscreen ? null : teams[0].id;
+
+    renderGrid(
+      grid,
+      teams,
+      (id) => {
+        const t = teams.find((x) => x.id === id);
+        if (t) openDetailView(t);
+      },
+      { picker: useFullscreen },
+    );
+
+    if (!useFullscreen) {
+      renderDetail(detail, teams[0]);
+    }
+
+    if (useFullscreen) {
+      backBtn.addEventListener('click', closeDetailView);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !detailStage.hidden) {
+          e.preventDefault();
+          closeDetailView();
+        }
+      });
+    }
+
     if (errEl) {
       errEl.classList.add('hidden');
       errEl.textContent = '';
@@ -283,6 +398,10 @@ export async function initIplTeamsSection(options = {}) {
     console.error('[IPL Teams]', e);
     grid.innerHTML = '';
     detail.innerHTML = '';
+    if (useFullscreen) {
+      detailStage.hidden = true;
+      document.body.classList.remove('ipl-teams-detail-open');
+    }
     if (errEl) {
       errEl.textContent = `Could not load IPL team profiles (${e.message}).`;
       errEl.classList.remove('hidden');
