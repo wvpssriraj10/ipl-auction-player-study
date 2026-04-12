@@ -202,26 +202,27 @@ body.ipl-teams-react-detail-open {
 
 .ipl-teams__card-logo-wrap {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  min-height: 56px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   padding: 6px;
 }
 
 .ipl-teams__card--picker .ipl-teams__card-logo-wrap {
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
-  min-height: 58px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  aspect-ratio: 1 / 1;
 }
 
 .ipl-teams__card-logo {
@@ -374,12 +375,13 @@ body.ipl-teams-react-detail-open {
 }
 
 .ipl-teams__detail-title {
-  margin: 0 0 0.25rem;
-  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
-  font-weight: 700;
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
   letter-spacing: -0.02em;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .ipl-teams__detail-sub {

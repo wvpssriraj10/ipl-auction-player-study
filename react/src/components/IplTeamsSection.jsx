@@ -195,10 +195,6 @@ export default function IplTeamsSection() {
     <section className="ipl-teams" aria-labelledby="ipl-teams-heading">
       <div className="ipl-teams__intro">
         <h2 id="ipl-teams-heading">IPL teams</h2>
-        <p className="ipl-teams__lede">
-          Tap a logo to open the full franchise profile. Use{' '}
-          <strong>Go back</strong> to return here.
-        </p>
       </div>
 
       <div className="ipl-teams__list-stage" aria-hidden={detailOpen}>
