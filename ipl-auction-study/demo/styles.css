@@ -1416,11 +1416,16 @@ body.ipl-teams-detail-open {
 }
 
 .ipl-teams-card--picker .ipl-teams-card-logo-wrap {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  min-height: 56px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  aspect-ratio: 1 / 1;
   padding: 6px !important;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ipl-teams-card--picker .ipl-teams-card-abbr {
@@ -1707,10 +1712,13 @@ body.ipl-teams-detail-open {
 
 .ipl-teams-detail-header-row {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ipl-teams-detail-logo-wrap {
@@ -1806,24 +1814,26 @@ body.ipl-teams-detail-open {
 
 .ipl-teams-detail-logo {
   flex-shrink: 0;
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
-  border-radius: 16px;
-  background: #ffffff !important; /* Enforced white background */
-  border: 3px solid rgba(139, 92, 246, 0.6);
-  box-shadow: 0 12px 48px rgba(139, 92, 246, 0.5);
+  border-radius: 20px;
+  background: #ffffff !important;
+  border: 4px solid rgba(139, 92, 246, 0.7);
+  box-shadow: 0 15px 50px rgba(139, 92, 246, 0.6);
   padding: 12px;
 }
 
 .ipl-teams-detail-title {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.35rem;
   font-family: "Archivo", sans-serif;
-  font-size: clamp(1.25rem, 3vw, 1.65rem);
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.05;
 }
 
 .ipl-teams-detail-sub {

@@ -205,10 +205,7 @@ function renderDetail(detailEl, team) {
   const teamName = normalizeTeamText(team.name) || team.name || '';
   const finalHtml = normalizeTeamText(`
     <div class="ipl-teams-detail-hero">
-      <div class="ipl-teams-detail-bg${photoClass}" style="${bgStyle}" aria-hidden="true"></div>
-      <div class="ipl-teams-detail-scrim" aria-hidden="true"></div>
-      
-      <div class="ipl-teams-detail-header-row reveal">
+      <div class="ipl-teams-detail-header-row">
         <div class="ipl-teams-detail-logo-wrap">
           <img src="${team.logoUrl || ''}" alt="" class="ipl-teams-detail-logo">
         </div>
