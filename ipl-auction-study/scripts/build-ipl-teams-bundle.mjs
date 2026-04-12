@@ -32,6 +32,7 @@ const FOLDER_TO_SLUG = {
   'Rising Pune Supergiant': 'rps',
   'Pune Warriors India': 'pwi',
   'Kochi Tuskers Kerala': 'ktk',
+  'Deccan Chargers': 'dcg',
 };
 
 function bgScore(name) {

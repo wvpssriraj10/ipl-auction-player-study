@@ -1491,6 +1491,163 @@
       "bgUrl": "/ipl-teams/srh/srh%20bg.jpg"
     },
     {
+      "id": "dcg",
+      "name": "Deccan Chargers",
+      "short_name": "DCG",
+      "basic_info": {
+        "city": "Hyderabad, Telangana, India",
+        "founded": 2008,
+        "status": "defunct",
+        "active_years": [
+          2008,
+          2009,
+          2010,
+          2011,
+          2012
+        ]
+      },
+      "identity": {
+        "colors": [
+          "blue",
+          "silver"
+        ],
+        "previous_colors": [
+          "beige",
+          "black"
+        ],
+        "nicknames": [
+          "Chargers"
+        ],
+        "meaning": "Represents aggression and power, symbolized by a charging bull"
+      },
+      "ownership": {
+        "current_owner": "Deccan Chronicle Holdings Ltd.",
+        "ownership_history": [
+          "Franchise bought for US$107 million in 2008 by Deccan Chronicle Holdings Ltd.",
+          "Put up for sale in 2012 due to financial issues",
+          "Rejected sole bid from PVP Ventures",
+          "Franchise terminated by BCCI on 14 September 2012",
+          "Sun TV Network later acquired Hyderabad franchise and formed Sunrisers Hyderabad",
+          "In 2020, tribunal ruled termination illegal and awarded ₹4814.67 crore compensation"
+        ]
+      },
+      "management": {
+        "captain": "Adam Gilchrist",
+        "coach": "Darren Lehmann",
+        "notable_captains": [
+          "V.V.S. Laxman",
+          "Adam Gilchrist",
+          "Kumar Sangakkara"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Rajiv Gandhi International Cricket Stadium",
+          "location": "Hyderabad",
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Deccan Chargers was one of the original franchises of the Indian Premier League (IPL), established in 2008 and based in Hyderabad. Owned by Deccan Chronicle Holdings Ltd., the team had a dramatic journey marked by extreme highs and lows. Despite finishing last in the inaugural 2008 season, the team made a historic comeback in 2009 under the captaincy of Adam Gilchrist to win the IPL title. This turnaround is considered one of the greatest in IPL history. Gilchrist led the team for the first three seasons, with Rohit Sharma playing a key supporting role. From 2011, Kumar Sangakkara took over the captaincy. The team underwent several squad and management changes over the years, including a complete overhaul in 2009 after their poor debut season. Despite moments of brilliance, inconsistency and financial instability affected the franchise in later years. In 2012, due to financial issues, the franchise was put up for sale but failed to secure a buyer. Subsequently, the BCCI terminated the team. The Hyderabad franchise was later replaced by Sunrisers Hyderabad. In 2020, an arbitration tribunal ruled that the termination was illegal and awarded compensation to the owners.",
+        "timeline": [
+          "2008: Franchise established and finished last in inaugural season",
+          "2009: Won IPL title under Adam Gilchrist",
+          "2010: Reached semi-finals",
+          "2011: Squad overhaul and decline in performance",
+          "2012: Poor season and franchise termination",
+          "2020: Court ruled termination illegal"
+        ],
+        "key_eras": [
+          {
+            "period": "2008",
+            "description": "Poor debut season finishing last"
+          },
+          {
+            "period": "2009–2010",
+            "description": "Golden phase with IPL title and playoff appearance"
+          },
+          {
+            "period": "2011–2012",
+            "description": "Decline phase with inconsistency and financial issues"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 1,
+        "title_years": [
+          2009
+        ],
+        "finals": 1,
+        "final_years": [
+          2009
+        ],
+        "playoff_appearances": 2
+      },
+      "performance": {
+        "overall": {
+          "matches": 75,
+          "wins": 29,
+          "losses": 46,
+          "no_result": 0,
+          "win_pct": 38.67
+        },
+        "season_highlights": [
+          {
+            "season": 2008,
+            "achievement": "Last place",
+            "note": "Won only 2 matches"
+          },
+          {
+            "season": 2009,
+            "achievement": "Champions",
+            "note": "One of the greatest comebacks in IPL history"
+          },
+          {
+            "season": 2010,
+            "achievement": "Semi-finals",
+            "note": "Pragyan Ojha won Purple Cap"
+          }
+        ],
+        "strengths": [
+          "Explosive batting under Adam Gilchrist",
+          "Strong spin attack led by Pragyan Ojha",
+          "Exceptional comeback ability (2009)"
+        ],
+        "weaknesses": [
+          "Inconsistent performances across seasons",
+          "Frequent squad changes",
+          "Weak bowling and fielding in later seasons",
+          "Financial instability"
+        ],
+        "records": [
+          "Won IPL 2009 after finishing last in 2008",
+          "One of the biggest comeback stories in IPL history",
+          "Produced players like Rohit Sharma"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "Faced in IPL 2009 final"
+        },
+        {
+          "team": "Chennai Super Kings",
+          "details": "Competitive matches during peak years"
+        }
+      ],
+      "notable_players": [
+        "Adam Gilchrist",
+        "Rohit Sharma",
+        "Andrew Symonds",
+        "Herschelle Gibbs",
+        "Pragyan Ojha",
+        "Dale Steyn",
+        "Kumar Sangakkara"
+      ],
+      "logoUrl": "/ipl-teams/dcg/HyderabadDeccanChargerslogo.png",
+      "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg"
+    },
+    {
       "id": "gl",
       "name": "Gujarat Lions",
       "short_name": "GL",

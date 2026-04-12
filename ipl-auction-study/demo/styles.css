@@ -1188,6 +1188,23 @@ input.player-search-input {
   animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.ipl-teams-stage-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px) brightness(0.35); /* Heavy blur and dim for readability */
+  -webkit-filter: blur(15px) brightness(0.35);
+  transform: scale(1.1); /* Avoid white edges from blur */
+  z-index: 1;
+}
+
+.ipl-teams-detail-stage > *:not(.ipl-teams-stage-bg) {
+  position: relative;
+  z-index: 2;
+}
+
 @keyframes slideUp {
   from { transform: translateY(100vh); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
@@ -1740,17 +1757,7 @@ body.ipl-teams-detail-open {
 }
 
 .ipl-teams-detail-bg {
-  position: absolute;
-  inset: -18px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: scale(1.08);
-}
-
-.ipl-teams-detail-bg--photo {
-  filter: blur(7px);
-  -webkit-filter: blur(7px);
+  display: none; /* Removed local hero bg in favor of full stage bg */
 }
 
 .ipl-teams-detail-scrim {

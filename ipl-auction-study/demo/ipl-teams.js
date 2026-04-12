@@ -311,6 +311,7 @@ export async function initIplTeamsSection(options = {}) {
   const errEl = document.getElementById('iplTeamsError');
   const listStage = document.getElementById('iplTeamsListStage');
   const detailStage = document.getElementById('iplTeamsDetailStage');
+  const stageBg = document.getElementById('iplTeamsStageBg');
   const backBtn = document.getElementById('iplTeamsBackBtn');
   if (!grid || !detail) return;
 
@@ -335,6 +336,10 @@ export async function initIplTeamsSection(options = {}) {
     if (!useFullscreen) return;
     detailStage.hidden = true;
     listStage.hidden = false;
+    if (stageBg) {
+      stageBg.style.backgroundImage = '';
+      stageBg.style.background = '';
+    }
     document.body.classList.remove('ipl-teams-detail-open');
     const sel = selectedId
       ? [...grid.querySelectorAll('[data-team-id]')].find(
@@ -348,6 +353,15 @@ export async function initIplTeamsSection(options = {}) {
     if (useFullscreen) {
       listStage.hidden = true;
       detailStage.hidden = false;
+      if (stageBg) {
+        if (team.bgUrl) {
+          stageBg.style.backgroundImage = `url(${JSON.stringify(team.bgUrl)})`;
+          stageBg.style.background = '';
+        } else {
+          stageBg.style.background = gradientFromColors(team.identity?.colors);
+          stageBg.style.backgroundImage = '';
+        }
+      }
       document.body.classList.add('ipl-teams-detail-open');
     }
     renderDetail(detail, team);
