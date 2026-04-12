@@ -376,6 +376,8 @@ export async function initIplTeamsSection(options = {}) {
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const data = await res.json();
     const teams = data.teams || [];
+    console.log(`[IPL Intelligence] Loaded ${teams.length} teams. Build: 2026-04-12-Immersive`);
+    window.__IPL_TEAMS_LOADED__ = teams.length;
     if (!teams.length) throw new Error('No teams in bundle');
 
     selectedId = useFullscreen ? null : teams[0].id;
