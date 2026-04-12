@@ -204,21 +204,86 @@ function renderDetail(detailEl, team) {
 
   const teamName = normalizeTeamText(team.name) || team.name || '';
   const finalHtml = normalizeTeamText(`
+    <style>
+.ipl-teams-detail-head {
+  display: flex !important;
+  gap: 1.5rem !important;
+  align-items: center !important;
+  margin-bottom: 2rem !important;
+  padding-bottom: 1.5rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.ipl-teams-detail-logo-pod {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  background: #ffffff !important;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ipl-teams-detail-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.ipl-teams-detail-titling {
+  flex: 1;
+  min-width: 0;
+}
+
+.ipl-teams-detail-top-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.ipl-teams-detail-abbr {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #e9d5ff;
+}
+
+.ipl-teams-detail-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(248, 250, 252, 0.9);
+}
+</style>
     <div class="ipl-teams-detail-hero">
-      <div class="ipl-teams-detail-header-row">
-        <div class="ipl-teams-detail-logo-wrap">
+      <div class="ipl-teams-detail-head">
+        <div class="ipl-teams-detail-logo-pod">
           <img src="${team.logoUrl || ''}" alt="" class="ipl-teams-detail-logo">
         </div>
-        <div class="ipl-teams-detail-main">
+        <div class="ipl-teams-detail-titling">
           <div class="ipl-teams-detail-top-meta">
             <span class="ipl-teams-detail-abbr">${escapeHtml(team.short_name)}</span>
-            ${years}
+            <span class="ipl-teams-dot"> · </span>
             <span class="ipl-teams-badge ipl-teams-badge--${team.basic_info?.status === 'active' ? 'success' : 'danger'}">
               ${escapeHtml(team.basic_info?.status || 'Active')}
             </span>
           </div>
           <h2 class="ipl-teams-detail-title">${escapeHtml(teamName)}</h2>
-          <p class="ipl-teams-detail-location">${escapeHtml(team.basic_info?.city)}</p>
+          <p class="ipl-teams-detail-sub">
+            ${escapeHtml(team.basic_info?.city)}
+            <span class="ipl-teams-dot"> · </span>
+            Since <strong>${escapeHtml(String(team.basic_info?.founded))}</strong>
+          </p>
         </div>
       </div>
     </div>

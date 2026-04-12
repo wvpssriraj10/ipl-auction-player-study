@@ -81,35 +81,28 @@ export default function IplTeamsSection() {
         <div className="ipl-teams__detail-inner">
           <header className="ipl-teams__detail-head">
             {team.logoUrl && (
-              <img
-                src={team.logoUrl}
-                alt=""
-                className="ipl-teams__detail-logo"
-                width={96}
-                height={96}
-              />
-            )}
-            <div className="ipl-teams__detail-titles">
-              <h3 className="ipl-teams__detail-title">{team.name}</h3>
-              <p className="ipl-teams__detail-sub">
-                <strong>{team.short_name}</strong>
-                <span className="ipl-teams__dot" aria-hidden>
-                  ·
-                </span>
-                {team.basic_info?.city}
-              </p>
-              <div className="ipl-teams__badges">
-                <span
-                  className={`ipl-teams__badge ipl-teams__badge--${team.basic_info?.status === 'active' ? 'active' : 'defunct'}`}
-                >
-                  {team.basic_info?.status === 'active' ? 'Active' : 'Defunct'}
-                </span>
-                {team.basic_info?.active_years && (
-                  <span className="ipl-teams__badge ipl-teams__badge--muted">
-                    {team.basic_info.active_years.join('–')}
-                  </span>
-                )}
+              <div className="ipl-teams__detail-logo-pod">
+                <img
+                  src={team.logoUrl}
+                  alt=""
+                  className="ipl-teams__detail-logo"
+                />
               </div>
+            )}
+            <div className="ipl-teams__detail-titling">
+              <div className="ipl-teams__detail-top-meta">
+                <span className="ipl-teams__detail-abbr">{team.short_name}</span>
+                <span className="ipl-teams__dot"> · </span>
+                <span className={`ipl-teams__badge ipl-teams__badge--${team.basic_info?.status === 'active' ? 'active' : 'defunct'}`}>
+                  {team.basic_info?.status || 'Active'}
+                </span>
+              </div>
+              <h2 className="ipl-teams__detail-title">{team.name}</h2>
+              <p className="ipl-teams__detail-sub">
+                {team.basic_info?.city}
+                <span className="ipl-teams__dot"> · </span>
+                Since <strong>{team.basic_info?.founded}</strong>
+              </p>
             </div>
           </header>
 

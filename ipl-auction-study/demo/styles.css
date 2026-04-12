@@ -1696,19 +1696,41 @@ body.ipl-teams-detail-open {
 .ipl-teams-detail-header-row {
   position: relative;
   z-index: 10;
+.ipl-teams__detail-head {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.ipl-teams-detail-logo-wrap {
+.ipl-teams__detail-logo-pod {
   flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  background: #ffffff !important;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.ipl-teams-detail-main {
+.ipl-teams__detail-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.ipl-teams__detail-titling {
   flex: 1;
   min-width: 0;
 }
