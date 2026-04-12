@@ -1332,19 +1332,19 @@ body.ipl-teams-detail-open {
 .ipl-teams-detail--fullscreen {
   flex: 1;
   min-height: 0;
-  border-radius: 0;
-  border: none;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;
   z-index: 10;
   overscroll-behavior: contain;
+  background: transparent !important;
+  border: none !important;
 }
 
 .ipl-teams-detail.ipl-teams-detail--fullscreen {
+  height: auto; /* Allow flex: 1 to control height */
   min-height: 0;
-  height: 100%;
 }
 
 .ipl-teams-detail--fullscreen .ipl-teams-detail-inner {
@@ -1811,15 +1811,16 @@ body.ipl-teams-detail-open {
 .ipl-teams-detail-inner {
   position: relative;
   z-index: 10;
-  padding: 1.5rem 1.5rem 4rem;
+  padding: 1.5rem 1.5rem 6rem; /* Extra bottom padding for scroll room */
   color: #f8fafc;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  line-height: 1.75;
-  font-size: 1.05rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  background: transparent !important;
 }
 
 .ipl-teams-detail-inner > * + * {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .ipl-teams-detail-head {
