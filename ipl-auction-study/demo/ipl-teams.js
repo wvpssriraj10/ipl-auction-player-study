@@ -203,8 +203,9 @@ function renderDetail(detailEl, team) {
       : '';
 
   const teamName = normalizeTeamText(team.name) || team.name || '';
-    <div class="ipl-teams-detail-hero">
-      <div class="ipl-teams-detail-head">
+  const finalHtml = normalizeTeamText(`
+    <div class="ipl-teams-detail-inner">
+      <header class="ipl-teams-detail-head">
         <div class="ipl-teams-detail-logo-pod">
           <img src="${team.logoUrl || ''}" alt="" class="ipl-teams-detail-logo">
         </div>
@@ -223,15 +224,13 @@ function renderDetail(detailEl, team) {
             Since <strong>${escapeHtml(String(team.basic_info?.founded))}</strong>
           </p>
         </div>
+      </header>
+
+      <div class="ipl-teams-detail-tagline-row">
+        ${team.identity?.meaning ? `<p class="ipl-teams-tagline">${escapeHtml(team.identity.meaning)}</p>` : ''}
+        ${chips}
       </div>
-    </div>
-    <div class="ipl-teams-detail-inner">
-      ${
-        team.identity?.meaning
-          ? `<p class="ipl-teams-tagline">${escapeHtml(team.identity.meaning)}</p>`
-          : ''
-      }
-      ${chips}
+
       <dl class="ipl-teams-facts">
         <div><dt>Captain</dt><dd>${escapeHtml(team.management?.captain ?? '—')}</dd></div>
         <div><dt>Coach</dt><dd>${escapeHtml(team.management?.coach ?? '—')}</dd></div>
