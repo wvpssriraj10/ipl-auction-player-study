@@ -1,0 +1,128 @@
+{
+  "id": "ktk",
+  "name": "Kochi Tuskers Kerala",
+  "short_name": "KTK",
+
+  "basic_info": {
+    "city": "Kochi, Kerala, India",
+    "founded": 2011,
+    "status": "defunct",
+    "active_years": [2011]
+  },
+
+  "identity": {
+    "colors": ["blue", "gold"],
+    "nicknames": ["Tuskers"],
+    "meaning": "Represents the cultural heritage of Kerala, inspired by elephants (tuskers), symbolizing strength and tradition"
+  },
+
+  "ownership": {
+    "current_owner": "Kochi Cricket Pvt. Ltd.",
+    "ownership_history": [
+      "Franchise awarded in 2010 to Kochi Cricket Pvt. Ltd.",
+      "Consortium included multiple stakeholders",
+      "Faced internal disputes among owners",
+      "Franchise terminated by BCCI after one season due to contractual issues"
+    ]
+  },
+
+  "management": {
+    "captain": "Mahela Jayawardene",
+    "coach": "Geoff Lawson",
+    "notable_captains": [
+      "Mahela Jayawardene"
+    ]
+  },
+
+  "home_grounds": [
+    {
+      "name": "Jawaharlal Nehru Stadium",
+      "location": "Kochi",
+      "capacity": 60000,
+      "primary": true
+    }
+  ],
+
+  "history": {
+    "full_text": "Kochi Tuskers Kerala (KTK) was a short-lived franchise in the Indian Premier League (IPL), participating only in the 2011 season. The team was introduced as part of the league's expansion and represented the state of Kerala. Despite having a strong lineup featuring international stars such as Mahela Jayawardene, Brendon McCullum, and others, the team struggled to deliver consistent performances on the field. Kochi Tuskers Kerala finished eighth in the league standings in their only season. Off the field, the franchise was plagued by ownership disputes and financial issues, which created instability within the organization. The Board of Control for Cricket in India (BCCI) terminated the franchise after the 2011 season due to breaches of contract, including failure to provide a required bank guarantee. As a result, Kochi Tuskers Kerala became one of the shortest-lived teams in IPL history. Despite its brief existence, the team remains a notable part of IPL history due to its controversial exit and the presence of several prominent players.",
+
+    "timeline": [
+      "2010: Franchise awarded as part of IPL expansion",
+      "2011: Debut and only IPL season",
+      "2011: Finished 8th in league standings",
+      "2011: Ownership disputes and financial issues arise",
+      "2011: Franchise terminated by BCCI"
+    ],
+
+    "key_eras": [
+      {
+        "period": "2011",
+        "description": "Single season participation marked by on-field struggles and off-field controversies"
+      }
+    ]
+  },
+
+  "honours": {
+    "ipl_titles": 0,
+    "title_years": [],
+    "finals": 0,
+    "final_years": [],
+    "playoff_appearances": 0
+  },
+
+  "performance": {
+    "overall": {
+      "matches": 14,
+      "wins": 6,
+      "losses": 8,
+      "no_result": 0,
+      "win_pct": 42.8
+    },
+
+    "season_highlights": [
+      {
+        "season": 2011,
+        "achievement": "8th place",
+        "note": "Only season in IPL"
+      }
+    ],
+
+    "strengths": [
+      "Presence of experienced international players",
+      "Strong fan support in Kerala",
+      "Competitive performances in some matches"
+    ],
+
+    "weaknesses": [
+      "Lack of team cohesion",
+      "Inconsistent performances",
+      "Severe off-field management issues",
+      "Financial instability"
+    ],
+
+    "records": [
+      "One of the shortest-lived franchises in IPL history",
+      "Only one season participation",
+      "Notable for controversial exit from IPL"
+    ]
+  },
+
+  "rivalries": [
+    {
+      "team": "Royal Challengers Bengaluru",
+      "details": "Notable matches during 2011 season"
+    },
+    {
+      "team": "Chennai Super Kings",
+      "details": "Faced strong opposition from top teams in debut season"
+    }
+  ],
+
+  "notable_players": [
+    "Mahela Jayawardene",
+    "Brendon McCullum",
+    "VVS Laxman",
+    "Ravindra Jadeja",
+    "S Sreesanth"
+  ]
+}

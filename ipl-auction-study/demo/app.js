@@ -1,3 +1,5 @@
+import { initIplTeamsSection } from "./ipl-teams.js";
+
 // ============================================
 // DOM ELEMENT REFERENCES
 // ============================================
@@ -1175,6 +1177,8 @@ async function init() {
   // Run before data load so the page is not stuck at opacity:0 if fetch fails (e.g. missing CSV on host)
   setupRevealAnimations();
   applyScrollEffects();
+
+  initIplTeamsSection().catch((err) => console.error("[IPL Teams]", err));
 
   try {
     state.isLoading = true;

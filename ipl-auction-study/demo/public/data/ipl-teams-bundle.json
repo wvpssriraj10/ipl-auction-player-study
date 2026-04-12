@@ -1,0 +1,2023 @@
+{
+  "teams": [
+    {
+      "id": "csk",
+      "name": "Chennai Super Kings",
+      "short_name": "CSK",
+      "basic_info": {
+        "city": "Chennai, Tamil Nadu, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "yellow"
+        ],
+        "nicknames": [
+          "Super Kings",
+          "Men in Yellow"
+        ],
+        "meaning": "Represents royalty, dominance, and consistency in performance"
+      },
+      "ownership": {
+        "current_owner": "Chennai Super Kings Cricket Limited",
+        "ownership_history": [
+          "Originally owned by India Cements through Chennai Super Kings Cricket Limited",
+          "Ownership remained stable compared to most IPL franchises"
+        ]
+      },
+      "management": {
+        "captain": "Ruturaj Gaikwad",
+        "coach": "Stephen Fleming",
+        "notable_captains": [
+          "MS Dhoni"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "M. A. Chidambaram Stadium",
+          "location": "Chennai",
+          "capacity": 38200,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Chennai Super Kings (CSK) is one of the most successful and consistent franchises in the history of the Indian Premier League (IPL). Established in 2008 as one of the original eight teams, CSK quickly became a dominant force in the league. The team is widely known for its stability in leadership, especially under MS Dhoni, who served as captain for most of its history. CSK built a reputation for making it to the playoffs almost every season and maintaining a high win percentage. The franchise achieved early success by winning back-to-back IPL titles in 2010 and 2011. Despite being suspended for two seasons (2016 and 2017) due to administrative issues, CSK made a remarkable comeback by winning the IPL title in 2018. The team continued its dominance by winning additional titles in 2021 and 2023, cementing its legacy as one of the most successful teams in IPL history. CSK is also known for its loyal fan base and strong team culture, often emphasizing experienced players and strategic gameplay over aggressive auction spending.",
+        "timeline": [
+          "2008: Franchise established as part of original IPL teams",
+          "2010: Won first IPL title",
+          "2011: Won second consecutive IPL title",
+          "2012–2015: Continued strong performances with multiple finals",
+          "2016–2017: Suspended from IPL",
+          "2018: Comeback season, won IPL title",
+          "2019: Reached final",
+          "2021: Won IPL title",
+          "2023: Won IPL title, becoming joint most successful team"
+        ],
+        "key_eras": [
+          {
+            "period": "2010–2013",
+            "description": "Golden era with back-to-back titles and consistent finals"
+          },
+          {
+            "period": "2014–2015",
+            "description": "Sustained success with playoff appearances"
+          },
+          {
+            "period": "2016–2017",
+            "description": "Suspension period"
+          },
+          {
+            "period": "2018–2023",
+            "description": "Comeback dominance with multiple titles and finals"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 5,
+        "title_years": [
+          2010,
+          2011,
+          2018,
+          2021,
+          2023
+        ],
+        "finals": 10,
+        "final_years": [
+          2008,
+          2010,
+          2011,
+          2012,
+          2013,
+          2015,
+          2018,
+          2019,
+          2021,
+          2023
+        ],
+        "playoff_appearances": 12
+      },
+      "performance": {
+        "overall": {
+          "matches": 240,
+          "wins": 145,
+          "losses": 90,
+          "no_result": 5,
+          "win_pct": 60.4
+        },
+        "season_highlights": [
+          {
+            "season": 2010,
+            "achievement": "Champions",
+            "note": "First IPL title"
+          },
+          {
+            "season": 2011,
+            "achievement": "Champions",
+            "note": "Back-to-back titles"
+          },
+          {
+            "season": 2018,
+            "achievement": "Champions",
+            "note": "Comeback after suspension"
+          },
+          {
+            "season": 2023,
+            "achievement": "Champions",
+            "note": "Equaled record for most titles"
+          }
+        ],
+        "strengths": [
+          "Exceptional leadership under MS Dhoni",
+          "High consistency across seasons",
+          "Strong finishing ability in matches",
+          "Strategic use of experienced players"
+        ],
+        "weaknesses": [
+          "Occasional slow starts in seasons",
+          "Dependence on experienced core players"
+        ],
+        "records": [
+          "Most finals appearances in IPL history",
+          "Highest playoff qualification rate",
+          "One of the highest win percentages among all teams"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "The biggest rivalry in IPL history, often referred to as the 'El Clasico of IPL', featuring multiple finals clashes"
+        },
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "Popular rivalry due to fan base and high-profile matches"
+        }
+      ],
+      "notable_players": [
+        "MS Dhoni",
+        "Suresh Raina",
+        "Ravindra Jadeja",
+        "Dwayne Bravo",
+        "Ruturaj Gaikwad"
+      ],
+      "logoUrl": "/ipl-teams/csk/Chennai_Super_Kings_Logo.jpg",
+      "bgUrl": "/ipl-teams/csk/IPL%20Chepauk%20Stadium%204K%20wallpaper%20-%202268x4032.jpg"
+    },
+    {
+      "id": "dc",
+      "name": "Delhi Capitals",
+      "short_name": "DC",
+      "basic_info": {
+        "city": "Delhi, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "blue",
+          "red"
+        ],
+        "nicknames": [
+          "Capitals"
+        ],
+        "previous_names": [
+          "Delhi Daredevils"
+        ],
+        "meaning": "Represents the capital city's energy, youth, and ambition"
+      },
+      "ownership": {
+        "current_owner": "GMR Group & JSW Group",
+        "ownership_history": [
+          "Initially owned solely by GMR Group",
+          "JSW Group acquired 50% stake in 2018",
+          "Rebranded from Delhi Daredevils to Delhi Capitals in 2019"
+        ]
+      },
+      "management": {
+        "captain": "Rishabh Pant",
+        "coach": "Ricky Ponting",
+        "notable_captains": [
+          "Virender Sehwag",
+          "Gautam Gambhir",
+          "Kevin Pietersen",
+          "Shreyas Iyer"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Arun Jaitley Stadium",
+          "location": "Delhi",
+          "capacity": 41000,
+          "primary": true
+        },
+        {
+          "name": "Dr. Y. S. Rajasekhara Reddy ACA–VDCA Cricket Stadium",
+          "location": "Visakhapatnam",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Delhi Capitals (DC), formerly known as Delhi Daredevils, is one of the original franchises of the Indian Premier League (IPL), established in 2008. In its early years, the team featured several high-profile players and had a strong start, reaching the semi-finals in the first two seasons (2008 and 2009). However, the franchise struggled with inconsistency and failed to convert early promise into sustained success. Over the years, Delhi went through multiple leadership changes and team rebuilds, often failing to reach the playoffs. A major turning point came in 2018 when JSW Group acquired a 50% stake in the franchise, leading to a fresh approach in team management and strategy. In 2019, the team was rebranded as Delhi Capitals, marking a new era focused on youth and long-term development. Under the leadership of players like Shreyas Iyer and later Rishabh Pant, along with coaching from Ricky Ponting, DC became a competitive side. The team reached its first IPL final in 2020 but lost to Mumbai Indians. Since then, Delhi Capitals has remained a strong contender, known for its young core, aggressive gameplay, and balanced squad.",
+        "timeline": [
+          "2008: Franchise established as Delhi Daredevils",
+          "2008–2009: Strong start with semi-final appearances",
+          "2010–2017: Inconsistent performances and frequent rebuilding",
+          "2018: JSW Group acquires stake, strategic shift begins",
+          "2019: Rebranded to Delhi Capitals",
+          "2020: Reached first IPL final",
+          "2021–2023: Competitive seasons with playoff contention",
+          "2024–present: Continued focus on youth and squad balance"
+        ],
+        "key_eras": [
+          {
+            "period": "2008–2009",
+            "description": "Early success with strong performances and semi-final appearances"
+          },
+          {
+            "period": "2010–2017",
+            "description": "Struggling phase with inconsistent results and leadership changes"
+          },
+          {
+            "period": "2018–2020",
+            "description": "Rebuilding phase leading to first IPL final"
+          },
+          {
+            "period": "2021–present",
+            "description": "Competitive phase with a strong young core and balanced team"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 1,
+        "final_years": [
+          2020
+        ],
+        "playoff_appearances": 6
+      },
+      "performance": {
+        "overall": {
+          "matches": 240,
+          "wins": 110,
+          "losses": 125,
+          "no_result": 5,
+          "win_pct": 45.8
+        },
+        "season_highlights": [
+          {
+            "season": 2020,
+            "achievement": "Runners-up",
+            "note": "First IPL final appearance"
+          },
+          {
+            "season": 2021,
+            "achievement": "Playoffs",
+            "note": "Strong performance with balanced squad"
+          }
+        ],
+        "strengths": [
+          "Strong young core of players",
+          "Aggressive batting approach",
+          "Balanced team composition",
+          "Good pace bowling attack"
+        ],
+        "weaknesses": [
+          "Lack of IPL title despite strong squads",
+          "Inconsistency in earlier seasons",
+          "Occasional middle-order instability"
+        ],
+        "records": [
+          "First IPL final appearance in 2020",
+          "Known for developing young Indian talent",
+          "Significant improvement post rebranding"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "Notable rivalry due to 2020 IPL final"
+        },
+        {
+          "team": "Kolkata Knight Riders",
+          "details": "Frequent competitive encounters"
+        }
+      ],
+      "notable_players": [
+        "Rishabh Pant",
+        "Virender Sehwag",
+        "Shreyas Iyer",
+        "Kagiso Rabada",
+        "David Warner",
+        "Prithvi Shaw"
+      ],
+      "logoUrl": "/ipl-teams/dc/Delhi_Capitals.png",
+      "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png"
+    },
+    {
+      "id": "gt",
+      "name": "Gujarat Titans",
+      "short_name": "GT",
+      "basic_info": {
+        "city": "Ahmedabad, Gujarat, India",
+        "founded": 2022,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "navy blue",
+          "gold"
+        ],
+        "nicknames": [
+          "Titans"
+        ],
+        "meaning": "Represents strength, dominance, and resilience"
+      },
+      "ownership": {
+        "current_owner": "CVC Capital Partners",
+        "ownership_history": [
+          "Franchise awarded in 2021 as part of IPL expansion",
+          "Owned by global private equity firm CVC Capital Partners"
+        ]
+      },
+      "management": {
+        "captain": "Shubman Gill",
+        "coach": "Ashish Nehra",
+        "notable_captains": [
+          "Hardik Pandya"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Narendra Modi Stadium",
+          "location": "Ahmedabad",
+          "capacity": 132000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Gujarat Titans (GT) is one of the newest franchises in the Indian Premier League (IPL), established in 2022 as part of the league's expansion. Despite being a new team, GT made an immediate impact by winning the IPL title in its debut season under the captaincy of Hardik Pandya. The franchise quickly gained recognition for its well-balanced squad, strong leadership, and ability to perform under pressure. In its inaugural season, Gujarat Titans showcased a combination of solid batting, effective bowling, and exceptional teamwork, which helped them dominate the tournament. The team continued its strong performance in the following season by reaching the final again, demonstrating consistency rarely seen in new franchises. GT has been praised for its strategic planning, efficient auction decisions, and the ability to build a cohesive unit in a short period. With a strong core of players and stable management, Gujarat Titans has established itself as a competitive force in the IPL despite its relatively short history.",
+        "timeline": [
+          "2021: Franchise announced as part of IPL expansion",
+          "2022: Debut season, won IPL title",
+          "2023: Reached IPL final",
+          "2024–present: Continued competitive performances with strong squad"
+        ],
+        "key_eras": [
+          {
+            "period": "2022",
+            "description": "Historic debut season with IPL title win"
+          },
+          {
+            "period": "2023",
+            "description": "Sustained success with another final appearance"
+          },
+          {
+            "period": "2024–present",
+            "description": "Emerging as a consistent and competitive team"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 1,
+        "title_years": [
+          2022
+        ],
+        "finals": 2,
+        "final_years": [
+          2022,
+          2023
+        ],
+        "playoff_appearances": 2
+      },
+      "performance": {
+        "overall": {
+          "matches": 50,
+          "wins": 30,
+          "losses": 18,
+          "no_result": 2,
+          "win_pct": 60
+        },
+        "season_highlights": [
+          {
+            "season": 2022,
+            "achievement": "Champions",
+            "note": "Won IPL title in debut season"
+          },
+          {
+            "season": 2023,
+            "achievement": "Runners-up",
+            "note": "Reached final in second season"
+          }
+        ],
+        "strengths": [
+          "Balanced squad with strong depth",
+          "Effective leadership and team cohesion",
+          "Strong bowling attack",
+          "Ability to perform under pressure"
+        ],
+        "weaknesses": [
+          "Limited historical data due to recent formation",
+          "Dependence on key players in crucial matches"
+        ],
+        "records": [
+          "Won IPL title in debut season",
+          "Reached finals in first two seasons",
+          "One of the highest win percentages among teams"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Chennai Super Kings",
+          "details": "Notable rivalry due to 2023 IPL final"
+        },
+        {
+          "team": "Mumbai Indians",
+          "details": "Emerging rivalry with competitive matches"
+        }
+      ],
+      "notable_players": [
+        "Hardik Pandya",
+        "Shubman Gill",
+        "Rashid Khan",
+        "Mohammed Shami",
+        "David Miller"
+      ],
+      "logoUrl": "/ipl-teams/gt/Gujarat_Titans_Logo.png",
+      "bgUrl": "/ipl-teams/gt/gujurat%20titans%20bg.jpg"
+    },
+    {
+      "id": "kkr",
+      "name": "Kolkata Knight Riders",
+      "short_name": "KKR",
+      "basic_info": {
+        "city": "Kolkata, West Bengal, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "purple",
+          "gold"
+        ],
+        "nicknames": [
+          "KKR",
+          "Knight Riders"
+        ],
+        "meaning": "Represents courage, strength, and royal heritage"
+      },
+      "ownership": {
+        "current_owner": "Knight Riders Group (Shah Rukh Khan, Juhi Chawla, Jay Mehta)",
+        "ownership_history": [
+          "Co-owned by Bollywood actor Shah Rukh Khan, actress Juhi Chawla, and businessman Jay Mehta since inception"
+        ]
+      },
+      "management": {
+        "captain": "Shreyas Iyer",
+        "coach": "Chandrakant Pandit",
+        "notable_captains": [
+          "Gautam Gambhir",
+          "Dinesh Karthik",
+          "Eoin Morgan"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Eden Gardens",
+          "location": "Kolkata",
+          "capacity": 68000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Kolkata Knight Riders (KKR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely recognized for its strong brand value and association with Bollywood through its ownership. In the early years of the IPL, KKR struggled with inconsistent performances and frequent leadership changes. However, the team underwent a major transformation under the captaincy of Gautam Gambhir, who led the franchise to its first IPL title in 2012. KKR continued its success by winning a second IPL title in 2014, establishing itself as a competitive force in the league. The franchise has been known for its aggressive style of play, innovative strategies, and the ability to nurture match-winning players. Over the years, KKR has experienced phases of rebuilding and resurgence, remaining a competitive side in multiple seasons. The team is also known for its passionate fan base and the iconic Eden Gardens stadium, which serves as one of the most vibrant venues in IPL.",
+        "timeline": [
+          "2008: Franchise established",
+          "2008–2010: Struggled with inconsistent performances",
+          "2011: Rebuilding phase begins",
+          "2012: Won first IPL title under Gautam Gambhir",
+          "2014: Won second IPL title",
+          "2015–2017: Competitive but inconsistent seasons",
+          "2018–2021: Playoff appearances and rebuilding",
+          "2022–present: Transition phase with new leadership"
+        ],
+        "key_eras": [
+          {
+            "period": "2008–2010",
+            "description": "Initial struggling phase with inconsistent performances"
+          },
+          {
+            "period": "2011–2014",
+            "description": "Golden era under Gautam Gambhir with two IPL titles"
+          },
+          {
+            "period": "2015–2019",
+            "description": "Competitive phase with playoff appearances"
+          },
+          {
+            "period": "2020–present",
+            "description": "Transition and rebuilding phase with emerging players"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 2,
+        "title_years": [
+          2012,
+          2014
+        ],
+        "finals": 3,
+        "final_years": [
+          2012,
+          2014,
+          2021
+        ],
+        "playoff_appearances": 8
+      },
+      "performance": {
+        "overall": {
+          "matches": 240,
+          "wins": 120,
+          "losses": 115,
+          "no_result": 5,
+          "win_pct": 50
+        },
+        "season_highlights": [
+          {
+            "season": 2012,
+            "achievement": "Champions",
+            "note": "First IPL title under Gautam Gambhir"
+          },
+          {
+            "season": 2014,
+            "achievement": "Champions",
+            "note": "Second IPL title"
+          },
+          {
+            "season": 2021,
+            "achievement": "Runners-up",
+            "note": "Reached final after strong comeback"
+          }
+        ],
+        "strengths": [
+          "Strong middle-order batting",
+          "Effective spin bowling attack",
+          "Ability to perform under pressure",
+          "Strong home advantage at Eden Gardens"
+        ],
+        "weaknesses": [
+          "Inconsistency in batting lineup in some seasons",
+          "Frequent leadership changes in certain phases"
+        ],
+        "records": [
+          "Two-time IPL champions",
+          "Strong record at Eden Gardens",
+          "Known for comeback victories in tournaments"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "Competitive rivalry with multiple high-intensity matches"
+        },
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "Notable rivalry with several memorable encounters"
+        },
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Recent rivalry due to playoff clashes"
+        }
+      ],
+      "notable_players": [
+        "Gautam Gambhir",
+        "Andre Russell",
+        "Sunil Narine",
+        "Shreyas Iyer",
+        "Eoin Morgan",
+        "Dinesh Karthik"
+      ],
+      "logoUrl": "/ipl-teams/kkr/Kolkata_Knight_Riders_Logo.png",
+      "bgUrl": "/ipl-teams/kkr/kkr%20bg.png"
+    },
+    {
+      "id": "lsg",
+      "name": "Lucknow Super Giants",
+      "short_name": "LSG",
+      "basic_info": {
+        "city": "Lucknow, Uttar Pradesh, India",
+        "founded": 2022,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "light blue",
+          "orange"
+        ],
+        "nicknames": [
+          "Super Giants"
+        ],
+        "meaning": "Represents strength, growth, and a modern cricketing identity"
+      },
+      "ownership": {
+        "current_owner": "RPSG Group (Sanjiv Goenka)",
+        "ownership_history": [
+          "Franchise awarded in 2021 as part of IPL expansion",
+          "Owned by RPSG Group, which previously owned Rising Pune Supergiant"
+        ]
+      },
+      "management": {
+        "captain": "KL Rahul",
+        "coach": "Justin Langer",
+        "notable_captains": [
+          "KL Rahul"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",
+          "location": "Lucknow",
+          "capacity": 50000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Lucknow Super Giants (LSG) is one of the newest franchises in the Indian Premier League (IPL), established in 2022 as part of the league's expansion. Owned by the RPSG Group, the franchise brought back IPL presence to the city of Lucknow and built a competitive squad from the outset. Under the captaincy of KL Rahul, LSG quickly established itself as a strong contender by qualifying for the playoffs in its first two seasons. The team has been known for its balanced squad, combining experienced international players with emerging Indian talent. LSG's approach has focused on stability, consistency, and structured gameplay rather than overly aggressive strategies. Despite not yet winning an IPL title, the franchise has shown strong potential and has been considered one of the most promising new teams in the competition. The team continues to evolve, aiming to convert consistent performances into championship success.",
+        "timeline": [
+          "2021: Franchise announced as part of IPL expansion",
+          "2022: Debut season, qualified for playoffs",
+          "2023: Qualified for playoffs again",
+          "2024–present: Continued competitive performances and squad development"
+        ],
+        "key_eras": [
+          {
+            "period": "2022–2023",
+            "description": "Strong start with back-to-back playoff qualifications"
+          },
+          {
+            "period": "2024–present",
+            "description": "Development phase aiming for first IPL title"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 0,
+        "final_years": [],
+        "playoff_appearances": 2
+      },
+      "performance": {
+        "overall": {
+          "matches": 45,
+          "wins": 25,
+          "losses": 18,
+          "no_result": 2,
+          "win_pct": 55.5
+        },
+        "season_highlights": [
+          {
+            "season": 2022,
+            "achievement": "Playoffs",
+            "note": "Strong debut season"
+          },
+          {
+            "season": 2023,
+            "achievement": "Playoffs",
+            "note": "Consistent performance in second season"
+          }
+        ],
+        "strengths": [
+          "Balanced squad composition",
+          "Consistent performances across seasons",
+          "Strong top-order batting",
+          "Disciplined bowling attack"
+        ],
+        "weaknesses": [
+          "Lack of IPL title experience",
+          "Occasional middle-order inconsistency",
+          "Limited experience in high-pressure knockout matches"
+        ],
+        "records": [
+          "Back-to-back playoff appearances in first two seasons",
+          "One of the most consistent new franchises"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Gujarat Titans",
+          "details": "Emerging rivalry between two new franchises"
+        },
+        {
+          "team": "Chennai Super Kings",
+          "details": "Competitive matches against experienced franchise"
+        }
+      ],
+      "notable_players": [
+        "KL Rahul",
+        "Quinton de Kock",
+        "Marcus Stoinis",
+        "Nicholas Pooran",
+        "Ravi Bishnoi"
+      ],
+      "logoUrl": "/ipl-teams/lsg/Lucknow_Super_Giants_Logo.png",
+      "bgUrl": "/ipl-teams/lsg/lsg%20bg.jpg"
+    },
+    {
+      "id": "mi",
+      "name": "Mumbai Indians",
+      "short_name": "MI",
+      "basic_info": {
+        "city": "Mumbai, Maharashtra, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "blue",
+          "gold"
+        ],
+        "nicknames": [
+          "MI",
+          "Paltan"
+        ],
+        "meaning": "Represents Mumbai’s spirit, unity, and resilience"
+      },
+      "ownership": {
+        "current_owner": "Reliance Industries",
+        "ownership_history": [
+          "Owned by Reliance Industries since inception in 2008",
+          "One of the most financially strong franchises in IPL"
+        ]
+      },
+      "management": {
+        "captain": "Hardik Pandya",
+        "coach": "Mark Boucher",
+        "notable_captains": [
+          "Rohit Sharma",
+          "Sachin Tendulkar"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Wankhede Stadium",
+          "location": "Mumbai",
+          "capacity": 33000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Mumbai Indians (MI) is one of the most successful franchises in the history of the Indian Premier League (IPL). Established in 2008 and owned by Reliance Industries, the team initially struggled in the early seasons before transforming into a dominant force in the league. Under the leadership of Rohit Sharma, who took over as captain in 2013, Mumbai Indians entered a golden era, winning multiple IPL titles and establishing themselves as a powerhouse. The team won its first IPL title in 2013 and went on to win additional championships in 2015, 2017, 2019, and 2020. Known for their strong scouting system, MI has consistently developed young talent while maintaining a core group of experienced match-winners. Their balanced team composition, strong bowling attack, and ability to perform under pressure have been key to their sustained success. The franchise has also been known for its dominance in high-pressure matches, including finals, where they have often outperformed opponents. Mumbai Indians share one of the fiercest rivalries in IPL history with Chennai Super Kings, with several iconic encounters between the two teams.",
+        "timeline": [
+          "2008: Franchise established as part of original IPL teams",
+          "2008–2012: Mixed performances with gradual team building",
+          "2013: Won first IPL title under Rohit Sharma",
+          "2015: Won second IPL title",
+          "2017: Won third IPL title",
+          "2019: Won fourth IPL title in a close final",
+          "2020: Won fifth IPL title, dominating the season",
+          "2021–2023: Performance dip and transition phase",
+          "2024–present: Squad restructuring and leadership changes"
+        ],
+        "key_eras": [
+          {
+            "period": "2008–2012",
+            "description": "Initial years with inconsistent performance but gradual team development"
+          },
+          {
+            "period": "2013–2020",
+            "description": "Golden era under Rohit Sharma with five IPL titles and dominance in finals"
+          },
+          {
+            "period": "2021–2023",
+            "description": "Decline phase with inconsistent results and squad transition"
+          },
+          {
+            "period": "2024–present",
+            "description": "Rebuilding phase with new leadership and young players"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 5,
+        "title_years": [
+          2013,
+          2015,
+          2017,
+          2019,
+          2020
+        ],
+        "finals": 6,
+        "final_years": [
+          2010,
+          2013,
+          2015,
+          2017,
+          2019,
+          2020
+        ],
+        "playoff_appearances": 10
+      },
+      "performance": {
+        "overall": {
+          "matches": 250,
+          "wins": 140,
+          "losses": 105,
+          "no_result": 5,
+          "win_pct": 56
+        },
+        "season_highlights": [
+          {
+            "season": 2013,
+            "achievement": "Champions",
+            "note": "First IPL title under Rohit Sharma"
+          },
+          {
+            "season": 2017,
+            "achievement": "Champions",
+            "note": "One of the closest finals in IPL history"
+          },
+          {
+            "season": 2019,
+            "achievement": "Champions",
+            "note": "Defeated CSK by 1 run in final"
+          },
+          {
+            "season": 2020,
+            "achievement": "Champions",
+            "note": "Dominant season performance"
+          }
+        ],
+        "strengths": [
+          "Strong scouting and talent development system",
+          "Balanced squad with depth in batting and bowling",
+          "Excellent performance in pressure situations",
+          "Strong finishing capabilities"
+        ],
+        "weaknesses": [
+          "Inconsistency during transition phases",
+          "Dependence on core players during peak years"
+        ],
+        "records": [
+          "Joint-most IPL titles (5)",
+          "Strong record in IPL finals",
+          "Consistent performance across multiple seasons"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Chennai Super Kings",
+          "details": "The biggest rivalry in IPL, often called the 'El Clasico of IPL', featuring multiple finals clashes"
+        },
+        {
+          "team": "Kolkata Knight Riders",
+          "details": "Competitive rivalry with several high-intensity matches"
+        }
+      ],
+      "notable_players": [
+        "Rohit Sharma",
+        "Sachin Tendulkar",
+        "Jasprit Bumrah",
+        "Kieron Pollard",
+        "Hardik Pandya",
+        "Lasith Malinga"
+      ],
+      "logoUrl": "/ipl-teams/mi/Mumbai_Indians_Logo.png",
+      "bgUrl": "/ipl-teams/mi/mumbai-indians-bg.webp"
+    },
+    {
+      "id": "pbks",
+      "name": "Punjab Kings",
+      "short_name": "PBKS",
+      "basic_info": {
+        "city": "Punjab, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "red",
+          "silver"
+        ],
+        "nicknames": [
+          "PBKS"
+        ],
+        "previous_names": [
+          "Kings XI Punjab"
+        ],
+        "meaning": "Represents the spirit, aggression, and pride of Punjab"
+      },
+      "ownership": {
+        "current_owner": "KPH Dream Cricket Pvt. Ltd.",
+        "ownership_history": [
+          "Co-owned by Preity Zinta, Ness Wadia, Mohit Burman, and Karan Paul",
+          "Operated under the name Kings XI Punjab until rebranding in 2021",
+          "Rebranded as Punjab Kings to reflect a fresh identity and new approach"
+        ]
+      },
+      "management": {
+        "captain": "Shikhar Dhawan",
+        "coach": "Trevor Bayliss",
+        "notable_captains": [
+          "Yuvraj Singh",
+          "Adam Gilchrist",
+          "George Bailey",
+          "KL Rahul",
+          "Mayank Agarwal"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Punjab Cricket Association IS Bindra Stadium",
+          "location": "Mohali",
+          "capacity": 26000,
+          "primary": true
+        },
+        {
+          "name": "Himachal Pradesh Cricket Association Stadium",
+          "location": "Dharamshala",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Punjab Kings (PBKS), formerly known as Kings XI Punjab, is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team has experienced a rollercoaster journey in the IPL, with flashes of brilliance but an overall lack of consistency. In its early years, the franchise showed promise but failed to convert strong squads into sustained success. The team's most successful season came in 2014 when they reached the IPL final under the captaincy of George Bailey, only to lose to Kolkata Knight Riders. Despite having several high-profile players over the years, Punjab has struggled to maintain consistent performances and frequently finished in the lower half of the table. In 2021, the franchise rebranded from Kings XI Punjab to Punjab Kings in an effort to redefine its identity and start a new chapter. Since then, PBKS has focused on building a balanced squad with a mix of experienced and young players, aiming to achieve stability and long-term success in the IPL.",
+        "timeline": [
+          "2008: Franchise established as Kings XI Punjab",
+          "2008–2013: Inconsistent performances with occasional strong seasons",
+          "2014: Reached IPL final, best performance in franchise history",
+          "2015–2020: Decline with frequent bottom-half finishes",
+          "2021: Rebranded as Punjab Kings",
+          "2022–present: Rebuilding phase with focus on squad balance"
+        ],
+        "key_eras": [
+          {
+            "period": "2008–2013",
+            "description": "Early years with mixed results and potential"
+          },
+          {
+            "period": "2014",
+            "description": "Peak season reaching IPL final"
+          },
+          {
+            "period": "2015–2020",
+            "description": "Decline phase with inconsistent performances"
+          },
+          {
+            "period": "2021–present",
+            "description": "Rebuilding phase after rebranding with focus on long-term success"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 1,
+        "final_years": [
+          2014
+        ],
+        "playoff_appearances": 2
+      },
+      "performance": {
+        "overall": {
+          "matches": 240,
+          "wins": 110,
+          "losses": 125,
+          "no_result": 5,
+          "win_pct": 45.8
+        },
+        "season_highlights": [
+          {
+            "season": 2014,
+            "achievement": "Runners-up",
+            "note": "Best season performance in franchise history"
+          },
+          {
+            "season": 2020,
+            "achievement": "Mid-table finish",
+            "note": "Strong comeback in second half of season"
+          }
+        ],
+        "strengths": [
+          "Explosive batting lineup",
+          "Presence of experienced international players",
+          "Ability to chase high totals"
+        ],
+        "weaknesses": [
+          "Inconsistency across seasons",
+          "Weak bowling performances in several years",
+          "Failure to perform in crucial matches"
+        ],
+        "records": [
+          "Highest IPL finish: Runners-up (2014)",
+          "Known for high-scoring matches",
+          "Frequent close matches but inconsistent outcomes"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Delhi Capitals",
+          "details": "Competitive rivalry due to similar performance trajectories"
+        },
+        {
+          "team": "Rajasthan Royals",
+          "details": "Regional rivalry with several close encounters"
+        }
+      ],
+      "notable_players": [
+        "Yuvraj Singh",
+        "KL Rahul",
+        "Chris Gayle",
+        "Shikhar Dhawan",
+        "Glenn Maxwell",
+        "Mayank Agarwal"
+      ],
+      "logoUrl": "/ipl-teams/pbks/Punjab_Kings_Logo.png",
+      "bgUrl": "/ipl-teams/pbks/pbks%20bg.jpg"
+    },
+    {
+      "id": "rr",
+      "name": "Rajasthan Royals",
+      "short_name": "RR",
+      "basic_info": {
+        "city": "Jaipur, Rajasthan, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "pink",
+          "blue"
+        ],
+        "nicknames": [
+          "Royals"
+        ],
+        "meaning": "Represents royalty, resilience, and a fearless underdog spirit"
+      },
+      "ownership": {
+        "current_owner": "Royal Multisport Pvt. Ltd.",
+        "ownership_history": [
+          "Initially owned by Emerging Media IPL Ltd.",
+          "Ownership transitioned to Royal Multisport Pvt. Ltd.",
+          "Experienced administrative issues leading to suspension"
+        ]
+      },
+      "management": {
+        "captain": "Sanju Samson",
+        "coach": "Kumar Sangakkara",
+        "notable_captains": [
+          "Shane Warne",
+          "Rahul Dravid",
+          "Steve Smith"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Sawai Mansingh Stadium",
+          "location": "Jaipur",
+          "capacity": 30000,
+          "primary": true
+        },
+        {
+          "name": "Barsapara Cricket Stadium",
+          "location": "Guwahati",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Rajasthan Royals (RR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely known for its underdog success story, having won the inaugural IPL season in 2008 under the leadership of Shane Warne. Unlike many other franchises, RR built its early success on a strategy of identifying and nurturing young and relatively unknown talent rather than relying heavily on big-name players. This approach helped the team establish a reputation for developing future stars. Following their early success, Rajasthan Royals experienced a mix of performances, often fluctuating between strong seasons and periods of inconsistency. The franchise was suspended for two seasons (2016 and 2017) due to administrative issues, similar to Chennai Super Kings. After returning in 2018, RR has continued to focus on youth development and strategic gameplay, occasionally reaching the playoffs and even the final in 2022. The team is also known for its innovative approach to analytics and talent scouting, making it one of the most unique franchises in the IPL.",
+        "timeline": [
+          "2008: Franchise established and won inaugural IPL title",
+          "2009–2013: Mixed performances with occasional playoff contention",
+          "2014–2015: Competitive seasons",
+          "2016–2017: Suspended from IPL",
+          "2018: Returned to IPL",
+          "2019–2021: Inconsistent performances",
+          "2022: Reached IPL final",
+          "2023–present: Competitive rebuilding phase"
+        ],
+        "key_eras": [
+          {
+            "period": "2008",
+            "description": "Historic inaugural IPL title under Shane Warne"
+          },
+          {
+            "period": "2009–2015",
+            "description": "Inconsistent but competitive performances"
+          },
+          {
+            "period": "2016–2017",
+            "description": "Suspension period"
+          },
+          {
+            "period": "2018–present",
+            "description": "Return phase focusing on youth development and analytics-driven strategy"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 1,
+        "title_years": [
+          2008
+        ],
+        "finals": 2,
+        "final_years": [
+          2008,
+          2022
+        ],
+        "playoff_appearances": 6
+      },
+      "performance": {
+        "overall": {
+          "matches": 220,
+          "wins": 105,
+          "losses": 110,
+          "no_result": 5,
+          "win_pct": 47.7
+        },
+        "season_highlights": [
+          {
+            "season": 2008,
+            "achievement": "Champions",
+            "note": "Won inaugural IPL season"
+          },
+          {
+            "season": 2022,
+            "achievement": "Runners-up",
+            "note": "Strong comeback season reaching final"
+          }
+        ],
+        "strengths": [
+          "Excellent talent scouting and development",
+          "Strong emphasis on young players",
+          "Flexible team strategy",
+          "Innovative use of analytics"
+        ],
+        "weaknesses": [
+          "Inconsistency across seasons",
+          "Lack of star power in certain years",
+          "Dependence on young players"
+        ],
+        "records": [
+          "Winners of inaugural IPL season (2008)",
+          "Known for producing emerging cricket talents",
+          "Unique team-building philosophy compared to other franchises"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Chennai Super Kings",
+          "details": "Rivalry due to early IPL clashes and suspension period overlap"
+        },
+        {
+          "team": "Mumbai Indians",
+          "details": "Competitive rivalry with several close matches"
+        }
+      ],
+      "notable_players": [
+        "Shane Warne",
+        "Sanju Samson",
+        "Jos Buttler",
+        "Ben Stokes",
+        "Rahul Dravid",
+        "Steve Smith"
+      ],
+      "logoUrl": "/ipl-teams/rr/rajasthan-royals-logo.jpg",
+      "bgUrl": "/ipl-teams/rr/rr%20bg.jpg"
+    },
+    {
+      "id": "rcb",
+      "name": "Royal Challengers Bengaluru",
+      "short_name": "RCB",
+      "basic_info": {
+        "city": "Bengaluru, Karnataka, India",
+        "founded": 2008,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "red",
+          "black",
+          "gold"
+        ],
+        "nicknames": [
+          "RCB",
+          "Bold Army"
+        ],
+        "meaning": "Represents boldness, aggression, and star power"
+      },
+      "ownership": {
+        "current_owner": "United Spirits (Diageo)",
+        "ownership_history": [
+          "Originally owned by Vijay Mallya through United Spirits",
+          "Currently managed under Diageo after ownership transition"
+        ]
+      },
+      "management": {
+        "captain": "Faf du Plessis",
+        "coach": "Andy Flower",
+        "notable_captains": [
+          "Virat Kohli",
+          "Anil Kumble",
+          "Daniel Vettori"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "M. Chinnaswamy Stadium",
+          "location": "Bengaluru",
+          "capacity": 40000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Royal Challengers Bengaluru (RCB) is one of the most popular franchises in the Indian Premier League (IPL), known for its massive fan base and star-studded lineups over the years. Established in 2008 as one of the original IPL teams, RCB has consistently attracted some of the biggest names in cricket, including Virat Kohli, AB de Villiers, Chris Gayle, and others. Despite its popularity and strong squads, the team struggled for many years to secure an IPL title. RCB reached the finals multiple times, including in 2009, 2011, and 2016, but fell short on each occasion. The 2016 season is particularly memorable, with Virat Kohli delivering one of the greatest individual seasons in IPL history. After years of near misses and rebuilding phases, RCB finally broke its title drought by winning its first IPL championship in 2025. The team is known for its aggressive batting approach and high-scoring matches, especially at its home ground, which is considered one of the most batting-friendly pitches in the league.",
+        "timeline": [
+          "2008: Franchise established",
+          "2009: Reached first IPL final",
+          "2011: Reached IPL final again",
+          "2016: Reached final, Virat Kohli’s record-breaking season",
+          "2017–2021: Inconsistent performances and rebuilding phase",
+          "2022–2024: Competitive seasons with playoff appearances",
+          "2025: Won first IPL title"
+        ],
+        "key_eras": [
+          {
+            "period": "2008–2011",
+            "description": "Early competitive years with multiple finals appearances"
+          },
+          {
+            "period": "2012–2016",
+            "description": "Star-driven era with peak performances including 2016 season"
+          },
+          {
+            "period": "2017–2021",
+            "description": "Struggles and rebuilding phase with inconsistent results"
+          },
+          {
+            "period": "2022–present",
+            "description": "Resurgence leading to first IPL title in 2025"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 1,
+        "title_years": [
+          2025
+        ],
+        "finals": 3,
+        "final_years": [
+          2009,
+          2011,
+          2016
+        ],
+        "playoff_appearances": 8
+      },
+      "performance": {
+        "overall": {
+          "matches": 250,
+          "wins": 120,
+          "losses": 125,
+          "no_result": 5,
+          "win_pct": 48
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "Runners-up",
+            "note": "Virat Kohli scored record-breaking runs"
+          },
+          {
+            "season": 2025,
+            "achievement": "Champions",
+            "note": "First IPL title"
+          }
+        ],
+        "strengths": [
+          "Explosive batting lineup",
+          "Strong fan support and home advantage",
+          "Presence of world-class players"
+        ],
+        "weaknesses": [
+          "Bowling inconsistency in several seasons",
+          "Dependence on key star players",
+          "Inconsistent performance in crucial matches (historically)"
+        ],
+        "records": [
+          "Highest individual season runs by a player (Virat Kohli, 2016)",
+          "High-scoring matches at Chinnaswamy Stadium",
+          "One of the largest fan bases in IPL"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Chennai Super Kings",
+          "details": "Popular rivalry due to fan base and frequent high-scoring matches"
+        },
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Notable rivalry due to 2016 IPL final"
+        },
+        {
+          "team": "Kolkata Knight Riders",
+          "details": "Competitive rivalry with several memorable matches"
+        }
+      ],
+      "notable_players": [
+        "Virat Kohli",
+        "AB de Villiers",
+        "Chris Gayle",
+        "Faf du Plessis",
+        "Glenn Maxwell",
+        "Anil Kumble"
+      ],
+      "logoUrl": "/ipl-teams/rcb/rcb-logo.jpg",
+      "bgUrl": "/ipl-teams/rcb/rcb%20bg.jpg"
+    },
+    {
+      "id": "srh",
+      "name": "Sunrisers Hyderabad",
+      "short_name": "SRH",
+      "basic_info": {
+        "city": "Hyderabad, Telangana, India",
+        "founded": 2013,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "orange",
+          "black"
+        ],
+        "nicknames": [
+          "Orange Army"
+        ],
+        "meaning": "Represents the rising sun and aggressive cricketing identity"
+      },
+      "ownership": {
+        "current_owner": "Sun Group",
+        "ownership_history": [
+          "Formed after termination of Deccan Chargers in 2012 by IPL governing council",
+          "Sun TV Network acquired the franchise and rebranded it as Sunrisers Hyderabad"
+        ]
+      },
+      "management": {
+        "captain": "Ishan Kishan",
+        "coach": "Daniel Vettori",
+        "notable_captains": [
+          "David Warner",
+          "Kane Williamson",
+          "Pat Cummins"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Rajiv Gandhi International Cricket Stadium",
+          "location": "Hyderabad",
+          "capacity": 39200,
+          "primary": true
+        },
+        {
+          "name": "ACA–VDCA Cricket Stadium",
+          "location": "Visakhapatnam",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Sunrisers Hyderabad (SRH) is a franchise cricket team based in Hyderabad, Telangana, India, that competes in the Indian Premier League (IPL). The team was established in 2013 after the Deccan Chargers franchise was terminated due to financial issues. The Sun Group, a major media conglomerate, acquired the franchise and introduced Sunrisers Hyderabad as a new entity. From the beginning, SRH built a reputation as a team heavily reliant on disciplined bowling attacks. Over the years, the team evolved significantly, transitioning into a high-powered batting unit while still maintaining its bowling strength. SRH achieved its greatest success in 2016 when it won the IPL title under the captaincy of David Warner. The team consistently remained competitive between 2016 and 2018, reaching multiple playoffs and finals. However, the franchise experienced a dip in performance between 2021 and 2023. In recent seasons, SRH has re-emerged as an aggressive batting side, setting multiple high-scoring records including one of the highest team totals in IPL history.",
+        "timeline": [
+          "2013: Franchise established after Deccan Chargers termination",
+          "2014–2015: Mid-table finishes, building squad core",
+          "2016: Won first IPL title under David Warner",
+          "2017: Strong season, playoff appearance",
+          "2018: Reached IPL final under Kane Williamson",
+          "2019–2020: Competitive seasons with playoff contention",
+          "2021–2023: Performance decline and team restructuring",
+          "2024: Return to finals with aggressive batting approach",
+          "2025–present: Focus on explosive batting and new leadership"
+        ],
+        "key_eras": [
+          {
+            "period": "2016–2018",
+            "description": "Golden phase with strong bowling attack and consistent playoff appearances including a title and finals"
+          },
+          {
+            "period": "2019–2020",
+            "description": "Transitional phase with competitive but inconsistent performances"
+          },
+          {
+            "period": "2021–2023",
+            "description": "Decline phase marked by poor team balance and leadership instability"
+          },
+          {
+            "period": "2024–present",
+            "description": "Revival phase characterized by aggressive batting strategy and record-breaking totals"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 1,
+        "title_years": [
+          2016
+        ],
+        "finals": 3,
+        "final_years": [
+          2016,
+          2018,
+          2024
+        ],
+        "playoff_appearances": 7
+      },
+      "performance": {
+        "overall": {
+          "matches": 201,
+          "wins": 95,
+          "losses": 103,
+          "no_result": 3,
+          "win_pct": 47.27
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "Champions",
+            "note": "Defeated RCB in final"
+          },
+          {
+            "season": 2018,
+            "achievement": "Runners-up",
+            "note": "Lost to CSK in final"
+          },
+          {
+            "season": 2023,
+            "achievement": "Bottom of table",
+            "note": "Worst season performance"
+          },
+          {
+            "season": 2024,
+            "achievement": "Finalist",
+            "note": "High scoring matches and batting dominance"
+          }
+        ],
+        "strengths": [
+          "Historically strong bowling attack",
+          "Effective death-over bowling",
+          "Recent explosive batting lineup"
+        ],
+        "weaknesses": [
+          "Middle-order inconsistency in some seasons",
+          "Frequent leadership changes during slump years"
+        ],
+        "records": [
+          "One of the highest team totals in IPL history (287 runs)",
+          "Consistently strong performance in defending totals during peak years"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "Major rivalry highlighted by the IPL 2016 final where SRH defeated RCB"
+        },
+        {
+          "team": "Kolkata Knight Riders",
+          "details": "Recent rivalry intensified due to playoff and final clashes"
+        }
+      ],
+      "notable_players": [
+        "David Warner",
+        "Bhuvneshwar Kumar",
+        "Kane Williamson",
+        "Rashid Khan",
+        "Pat Cummins"
+      ],
+      "logoUrl": "/ipl-teams/srh/Sunrisers_Hyderabad_Logo.png",
+      "bgUrl": "/ipl-teams/srh/srh%20bg.jpg"
+    },
+    {
+      "id": "gl",
+      "name": "Gujarat Lions",
+      "short_name": "GL",
+      "basic_info": {
+        "city": "Rajkot, Gujarat, India",
+        "founded": 2016,
+        "status": "defunct",
+        "active_years": [
+          2016,
+          2017
+        ]
+      },
+      "identity": {
+        "colors": [
+          "orange",
+          "blue"
+        ],
+        "nicknames": [
+          "Lions"
+        ],
+        "meaning": "Represents strength, pride, and regional identity of Gujarat"
+      },
+      "ownership": {
+        "current_owner": "Intex Technologies",
+        "ownership_history": [
+          "Franchise awarded to Intex Technologies as a temporary replacement team",
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+        ]
+      },
+      "management": {
+        "captain": "Suresh Raina",
+        "coach": "Brad Hodge",
+        "notable_captains": [
+          "Suresh Raina"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Saurashtra Cricket Association Stadium",
+          "location": "Rajkot",
+          "capacity": 28000,
+          "primary": true
+        },
+        {
+          "name": "Green Park Stadium",
+          "location": "Kanpur",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
+        "timeline": [
+          "2016: Franchise introduced as replacement team",
+          "2016: Finished top of league stage, qualified for playoffs",
+          "2017: Poor performance, finished near bottom",
+          "2018: Franchise dissolved after return of CSK and RR"
+        ],
+        "key_eras": [
+          {
+            "period": "2016",
+            "description": "Strong debut season with top league finish"
+          },
+          {
+            "period": "2017",
+            "description": "Decline phase with poor performance"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 0,
+        "final_years": [],
+        "playoff_appearances": 1
+      },
+      "performance": {
+        "overall": {
+          "matches": 30,
+          "wins": 13,
+          "losses": 16,
+          "no_result": 1,
+          "win_pct": 43.3
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "Playoffs",
+            "note": "Finished first in league stage"
+          },
+          {
+            "season": 2017,
+            "achievement": "Bottom-half finish",
+            "note": "Poor performance"
+          }
+        ],
+        "strengths": [
+          "Strong batting lineup in debut season",
+          "Effective leadership under Suresh Raina",
+          "Good team balance in 2016"
+        ],
+        "weaknesses": [
+          "Inconsistency across seasons",
+          "Weak bowling attack in 2017",
+          "Short-lived team structure"
+        ],
+        "records": [
+          "Finished top of table in debut season (2016)",
+          "One of the best debut performances by a temporary IPL team"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Faced SRH in IPL 2016 playoffs"
+        },
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "High-scoring encounters during 2016 season"
+        }
+      ],
+      "notable_players": [
+        "Suresh Raina",
+        "Brendon McCullum",
+        "Dwayne Bravo",
+        "Ravindra Jadeja",
+        "Aaron Finch"
+      ],
+      "logoUrl": "/ipl-teams/gl/Gujarat_Lions.png",
+      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png"
+    },
+    {
+      "id": "ktk",
+      "name": "Kochi Tuskers Kerala",
+      "short_name": "KTK",
+      "basic_info": {
+        "city": "Kochi, Kerala, India",
+        "founded": 2011,
+        "status": "defunct",
+        "active_years": [
+          2011
+        ]
+      },
+      "identity": {
+        "colors": [
+          "blue",
+          "gold"
+        ],
+        "nicknames": [
+          "Tuskers"
+        ],
+        "meaning": "Represents the cultural heritage of Kerala, inspired by elephants (tuskers), symbolizing strength and tradition"
+      },
+      "ownership": {
+        "current_owner": "Kochi Cricket Pvt. Ltd.",
+        "ownership_history": [
+          "Franchise awarded in 2010 to Kochi Cricket Pvt. Ltd.",
+          "Consortium included multiple stakeholders",
+          "Faced internal disputes among owners",
+          "Franchise terminated by BCCI after one season due to contractual issues"
+        ]
+      },
+      "management": {
+        "captain": "Mahela Jayawardene",
+        "coach": "Geoff Lawson",
+        "notable_captains": [
+          "Mahela Jayawardene"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Jawaharlal Nehru Stadium",
+          "location": "Kochi",
+          "capacity": 60000,
+          "primary": true
+        }
+      ],
+      "history": {
+        "full_text": "Kochi Tuskers Kerala (KTK) was a short-lived franchise in the Indian Premier League (IPL), participating only in the 2011 season. The team was introduced as part of the league's expansion and represented the state of Kerala. Despite having a strong lineup featuring international stars such as Mahela Jayawardene, Brendon McCullum, and others, the team struggled to deliver consistent performances on the field. Kochi Tuskers Kerala finished eighth in the league standings in their only season. Off the field, the franchise was plagued by ownership disputes and financial issues, which created instability within the organization. The Board of Control for Cricket in India (BCCI) terminated the franchise after the 2011 season due to breaches of contract, including failure to provide a required bank guarantee. As a result, Kochi Tuskers Kerala became one of the shortest-lived teams in IPL history. Despite its brief existence, the team remains a notable part of IPL history due to its controversial exit and the presence of several prominent players.",
+        "timeline": [
+          "2010: Franchise awarded as part of IPL expansion",
+          "2011: Debut and only IPL season",
+          "2011: Finished 8th in league standings",
+          "2011: Ownership disputes and financial issues arise",
+          "2011: Franchise terminated by BCCI"
+        ],
+        "key_eras": [
+          {
+            "period": "2011",
+            "description": "Single season participation marked by on-field struggles and off-field controversies"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 0,
+        "final_years": [],
+        "playoff_appearances": 0
+      },
+      "performance": {
+        "overall": {
+          "matches": 14,
+          "wins": 6,
+          "losses": 8,
+          "no_result": 0,
+          "win_pct": 42.8
+        },
+        "season_highlights": [
+          {
+            "season": 2011,
+            "achievement": "8th place",
+            "note": "Only season in IPL"
+          }
+        ],
+        "strengths": [
+          "Presence of experienced international players",
+          "Strong fan support in Kerala",
+          "Competitive performances in some matches"
+        ],
+        "weaknesses": [
+          "Lack of team cohesion",
+          "Inconsistent performances",
+          "Severe off-field management issues",
+          "Financial instability"
+        ],
+        "records": [
+          "One of the shortest-lived franchises in IPL history",
+          "Only one season participation",
+          "Notable for controversial exit from IPL"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "Notable matches during 2011 season"
+        },
+        {
+          "team": "Chennai Super Kings",
+          "details": "Faced strong opposition from top teams in debut season"
+        }
+      ],
+      "notable_players": [
+        "Mahela Jayawardene",
+        "Brendon McCullum",
+        "VVS Laxman",
+        "Ravindra Jadeja",
+        "S Sreesanth"
+      ],
+      "logoUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala_Logo.png",
+      "bgUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala%20bg.png"
+    },
+    {
+      "id": "pwi",
+      "name": "Pune Warriors India",
+      "short_name": "PWI",
+      "basic_info": {
+        "city": "Pune, Maharashtra, India",
+        "founded": 2011,
+        "status": "defunct",
+        "active_years": [
+          2011,
+          2012,
+          2013
+        ]
+      },
+      "identity": {
+        "colors": [
+          "blue",
+          "gold"
+        ],
+        "nicknames": [
+          "Warriors"
+        ],
+        "meaning": "Represents strength, determination, and competitive spirit"
+      },
+      "ownership": {
+        "current_owner": "Sahara India Pariwar",
+        "ownership_history": [
+          "Franchise awarded to Sahara India Pariwar in 2010",
+          "Faced financial and administrative disputes with BCCI",
+          "Eventually withdrawn from IPL after 2013 season"
+        ]
+      },
+      "management": {
+        "captain": "Angelo Mathews",
+        "coach": "Geoff Marsh",
+        "notable_captains": [
+          "Yuvraj Singh",
+          "Sourav Ganguly",
+          "Angelo Mathews"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Maharashtra Cricket Association Stadium",
+          "location": "Pune",
+          "capacity": 37000,
+          "primary": true
+        },
+        {
+          "name": "Subrata Roy Sahara Stadium",
+          "location": "Pune",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Pune Warriors India (PWI) was a franchise cricket team that participated in the Indian Premier League (IPL) from 2011 to 2013. The team was owned by Sahara India Pariwar and was introduced as part of the IPL's expansion. Despite having several high-profile players, including Yuvraj Singh and Sourav Ganguly, PWI struggled to achieve consistent success on the field. The team faced numerous challenges, including poor team balance, inconsistent performances, and off-field administrative issues. In its debut season in 2011, Pune Warriors India showed some promise but failed to qualify for the playoffs. The following seasons saw a decline in performance, with the team finishing in the lower half of the table. Off the field, disputes between Sahara Group and the Board of Control for Cricket in India (BCCI) regarding franchise fees and governance led to instability. Eventually, Sahara withdrew the team from the IPL after the 2013 season, bringing an end to Pune Warriors India's brief and turbulent existence in the league.",
+        "timeline": [
+          "2010: Franchise awarded to Sahara India Pariwar",
+          "2011: Debut season in IPL",
+          "2011: Mixed performances, mid-table finish",
+          "2012: Decline in performance",
+          "2013: Continued struggles and bottom finishes",
+          "2013: Franchise withdrawn from IPL due to disputes"
+        ],
+        "key_eras": [
+          {
+            "period": "2011",
+            "description": "Debut season with moderate performance"
+          },
+          {
+            "period": "2012–2013",
+            "description": "Decline phase with poor results and instability"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 0,
+        "final_years": [],
+        "playoff_appearances": 0
+      },
+      "performance": {
+        "overall": {
+          "matches": 46,
+          "wins": 12,
+          "losses": 33,
+          "no_result": 1,
+          "win_pct": 26.1
+        },
+        "season_highlights": [
+          {
+            "season": 2011,
+            "achievement": "Mid-table finish",
+            "note": "Best season performance"
+          },
+          {
+            "season": 2013,
+            "achievement": "Bottom of table",
+            "note": "Worst performance"
+          }
+        ],
+        "strengths": [
+          "Presence of high-profile international players",
+          "Strong fan following in Pune",
+          "Initial promise during debut season"
+        ],
+        "weaknesses": [
+          "Poor team balance",
+          "Inconsistent performances",
+          "Off-field management issues",
+          "Financial and administrative instability"
+        ],
+        "records": [
+          "One of the lowest win percentages in IPL history",
+          "Short-lived franchise due to administrative disputes",
+          "Struggled to compete consistently against stronger teams"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "Regional rivalry with Maharashtra-based franchise"
+        },
+        {
+          "team": "Rising Pune Supergiant",
+          "details": "Indirect connection as both represent Pune in IPL history"
+        }
+      ],
+      "notable_players": [
+        "Yuvraj Singh",
+        "Sourav Ganguly",
+        "Angelo Mathews",
+        "Mitchell Marsh",
+        "Robin Uthappa"
+      ],
+      "logoUrl": "/ipl-teams/pwi/Pune_Warriors_India_IPL_Logo.png",
+      "bgUrl": "/ipl-teams/pwi/pwi%20bg.jpg"
+    },
+    {
+      "id": "rps",
+      "name": "Rising Pune Supergiant",
+      "short_name": "RPS",
+      "basic_info": {
+        "city": "Pune, Maharashtra, India",
+        "founded": 2016,
+        "status": "defunct",
+        "active_years": [
+          2016,
+          2017
+        ]
+      },
+      "identity": {
+        "colors": [
+          "purple",
+          "gold"
+        ],
+        "nicknames": [
+          "Supergiant"
+        ],
+        "meaning": "Represents strength, scale, and ambition"
+      },
+      "ownership": {
+        "current_owner": "RPSG Group (Sanjiv Goenka)",
+        "ownership_history": [
+          "Franchise awarded to RPSG Group as a temporary replacement team",
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+        ]
+      },
+      "management": {
+        "captain": "Steve Smith",
+        "coach": "Stephen Fleming",
+        "notable_captains": [
+          "MS Dhoni",
+          "Steve Smith"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Maharashtra Cricket Association Stadium",
+          "location": "Pune",
+          "capacity": 37000,
+          "primary": true
+        },
+        {
+          "name": "Dr. DY Patil Sports Academy",
+          "location": "Navi Mumbai",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Rising Pune Supergiant (RPS) was a temporary franchise that competed in the Indian Premier League (IPL) during the 2016 and 2017 seasons. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by the RPSG Group, the franchise brought together a mix of experienced international players and Indian stars. In its debut season in 2016, RPS had a disappointing campaign, finishing seventh in the league. The team struggled to find consistency and faced challenges with leadership and team balance. However, in the 2017 season, RPS underwent a remarkable transformation under the captaincy of Steve Smith. The team performed exceptionally well, reaching the IPL final after defeating Mumbai Indians in the playoffs. In a closely contested final, RPS narrowly lost to Mumbai Indians by just one run. Despite their strong performance in 2017, the franchise was dissolved after the return of Chennai Super Kings and Rajasthan Royals in 2018. Although short-lived, RPS left a lasting impact with its dramatic turnaround between its two seasons.",
+        "timeline": [
+          "2016: Franchise introduced as replacement team",
+          "2016: Poor debut season, finished 7th",
+          "2017: Reached IPL final under Steve Smith",
+          "2017: Lost final to Mumbai Indians by 1 run",
+          "2018: Franchise dissolved after return of CSK and RR"
+        ],
+        "key_eras": [
+          {
+            "period": "2016",
+            "description": "Struggling debut season with inconsistent performances"
+          },
+          {
+            "period": "2017",
+            "description": "Dramatic turnaround with strong performance and final appearance"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 1,
+        "final_years": [
+          2017
+        ],
+        "playoff_appearances": 1
+      },
+      "performance": {
+        "overall": {
+          "matches": 30,
+          "wins": 15,
+          "losses": 15,
+          "no_result": 0,
+          "win_pct": 50
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "7th place",
+            "note": "Poor debut season"
+          },
+          {
+            "season": 2017,
+            "achievement": "Runners-up",
+            "note": "Lost final by 1 run to Mumbai Indians"
+          }
+        ],
+        "strengths": [
+          "Strong comeback ability",
+          "Balanced squad in 2017 season",
+          "Effective leadership under Steve Smith",
+          "Strong bowling attack in 2017"
+        ],
+        "weaknesses": [
+          "Inconsistency in debut season",
+          "Leadership instability in 2016",
+          "Short-lived team continuity"
+        ],
+        "records": [
+          "One of the closest IPL finals (2017)",
+          "Significant improvement between two seasons",
+          "Competitive performance despite short existence"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "Strong rivalry during 2017 season including IPL final"
+        },
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Faced SRH in 2016 playoffs"
+        }
+      ],
+      "notable_players": [
+        "MS Dhoni",
+        "Steve Smith",
+        "Ajinkya Rahane",
+        "Ben Stokes",
+        "Ravichandran Ashwin",
+        "Faf du Plessis"
+      ],
+      "logoUrl": "/ipl-teams/rps/Rising_Pune_Supergiant%20logo.png",
+      "bgUrl": "/ipl-teams/rps/rps%20bg.png"
+    }
+  ]
+}

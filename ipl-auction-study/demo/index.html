@@ -28,6 +28,7 @@
     <nav aria-label="Main Navigation">
       <a href="#services">Services</a>
       <a href="#query">Console</a>
+      <a href="#teams">Teams</a>
       <a href="#numbers">By The Numbers</a>
     </nav>
   </header>
@@ -145,6 +146,19 @@
       </section>
     </section>
   </main>
+
+  <!-- IPL Teams (profiles + imagery from /data/ipl-teams-bundle.json) -->
+  <section id="teams" class="container section ipl-teams-section reveal" aria-labelledby="teams-heading">
+    <h2 id="teams-heading" class="section-title">IPL TEAMS</h2>
+    <p class="ipl-teams-lede">
+      Franchise bios from the project JSON library. Backgrounds are scaled to cover, lightly blurred, and dimmed so text stays readable.
+    </p>
+    <div class="ipl-teams-layout">
+      <div id="iplTeamsGrid" class="ipl-teams-grid" role="tablist" aria-label="IPL franchises"></div>
+      <div id="iplTeamsDetail" class="ipl-teams-detail" role="tabpanel" aria-live="polite"></div>
+    </div>
+    <p id="iplTeamsError" class="ipl-teams-error hidden" role="alert"></p>
+  </section>
 
   <!-- Statistics Section -->
   <section id="numbers" class="container section numbers reveal" aria-labelledby="stats-heading">

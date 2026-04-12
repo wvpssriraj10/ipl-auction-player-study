@@ -4,8 +4,9 @@
   "description": "An analysis of IPL auction values vs performance",
   "main": "demo/index.html",
   "scripts": {
+    "predev": "node scripts/build-ipl-teams-bundle.mjs",
     "dev": "vite",
-    "build": "vite build demo",
+    "build": "node scripts/build-ipl-teams-bundle.mjs && vite build demo",
     "preview": "vite preview demo"
   },
   "devDependencies": {

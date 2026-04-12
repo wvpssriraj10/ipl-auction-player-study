@@ -1,0 +1,137 @@
+{
+  "id": "gl",
+  "name": "Gujarat Lions",
+  "short_name": "GL",
+
+  "basic_info": {
+    "city": "Rajkot, Gujarat, India",
+    "founded": 2016,
+    "status": "defunct",
+    "active_years": [2016, 2017]
+  },
+
+  "identity": {
+    "colors": ["orange", "blue"],
+    "nicknames": ["Lions"],
+    "meaning": "Represents strength, pride, and regional identity of Gujarat"
+  },
+
+  "ownership": {
+    "current_owner": "Intex Technologies",
+    "ownership_history": [
+      "Franchise awarded to Intex Technologies as a temporary replacement team",
+      "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+    ]
+  },
+
+  "management": {
+    "captain": "Suresh Raina",
+    "coach": "Brad Hodge",
+    "notable_captains": [
+      "Suresh Raina"
+    ]
+  },
+
+  "home_grounds": [
+    {
+      "name": "Saurashtra Cricket Association Stadium",
+      "location": "Rajkot",
+      "capacity": 28000,
+      "primary": true
+    },
+    {
+      "name": "Green Park Stadium",
+      "location": "Kanpur",
+      "primary": false
+    }
+  ],
+
+  "history": {
+    "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
+
+    "timeline": [
+      "2016: Franchise introduced as replacement team",
+      "2016: Finished top of league stage, qualified for playoffs",
+      "2017: Poor performance, finished near bottom",
+      "2018: Franchise dissolved after return of CSK and RR"
+    ],
+
+    "key_eras": [
+      {
+        "period": "2016",
+        "description": "Strong debut season with top league finish"
+      },
+      {
+        "period": "2017",
+        "description": "Decline phase with poor performance"
+      }
+    ]
+  },
+
+  "honours": {
+    "ipl_titles": 0,
+    "title_years": [],
+    "finals": 0,
+    "final_years": [],
+    "playoff_appearances": 1
+  },
+
+  "performance": {
+    "overall": {
+      "matches": 30,
+      "wins": 13,
+      "losses": 16,
+      "no_result": 1,
+      "win_pct": 43.3
+    },
+
+    "season_highlights": [
+      {
+        "season": 2016,
+        "achievement": "Playoffs",
+        "note": "Finished first in league stage"
+      },
+      {
+        "season": 2017,
+        "achievement": "Bottom-half finish",
+        "note": "Poor performance"
+      }
+    ],
+
+    "strengths": [
+      "Strong batting lineup in debut season",
+      "Effective leadership under Suresh Raina",
+      "Good team balance in 2016"
+    ],
+
+    "weaknesses": [
+      "Inconsistency across seasons",
+      "Weak bowling attack in 2017",
+      "Short-lived team structure"
+    ],
+
+    "records": [
+      "Finished top of table in debut season (2016)",
+      "One of the best debut performances by a temporary IPL team"
+    ]
+  },
+
+  "rivalries": [
+    {
+      "team": "Sunrisers Hyderabad",
+      "details": "Faced SRH in IPL 2016 playoffs"
+    },
+    {
+      "team": "Royal Challengers Bengaluru",
+      "details": "High-scoring encounters during 2016 season"
+    }
+  ],
+
+  "notable_players": [
+    "Suresh Raina",
+    "Brendon McCullum",
+    "Dwayne Bravo",
+    "Ravindra Jadeja",
+    "Aaron Finch"
+  ]
+}
