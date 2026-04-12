@@ -257,7 +257,7 @@ function renderDetail(detailEl, team) {
       }
       <div class="ipl-teams-story">
         <h4>History</h4>
-        <p>${escapeHtml(team.history?.full_text ?? '')}</p>
+        <div class="ipl-teams-story-text">${normalizeTeamText(team.history?.full_text ?? '').split('. ').map(s => s.trim() ? `<p>${escapeHtml(s.trim())}${s.trim().endsWith('.') ? '' : '.'}</p>` : '').join('')}</div>
       </div>
       ${
         team.notable_players?.length

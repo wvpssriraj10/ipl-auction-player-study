@@ -175,7 +175,18 @@ export default function IplTeamsSection() {
 
           <div className="ipl-teams__story">
             <h4>History</h4>
-            <p>{team.history?.full_text}</p>
+            <div className="ipl-teams__story-text">
+              {(team.history?.full_text || '').split('. ').map((sentence, idx) => {
+                const trimmed = sentence.trim()
+                if (!trimmed) return null
+                return (
+                  <p key={idx}>
+                    {trimmed}
+                    {trimmed.endsWith('.') ? '' : '.'}
+                  </p>
+                )
+              })}
+            </div>
           </div>
 
           {team.notable_players?.length > 0 && (

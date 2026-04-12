@@ -496,12 +496,23 @@ body.ipl-teams-react-detail-open {
 }
 
 .ipl-teams__honours p,
-.ipl-teams__story p {
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.55;
+.ipl-teams__story-text p {
+  margin: 0 0 1.25rem;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.8;
   color: rgba(248, 250, 252, 0.95);
+  text-align: justify;
+}
+
+.ipl-teams__detail--fullscreen {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 3rem;
+  overscroll-behavior: contain;
 }
 
 .ipl-teams__honours strong {
