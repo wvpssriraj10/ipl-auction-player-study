@@ -37,8 +37,11 @@
 
   .ipl-teams__grid {
     flex: 0 0 240px;
+    flex-shrink: 0;
+    min-width: 220px;
     max-height: min(70vh, 640px);
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 4px;
   }
 
@@ -157,8 +160,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   overflow: hidden;
 }
 
@@ -170,7 +173,6 @@
   height: auto;
   object-fit: contain;
   object-position: center;
-  mix-blend-mode: multiply;
 }
 
 .ipl-teams__card-fallback {
@@ -281,10 +283,8 @@
   height: 88px;
   object-fit: contain;
   border-radius: 12px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   padding: 6px;
-  mix-blend-mode: multiply;
 }
 
 .ipl-teams__detail-titles {

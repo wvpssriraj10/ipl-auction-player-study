@@ -1112,8 +1112,11 @@ input.player-search-input {
 
   .ipl-teams-grid {
     flex: 0 0 260px;
+    flex-shrink: 0;
+    min-width: 220px;
     max-height: min(72vh, 640px);
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 6px;
   }
 
@@ -1234,9 +1237,8 @@ input.player-search-input {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  /* Transparent so multiply blend can use the card bg (hides white JPEG mattes) */
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   overflow: hidden;
 }
 
@@ -1248,8 +1250,19 @@ input.player-search-input {
   height: auto;
   object-fit: contain;
   object-position: center;
-  /* White logo areas blend into the blurred card; keeps PNGs looking normal */
-  mix-blend-mode: multiply;
+}
+
+.ipl-teams-loading,
+.ipl-teams-detail-placeholder {
+  margin: 0;
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.ipl-teams-grid[aria-busy='true'] {
+  min-height: 4rem;
 }
 
 .ipl-teams-card-fallback {
@@ -1349,10 +1362,9 @@ input.player-search-input {
   height: 84px;
   object-fit: contain;
   border-radius: 12px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 6px;
-  mix-blend-mode: multiply;
 }
 
 .ipl-teams-detail-title {

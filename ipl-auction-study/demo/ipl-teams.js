@@ -218,8 +218,32 @@ function renderDetail(detailEl, team) {
 }
 
 /**
+ * Resolve bundle JSON: always from site origin + `/data/...` so it works on Vercel
+ * (avoid broken `import.meta.env.BASE_URL` values like `./`).
+ */
+function defaultBundleUrl() {
+  if (typeof window !== 'undefined' && window.location?.origin) {
+    return new URL('/data/ipl-teams-bundle.json', window.location.origin).href;
+  }
+  return '/data/ipl-teams-bundle.json';
+}
+
+async function fetchBundle(primaryUrl) {
+  let res = await fetch(primaryUrl, { cache: 'no-store' });
+  if (res.ok) return res;
+  const fallback = new URL(
+    'data/ipl-teams-bundle.json',
+    window.location.href,
+  ).href;
+  if (fallback !== primaryUrl) {
+    res = await fetch(fallback, { cache: 'no-store' });
+  }
+  return res;
+}
+
+/**
  * @param {object} [options]
- * @param {string} [options.bundleUrl] - defaults to site-root data path (works with Vite base)
+ * @param {string} [options.bundleUrl] - override bundle location
  */
 export async function initIplTeamsSection(options = {}) {
   const grid = document.getElementById('iplTeamsGrid');
@@ -227,16 +251,19 @@ export async function initIplTeamsSection(options = {}) {
   const errEl = document.getElementById('iplTeamsError');
   if (!grid || !detail) return;
 
-  const base = typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
-    ? import.meta.env.BASE_URL
-    : '/';
-  const prefix = base === '/' ? '/' : base.replace(/\/?$/, '/');
-  const bundleUrl =
-    options.bundleUrl ??
-    (prefix === '/' ? '/data/ipl-teams-bundle.json' : `${prefix}data/ipl-teams-bundle.json`);
+  const bundleUrl = options.bundleUrl ?? defaultBundleUrl();
+
+  grid.innerHTML = '';
+  grid.setAttribute('aria-busy', 'true');
+  const loadingEl = document.createElement('p');
+  loadingEl.className = 'ipl-teams-loading';
+  loadingEl.textContent = 'Loading teams…';
+  grid.appendChild(loadingEl);
+  detail.innerHTML =
+    '<p class="ipl-teams-detail-placeholder">Select a team to load details.</p>';
 
   try {
-    const res = await fetch(bundleUrl);
+    const res = await fetchBundle(bundleUrl);
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const data = await res.json();
     const teams = data.teams || [];
@@ -254,9 +281,13 @@ export async function initIplTeamsSection(options = {}) {
     }
   } catch (e) {
     console.error('[IPL Teams]', e);
+    grid.innerHTML = '';
+    detail.innerHTML = '';
     if (errEl) {
-      errEl.textContent = `Could not load IPL team profiles (${e.message}). Run the site from the Vite dev server or rebuild so /data/ipl-teams-bundle.json is available.`;
+      errEl.textContent = `Could not load IPL team profiles (${e.message}).`;
       errEl.classList.remove('hidden');
     }
+  } finally {
+    grid.removeAttribute('aria-busy');
   }
 }
