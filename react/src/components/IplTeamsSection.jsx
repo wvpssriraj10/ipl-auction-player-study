@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { getIplTeams } from '../data/iplTeams'
 import './IplTeamsSection.css'
 
@@ -28,48 +28,216 @@ function gradientFromColors(colors) {
 
 export default function IplTeamsSection() {
   const teams = useMemo(() => getIplTeams(), [])
-  const [selectedId, setSelectedId] = useState(teams[0]?.id ?? null)
+  const [selectedId, setSelectedId] = useState(null)
+  const [detailOpen, setDetailOpen] = useState(false)
+  const gridRef = useRef(null)
+  const backBtnRef = useRef(null)
 
-  const selected = teams.find((t) => t.id === selectedId) ?? teams[0] ?? null
+  const selected = teams.find((t) => t.id === selectedId) ?? null
+
+  useEffect(() => {
+    document.body.classList.toggle('ipl-teams-react-detail-open', detailOpen)
+    return () => document.body.classList.remove('ipl-teams-react-detail-open')
+  }, [detailOpen])
+
+  useEffect(() => {
+    if (!detailOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setDetailOpen(false)
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [detailOpen])
+
+  useEffect(() => {
+    if (detailOpen) {
+      requestAnimationFrame(() => backBtnRef.current?.focus())
+    } else if (selectedId && gridRef.current) {
+      const btn = gridRef.current.querySelector(`[data-team-id="${selectedId}"]`)
+      if (btn instanceof HTMLElement) btn.focus()
+    }
+  }, [detailOpen, selectedId])
+
+  function openTeam(id) {
+    setSelectedId(id)
+    setDetailOpen(true)
+  }
+
+  function closeDetail() {
+    setDetailOpen(false)
+  }
+
+  function renderDetailArticle(team) {
+    return (
+      <article
+        className="ipl-teams__detail ipl-teams__detail--fullscreen"
+        aria-label={team.name}
+      >
+        {/* Local hero background hidden in favor of stage background for immersive look */}
+        <div className="ipl-teams__detail-scrim" aria-hidden />
+        <div className="ipl-teams__detail-inner">
+          <header className="ipl-teams__detail-head">
+            {team.logoUrl && (
+              <img
+                src={team.logoUrl}
+                alt=""
+                className="ipl-teams__detail-logo"
+                width={96}
+                height={96}
+              />
+            )}
+            <div className="ipl-teams__detail-titles">
+              <h3 className="ipl-teams__detail-title">{team.name}</h3>
+              <p className="ipl-teams__detail-sub">
+                <strong>{team.short_name}</strong>
+                <span className="ipl-teams__dot" aria-hidden>
+                  ·
+                </span>
+                {team.basic_info?.city}
+              </p>
+              <div className="ipl-teams__badges">
+                <span
+                  className={`ipl-teams__badge ipl-teams__badge--${team.basic_info?.status === 'active' ? 'active' : 'defunct'}`}
+                >
+                  {team.basic_info?.status === 'active' ? 'Active' : 'Defunct'}
+                </span>
+                {team.basic_info?.active_years && (
+                  <span className="ipl-teams__badge ipl-teams__badge--muted">
+                    {team.basic_info.active_years.join('–')}
+                  </span>
+                )}
+              </div>
+            </div>
+          </header>
+
+          {team.identity?.meaning && (
+            <p className="ipl-teams__tagline">{team.identity.meaning}</p>
+          )}
+
+          {team.identity?.colors?.length > 0 && (
+            <ul className="ipl-teams__chips" aria-label="Team colours">
+              {team.identity.colors.map((c) => (
+                <li key={c} className="ipl-teams__chip">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <dl className="ipl-teams__facts">
+            <div>
+              <dt>Captain</dt>
+              <dd>{team.management?.captain ?? '—'}</dd>
+            </div>
+            <div>
+              <dt>Coach</dt>
+              <dd>{team.management?.coach ?? '—'}</dd>
+            </div>
+            <div>
+              <dt>Founded</dt>
+              <dd>{team.basic_info?.founded ?? '—'}</dd>
+            </div>
+            <div>
+              <dt>Owner</dt>
+              <dd>{team.ownership?.current_owner ?? '—'}</dd>
+            </div>
+          </dl>
+
+          <div className="ipl-teams__honours">
+            <h4>Honours</h4>
+            <p>
+              <strong>{team.honours?.ipl_titles ?? 0}</strong> titles
+              {team.honours?.title_years?.length > 0 &&
+                ` (${team.honours.title_years.join(', ')})`}
+              <span className="ipl-teams__dot"> · </span>
+              <strong>{team.honours?.finals ?? 0}</strong> finals
+              <span className="ipl-teams__dot"> · </span>
+              <strong>{team.honours?.playoff_appearances ?? 0}</strong> playoff
+              runs
+            </p>
+          </div>
+
+          {team.performance?.overall && (
+            <div className="ipl-teams__honours">
+              <h4>Overall record</h4>
+              <p>
+                <strong>{team.performance.overall.matches}</strong> matches
+                <span className="ipl-teams__dot"> · </span>
+                <strong>{team.performance.overall.wins}</strong> wins
+                <span className="ipl-teams__dot"> · </span>
+                <strong>{team.performance.overall.win_pct}%</strong> win rate
+              </p>
+            </div>
+          )}
+
+          <div className="ipl-teams__story">
+            <h4>History</h4>
+            <p>{team.history?.full_text}</p>
+          </div>
+
+          {team.notable_players?.length > 0 && (
+            <div className="ipl-teams__honours">
+              <h4>Notable players</h4>
+              <p className="ipl-teams__players">
+                {team.notable_players.join(', ')}
+              </p>
+            </div>
+          )}
+        </div>
+      </article>
+    )
+  }
 
   return (
     <section className="ipl-teams" aria-labelledby="ipl-teams-heading">
       <div className="ipl-teams__intro">
         <h2 id="ipl-teams-heading">IPL teams</h2>
         <p className="ipl-teams__lede">
-          Franchise profiles from your JSON assets. Pick a team to view details
-          on a softened background so the copy stays sharp and easy to read.
+          Tap a logo to open the full franchise profile. Use{' '}
+          <strong>Go back</strong> to return here.
         </p>
       </div>
 
-      <div className="ipl-teams__layout">
+      <div className="ipl-teams__list-stage" aria-hidden={detailOpen}>
         <div
-          className="ipl-teams__grid"
-          role="tablist"
+          ref={gridRef}
+          className="ipl-teams__grid ipl-teams__grid--picker"
+          role="listbox"
           aria-label="IPL franchises"
+          aria-multiselectable="false"
         >
           {teams.map((team) => {
-            const isActive = team.id === selected?.id
+            const isActive = team.id === selectedId
             const photoBg = Boolean(team.bgUrl)
             return (
               <button
                 key={team.id}
                 type="button"
-                role="tab"
+                data-team-id={team.id}
+                role="option"
                 aria-selected={isActive}
-                className={`ipl-teams__card${isActive ? ' ipl-teams__card--active' : ''}${photoBg ? ' ipl-teams__card--has-photo-bg' : ' ipl-teams__card--has-gradient-bg'}`}
-                onClick={() => setSelectedId(team.id)}
+                aria-label={team.name}
+                className={`ipl-teams__card ipl-teams__card--picker${isActive ? ' ipl-teams__card--active' : ''}${photoBg ? ' ipl-teams__card--has-photo-bg' : ' ipl-teams__card--has-gradient-bg'}`}
+                onClick={() => openTeam(team.id)}
               >
-                <span
-                  className="ipl-teams__card-bg"
-                  aria-hidden
-                  style={
-                    photoBg
-                      ? { backgroundImage: `url(${team.bgUrl})` }
-                      : { background: gradientFromColors(team.identity?.colors) }
-                  }
-                />
-                <span className="ipl-teams__card-scrim" aria-hidden />
+                <span className="ipl-teams__card-visual" aria-hidden>
+                  <span
+                    className="ipl-teams__card-bg"
+                    style={
+                      photoBg
+                        ? { backgroundImage: `url(${team.bgUrl})` }
+                        : {
+                            background: gradientFromColors(
+                              team.identity?.colors,
+                            ),
+                          }
+                    }
+                  />
+                  <span className="ipl-teams__card-scrim" />
+                </span>
                 <span className="ipl-teams__card-inner">
                   <span className="ipl-teams__card-logo-wrap">
                     {team.logoUrl ? (
@@ -87,7 +255,6 @@ export default function IplTeamsSection() {
                     )}
                   </span>
                   <span className="ipl-teams__card-meta">
-                    <span className="ipl-teams__card-name">{team.name}</span>
                     <span className="ipl-teams__card-abbr">{team.short_name}</span>
                   </span>
                 </span>
@@ -95,143 +262,37 @@ export default function IplTeamsSection() {
             )
           })}
         </div>
-
-        {selected && (
-          <article
-            className="ipl-teams__detail"
-            role="tabpanel"
-            aria-label={selected.name}
-          >
-            <div
-              className={`ipl-teams__detail-bg${selected.bgUrl ? ' ipl-teams__detail-bg--photo' : ''}`}
-              style={
-                selected.bgUrl
-                  ? {
-                      backgroundImage: `url(${selected.bgUrl})`,
-                    }
-                  : {
-                      background: gradientFromColors(selected.identity?.colors),
-                    }
-              }
-              aria-hidden
-            />
-            <div className="ipl-teams__detail-scrim" aria-hidden />
-            <div className="ipl-teams__detail-inner">
-              <header className="ipl-teams__detail-head">
-                {selected.logoUrl && (
-                  <img
-                    src={selected.logoUrl}
-                    alt=""
-                    className="ipl-teams__detail-logo"
-                    width={96}
-                    height={96}
-                  />
-                )}
-                <div className="ipl-teams__detail-titles">
-                  <h3 className="ipl-teams__detail-title">{selected.name}</h3>
-                  <p className="ipl-teams__detail-sub">
-                    <strong>{selected.short_name}</strong>
-                    <span className="ipl-teams__dot" aria-hidden>
-                      ·
-                    </span>
-                    {selected.basic_info?.city}
-                  </p>
-                  <div className="ipl-teams__badges">
-                    <span
-                      className={`ipl-teams__badge ipl-teams__badge--${selected.basic_info?.status === 'active' ? 'active' : 'defunct'}`}
-                    >
-                      {selected.basic_info?.status === 'active'
-                        ? 'Active'
-                        : 'Defunct'}
-                    </span>
-                    {selected.basic_info?.active_years && (
-                      <span className="ipl-teams__badge ipl-teams__badge--muted">
-                        {selected.basic_info.active_years.join('–')}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </header>
-
-              {selected.identity?.meaning && (
-                <p className="ipl-teams__tagline">{selected.identity.meaning}</p>
-              )}
-
-              {selected.identity?.colors?.length > 0 && (
-                <ul className="ipl-teams__chips" aria-label="Team colours">
-                  {selected.identity.colors.map((c) => (
-                    <li key={c} className="ipl-teams__chip">
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              <dl className="ipl-teams__facts">
-                <div>
-                  <dt>Captain</dt>
-                  <dd>{selected.management?.captain ?? '—'}</dd>
-                </div>
-                <div>
-                  <dt>Coach</dt>
-                  <dd>{selected.management?.coach ?? '—'}</dd>
-                </div>
-                <div>
-                  <dt>Founded</dt>
-                  <dd>{selected.basic_info?.founded ?? '—'}</dd>
-                </div>
-                <div>
-                  <dt>Owner</dt>
-                  <dd>{selected.ownership?.current_owner ?? '—'}</dd>
-                </div>
-              </dl>
-
-              <div className="ipl-teams__honours">
-                <h4>Honours</h4>
-                <p>
-                  <strong>{selected.honours?.ipl_titles ?? 0}</strong> titles
-                  {selected.honours?.title_years?.length > 0 &&
-                    ` (${selected.honours.title_years.join(', ')})`}
-                  <span className="ipl-teams__dot"> · </span>
-                  <strong>{selected.honours?.finals ?? 0}</strong> finals
-                  <span className="ipl-teams__dot"> · </span>
-                  <strong>{selected.honours?.playoff_appearances ?? 0}</strong>{' '}
-                  playoff runs
-                </p>
-              </div>
-
-              {selected.performance?.overall && (
-                <div className="ipl-teams__honours">
-                  <h4>Overall record</h4>
-                  <p>
-                    <strong>{selected.performance.overall.matches}</strong>{' '}
-                    matches
-                    <span className="ipl-teams__dot"> · </span>
-                    <strong>{selected.performance.overall.wins}</strong> wins
-                    <span className="ipl-teams__dot"> · </span>
-                    <strong>{selected.performance.overall.win_pct}%</strong> win
-                    rate
-                  </p>
-                </div>
-              )}
-
-              <div className="ipl-teams__story">
-                <h4>History</h4>
-                <p>{selected.history?.full_text}</p>
-              </div>
-
-              {selected.notable_players?.length > 0 && (
-                <div className="ipl-teams__honours">
-                  <h4>Notable players</h4>
-                  <p className="ipl-teams__players">
-                    {selected.notable_players.join(', ')}
-                  </p>
-                </div>
-              )}
-            </div>
-          </article>
-        )}
       </div>
+
+      {detailOpen && selected && (
+        <div
+          className="ipl-teams__detail-stage"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Team profile"
+        >
+          <div
+            className="ipl-teams__stage-bg"
+            style={
+              selected.bgUrl
+                ? { backgroundImage: `url(${selected.bgUrl})` }
+                : { background: gradientFromColors(selected.identity?.colors) }
+            }
+            aria-hidden
+          />
+          <div className="ipl-teams__detail-stage-bar">
+            <button
+              ref={backBtnRef}
+              type="button"
+              className="ipl-teams__back-btn"
+              onClick={closeDetail}
+            >
+              Go back
+            </button>
+          </div>
+          {renderDetailArticle(selected)}
+        </div>
+      )}
     </section>
   )
 }
