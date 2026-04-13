@@ -48,10 +48,12 @@ function bgScore(name) {
 
 function logoScore(name) {
   const n = name.toLowerCase();
-  if (n.includes('logo')) return 100;
-  if (n === 'delhi_capitals.png') return 80;
-  if (n === 'gujarat_lions.png') return 80;
-  return 0;
+  let score = 0;
+  if (n.includes('logo')) score += 100;
+  if (n.endsWith('.png') || n.endsWith('.svg')) score += 10;
+  if (n === 'delhi_capitals.png') score += 80;
+  if (n === 'gujarat_lions.png') score += 80;
+  return score;
 }
 
 function resolveImageFiles(fileNames) {
