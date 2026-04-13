@@ -108,8 +108,14 @@
     .nrr-plus { color: #4ade80; }
     .nrr-minus { color: #f87171; }
     
-    .nrr-plus { color: #4ade80; }
-    .nrr-minus { color: #f87171; }
+    .points-table-container {
+      opacity: 1;
+      transform: none;
+      background: rgba(13, 13, 13, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body class="teams-shell">
@@ -131,7 +137,7 @@
       </select>
     </div>
 
-    <div class="points-table-container reveal">
+    <div class="points-table-container">
       <table class="ipl-table" id="pointsTable">
         <thead>
           <tr>
@@ -229,7 +235,7 @@
         const nrrText = t.nrr > 0 ? `+${t.nrr.toFixed(3)}` : (t.nrr < 0 ? t.nrr.toFixed(3) : '0.000');
         
         // Match team name to logo
-        let logoUrl = teamsMap[t.team] || '';
+        let logoUrl = teamsMap[t.team] || 'https://www.google.com/s2/favicons?domain=iplt20.com&sz=32';
         
         // Simple abbreviation for the label
         const abbr = t.team.split(' ').map(w => w[0]).join('').substring(0,4);
