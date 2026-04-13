@@ -55,37 +55,68 @@
       color: var(--purple-light);
       pointer-events: none;
     }
+    .nrr-plus { color: #4ade80 !important; font-weight: 600; }
+    .nrr-minus { color: #f87171 !important; font-weight: 600; }
+    
+    .ipl-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
     .ipl-table th, .ipl-table td {
-      padding: 0.6rem 0.75rem;
+      padding: 0.8rem 0.5rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       vertical-align: middle;
+      text-align: center;
+    }
+    .ipl-table th {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .ipl-table td:first-child, .ipl-table th:first-child { 
+      width: 40px; 
+      text-align: left;
+      padding-left: 1rem;
+    }
+    .ipl-table td:nth-child(2), .ipl-table th:nth-child(2) { 
+      width: 35%; 
+      text-align: left;
+    }
+    .ipl-table td:last-child, .ipl-table th:last-child {
+      text-align: right;
+      padding-right: 1.5rem;
     }
     .team-cell {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      font-weight: 600;
+      gap: 1.25rem;
+      font-weight: 700;
       color: var(--white);
       font-size: 1rem;
     }
     .team-logo-sm {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       object-fit: contain;
     }
     .stat-pts {
       font-weight: 900;
       color: var(--purple-light);
-      font-size: 1rem;
+      font-size: 1.1rem;
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
     }
     .points-table-container {
       opacity: 1;
       transform: none;
-      background: rgba(13, 13, 13, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 0.5rem 1rem;
-      backdrop-filter: blur(10px);
+      background: rgba(13, 13, 13, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
   </style>
 </head>
@@ -221,23 +252,20 @@
         
         // Match team name to logo
         let logoUrl = teamsMap[t.team] || 'https://www.google.com/s2/favicons?domain=iplt20.com&sz=32';
-        
-        // Simple abbreviation for the label
-        const abbr = t.team.split(' ').map(w => w[0]).join('').substring(0,4);
 
         tr.innerHTML = `
           <td><span class="rank-num">${t.rank}</span></td>
           <td>
             <div class="team-cell">
-              <img src="${logoUrl}" class="team-logo-sm" alt="">
+              <img src="${logoUrl}" class="team-logo-sm" alt="${t.team}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3233/3233483.png'">
               <span>${escapeHtml(t.team)}</span>
             </div>
           </td>
-          <td style="text-align:right" class="stat-val">${t.m}</td>
-          <td style="text-align:right" class="stat-val">${t.w}</td>
-          <td style="text-align:right" class="stat-val">${t.l}</td>
-          <td style="text-align:right" class="${nrrClass} stat-val">${nrrText}</td>
-          <td style="text-align:right" class="stat-pts"><strong>${t.pts}</strong></td>
+          <td class="stat-val">${t.m}</td>
+          <td class="stat-val">${t.w}</td>
+          <td class="stat-val">${t.l}</td>
+          <td class="${nrrClass} stat-val">${nrrText}</td>
+          <td class="stat-pts"><strong>${t.pts}</strong></td>
         `;
         tbody.appendChild(tr);
       });
