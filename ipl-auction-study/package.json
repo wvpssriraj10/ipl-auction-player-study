@@ -2,12 +2,12 @@
   "name": "ipl-auction-study",
   "version": "1.0.0",
   "description": "An analysis of IPL auction values vs performance",
-  "main": "demo/index.html",
+  "main": "index.html",
   "scripts": {
     "predev": "node scripts/build-ipl-teams-bundle.mjs",
     "dev": "vite",
-    "build": "node scripts/build-ipl-teams-bundle.mjs && vite build demo",
-    "preview": "vite preview demo"
+    "build": "node scripts/build-ipl-teams-bundle.mjs && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^5.4.21"

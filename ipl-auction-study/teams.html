@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IPL franchise profiles — teams, history, honours, and imagery." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>IPL Teams | IPL Auction Intelligence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏏%3C/text%3E%3C/svg%3E">
+  <link rel="alternate icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3233/3233483.png">
+  
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="teams-shell">
+  <a href="./index.html" class="skip-to-main">Skip to main content</a>
+
+  <header class="teams-topbar" role="banner">
+    <a href="./index.html" class="teams-back-link">
+      <span aria-hidden="true">←</span> Back to demo
+    </a>
+    <span class="teams-topbar-brand">IPL TEAMS</span>
+    <nav class="topbar-nav">
+       <a href="./points-table.html" class="nav-link nav-highlight">🏆 Points Table</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="teams-main container section teams-main--ipl-flow">
+    <h1 class="section-title teams-page-h1 teams-page-title--gradient">Franchise profiles</h1>
+
+    <div class="ipl-teams-flow">
+      <div id="iplTeamsListStage" class="ipl-teams-list-stage">
+        <div
+          id="iplTeamsGrid"
+          class="ipl-teams-grid ipl-teams-grid--picker"
+          role="listbox"
+          aria-label="IPL franchises"
+        ></div>
+      </div>
+
+      <div
+        id="iplTeamsDetailStage"
+        class="ipl-teams-detail-stage"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Team profile"
+        hidden
+      >
+        <div id="iplTeamsStageBg" class="ipl-teams-stage-bg" aria-hidden="true"></div>
+        <div class="ipl-teams-detail-stage-bar">
+          <button type="button" id="iplTeamsBackBtn" class="ipl-teams-back-btn">
+            Go back
+          </button>
+        </div>
+        <div
+          id="iplTeamsDetail"
+          class="ipl-teams-detail ipl-teams-detail--fullscreen"
+          aria-live="polite"
+        ></div>
+      </div>
+    </div>
+    <p id="iplTeamsError" class="ipl-teams-error hidden" role="alert"></p>
+  </main>
+
+  <script type="module" src="./teams-page.js"></script>
+</body>
+</html>

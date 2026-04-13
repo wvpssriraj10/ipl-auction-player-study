@@ -1,6 +1,6 @@
 /**
- * Copies IPL team assets from react/src/assets into demo/public/ipl-teams/<slug>/
- * and writes demo/public/data/ipl-teams-bundle.json for the main site.
+ * Copies IPL team assets from react/src/assets into public/ipl-teams/<slug>/
+ * and writes public/data/ipl-teams-bundle.json for the main site.
  *
  * Run from repo: node ipl-auction-study/scripts/build-ipl-teams-bundle.mjs
  * Or: npm run build (from ipl-auction-study) runs this before vite build.
@@ -13,8 +13,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const studyRoot = path.resolve(__dirname, '..');
 const repoRoot = path.resolve(studyRoot, '..');
 const srcAssets = path.join(repoRoot, 'react', 'src', 'assets');
-const destBase = path.join(studyRoot, 'demo', 'public', 'ipl-teams');
-const bundlePath = path.join(studyRoot, 'demo', 'public', 'data', 'ipl-teams-bundle.json');
+const destBase = path.join(studyRoot, 'public', 'ipl-teams');
+const bundlePath = path.join(studyRoot, 'public', 'data', 'ipl-teams-bundle.json');
 
 /** React asset folder name → URL slug (no spaces) */
 const FOLDER_TO_SLUG = {

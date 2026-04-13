@@ -2,13 +2,20 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
-  publicDir: 'demo/public',
+  publicDir: 'public',
   server: {
     port: 3000,
-    open: '/demo/index.html',
+    open: '/index.html',
   },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        teams: 'teams.html',
+        points: 'points-table.html'
+      }
+    }
   },
 });
