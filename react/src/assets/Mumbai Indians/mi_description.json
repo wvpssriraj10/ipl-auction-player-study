@@ -153,5 +153,11 @@
     "Kieron Pollard",
     "Hardik Pandya",
     "Lasith Malinga"
-  ]
+  ],
+  "social_links": {
+    "twitter": "https://twitter.com/mipaltan",
+    "instagram": "https://www.instagram.com/mumbaiindians/",
+    "facebook": "https://www.facebook.com/mumbaiindians/",
+    "website": "https://www.mumbaiindians.com/"
+  }
 }
