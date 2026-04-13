@@ -156,5 +156,10 @@
     "Kane Williamson",
     "Rashid Khan",
     "Pat Cummins"
-  ]
+  ],
+  "social_links": {
+    "twitter": "https://x.com/SunRisers",
+    "instagram": "https://www.instagram.com/sunrisershyd/",
+    "youtube": "https://www.youtube.com/@SunrisersIPL"
+  }
 }

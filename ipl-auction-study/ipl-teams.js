@@ -206,10 +206,22 @@ function renderDetail(detailEl, team) {
   let socialHtml = '';
   if (socialLinks) {
     socialHtml = '<div class="ipl-teams-social-row">';
-    if (socialLinks.twitter) socialHtml += `<a href="${escapeHtml(socialLinks.twitter)}" target="_blank" class="ipl-teams-social-link" title="Twitter/X"><span>𝕏</span></a>`;
-    if (socialLinks.instagram) socialHtml += `<a href="${escapeHtml(socialLinks.instagram)}" target="_blank" class="ipl-teams-social-link" title="Instagram"><span>📸</span></a>`;
-    if (socialLinks.facebook) socialHtml += `<a href="${escapeHtml(socialLinks.facebook)}" target="_blank" class="ipl-teams-social-link" title="Facebook"><span>🌐</span></a>`;
-    if (socialLinks.website) socialHtml += `<a href="${escapeHtml(socialLinks.website)}" target="_blank" class="ipl-teams-social-link" title="Official Website"><span>🏠</span></a>`;
+    const icons = {
+      twitter: 'fa-x-twitter',
+      instagram: 'fa-instagram',
+      facebook: 'fa-facebook',
+      youtube: 'fa-youtube',
+      website: 'fa-globe'
+    };
+    
+    Object.entries(socialLinks).forEach(([key, url]) => {
+      if (url && icons[key]) {
+        socialHtml += `
+          <a href="${escapeHtml(url)}" target="_blank" class="ipl-teams-social-link" title="${key.charAt(0).toUpperCase() + key.slice(1)}">
+            <i class="fa-brands ${icons[key]}"></i>
+          </a>`;
+      }
+    });
     socialHtml += '</div>';
   }
 

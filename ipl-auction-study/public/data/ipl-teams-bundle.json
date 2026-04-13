@@ -161,10 +161,9 @@
         "Ruturaj Gaikwad"
       ],
       "social_links": {
-        "twitter": "https://twitter.com/ChennaiIPL",
+        "twitter": "https://x.com/ChennaiIPL",
         "instagram": "https://www.instagram.com/chennaiipl/",
-        "facebook": "https://www.facebook.com/TheChennaiSuperKings/",
-        "website": "https://www.chennaisuperkings.com/"
+        "youtube": "https://www.youtube.com/@ChennaiIPL"
       },
       "logoUrl": "/ipl-teams/csk/Chennai_Super_Kings_Logo.png",
       "bgUrl": "/ipl-teams/csk/IPL%20Chepauk%20Stadium%204K%20wallpaper%20-%202268x4032.jpg"
@@ -317,6 +316,11 @@
         "David Warner",
         "Prithvi Shaw"
       ],
+      "social_links": {
+        "twitter": "https://x.com/DelhiCapitals",
+        "instagram": "https://www.instagram.com/delhicapitals/",
+        "youtube": "https://www.youtube.com/@delhicapitals"
+      },
       "logoUrl": "/ipl-teams/dc/Delhi_Capitals.png",
       "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png"
     },
@@ -449,6 +453,11 @@
         "Mohammed Shami",
         "David Miller"
       ],
+      "social_links": {
+        "twitter": "https://x.com/gujarat_titans",
+        "instagram": "https://www.instagram.com/gujarat_titans/",
+        "youtube": "https://www.youtube.com/@GujaratTitans"
+      },
       "logoUrl": "/ipl-teams/gt/Gujarat_Titans_Logo.png",
       "bgUrl": "/ipl-teams/gt/gujurat%20titans%20bg.jpg"
     },
@@ -603,6 +612,11 @@
         "Eoin Morgan",
         "Dinesh Karthik"
       ],
+      "social_links": {
+        "twitter": "https://x.com/KKRiders",
+        "instagram": "https://www.instagram.com/kkriders/",
+        "youtube": "https://www.youtube.com/@kkriders"
+      },
       "logoUrl": "/ipl-teams/kkr/Kolkata_Knight_Riders_Logo.png",
       "bgUrl": "/ipl-teams/kkr/kkr%20bg.png"
     },
@@ -726,6 +740,11 @@
         "Nicholas Pooran",
         "Ravi Bishnoi"
       ],
+      "social_links": {
+        "twitter": "https://x.com/LucknowIPL",
+        "instagram": "https://www.instagram.com/lucknowsupergiants/",
+        "youtube": "https://www.youtube.com/@LucknowSuperGiants"
+      },
       "logoUrl": "/ipl-teams/lsg/Lucknow_Super_Giants_Logo.png",
       "bgUrl": "/ipl-teams/lsg/lsg%20bg.jpg"
     },
@@ -889,10 +908,9 @@
         "Lasith Malinga"
       ],
       "social_links": {
-        "twitter": "https://twitter.com/mipaltan",
+        "twitter": "https://x.com/mipaltan",
         "instagram": "https://www.instagram.com/mumbaiindians/",
-        "facebook": "https://www.facebook.com/mumbaiindians/",
-        "website": "https://www.mumbaiindians.com/"
+        "youtube": "https://www.youtube.com/@mumbaiindians"
       },
       "logoUrl": "/ipl-teams/mi/Mumbai_Indians_Logo.png",
       "bgUrl": "/ipl-teams/mi/mumbai-indians-bg.webp"
@@ -1043,6 +1061,11 @@
         "Glenn Maxwell",
         "Mayank Agarwal"
       ],
+      "social_links": {
+        "twitter": "https://x.com/PunjabKingsIPL",
+        "instagram": "https://www.instagram.com/punjabkingsipl/",
+        "youtube": "https://www.youtube.com/@PunjabKingsIPL"
+      },
       "logoUrl": "/ipl-teams/pbks/Punjab_Kings_Logo.png",
       "bgUrl": "/ipl-teams/pbks/pbks%20bg.jpg"
     },
@@ -1185,6 +1208,11 @@
           "details": "Competitive rivalry with several close matches"
         }
       ],
+      "social_links": {
+        "twitter": "https://x.com/rajasthanroyals",
+        "instagram": "https://www.instagram.com/rajasthanroyals/",
+        "youtube": "https://www.youtube.com/@rajasthanroyals"
+      },
       "notable_players": [
         "Shane Warne",
         "Sanju Samson",
@@ -1334,6 +1362,11 @@
           "details": "Competitive rivalry with several memorable matches"
         }
       ],
+      "social_links": {
+        "twitter": "https://x.com/RCBTweets",
+        "instagram": "https://www.instagram.com/royalchallengersbangalore/",
+        "youtube": "https://www.youtube.com/@RoyalChallengersBangalore"
+      },
       "notable_players": [
         "Virat Kohli",
         "AB de Villiers",
@@ -1499,6 +1532,11 @@
         "Rashid Khan",
         "Pat Cummins"
       ],
+      "social_links": {
+        "twitter": "https://x.com/SunRisers",
+        "instagram": "https://www.instagram.com/sunrisershyd/",
+        "youtube": "https://www.youtube.com/@SunrisersIPL"
+      },
       "logoUrl": "/ipl-teams/srh/Sunrisers_Hyderabad_Logo.png",
       "bgUrl": "/ipl-teams/srh/srh%20bg.jpg"
     },

@@ -143,6 +143,12 @@
     }
   ],
 
+  "social_links": {
+    "twitter": "https://x.com/rajasthanroyals",
+    "instagram": "https://www.instagram.com/rajasthanroyals/",
+    "youtube": "https://www.youtube.com/@rajasthanroyals"
+  },
+
   "notable_players": [
     "Shane Warne",
     "Sanju Samson",

@@ -151,5 +151,11 @@
     "Shreyas Iyer",
     "Eoin Morgan",
     "Dinesh Karthik"
-  ]
+  ],
+
+  "social_links": {
+    "twitter": "https://x.com/KKRiders",
+    "instagram": "https://www.instagram.com/kkriders/",
+    "youtube": "https://www.youtube.com/@kkriders"
+  }
 }

@@ -139,6 +139,12 @@
     }
   ],
 
+  "social_links": {
+    "twitter": "https://x.com/RCBTweets",
+    "instagram": "https://www.instagram.com/royalchallengersbangalore/",
+    "youtube": "https://www.youtube.com/@RoyalChallengersBangalore"
+  },
+
   "notable_players": [
     "Virat Kohli",
     "AB de Villiers",

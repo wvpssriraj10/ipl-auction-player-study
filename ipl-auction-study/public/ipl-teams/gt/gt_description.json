@@ -132,5 +132,10 @@
     "Rashid Khan",
     "Mohammed Shami",
     "David Miller"
-  ]
+  ],
+  "social_links": {
+    "twitter": "https://x.com/gujarat_titans",
+    "instagram": "https://www.instagram.com/gujarat_titans/",
+    "youtube": "https://www.youtube.com/@GujaratTitans"
+  }
 }
