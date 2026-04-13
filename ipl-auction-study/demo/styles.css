@@ -1437,6 +1437,18 @@ body.ipl-teams-detail-open {
   margin-right: 2rem;
 }
 
+.nav-highlight {
+  color: var(--purple-light) !important;
+  font-weight: 800 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-highlight:hover {
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+}
+
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
