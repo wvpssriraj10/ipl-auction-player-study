@@ -15,82 +15,98 @@
   
   <link rel="stylesheet" href="./styles.css" />
   <style>
-    .points-table-container {
-      margin-top: 2rem;
-      overflow-x: auto;
-      background: var(--card);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    .season-select-wrapper {
+      margin-bottom: 2.5rem;
+      text-align: left;
     }
-    .season-selector {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    .season-btn {
-      padding: 0.5rem 1rem;
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid var(--border-color);
-      color: var(--text-secondary);
-      border-radius: 8px;
-      cursor: pointer;
+    .season-label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
       font-weight: 600;
-      transition: all 0.2s ease;
     }
-    .season-btn:hover {
-      background: rgba(139, 92, 246, 0.2);
-      border-color: var(--purple-light);
+    .season-dropdown {
+      background: none;
+      border: none;
+      color: var(--purple-light);
+      font-size: 1.5rem;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: 'Archivo', sans-serif;
+      padding: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    .season-btn.active {
-      background: var(--purple);
-      color: white;
-      border-color: var(--purple);
+    .season-dropdown:focus {
+      outline: none;
+    }
+    .season-dropdown-icon {
+      font-size: 0.8rem;
+      vertical-align: middle;
+      color: var(--purple-light);
     }
     .ipl-table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      min-width: 600px;
     }
     .ipl-table th, .ipl-table td {
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1rem 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      vertical-align: middle;
     }
     .ipl-table th {
-      background: rgba(139, 92, 246, 0.05);
-      color: var(--purple-light);
-      font-size: 0.75rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: normal;
     }
-    .ipl-table tr:last-child td {
-      border-bottom: none;
+    .ipl-table th:last-child, 
+    .ipl-table td:last-child {
+      text-align: right;
+      padding-right: 0;
+    }
+    .ipl-table th:first-child,
+    .ipl-table td:first-child {
+      padding-left: 0;
+      width: 40px;
     }
     .team-cell {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      font-weight: 700;
-      color: white;
+      gap: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 1.1rem;
     }
-    .rank-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      font-size: 0.75rem;
+    .team-logo-sm {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .rank-num {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .stat-val {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+    .stat-pts {
       font-weight: 800;
+      color: var(--white);
+      font-size: 1.1rem;
     }
-    .rank-1 .rank-badge { background: #ffd700; color: #000; }
-    .rank-2 .rank-badge { background: #c0c0c0; color: #000; }
-    .rank-3 .rank-badge { background: #cd7f32; color: #000; }
+    .nrr-plus { color: #4ade80; }
+    .nrr-minus { color: #f87171; }
     
     .nrr-plus { color: #4ade80; }
     .nrr-minus { color: #f87171; }
@@ -108,23 +124,24 @@
   </header>
 
   <main id="main-content" class="container section">
-    <h1 class="section-title teams-page-title--gradient">Historical Standings</h1>
-    <p class="ipl-teams-lede">Final table for all seasons from 2008 to 2024. Playoff positions reflected in rankings.</p>
-
-    <div id="seasonSelector" class="season-selector"></div>
+    <div class="season-select-wrapper">
+      <span class="season-label">Season</span>
+      <select id="seasonSelect" class="season-dropdown">
+        <!-- Options populated via JS -->
+      </select>
+    </div>
 
     <div class="points-table-container reveal">
       <table class="ipl-table" id="pointsTable">
         <thead>
           <tr>
-            <th>Rank</th>
+            <th></th>
             <th>Team</th>
-            <th>Pld</th>
-            <th>W</th>
-            <th>L</th>
-            <th>NR</th>
-            <th>Pts</th>
-            <th>NRR</th>
+            <th style="text-align:right">M</th>
+            <th style="text-align:right">W</th>
+            <th style="text-align:right">L</th>
+            <th style="text-align:right">NRR</th>
+            <th style="text-align:right">Pts</th>
           </tr>
         </thead>
         <tbody id="tableBody">
@@ -136,34 +153,59 @@
 
   <script type="module">
     let pointsData = null;
+    let teamsMap = {};
 
     async function init() {
       try {
-        const res = await fetch('./data/ipl-points-table.json');
+        console.log("[Points Table] Initializing fetch...");
+        
+        // Relative to root
+        const teamsUrl = '/data/ipl-teams-bundle.json';
+        const pointsUrl = '/data/ipl-points-table.json';
+        
+        console.log("[Points Table] Fetching teams from:", teamsUrl);
+        const teamsRes = await fetch(teamsUrl);
+        if (!teamsRes.ok) {
+           console.error("[Points Table] Teams fetch failed:", teamsRes.status);
+           return;
+        }
+        const teamsBundle = await teamsRes.json();
+        
+        teamsBundle.teams.forEach(t => {
+          teamsMap[t.name] = t.logoUrl;
+          teamsMap[t.short_name] = t.logoUrl;
+          if (t.id === 'dcg') teamsMap["Deccan Chargers"] = t.logoUrl;
+          if (t.id === 'dc') teamsMap["Delhi Daredevils"] = t.logoUrl;
+          if (t.id === 'pbks') teamsMap["Kings XI Punjab"] = t.logoUrl;
+        });
+
+        console.log("[Points Table] Fetching points from:", pointsUrl);
+        const res = await fetch(pointsUrl);
+        if (!res.ok) {
+           console.error("[Points Table] Points fetch failed:", res.status);
+           return;
+        }
         pointsData = await res.json();
+        console.log("[Points Table] Data loaded successfully.");
         
         const seasons = Object.keys(pointsData.seasons).sort((a,b) => b - a);
         renderSelector(seasons);
         renderTable(seasons[0]);
       } catch (e) {
-        console.error("Failed to load points table", e);
+        console.error("[Points Table] Runtime error:", e);
       }
     }
 
     function renderSelector(seasons) {
-      const container = document.getElementById('seasonSelector');
+      const select = document.getElementById('seasonSelect');
       seasons.forEach(s => {
-        const btn = document.createElement('button');
-        btn.className = 'season-btn';
-        btn.textContent = s;
-        btn.onclick = () => {
-          document.querySelectorAll('.season-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          renderTable(s);
-        };
-        if (s === seasons[0]) btn.classList.add('active');
-        container.appendChild(btn);
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = s;
+        select.appendChild(opt);
       });
+      
+      select.onchange = (e) => renderTable(e.target.value);
     }
 
     function renderTable(season) {
@@ -173,23 +215,40 @@
       const teams = pointsData.seasons[season];
       teams.forEach(t => {
         const tr = document.createElement('tr');
-        tr.className = `rank-${t.rank}`;
         
         const nrrClass = t.nrr > 0 ? 'nrr-plus' : (t.nrr < 0 ? 'nrr-minus' : '');
-        const nrrText = t.nrr > 0 ? `+${t.nrr.toFixed(3)}` : t.nrr.toFixed(3);
+        const nrrText = t.nrr > 0 ? `+${t.nrr.toFixed(3)}` : (t.nrr < 0 ? t.nrr.toFixed(3) : '0.000');
+        
+        // Match team name to logo
+        let logoUrl = teamsMap[t.team] || '';
+        
+        // Simple abbreviation for the label
+        const abbr = t.team.split(' ').map(w => w[0]).join('').substring(0,4);
 
         tr.innerHTML = `
-          <td><span class="rank-badge">${t.rank}</span></td>
-          <td><div class="team-cell">${t.team}</div></td>
-          <td>${t.m}</td>
-          <td>${t.w}</td>
-          <td>${t.l}</td>
-          <td>${t.nr}</td>
-          <td><strong>${t.pts}</strong></td>
-          <td class="${nrrClass}">${nrrText}</td>
+          <td><span class="rank-num">${t.rank}</span></td>
+          <td>
+            <div class="team-cell">
+              <img src="${logoUrl}" class="team-logo-sm" alt="">
+              <span>${escapeHtml(t.team)}</span>
+            </div>
+          </td>
+          <td style="text-align:right" class="stat-val">${t.m}</td>
+          <td style="text-align:right" class="stat-val">${t.w}</td>
+          <td style="text-align:right" class="stat-val">${t.l}</td>
+          <td style="text-align:right" class="${nrrClass} stat-val">${nrrText}</td>
+          <td style="text-align:right" class="stat-pts"><strong>${t.pts}</strong></td>
         `;
         tbody.appendChild(tr);
       });
+    }
+
+    // Helper to escape HTML and prevent injections
+    function escapeHtml(str) {
+      if (!str) return '';
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
     }
 
     init();
