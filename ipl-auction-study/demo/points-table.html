@@ -174,10 +174,19 @@
         teamsBundle.teams.forEach(t => {
           teamsMap[t.name] = t.logoUrl;
           teamsMap[t.short_name] = t.logoUrl;
+          // Comprehensive historical mapping
           if (t.id === 'dcg') teamsMap["Deccan Chargers"] = t.logoUrl;
-          if (t.id === 'dc') teamsMap["Delhi Daredevils"] = t.logoUrl;
-          if (t.id === 'pbks') teamsMap["Kings XI Punjab"] = t.logoUrl;
+          if (t.id === 'dc') { teamsMap["Delhi Daredevils"] = t.logoUrl; teamsMap["DDD"] = t.logoUrl; }
+          if (t.id === 'pbks') { teamsMap["Kings XI Punjab"] = t.logoUrl; teamsMap["KXIP"] = t.logoUrl; teamsMap["KXP"] = t.logoUrl; }
+          if (t.id === 'srh') teamsMap["SRH"] = t.logoUrl;
+          if (t.id === 'rcb') { teamsMap["Royal Challengers Bangalore"] = t.logoUrl; teamsMap["Royal Challengers Bengaluru"] = t.logoUrl; }
         });
+
+        // Add defunct teams that might not be in the bundle or need special handling
+        teamsMap["Rising Pune Supergiant"] = "https://upload.wikimedia.org/wikipedia/en/2/20/Rising_Pune_Supergiant_Logo.svg";
+        teamsMap["Gujarat Lions"] = "https://upload.wikimedia.org/wikipedia/en/c/c4/Gujarat_Lions_Logo.svg";
+        teamsMap["Pune Warriors India"] = "https://upload.wikimedia.org/wikipedia/en/5/50/Pune_Warriors_India_Logo.svg";
+        teamsMap["Kochi Tuskers Kerala"] = "https://upload.wikimedia.org/wikipedia/en/e/ef/Kochi_Tuskers_Kerala_Logo.svg";
 
         console.log("[Points Table] Fetching points from:", pointsUrl);
         const res = await fetch(pointsUrl);
