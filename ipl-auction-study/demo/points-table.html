@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IPL points table history from 2008 to 2024. View final standings and playoff qualifiers." />
+  <meta name="theme-color" content="#8b5cf6" />
+  <title>Points Table History | IPL Auction Intelligence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏏%3C/text%3E%3C/svg%3E">
+  
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .points-table-container {
+      margin-top: 2rem;
+      overflow-x: auto;
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .season-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    .season-btn {
+      padding: 0.5rem 1rem;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .season-btn:hover {
+      background: rgba(139, 92, 246, 0.2);
+      border-color: var(--purple-light);
+    }
+    .season-btn.active {
+      background: var(--purple);
+      color: white;
+      border-color: var(--purple);
+    }
+    .ipl-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 600px;
+    }
+    .ipl-table th, .ipl-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .ipl-table th {
+      background: rgba(139, 92, 246, 0.05);
+      color: var(--purple-light);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .ipl-table tr:last-child td {
+      border-bottom: none;
+    }
+    .team-cell {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+    .rank-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .rank-1 .rank-badge { background: #ffd700; color: #000; }
+    .rank-2 .rank-badge { background: #c0c0c0; color: #000; }
+    .rank-3 .rank-badge { background: #cd7f32; color: #000; }
+    
+    .nrr-plus { color: #4ade80; }
+    .nrr-minus { color: #f87171; }
+  </style>
+</head>
+<body class="teams-shell">
+  <header class="teams-topbar" role="banner">
+    <a href="./index.html" class="teams-back-link">
+      <span aria-hidden="true">←</span> Back to demo
+    </a>
+    <span class="teams-topbar-brand">POINTS TABLE</span>
+    <nav class="topbar-nav">
+       <a href="./teams.html" class="nav-link">Franchises</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container section">
+    <h1 class="section-title teams-page-title--gradient">Historical Standings</h1>
+    <p class="ipl-teams-lede">Final table for all seasons from 2008 to 2024. Playoff positions reflected in rankings.</p>
+
+    <div id="seasonSelector" class="season-selector"></div>
+
+    <div class="points-table-container reveal">
+      <table class="ipl-table" id="pointsTable">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Pld</th>
+            <th>W</th>
+            <th>L</th>
+            <th>NR</th>
+            <th>Pts</th>
+            <th>NRR</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Populated via JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module">
+    let pointsData = null;
+
+    async function init() {
+      try {
+        const res = await fetch('./data/ipl-points-table.json');
+        pointsData = await res.json();
+        
+        const seasons = Object.keys(pointsData.seasons).sort((a,b) => b - a);
+        renderSelector(seasons);
+        renderTable(seasons[0]);
+      } catch (e) {
+        console.error("Failed to load points table", e);
+      }
+    }
+
+    function renderSelector(seasons) {
+      const container = document.getElementById('seasonSelector');
+      seasons.forEach(s => {
+        const btn = document.createElement('button');
+        btn.className = 'season-btn';
+        btn.textContent = s;
+        btn.onclick = () => {
+          document.querySelectorAll('.season-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderTable(s);
+        };
+        if (s === seasons[0]) btn.classList.add('active');
+        container.appendChild(btn);
+      });
+    }
+
+    function renderTable(season) {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+      
+      const teams = pointsData.seasons[season];
+      teams.forEach(t => {
+        const tr = document.createElement('tr');
+        tr.className = `rank-${t.rank}`;
+        
+        const nrrClass = t.nrr > 0 ? 'nrr-plus' : (t.nrr < 0 ? 'nrr-minus' : '');
+        const nrrText = t.nrr > 0 ? `+${t.nrr.toFixed(3)}` : t.nrr.toFixed(3);
+
+        tr.innerHTML = `
+          <td><span class="rank-badge">${t.rank}</span></td>
+          <td><div class="team-cell">${t.team}</div></td>
+          <td>${t.m}</td>
+          <td>${t.w}</td>
+          <td>${t.l}</td>
+          <td>${t.nr}</td>
+          <td><strong>${t.pts}</strong></td>
+          <td class="${nrrClass}">${nrrText}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

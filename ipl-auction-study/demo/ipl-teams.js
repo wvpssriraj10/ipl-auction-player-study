@@ -199,8 +199,20 @@ function renderDetail(detailEl, team) {
             (n) =>
               `<li class="ipl-teams-player-pill">${escapeHtml(n)}</li>`,
           )
-          .join('')}</ul>`
+        .join('')}</ul>`
       : '';
+
+  const socialLinks = team.social_links;
+  let socialHtml = '';
+  if (socialLinks) {
+    socialHtml = '<div class="ipl-teams-social-row">';
+    if (socialLinks.twitter) socialHtml += `<a href="${escapeHtml(socialLinks.twitter)}" target="_blank" class="ipl-teams-social-link" title="Twitter/X"><span>𝕏</span></a>`;
+    if (socialLinks.instagram) socialHtml += `<a href="${escapeHtml(socialLinks.instagram)}" target="_blank" class="ipl-teams-social-link" title="Instagram"><span>📸</span></a>`;
+    if (socialLinks.facebook) socialHtml += `<a href="${escapeHtml(socialLinks.facebook)}" target="_blank" class="ipl-teams-social-link" title="Facebook"><span>🌐</span></a>`;
+    if (socialLinks.website) socialHtml += `<a href="${escapeHtml(socialLinks.website)}" target="_blank" class="ipl-teams-social-link" title="Official Website"><span>🏠</span></a>`;
+    socialHtml += '</div>';
+  }
+
 
   const teamName = normalizeTeamText(team.name) || team.name || '';
   const finalHtml = normalizeTeamText(`
@@ -223,6 +235,7 @@ function renderDetail(detailEl, team) {
             <span class="ipl-teams-dot"> · </span>
             Since <strong>${escapeHtml(String(team.basic_info?.founded))}</strong>
           </p>
+          ${socialHtml}
         </div>
       </header>
 

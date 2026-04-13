@@ -151,5 +151,11 @@
     "Ravindra Jadeja",
     "Dwayne Bravo",
     "Ruturaj Gaikwad"
-  ]
+  ],
+  "social_links": {
+    "twitter": "https://twitter.com/ChennaiIPL",
+    "instagram": "https://www.instagram.com/chennaiipl/",
+    "facebook": "https://www.facebook.com/TheChennaiSuperKings/",
+    "website": "https://www.chennaisuperkings.com/"
+  }
 }

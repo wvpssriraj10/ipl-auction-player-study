@@ -160,6 +160,12 @@
         "Dwayne Bravo",
         "Ruturaj Gaikwad"
       ],
+      "social_links": {
+        "twitter": "https://twitter.com/ChennaiIPL",
+        "instagram": "https://www.instagram.com/chennaiipl/",
+        "facebook": "https://www.facebook.com/TheChennaiSuperKings/",
+        "website": "https://www.chennaisuperkings.com/"
+      },
       "logoUrl": "/ipl-teams/csk/Chennai_Super_Kings_Logo.png",
       "bgUrl": "/ipl-teams/csk/IPL%20Chepauk%20Stadium%204K%20wallpaper%20-%202268x4032.jpg"
     },
@@ -882,6 +888,12 @@
         "Hardik Pandya",
         "Lasith Malinga"
       ],
+      "social_links": {
+        "twitter": "https://twitter.com/mipaltan",
+        "instagram": "https://www.instagram.com/mumbaiindians/",
+        "facebook": "https://www.facebook.com/mumbaiindians/",
+        "website": "https://www.mumbaiindians.com/"
+      },
       "logoUrl": "/ipl-teams/mi/Mumbai_Indians_Logo.png",
       "bgUrl": "/ipl-teams/mi/mumbai-indians-bg.webp"
     },

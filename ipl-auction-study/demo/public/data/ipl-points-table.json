@@ -1,0 +1,106 @@
+{
+  "seasons": {
+    "2024": [
+      { "rank": 1, "team": "Kolkata Knight Riders", "m": 14, "w": 9, "l": 3, "nr": 2, "pts": 20, "nrr": 1.428 },
+      { "rank": 2, "team": "Sunrisers Hyderabad", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.414 },
+      { "rank": 3, "team": "Rajasthan Royals", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.273 },
+      { "rank": 4, "team": "Royal Challengers Bengaluru", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.459 }
+    ],
+    "2023": [
+      { "rank": 1, "team": "Gujarat Titans", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.809 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.652 },
+      { "rank": 3, "team": "Lucknow Super Giants", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.304 },
+      { "rank": 4, "team": "Mumbai Indians", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.044 }
+    ],
+    "2022": [
+      { "rank": 1, "team": "Gujarat Titans", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.316 },
+      { "rank": 2, "team": "Rajasthan Royals", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.298 },
+      { "rank": 3, "team": "Lucknow Super Giants", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.251 },
+      { "rank": 4, "team": "Royal Challengers Bengaluru", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.253 }
+    ],
+    "2021": [
+      { "rank": 1, "team": "Delhi Capitals", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.481 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.454 },
+      { "rank": 3, "team": "Royal Challengers Bengaluru", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": -0.110 },
+      { "rank": 4, "team": "Kolkata Knight Riders", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.587 }
+    ],
+    "2020": [
+      { "rank": 1, "team": "Mumbai Indians", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 1.107 },
+      { "rank": 2, "team": "Delhi Capitals", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.109 },
+      { "rank": 3, "team": "Sunrisers Hyderabad", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.608 },
+      { "rank": 4, "team": "Royal Challengers Bengaluru", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": -0.172 }
+    ],
+    "2019": [
+      { "rank": 1, "team": "Mumbai Indians", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.421 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.131 },
+      { "rank": 3, "team": "Delhi Capitals", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.044 },
+      { "rank": 4, "team": "Sunrisers Hyderabad", "m": 14, "w": 6, "l": 8, "nr": 0, "pts": 12, "nrr": 0.577 }
+    ],
+    "2018": [
+      { "rank": 1, "team": "Sunrisers Hyderabad", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.284 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.253 },
+      { "rank": 3, "team": "Kolkata Knight Riders", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.070 },
+      { "rank": 4, "team": "Rajasthan Royals", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": -0.250 }
+    ],
+    "2017": [
+      { "rank": 1, "team": "Mumbai Indians", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.784 },
+      { "rank": 2, "team": "Rising Pune Supergiant", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.164 },
+      { "rank": 3, "team": "Sunrisers Hyderabad", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.486 },
+      { "rank": 4, "team": "Kolkata Knight Riders", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": 0.641 }
+    ],
+    "2016": [
+      { "rank": 1, "team": "Gujarat Lions", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": -0.374 },
+      { "rank": 2, "team": "Royal Challengers Bengaluru", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": 0.932 },
+      { "rank": 3, "team": "Sunrisers Hyderabad", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": 0.245 },
+      { "rank": 4, "team": "Kolkata Knight Riders", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": 0.410 }
+    ],
+    "2015": [
+      { "rank": 1, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.709 },
+      { "rank": 2, "team": "Mumbai Indians", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.043 },
+      { "rank": 3, "team": "Royal Challengers Bengaluru", "m": 14, "w": 7, "l": 5, "nr": 2, "pts": 16, "nrr": 1.037 },
+      { "rank": 4, "team": "Rajasthan Royals", "m": 14, "w": 7, "l": 5, "nr": 2, "pts": 16, "nrr": 0.062 }
+    ],
+    "2014": [
+      { "rank": 1, "team": "Kings XI Punjab", "m": 14, "w": 11, "l": 3, "nr": 0, "pts": 22, "nrr": 0.968 },
+      { "rank": 2, "team": "Kolkata Knight Riders", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.418 },
+      { "rank": 3, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.385 },
+      { "rank": 4, "team": "Mumbai Indians", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.025 }
+    ],
+    "2013": [
+      { "rank": 1, "team": "Chennai Super Kings", "m": 16, "w": 11, "l": 5, "nr": 0, "pts": 22, "nrr": 0.530 },
+      { "rank": 2, "team": "Mumbai Indians", "m": 16, "w": 11, "l": 5, "nr": 0, "pts": 22, "nrr": 0.441 },
+      { "rank": 3, "team": "Rajasthan Royals", "m": 16, "w": 10, "l": 6, "nr": 0, "pts": 20, "nrr": 0.322 },
+      { "rank": 4, "team": "Sunrisers Hyderabad", "m": 16, "w": 10, "l": 6, "nr": 0, "pts": 20, "nrr": 0.003 }
+    ],
+    "2012": [
+      { "rank": 1, "team": "Delhi Daredevils", "m": 16, "w": 11, "l": 5, "nr": 0, "pts": 22, "nrr": 0.617 },
+      { "rank": 2, "team": "Kolkata Knight Riders", "m": 16, "w": 10, "l": 5, "nr": 1, "pts": 21, "nrr": 0.561 },
+      { "rank": 3, "team": "Mumbai Indians", "m": 16, "w": 10, "l": 6, "nr": 0, "pts": 20, "nrr": -0.100 },
+      { "rank": 4, "team": "Chennai Super Kings", "m": 16, "w": 8, "l": 7, "nr": 1, "pts": 17, "nrr": 0.100 }
+    ],
+    "2011": [
+      { "rank": 1, "team": "Royal Challengers Bengaluru", "m": 14, "w": 9, "l": 4, "nr": 1, "pts": 19, "nrr": 0.632 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.443 },
+      { "rank": 3, "team": "Mumbai Indians", "m": 14, "w": 9, "l": 5, "nr": 0, "pts": 18, "nrr": 0.340 },
+      { "rank": 4, "team": "Kolkata Knight Riders", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": 0.433 }
+    ],
+    "2010": [
+      { "rank": 1, "team": "Mumbai Indians", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 1.084 },
+      { "rank": 2, "team": "Deccan Chargers", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.297 },
+      { "rank": 3, "team": "Chennai Super Kings", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.273 },
+      { "rank": 4, "team": "Royal Challengers Bengaluru", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.219 }
+    ],
+    "2009": [
+      { "rank": 1, "team": "Delhi Daredevils", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.311 },
+      { "rank": 2, "team": "Chennai Super Kings", "m": 14, "w": 8, "l": 5, "nr": 1, "pts": 17, "nrr": 0.951 },
+      { "rank": 3, "team": "Royal Challengers Bengaluru", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.191 },
+      { "rank": 4, "team": "Deccan Chargers", "m": 14, "w": 7, "l": 7, "nr": 0, "pts": 14, "nrr": 0.203 }
+    ],
+    "2008": [
+      { "rank": 1, "team": "Rajasthan Royals", "m": 14, "w": 11, "l": 3, "nr": 0, "pts": 22, "nrr": 0.632 },
+      { "rank": 2, "team": "Kings XI Punjab", "m": 14, "w": 10, "l": 4, "nr": 0, "pts": 20, "nrr": 0.507 },
+      { "rank": 3, "team": "Chennai Super Kings", "m": 14, "w": 8, "l": 6, "nr": 0, "pts": 16, "nrr": -0.192 },
+      { "rank": 4, "team": "Delhi Daredevils", "m": 14, "w": 7, "l": 6, "nr": 1, "pts": 15, "nrr": 0.342 }
+    ]
+  }
+}

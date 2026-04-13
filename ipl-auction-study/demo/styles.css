@@ -1430,6 +1430,61 @@ body.ipl-teams-detail-open {
   box-shadow: 0 0 22px rgba(139, 92, 246, 0.42);
 }
 
+.topbar-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--purple-light);
+}
+
+/* Detail Header Social Links */
+.ipl-teams-social-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ipl-teams-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.ipl-teams-social-link:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.ipl-teams-social-link span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .ipl-teams-card {
   position: relative;
   display: flex;
