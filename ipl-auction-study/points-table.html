@@ -129,12 +129,12 @@
       try {
         console.log("[Points Table] Initializing fetch...");
         
-        // Relative to root
-        const teamsUrl = '/data/ipl-teams-bundle.json';
-        const pointsUrl = '/data/ipl-points-table.json';
+        // Absolute root paths for Vercel/Vite
+        const teamsUrl = './public/data/ipl-teams-bundle.json';
+        const pointsUrl = './public/data/ipl-points-table.json';
         
-        console.log("[Points Table] Fetching teams from:", teamsUrl);
-        const teamsRes = await fetch(teamsUrl);
+        console.log("[Points Table] Fetching from:", pointsUrl);
+        const teamsRes = await fetch(teamsUrl).catch(() => fetch('/data/ipl-teams-bundle.json'));
         if (!teamsRes.ok) {
            console.error("[Points Table] Teams fetch failed:", teamsRes.status);
            return;
@@ -158,13 +158,17 @@
         teamsMap["Pune Warriors India"] = "https://upload.wikimedia.org/wikipedia/en/5/50/Pune_Warriors_India_Logo.svg";
         teamsMap["Kochi Tuskers Kerala"] = "https://upload.wikimedia.org/wikipedia/en/e/ef/Kochi_Tuskers_Kerala_Logo.svg";
 
-        console.log("[Points Table] Fetching points from:", pointsUrl);
-        const res = await fetch(pointsUrl);
+        console.log("[Points Table] Fetching points...");
+        const res = await fetch(pointsUrl).catch(() => fetch('/data/ipl-points-table.json'));
         if (!res.ok) {
            console.error("[Points Table] Points fetch failed:", res.status);
-           return;
+           // Fallback to local path if root fails
+           const fallbackRes = await fetch('./data/ipl-points-table.json');
+           if (fallbackRes.ok) pointsData = await fallbackRes.json();
+           else return;
+        } else {
+           pointsData = await res.json();
         }
-        pointsData = await res.json();
         console.log("[Points Table] Data loaded successfully.");
         
         const seasons = Object.keys(pointsData.seasons).sort((a,b) => b - a);
