@@ -103,6 +103,9 @@ function main() {
     }
 
     const destDir = path.join(destBase, slug);
+    if (fs.existsSync(destDir)) {
+      fs.rmSync(destDir, { recursive: true, force: true });
+    }
     fs.mkdirSync(destDir, { recursive: true });
     fs.cpSync(srcDir, destDir, { recursive: true });
 
