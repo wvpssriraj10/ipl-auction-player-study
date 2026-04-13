@@ -21,23 +21,29 @@
       margin-bottom: 2rem;
     }
     .season-dropdown {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--purple-light);
-      font-size: 1.25rem;
-      font-weight: 800;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
       cursor: pointer;
       font-family: 'Archivo', sans-serif;
-      padding: 0.5rem 2.5rem 0.5rem 1rem;
+      padding: 0.6rem 2.8rem 0.6rem 1.2rem;
       appearance: none;
       -webkit-appearance: none;
       border-radius: 8px;
       transition: all 0.2s ease;
-      min-width: 140px;
+      min-width: 160px;
+      outline: none;
+    }
+    .season-dropdown option {
+      background: #0d0d0d;
+      color: white;
+      padding: 10px;
     }
     .season-dropdown:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.15);
+      border-color: var(--purple-light);
     }
     .season-dropdown-container::after {
       content: '▼';
@@ -129,17 +135,28 @@
       try {
         console.log("[Points Table] Initializing fetch...");
         
-        // Absolute root paths for Vercel/Vite
-        const teamsUrl = './public/data/ipl-teams-bundle.json';
-        const pointsUrl = './public/data/ipl-points-table.json';
-        
-        console.log("[Points Table] Fetching from:", pointsUrl);
-        const teamsRes = await fetch(teamsUrl).catch(() => fetch('/data/ipl-teams-bundle.json'));
-        if (!teamsRes.ok) {
-           console.error("[Points Table] Teams fetch failed:", teamsRes.status);
-           return;
+        async function smartFetch(paths) {
+          for (let p of paths) {
+            try {
+              console.log("[Points Table] Trying path:", p);
+              const res = await fetch(p);
+              if (res.ok) return await res.json();
+            } catch (e) {}
+          }
+          return null;
         }
-        const teamsBundle = await teamsRes.json();
+
+        const teamsBundle = await smartFetch([
+          './data/ipl-teams-bundle.json',
+          '/data/ipl-teams-bundle.json',
+          './public/data/ipl-teams-bundle.json',
+          '../public/data/ipl-teams-bundle.json'
+        ]);
+
+        if (!teamsBundle) {
+          console.error("[Points Table] Could not load teams bundle.");
+          return;
+        }
         
         teamsBundle.teams.forEach(t => {
           teamsMap[t.name] = t.logoUrl;
@@ -158,16 +175,16 @@
         teamsMap["Pune Warriors India"] = "https://upload.wikimedia.org/wikipedia/en/5/50/Pune_Warriors_India_Logo.svg";
         teamsMap["Kochi Tuskers Kerala"] = "https://upload.wikimedia.org/wikipedia/en/e/ef/Kochi_Tuskers_Kerala_Logo.svg";
 
-        console.log("[Points Table] Fetching points...");
-        const res = await fetch(pointsUrl).catch(() => fetch('/data/ipl-points-table.json'));
-        if (!res.ok) {
-           console.error("[Points Table] Points fetch failed:", res.status);
-           // Fallback to local path if root fails
-           const fallbackRes = await fetch('./data/ipl-points-table.json');
-           if (fallbackRes.ok) pointsData = await fallbackRes.json();
-           else return;
-        } else {
-           pointsData = await res.json();
+        pointsData = await smartFetch([
+          './data/ipl-points-table.json',
+          '/data/ipl-points-table.json',
+          './public/data/ipl-points-table.json',
+          '../public/data/ipl-points-table.json'
+        ]);
+
+        if (!pointsData) {
+          console.error("[Points Table] Could not load points table data.");
+          return;
         }
         console.log("[Points Table] Data loaded successfully.");
         
