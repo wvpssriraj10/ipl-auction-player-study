@@ -2374,9 +2374,7 @@ body.ipl-teams-detail-open {
   overflow: hidden !important;
 }
 
-.ipl-teams-detail-stage {
-  background: #06080c !important; /* Base black stage level */
-}
+
 
 /* New header logic moved from JS to CSS */
 .ipl-teams-detail-head {
@@ -2450,7 +2448,8 @@ body.ipl-teams-detail-open {
 }
 
 .ipl-teams-detail-stage {
-  background: #000000 !important; /* Pure black stage for best image contrast */
+  background: #000000 !important;
+  position: relative !important;
   display: flex !important;
   flex-direction: column !important;
   overflow: hidden !important;
