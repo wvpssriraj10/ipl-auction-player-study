@@ -130,6 +130,34 @@
       padding: 1rem;
       backdrop-filter: blur(20px);
     }
+
+    .trophy-icon {
+      margin-left: 0.5rem;
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+      font-size: 1.1rem;
+      vertical-align: middle;
+      animation: trophy-bounce 2s infinite ease-in-out;
+      display: inline-block;
+    }
+
+    @keyframes trophy-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .champion-row {
+      background: rgba(255, 215, 0, 0.05) !important;
+      border-left: 4px solid #ffd700;
+    }
+
+    .champion-row td {
+      border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
+    }
+
+    .champion-row .stat-pts {
+      color: #ffd700 !important;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
   </style>
 </head>
 <body class="teams-shell">
@@ -251,11 +279,34 @@
       select.onchange = (e) => renderTable(e.target.value);
     }
 
+    const iplWinners = {
+      "2025": "PBKS", 
+      "2024": "KKR",
+      "2023": "CSK",
+      "2022": "GT",
+      "2021": "CSK",
+      "2020": "MI",
+      "2019": "MI",
+      "2018": "CSK",
+      "2017": "MI",
+      "2016": "SRH",
+      "2015": "MI",
+      "2014": "KKR",
+      "2013": "MI",
+      "2012": "KKR",
+      "2011": "CSK",
+      "2010": "CSK",
+      "2009": "DEC",
+      "2008": "RR"
+    };
+
     function renderTable(season) {
       const tbody = document.getElementById('tableBody');
       tbody.innerHTML = '';
       
       const teams = pointsData.seasons[season];
+      const winnerName = iplWinners[season];
+
       teams.forEach(t => {
         const tr = document.createElement('tr');
         
@@ -265,12 +316,15 @@
         // Match team name to logo
         let logoUrl = teamsMap[t.team] || 'https://www.google.com/s2/favicons?domain=iplt20.com&sz=32';
 
+        const isWinner = t.team === winnerName;
+        const trophyIcon = isWinner ? '<span class="trophy-icon" title="Season Champion">🏆</span>' : '';
+
         tr.innerHTML = `
           <td><span class="rank-num">${t.rank}</span></td>
           <td>
             <div class="team-cell">
               <img src="${logoUrl}" class="team-logo-sm" alt="${t.team}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3233/3233483.png'">
-              <span>${escapeHtml(t.team)}</span>
+              <span>${escapeHtml(t.team)} ${trophyIcon}</span>
             </div>
           </td>
           <td class="stat-val">${t.m}</td>
@@ -279,6 +333,8 @@
           <td class="${nrrClass} stat-val">${nrrText}</td>
           <td class="stat-pts"><strong>${t.pts}</strong></td>
         `;
+        
+        if (isWinner) tr.classList.add('champion-row');
         tbody.appendChild(tr);
       });
     }
