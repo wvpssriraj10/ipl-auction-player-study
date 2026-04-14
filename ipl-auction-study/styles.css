@@ -1356,26 +1356,28 @@ body.ipl-teams-detail-open {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    padding: 2.5rem 1.5rem !important;
+    padding: 2.5rem 1rem !important;
     gap: 1.5rem 1.25rem !important;
-    max-width: 1280px !important; /* Strictly calculated to fit 8 cards + 7 gaps */
+    max-width: 1320px !important; /* Forces 8 in row 1 and 7 in row 2 */
     margin: 0 auto;
   }
 
   .ipl-teams-grid--picker .ipl-teams-card {
-    flex: 0 0 140px !important; /* Fixed width to keep alignment predictable */
-    height: 230px; /* Comfortably fits names and abbreviation */
+    flex: 0 0 140px !important; 
+    width: 140px !important;
+    height: 235px; /* Added 5px more for better vertical breathing room */
   }
 
   .ipl-teams-grid--picker .ipl-teams-card-inner {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Space elements consistently */
+    justify-content: space-between; 
     text-align: center;
     padding: 1.5rem 0.5rem;
     gap: 0.5rem;
     min-height: 100%;
     flex: 1;
+    width: 100%;
   }
 
   .ipl-teams-grid--picker .ipl-teams-card-meta {
@@ -1400,7 +1402,7 @@ body.ipl-teams-detail-open {
     font-size: 0.68rem;
     font-weight: 800;
     line-height: 1.25;
-    word-break: break-word;
+    word-break: break-all;
   }
 }
 
