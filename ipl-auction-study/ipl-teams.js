@@ -216,9 +216,10 @@ function renderDetail(detailEl, team) {
     
     Object.entries(socialLinks).forEach(([key, url]) => {
       if (url && icons[key]) {
+        const iconClass = key === 'website' ? `fa-solid ${icons[key]}` : `fa-brands ${icons[key]}`;
         socialHtml += `
           <a href="${escapeHtml(url)}" target="_blank" class="ipl-teams-social-link" title="${key.charAt(0).toUpperCase() + key.slice(1)}">
-            <i class="fa-brands ${icons[key]}"></i>
+            <i class="${iconClass}"></i>
           </a>`;
       }
     });
