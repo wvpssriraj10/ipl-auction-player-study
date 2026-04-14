@@ -37,6 +37,7 @@ const FOLDER_TO_SLUG = {
 
 function bgScore(name) {
   const n = name.toLowerCase();
+  if (n === 'bg.jpg' || n === 'bg.png' || n === 'bg.webp' || n === 'bg.jpeg') return 200;
   if (n.includes(' bg.') || n.includes(' bg ') || n.endsWith(' bg')) return 100;
   if (/\bbg\b/.test(n)) return 90;
   if (n.includes('wallpaper')) return 85;
