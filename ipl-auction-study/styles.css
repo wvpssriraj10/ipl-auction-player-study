@@ -1356,7 +1356,7 @@ body.ipl-teams-detail-open {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    padding: 2.5rem 1rem !important;
+    padding: 2.5rem 1rem 10rem !important; /* Large gap at bottom of grid */
     gap: 1.5rem 1.25rem !important;
     max-width: 1320px !important; /* Forces 8 in row 1 and 7 in row 2 */
     margin: 0 auto;
@@ -2169,6 +2169,7 @@ body.ipl-teams-detail-open {
 
 .ipl-teams-block--players {
   margin-top: 0.25rem;
+  padding-bottom: 4rem; /* Specific gap for players section */
 }
 
 .ipl-teams-players {
@@ -2393,7 +2394,7 @@ body.ipl-teams-detail-open {
 .ipl-teams-detail-inner {
   position: relative;
   z-index: 10;
-  padding: 2.5rem 2rem 8rem !important; /* Increased padding to clear bar */
+  padding: 2.5rem 2rem 12rem !important; /* Increased padding to create a large gap at the end */
   color: #f8fafc;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
   background: transparent !important;
