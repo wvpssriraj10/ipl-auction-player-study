@@ -479,11 +479,11 @@ export async function initIplTeamsSection(options = {}) {
       detailStage.hidden = false;
       if (stageBg) {
         if (team.bgUrl) {
-          stageBg.style.backgroundImage = `url(${JSON.stringify(team.bgUrl)})`;
-          stageBg.style.background = '';
+          stageBg.style.backgroundImage = "url('" + team.bgUrl + "')";
+          if (detailStage) detailStage.style.backgroundColor = 'transparent';
         } else {
-          stageBg.style.background = gradientFromColors(team.identity?.colors);
-          stageBg.style.backgroundImage = '';
+          stageBg.style.backgroundImage = 'none';
+          if (detailStage) detailStage.style.backgroundColor = '#06080c';
         }
       }
       document.body.classList.add('ipl-teams-detail-open');
