@@ -30,7 +30,11 @@
     "captain": "Mahela Jayawardene",
     "coach": "Geoff Lawson",
     "notable_captains": [
-      "Mahela Jayawardene"
+      "Mahela Jayawardene: 1 year (2011)",
+      "Parthiv Patel: Stand-in (2011)"
+    ],
+    "notable_coaches": [
+      "Geoff Lawson: 1 year (2011)"
     ]
   },
 
@@ -110,7 +114,7 @@
   "rivalries": [
     {
       "team": "Royal Challengers Bengaluru",
-      "details": "Notable matches during 2011 season"
+      "details": "Notable rivalry during 2011 season"
     },
     {
       "team": "Chennai Super Kings",

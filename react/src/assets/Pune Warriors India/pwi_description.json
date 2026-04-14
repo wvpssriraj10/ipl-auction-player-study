@@ -27,11 +27,19 @@
 
   "management": {
     "captain": "Angelo Mathews",
-    "coach": "Geoff Marsh",
+    "coach": "Allan Donald",
     "notable_captains": [
-      "Yuvraj Singh",
-      "Sourav Ganguly",
-      "Angelo Mathews"
+      "Yuvraj Singh: 1 year (2011)",
+      "Sourav Ganguly: 1 year (2012)",
+      "Steve Smith: Stand-in (2012)",
+      "Angelo Mathews: 1 year (2013)",
+      "Aaron Finch: 1 year (2013)",
+      "Ross Taylor: 1 year (2013)"
+    ],
+    "notable_coaches": [
+      "Geoff Marsh: 1 year (2011)",
+      "Dermot Reeve: 1 year (2012)",
+      "Allan Donald: 1 year (2013)"
     ]
   },
 

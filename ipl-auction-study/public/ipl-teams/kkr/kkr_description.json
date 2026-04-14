@@ -2,36 +2,42 @@
   "id": "kkr",
   "name": "Kolkata Knight Riders",
   "short_name": "KKR",
-
   "basic_info": {
     "city": "Kolkata, West Bengal, India",
     "founded": 2008,
     "status": "active"
   },
-
   "identity": {
-    "colors": ["purple", "gold"],
-    "nicknames": ["KKR", "Knight Riders"],
+    "colors": [
+      "purple",
+      "gold"
+    ],
+    "nicknames": [
+      "KKR",
+      "Knight Riders"
+    ],
     "meaning": "Represents courage, strength, and royal heritage"
   },
-
   "ownership": {
     "current_owner": "Knight Riders Group (Shah Rukh Khan, Juhi Chawla, Jay Mehta)",
     "ownership_history": [
       "Co-owned by Bollywood actor Shah Rukh Khan, actress Juhi Chawla, and businessman Jay Mehta since inception"
     ]
   },
-
   "management": {
-    "captain": "Shreyas Iyer",
-    "coach": "Chandrakant Pandit",
+    "captain": "Ajinkya Rahane",
+    "coach": "Abhishek Nayar",
     "notable_captains": [
-      "Gautam Gambhir",
-      "Dinesh Karthik",
-      "Eoin Morgan"
+      "Sourav Ganguly: 2 years (2008, 2010)",
+      "Brendon McCullum: 1 year (2009)",
+      "Gautam Gambhir: 7 years (2011–2017)",
+      "Dinesh Karthik: 3 years (2018–2020)",
+      "Eoin Morgan: 2 years (2020–2021)",
+      "Shreyas Iyer: 2 years (2022, 2024)",
+      "Nitish Rana: 1 year (2023)",
+      "Ajinkya Rahane: 2 years (2025–2026)"
     ]
   },
-
   "home_grounds": [
     {
       "name": "Eden Gardens",
@@ -40,10 +46,8 @@
       "primary": true
     }
   ],
-
   "history": {
     "full_text": "Kolkata Knight Riders (KKR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely recognized for its strong brand value and association with Bollywood through its ownership. In the early years of the IPL, KKR struggled with inconsistent performances and frequent leadership changes. However, the team underwent a major transformation under the captaincy of Gautam Gambhir, who led the franchise to its first IPL title in 2012. KKR continued its success by winning a second IPL title in 2014, establishing itself as a competitive force in the league. The franchise has been known for its aggressive style of play, innovative strategies, and the ability to nurture match-winning players. Over the years, KKR has experienced phases of rebuilding and resurgence, remaining a competitive side in multiple seasons. The team is also known for its passionate fan base and the iconic Eden Gardens stadium, which serves as one of the most vibrant venues in IPL.",
-
     "timeline": [
       "2008: Franchise established",
       "2008–2010: Struggled with inconsistent performances",
@@ -54,7 +58,6 @@
       "2018–2021: Playoff appearances and rebuilding",
       "2022–present: Transition phase with new leadership"
     ],
-
     "key_eras": [
       {
         "period": "2008–2010",
@@ -74,15 +77,20 @@
       }
     ]
   },
-
   "honours": {
     "ipl_titles": 2,
-    "title_years": [2012, 2014],
+    "title_years": [
+      2012,
+      2014
+    ],
     "finals": 3,
-    "final_years": [2012, 2014, 2021],
+    "final_years": [
+      2012,
+      2014,
+      2021
+    ],
     "playoff_appearances": 8
   },
-
   "performance": {
     "overall": {
       "matches": 240,
@@ -91,7 +99,6 @@
       "no_result": 5,
       "win_pct": 50.0
     },
-
     "season_highlights": [
       {
         "season": 2012,
@@ -109,26 +116,22 @@
         "note": "Reached final after strong comeback"
       }
     ],
-
     "strengths": [
       "Strong middle-order batting",
       "Effective spin bowling attack",
       "Ability to perform under pressure",
       "Strong home advantage at Eden Gardens"
     ],
-
     "weaknesses": [
       "Inconsistency in batting lineup in some seasons",
       "Frequent leadership changes in certain phases"
     ],
-
     "records": [
       "Two-time IPL champions",
       "Strong record at Eden Gardens",
       "Known for comeback victories in tournaments"
     ]
   },
-
   "rivalries": [
     {
       "team": "Mumbai Indians",
@@ -143,7 +146,6 @@
       "details": "Recent rivalry due to playoff clashes"
     }
   ],
-
   "notable_players": [
     "Gautam Gambhir",
     "Andre Russell",
@@ -152,10 +154,9 @@
     "Eoin Morgan",
     "Dinesh Karthik"
   ],
-
   "social_links": {
     "twitter": "https://x.com/KKRiders",
     "instagram": "https://www.instagram.com/kkriders/",
-    "youtube": "https://www.youtube.com/@kkriders"
+    "youtube": "https://www.youtube.com/@kolkataknightriders"
   }
 }

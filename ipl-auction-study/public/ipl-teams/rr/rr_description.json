@@ -25,12 +25,23 @@
   },
 
   "management": {
-    "captain": "Sanju Samson",
-    "coach": "Kumar Sangakkara",
+    "captain": "Riyan Parag",
+    "coach": "Rahul Dravid",
     "notable_captains": [
-      "Shane Warne",
-      "Rahul Dravid",
-      "Steve Smith"
+      "Shane Warne: 4 years (2008–2011)",
+      "Rahul Dravid: 2 years (2012–2013)",
+      "Shane Watson: 2 years (2014–2015)",
+      "Steve Smith: 4 years (2014–2015, 2019–2020)",
+      "Ajinkya Rahane: 2 years (2018–2019)",
+      "Sanju Samson: 6 years (2021–2025)",
+      "Riyan Parag: 1 year (2026)"
+    ],
+    "notable_coaches": [
+      "Shane Warne: 4 years (2008–2011)",
+      "Rahul Dravid: 6 years (2012–2015, 2025–2026)",
+      "Paddy Upton: 2 years (2013, 2019)",
+      "Andrew McDonald: 1 year (2020)",
+      "Kumar Sangakkara: 4 years (2021–2024)"
     ]
   },
 
@@ -44,6 +55,7 @@
     {
       "name": "Barsapara Cricket Stadium",
       "location": "Guwahati",
+      "capacity": 28000,
       "primary": false
     }
   ],

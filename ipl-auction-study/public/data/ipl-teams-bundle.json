@@ -30,7 +30,14 @@
         "captain": "Ruturaj Gaikwad",
         "coach": "Stephen Fleming",
         "notable_captains": [
-          "MS Dhoni"
+          "MS Dhoni: 14 years (2008–2015, 2018–2023)",
+          "Suresh Raina: Stand-in (2010–2019)",
+          "Ravindra Jadeja: 1 year (2022)",
+          "Ruturaj Gaikwad: 3 years (2024–2026)"
+        ],
+        "notable_coaches": [
+          "Kepler Wessels: 1 year (2008)",
+          "Stephen Fleming: 16 years (2009–2015, 2018–2026)"
         ]
       },
       "home_grounds": [
@@ -199,13 +206,20 @@
         ]
       },
       "management": {
-        "captain": "Rishabh Pant",
-        "coach": "Ricky Ponting",
+        "captain": "Axar Patel",
+        "coach": "Hemang Badani",
         "notable_captains": [
-          "Virender Sehwag",
-          "Gautam Gambhir",
-          "Kevin Pietersen",
-          "Shreyas Iyer"
+          "Virender Sehwag: 4 years (2008–2009, 2011–2012)",
+          "Gautam Gambhir: 2 years (2010, 2018)",
+          "Mahela Jayawardene: 1 year (2012)",
+          "David Warner: 2 years (2013, 2023)",
+          "Kevin Pietersen: 1 year (2014)",
+          "JP Duminy: 1 year (2015)",
+          "Zaheer Khan: 2 years (2016–2017)",
+          "Karun Nair: Stand-in (2017)",
+          "Shreyas Iyer: 3 years (2018–2020)",
+          "Rishabh Pant: 3 years (2021–2022, 2024)",
+          "Axar Patel: 2 years (2025–2026)"
         ]
       },
       "home_grounds": [
@@ -325,6 +339,138 @@
       "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png"
     },
     {
+      "id": "gl",
+      "name": "Gujarat Lions",
+      "short_name": "GL",
+      "basic_info": {
+        "city": "Rajkot, Gujarat, India",
+        "founded": 2016,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "orange",
+          "blue"
+        ],
+        "nicknames": [
+          "Lions"
+        ],
+        "meaning": "Represents strength, pride, and regional identity of Gujarat"
+      },
+      "ownership": {
+        "current_owner": "Intex Technologies",
+        "ownership_history": [
+          "Franchise awarded to Intex Technologies as a temporary replacement team",
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+        ]
+      },
+      "management": {
+        "captain": "Suresh Raina",
+        "coach": "Brad Hodge",
+        "notable_captains": [
+          "Suresh Raina: 2 years (2016–2017)",
+          "Brendon McCullum: Stand-in (2016)"
+        ],
+        "notable_coaches": [
+          "Brad Hodge: 2 years (2016–2017)"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Saurashtra Cricket Association Stadium",
+          "location": "Rajkot",
+          "capacity": 28000,
+          "primary": true
+        },
+        {
+          "name": "Green Park Stadium",
+          "location": "Kanpur",
+          "capacity": 33000,
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
+        "timeline": [
+          "2016: Franchise introduced as replacement team",
+          "2016: Finished top of league stage, qualified for playoffs",
+          "2017: Poor performance, finished near bottom",
+          "2018: Franchise dissolved after return of CSK and RR"
+        ],
+        "key_eras": [
+          {
+            "period": "2016",
+            "description": "Strong debut season with top league finish"
+          },
+          {
+            "period": "2017",
+            "description": "Decline phase with poor performance"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 0,
+        "final_years": [],
+        "playoff_appearances": 1
+      },
+      "performance": {
+        "overall": {
+          "matches": 30,
+          "wins": 13,
+          "losses": 16,
+          "no_result": 1,
+          "win_pct": 43.3
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "Playoffs",
+            "note": "Finished first in league stage"
+          },
+          {
+            "season": 2017,
+            "achievement": "Bottom-half finish",
+            "note": "Poor performance"
+          }
+        ],
+        "strengths": [
+          "Strong batting lineup in debut season",
+          "Effective leadership under Suresh Raina",
+          "Good team balance in 2016"
+        ],
+        "weaknesses": [
+          "Inconsistency across seasons",
+          "Weak bowling attack in 2017",
+          "Short-lived team structure"
+        ],
+        "records": [
+          "Finished top of table in debut season (2016)",
+          "One of the best debut performances by a temporary IPL team"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Faced SRH in IPL 2016 playoffs"
+        },
+        {
+          "team": "Royal Challengers Bengaluru",
+          "details": "High-scoring encounters during 2016 season"
+        }
+      ],
+      "notable_players": [
+        "Suresh Raina",
+        "Brendon McCullum",
+        "Dwayne Bravo",
+        "Ravindra Jadeja",
+        "Aaron Finch"
+      ],
+      "logoUrl": "/ipl-teams/gl/Gujarat_Lions.png",
+      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png"
+    },
+    {
       "id": "gt",
       "name": "Gujarat Titans",
       "short_name": "GT",
@@ -354,7 +500,12 @@
         "captain": "Shubman Gill",
         "coach": "Ashish Nehra",
         "notable_captains": [
-          "Hardik Pandya"
+          "Hardik Pandya: 2 years (2022–2023)",
+          "Rashid Khan: Stand-in (2022–2023)",
+          "Shubman Gill: 3 years (2024–2026)"
+        ],
+        "notable_coaches": [
+          "Ashish Nehra: 5 years (2022–2026)"
         ]
       },
       "home_grounds": [
@@ -488,12 +639,17 @@
         ]
       },
       "management": {
-        "captain": "Shreyas Iyer",
-        "coach": "Chandrakant Pandit",
+        "captain": "Ajinkya Rahane",
+        "coach": "Abhishek Nayar",
         "notable_captains": [
-          "Gautam Gambhir",
-          "Dinesh Karthik",
-          "Eoin Morgan"
+          "Sourav Ganguly: 2 years (2008, 2010)",
+          "Brendon McCullum: 1 year (2009)",
+          "Gautam Gambhir: 7 years (2011–2017)",
+          "Dinesh Karthik: 3 years (2018–2020)",
+          "Eoin Morgan: 2 years (2020–2021)",
+          "Shreyas Iyer: 2 years (2022, 2024)",
+          "Nitish Rana: 1 year (2023)",
+          "Ajinkya Rahane: 2 years (2025–2026)"
         ]
       },
       "home_grounds": [
@@ -615,7 +771,7 @@
       "social_links": {
         "twitter": "https://x.com/KKRiders",
         "instagram": "https://www.instagram.com/kkriders/",
-        "youtube": "https://www.youtube.com/@kkriders"
+        "youtube": "https://www.youtube.com/@kolkataknightriders"
       },
       "logoUrl": "/ipl-teams/kkr/Kolkata_Knight_Riders_Logo.png",
       "bgUrl": "/ipl-teams/kkr/kkr%20bg.png"
@@ -647,10 +803,17 @@
         ]
       },
       "management": {
-        "captain": "KL Rahul",
+        "captain": "Rishabh Pant",
         "coach": "Justin Langer",
         "notable_captains": [
-          "KL Rahul"
+          "KL Rahul: 3 years (2022–2024)",
+          "Krunal Pandya: Stand-in (2023)",
+          "Nicholas Pooran: Stand-in (2024)",
+          "Rishabh Pant: 2 years (2025–2026)"
+        ],
+        "notable_coaches": [
+          "Andy Flower: 2 years (2022–2023)",
+          "Justin Langer: 3 years (2024–2026)"
         ]
       },
       "home_grounds": [
@@ -777,10 +940,25 @@
       },
       "management": {
         "captain": "Hardik Pandya",
-        "coach": "Mark Boucher",
+        "coach": "Mahela Jayawardene",
         "notable_captains": [
-          "Rohit Sharma",
-          "Sachin Tendulkar"
+          "Shaun Pollock: 1 year (2008)",
+          "Harbhajan Singh: 5 years (2008–2012)",
+          "Sachin Tendulkar: 4 years (2008–2011)",
+          "Ricky Ponting: 1 year (2013)",
+          "Rohit Sharma: 11 years (2013–2023)",
+          "Kieron Pollard: Stand-in (2014–2021)",
+          "Suryakumar Yadav: 1 year (2023)",
+          "Hardik Pandya: 3 years (2024–2026)"
+        ],
+        "notable_coaches": [
+          "Lalchand Rajput: 1 year (2008)",
+          "Shaun Pollock: 1 year (2009)",
+          "Robin Singh: 3 years (2010–2012)",
+          "John Wright: 2 years (2013–2014)",
+          "Ricky Ponting: 2 years (2015–2016)",
+          "Mahela Jayawardene: 8 years (2017–2022, 2025–2026)",
+          "Mark Boucher: 2 years (2023–2024)"
         ]
       },
       "home_grounds": [
@@ -946,14 +1124,24 @@
         ]
       },
       "management": {
-        "captain": "Shikhar Dhawan",
-        "coach": "Trevor Bayliss",
+        "captain": "Shreyas Iyer",
+        "coach": "Ricky Ponting",
         "notable_captains": [
-          "Yuvraj Singh",
-          "Adam Gilchrist",
-          "George Bailey",
-          "KL Rahul",
-          "Mayank Agarwal"
+          "Yuvraj Singh: 2 years (2008–2009)",
+          "Kumar Sangakkara: 1 year (2010)",
+          "Mahela Jayawardene: 1 year (2010)",
+          "Adam Gilchrist: 3 years (2011–2013)",
+          "David Hussey: Stand-in (2012–2013)",
+          "George Bailey: 2 years (2014–2015)",
+          "David Miller: 1 year (2016)",
+          "Murali Vijay: 1 year (2016)",
+          "Glenn Maxwell: 1 year (2017)",
+          "Ravichandran Ashwin: 2 years (2018–2019)",
+          "KL Rahul: 2 years (2020–2021)",
+          "Mayank Agarwal: 1 year (2022)",
+          "Shikhar Dhawan: 2 years (2023–2024)",
+          "Sam Curran: Stand-in (2023–2024)",
+          "Shreyas Iyer: 2 years (2025–2026)"
         ]
       },
       "home_grounds": [
@@ -1064,7 +1252,7 @@
       "social_links": {
         "twitter": "https://x.com/PunjabKingsIPL",
         "instagram": "https://www.instagram.com/punjabkingsipl/",
-        "youtube": "https://www.youtube.com/@PunjabKingsIPL"
+        "youtube": "https://www.youtube.com/@PUNJABKINGSTV"
       },
       "logoUrl": "/ipl-teams/pbks/Punjab_Kings_Logo.png",
       "bgUrl": "/ipl-teams/pbks/pbks%20bg.jpg"
@@ -1097,12 +1285,23 @@
         ]
       },
       "management": {
-        "captain": "Sanju Samson",
-        "coach": "Kumar Sangakkara",
+        "captain": "Riyan Parag",
+        "coach": "Rahul Dravid",
         "notable_captains": [
-          "Shane Warne",
-          "Rahul Dravid",
-          "Steve Smith"
+          "Shane Warne: 4 years (2008–2011)",
+          "Rahul Dravid: 2 years (2012–2013)",
+          "Shane Watson: 2 years (2014–2015)",
+          "Steve Smith: 4 years (2014–2015, 2019–2020)",
+          "Ajinkya Rahane: 2 years (2018–2019)",
+          "Sanju Samson: 6 years (2021–2025)",
+          "Riyan Parag: 1 year (2026)"
+        ],
+        "notable_coaches": [
+          "Shane Warne: 4 years (2008–2011)",
+          "Rahul Dravid: 6 years (2012–2015, 2025–2026)",
+          "Paddy Upton: 2 years (2013, 2019)",
+          "Andrew McDonald: 1 year (2020)",
+          "Kumar Sangakkara: 4 years (2021–2024)"
         ]
       },
       "home_grounds": [
@@ -1115,6 +1314,7 @@
         {
           "name": "Barsapara Cricket Stadium",
           "location": "Guwahati",
+          "capacity": 28000,
           "primary": false
         }
       ],
@@ -1225,6 +1425,144 @@
       "bgUrl": "/ipl-teams/rr/rr%20bg.jpg"
     },
     {
+      "id": "rps",
+      "name": "Rising Pune Supergiant",
+      "short_name": "RPS",
+      "basic_info": {
+        "city": "Pune, Maharashtra, India",
+        "founded": 2016,
+        "status": "active"
+      },
+      "identity": {
+        "colors": [
+          "purple",
+          "gold"
+        ],
+        "nicknames": [
+          "Supergiant"
+        ],
+        "meaning": "Represents strength, scale, and ambition"
+      },
+      "ownership": {
+        "current_owner": "RPSG Group (Sanjiv Goenka)",
+        "ownership_history": [
+          "Franchise awarded to RPSG Group as a temporary replacement team",
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+        ]
+      },
+      "management": {
+        "captain": "Steve Smith",
+        "coach": "Stephen Fleming",
+        "notable_captains": [
+          "MS Dhoni: 1 year (2016)",
+          "Steve Smith: 1 year (2017)",
+          "Ajinkya Rahane: Stand-in (2017)"
+        ],
+        "notable_coaches": [
+          "Stephen Fleming: 2 years (2016–2017)"
+        ]
+      },
+      "home_grounds": [
+        {
+          "name": "Maharashtra Cricket Association Stadium",
+          "location": "Pune",
+          "capacity": 37000,
+          "primary": true
+        },
+        {
+          "name": "Dr. DY Patil Sports Academy",
+          "location": "Navi Mumbai",
+          "primary": false
+        }
+      ],
+      "history": {
+        "full_text": "Rising Pune Supergiant (RPS) was a temporary franchise that competed in the Indian Premier League (IPL) during the 2016 and 2017 seasons. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by the RPSG Group, the franchise brought together a mix of experienced international players and Indian stars. In its debut season in 2016, RPS had a disappointing campaign, finishing seventh in the league. The team struggled to find consistency and faced challenges with leadership and team balance. However, in the 2017 season, RPS underwent a remarkable transformation under the captaincy of Steve Smith. The team performed exceptionally well, reaching the IPL final after defeating Mumbai Indians in the playoffs. In a closely contested final, RPS narrowly lost to Mumbai Indians by just one run. Despite their strong performance in 2017, the franchise was dissolved after the return of Chennai Super Kings and Rajasthan Royals in 2018. Although short-lived, RPS left a lasting impact with its dramatic turnaround between its two seasons.",
+        "timeline": [
+          "2016: Franchise introduced as replacement team",
+          "2016: Poor debut season, finished 7th",
+          "2017: Reached IPL final under Steve Smith",
+          "2017: Lost final to Mumbai Indians by 1 run",
+          "2018: Franchise dissolved after return of CSK and RR"
+        ],
+        "key_eras": [
+          {
+            "period": "2016",
+            "description": "Struggling debut season with inconsistent performances"
+          },
+          {
+            "period": "2017",
+            "description": "Dramatic turnaround with strong performance and final appearance"
+          }
+        ]
+      },
+      "honours": {
+        "ipl_titles": 0,
+        "title_years": [],
+        "finals": 1,
+        "final_years": [
+          2017
+        ],
+        "playoff_appearances": 1
+      },
+      "performance": {
+        "overall": {
+          "matches": 30,
+          "wins": 15,
+          "losses": 15,
+          "no_result": 0,
+          "win_pct": 50
+        },
+        "season_highlights": [
+          {
+            "season": 2016,
+            "achievement": "7th place",
+            "note": "Poor debut season"
+          },
+          {
+            "season": 2017,
+            "achievement": "Runners-up",
+            "note": "Lost final by 1 run to Mumbai Indians"
+          }
+        ],
+        "strengths": [
+          "Strong comeback ability",
+          "Balanced squad in 2017 season",
+          "Effective leadership under Steve Smith",
+          "Strong bowling attack in 2017"
+        ],
+        "weaknesses": [
+          "Inconsistency in debut season",
+          "Leadership instability in 2016",
+          "Short-lived team continuity"
+        ],
+        "records": [
+          "One of the closest IPL finals (2017)",
+          "Significant improvement between two seasons",
+          "Competitive performance despite short existence"
+        ]
+      },
+      "rivalries": [
+        {
+          "team": "Mumbai Indians",
+          "details": "Strong rivalry during 2017 season including IPL final"
+        },
+        {
+          "team": "Sunrisers Hyderabad",
+          "details": "Faced SRH in 2016 playoffs"
+        }
+      ],
+      "notable_players": [
+        "MS Dhoni",
+        "Steve Smith",
+        "Ajinkya Rahane",
+        "Ben Stokes",
+        "Ravichandran Ashwin",
+        "Faf du Plessis"
+      ],
+      "logoUrl": "/ipl-teams/rps/Rising_Pune_Supergiant%20logo.png",
+      "bgUrl": "/ipl-teams/rps/rps%20bg.png"
+    },
+    {
       "id": "rcb",
       "name": "Royal Challengers Bengaluru",
       "short_name": "RCB",
@@ -1256,9 +1594,23 @@
         "captain": "Faf du Plessis",
         "coach": "Andy Flower",
         "notable_captains": [
-          "Virat Kohli",
-          "Anil Kumble",
-          "Daniel Vettori"
+          "Rahul Dravid: 1 year (2008)",
+          "Kevin Pietersen: 1 year (2009)",
+          "Anil Kumble: 2 years (2009–2010)",
+          "Daniel Vettori: 2 years (2011–2012)",
+          "Virat Kohli: 11 years (2011–2021)",
+          "Shane Watson: 1 year (2017)",
+          "Faf du Plessis: 3 years (2022–2024)",
+          "Rajat Patidar: 2 years (2025–2026)"
+        ],
+        "notable_coaches": [
+          "Venkatesh Prasad / Martin Crowe: 1 year (2008)",
+          "Ray Jennings: 5 years (2009–2013)",
+          "Daniel Vettori: 5 years (2014–2018)",
+          "Gary Kirsten: 1 year (2019)",
+          "Simon Katich: 2 years (2020–2021)",
+          "Sanjay Bangar: 2 years (2022–2023)",
+          "Andy Flower: 3 years (2024–2026)"
         ]
       },
       "home_grounds": [
@@ -1364,8 +1716,8 @@
       ],
       "social_links": {
         "twitter": "https://x.com/RCBTweets",
-        "instagram": "https://www.instagram.com/royalchallengersbangalore/",
-        "youtube": "https://www.youtube.com/@RoyalChallengersBangalore"
+        "instagram": "https://www.instagram.com/royalchallengers.bengaluru/",
+        "youtube": "https://www.youtube.com/@royalchallengersbengaluruYT"
       },
       "notable_players": [
         "Virat Kohli",
@@ -1405,12 +1757,25 @@
         ]
       },
       "management": {
-        "captain": "Ishan Kishan",
+        "captain": "Pat Cummins",
         "coach": "Daniel Vettori",
         "notable_captains": [
-          "David Warner",
-          "Kane Williamson",
-          "Pat Cummins"
+          "Kumar Sangakkara: 1 year (2013)",
+          "Cameron White: 1 year (2013)",
+          "Shikhar Dhawan: 2 years (2013–2014)",
+          "Darren Sammy: 1 year (2014)",
+          "David Warner: 6 years (2015–2019, 2021)",
+          "Kane Williamson: 4 years (2018–2019, 2021–2022)",
+          "Bhuvneshwar Kumar: Stand-in (2019–2023)",
+          "Manish Pandey: 1 year (2021)",
+          "Aiden Markram: 1 year (2023)",
+          "Pat Cummins: 3 years (2024–2026)"
+        ],
+        "notable_coaches": [
+          "Tom Moody: 8 years (2013–2019, 2022)",
+          "Trevor Bayliss: 2 years (2020–2021)",
+          "Brian Lara: 1 year (2023)",
+          "Daniel Vettori: 3 years (2024–2026)"
         ]
       },
       "home_grounds": [
@@ -1585,9 +1950,14 @@
         "captain": "Adam Gilchrist",
         "coach": "Darren Lehmann",
         "notable_captains": [
-          "V.V.S. Laxman",
-          "Adam Gilchrist",
-          "Kumar Sangakkara"
+          "VVS Laxman: 1 year (2008)",
+          "Adam Gilchrist: 3 years (2008–2010)",
+          "Kumar Sangakkara: 2 years (2011–2012)",
+          "Cameron White: 1 year (2012)"
+        ],
+        "notable_coaches": [
+          "Robin Singh: 1 year (2008)",
+          "Darren Lehmann: 4 years (2009–2012)"
         ]
       },
       "home_grounds": [
@@ -1698,137 +2068,6 @@
       "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg"
     },
     {
-      "id": "gl",
-      "name": "Gujarat Lions",
-      "short_name": "GL",
-      "basic_info": {
-        "city": "Rajkot, Gujarat, India",
-        "founded": 2016,
-        "status": "defunct",
-        "active_years": [
-          2016,
-          2017
-        ]
-      },
-      "identity": {
-        "colors": [
-          "orange",
-          "blue"
-        ],
-        "nicknames": [
-          "Lions"
-        ],
-        "meaning": "Represents strength, pride, and regional identity of Gujarat"
-      },
-      "ownership": {
-        "current_owner": "Intex Technologies",
-        "ownership_history": [
-          "Franchise awarded to Intex Technologies as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
-        ]
-      },
-      "management": {
-        "captain": "Suresh Raina",
-        "coach": "Brad Hodge",
-        "notable_captains": [
-          "Suresh Raina"
-        ]
-      },
-      "home_grounds": [
-        {
-          "name": "Saurashtra Cricket Association Stadium",
-          "location": "Rajkot",
-          "capacity": 28000,
-          "primary": true
-        },
-        {
-          "name": "Green Park Stadium",
-          "location": "Kanpur",
-          "primary": false
-        }
-      ],
-      "history": {
-        "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
-        "timeline": [
-          "2016: Franchise introduced as replacement team",
-          "2016: Finished top of league stage, qualified for playoffs",
-          "2017: Poor performance, finished near bottom",
-          "2018: Franchise dissolved after return of CSK and RR"
-        ],
-        "key_eras": [
-          {
-            "period": "2016",
-            "description": "Strong debut season with top league finish"
-          },
-          {
-            "period": "2017",
-            "description": "Decline phase with poor performance"
-          }
-        ]
-      },
-      "honours": {
-        "ipl_titles": 0,
-        "title_years": [],
-        "finals": 0,
-        "final_years": [],
-        "playoff_appearances": 1
-      },
-      "performance": {
-        "overall": {
-          "matches": 30,
-          "wins": 13,
-          "losses": 16,
-          "no_result": 1,
-          "win_pct": 43.3
-        },
-        "season_highlights": [
-          {
-            "season": 2016,
-            "achievement": "Playoffs",
-            "note": "Finished first in league stage"
-          },
-          {
-            "season": 2017,
-            "achievement": "Bottom-half finish",
-            "note": "Poor performance"
-          }
-        ],
-        "strengths": [
-          "Strong batting lineup in debut season",
-          "Effective leadership under Suresh Raina",
-          "Good team balance in 2016"
-        ],
-        "weaknesses": [
-          "Inconsistency across seasons",
-          "Weak bowling attack in 2017",
-          "Short-lived team structure"
-        ],
-        "records": [
-          "Finished top of table in debut season (2016)",
-          "One of the best debut performances by a temporary IPL team"
-        ]
-      },
-      "rivalries": [
-        {
-          "team": "Sunrisers Hyderabad",
-          "details": "Faced SRH in IPL 2016 playoffs"
-        },
-        {
-          "team": "Royal Challengers Bengaluru",
-          "details": "High-scoring encounters during 2016 season"
-        }
-      ],
-      "notable_players": [
-        "Suresh Raina",
-        "Brendon McCullum",
-        "Dwayne Bravo",
-        "Ravindra Jadeja",
-        "Aaron Finch"
-      ],
-      "logoUrl": "/ipl-teams/gl/Gujarat_Lions.png",
-      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png"
-    },
-    {
       "id": "ktk",
       "name": "Kochi Tuskers Kerala",
       "short_name": "KTK",
@@ -1863,7 +2102,11 @@
         "captain": "Mahela Jayawardene",
         "coach": "Geoff Lawson",
         "notable_captains": [
-          "Mahela Jayawardene"
+          "Mahela Jayawardene: 1 year (2011)",
+          "Parthiv Patel: Stand-in (2011)"
+        ],
+        "notable_coaches": [
+          "Geoff Lawson: 1 year (2011)"
         ]
       },
       "home_grounds": [
@@ -1932,7 +2175,7 @@
       "rivalries": [
         {
           "team": "Royal Challengers Bengaluru",
-          "details": "Notable matches during 2011 season"
+          "details": "Notable rivalry during 2011 season"
         },
         {
           "team": "Chennai Super Kings",
@@ -1983,11 +2226,19 @@
       },
       "management": {
         "captain": "Angelo Mathews",
-        "coach": "Geoff Marsh",
+        "coach": "Allan Donald",
         "notable_captains": [
-          "Yuvraj Singh",
-          "Sourav Ganguly",
-          "Angelo Mathews"
+          "Yuvraj Singh: 1 year (2011)",
+          "Sourav Ganguly: 1 year (2012)",
+          "Steve Smith: Stand-in (2012)",
+          "Angelo Mathews: 1 year (2013)",
+          "Aaron Finch: 1 year (2013)",
+          "Ross Taylor: 1 year (2013)"
+        ],
+        "notable_coaches": [
+          "Geoff Marsh: 1 year (2011)",
+          "Dermot Reeve: 1 year (2012)",
+          "Allan Donald: 1 year (2013)"
         ]
       },
       "home_grounds": [
@@ -2087,144 +2338,6 @@
       ],
       "logoUrl": "/ipl-teams/pwi/Pune_Warriors_India_IPL_Logo.png",
       "bgUrl": "/ipl-teams/pwi/pwi%20bg.jpg"
-    },
-    {
-      "id": "rps",
-      "name": "Rising Pune Supergiant",
-      "short_name": "RPS",
-      "basic_info": {
-        "city": "Pune, Maharashtra, India",
-        "founded": 2016,
-        "status": "defunct",
-        "active_years": [
-          2016,
-          2017
-        ]
-      },
-      "identity": {
-        "colors": [
-          "purple",
-          "gold"
-        ],
-        "nicknames": [
-          "Supergiant"
-        ],
-        "meaning": "Represents strength, scale, and ambition"
-      },
-      "ownership": {
-        "current_owner": "RPSG Group (Sanjiv Goenka)",
-        "ownership_history": [
-          "Franchise awarded to RPSG Group as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
-        ]
-      },
-      "management": {
-        "captain": "Steve Smith",
-        "coach": "Stephen Fleming",
-        "notable_captains": [
-          "MS Dhoni",
-          "Steve Smith"
-        ]
-      },
-      "home_grounds": [
-        {
-          "name": "Maharashtra Cricket Association Stadium",
-          "location": "Pune",
-          "capacity": 37000,
-          "primary": true
-        },
-        {
-          "name": "Dr. DY Patil Sports Academy",
-          "location": "Navi Mumbai",
-          "primary": false
-        }
-      ],
-      "history": {
-        "full_text": "Rising Pune Supergiant (RPS) was a temporary franchise that competed in the Indian Premier League (IPL) during the 2016 and 2017 seasons. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by the RPSG Group, the franchise brought together a mix of experienced international players and Indian stars. In its debut season in 2016, RPS had a disappointing campaign, finishing seventh in the league. The team struggled to find consistency and faced challenges with leadership and team balance. However, in the 2017 season, RPS underwent a remarkable transformation under the captaincy of Steve Smith. The team performed exceptionally well, reaching the IPL final after defeating Mumbai Indians in the playoffs. In a closely contested final, RPS narrowly lost to Mumbai Indians by just one run. Despite their strong performance in 2017, the franchise was dissolved after the return of Chennai Super Kings and Rajasthan Royals in 2018. Although short-lived, RPS left a lasting impact with its dramatic turnaround between its two seasons.",
-        "timeline": [
-          "2016: Franchise introduced as replacement team",
-          "2016: Poor debut season, finished 7th",
-          "2017: Reached IPL final under Steve Smith",
-          "2017: Lost final to Mumbai Indians by 1 run",
-          "2018: Franchise dissolved after return of CSK and RR"
-        ],
-        "key_eras": [
-          {
-            "period": "2016",
-            "description": "Struggling debut season with inconsistent performances"
-          },
-          {
-            "period": "2017",
-            "description": "Dramatic turnaround with strong performance and final appearance"
-          }
-        ]
-      },
-      "honours": {
-        "ipl_titles": 0,
-        "title_years": [],
-        "finals": 1,
-        "final_years": [
-          2017
-        ],
-        "playoff_appearances": 1
-      },
-      "performance": {
-        "overall": {
-          "matches": 30,
-          "wins": 15,
-          "losses": 15,
-          "no_result": 0,
-          "win_pct": 50
-        },
-        "season_highlights": [
-          {
-            "season": 2016,
-            "achievement": "7th place",
-            "note": "Poor debut season"
-          },
-          {
-            "season": 2017,
-            "achievement": "Runners-up",
-            "note": "Lost final by 1 run to Mumbai Indians"
-          }
-        ],
-        "strengths": [
-          "Strong comeback ability",
-          "Balanced squad in 2017 season",
-          "Effective leadership under Steve Smith",
-          "Strong bowling attack in 2017"
-        ],
-        "weaknesses": [
-          "Inconsistency in debut season",
-          "Leadership instability in 2016",
-          "Short-lived team continuity"
-        ],
-        "records": [
-          "One of the closest IPL finals (2017)",
-          "Significant improvement between two seasons",
-          "Competitive performance despite short existence"
-        ]
-      },
-      "rivalries": [
-        {
-          "team": "Mumbai Indians",
-          "details": "Strong rivalry during 2017 season including IPL final"
-        },
-        {
-          "team": "Sunrisers Hyderabad",
-          "details": "Faced SRH in 2016 playoffs"
-        }
-      ],
-      "notable_players": [
-        "MS Dhoni",
-        "Steve Smith",
-        "Ajinkya Rahane",
-        "Ben Stokes",
-        "Ravichandran Ashwin",
-        "Faf du Plessis"
-      ],
-      "logoUrl": "/ipl-teams/rps/Rising_Pune_Supergiant%20logo.png",
-      "bgUrl": "/ipl-teams/rps/rps%20bg.png"
     }
   ]
 }

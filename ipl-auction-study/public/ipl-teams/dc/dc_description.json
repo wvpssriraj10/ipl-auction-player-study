@@ -2,20 +2,24 @@
   "id": "dc",
   "name": "Delhi Capitals",
   "short_name": "DC",
-
   "basic_info": {
     "city": "Delhi, India",
     "founded": 2008,
     "status": "active"
   },
-
   "identity": {
-    "colors": ["blue", "red"],
-    "nicknames": ["Capitals"],
-    "previous_names": ["Delhi Daredevils"],
+    "colors": [
+      "blue",
+      "red"
+    ],
+    "nicknames": [
+      "Capitals"
+    ],
+    "previous_names": [
+      "Delhi Daredevils"
+    ],
     "meaning": "Represents the capital city's energy, youth, and ambition"
   },
-
   "ownership": {
     "current_owner": "GMR Group & JSW Group",
     "ownership_history": [
@@ -24,18 +28,23 @@
       "Rebranded from Delhi Daredevils to Delhi Capitals in 2019"
     ]
   },
-
   "management": {
-    "captain": "Rishabh Pant",
-    "coach": "Ricky Ponting",
+    "captain": "Axar Patel",
+    "coach": "Hemang Badani",
     "notable_captains": [
-      "Virender Sehwag",
-      "Gautam Gambhir",
-      "Kevin Pietersen",
-      "Shreyas Iyer"
+      "Virender Sehwag: 4 years (2008–2009, 2011–2012)",
+      "Gautam Gambhir: 2 years (2010, 2018)",
+      "Mahela Jayawardene: 1 year (2012)",
+      "David Warner: 2 years (2013, 2023)",
+      "Kevin Pietersen: 1 year (2014)",
+      "JP Duminy: 1 year (2015)",
+      "Zaheer Khan: 2 years (2016–2017)",
+      "Karun Nair: Stand-in (2017)",
+      "Shreyas Iyer: 3 years (2018–2020)",
+      "Rishabh Pant: 3 years (2021–2022, 2024)",
+      "Axar Patel: 2 years (2025–2026)"
     ]
   },
-
   "home_grounds": [
     {
       "name": "Arun Jaitley Stadium",
@@ -49,10 +58,8 @@
       "primary": false
     }
   ],
-
   "history": {
     "full_text": "Delhi Capitals (DC), formerly known as Delhi Daredevils, is one of the original franchises of the Indian Premier League (IPL), established in 2008. In its early years, the team featured several high-profile players and had a strong start, reaching the semi-finals in the first two seasons (2008 and 2009). However, the franchise struggled with inconsistency and failed to convert early promise into sustained success. Over the years, Delhi went through multiple leadership changes and team rebuilds, often failing to reach the playoffs. A major turning point came in 2018 when JSW Group acquired a 50% stake in the franchise, leading to a fresh approach in team management and strategy. In 2019, the team was rebranded as Delhi Capitals, marking a new era focused on youth and long-term development. Under the leadership of players like Shreyas Iyer and later Rishabh Pant, along with coaching from Ricky Ponting, DC became a competitive side. The team reached its first IPL final in 2020 but lost to Mumbai Indians. Since then, Delhi Capitals has remained a strong contender, known for its young core, aggressive gameplay, and balanced squad.",
-
     "timeline": [
       "2008: Franchise established as Delhi Daredevils",
       "2008–2009: Strong start with semi-final appearances",
@@ -63,7 +70,6 @@
       "2021–2023: Competitive seasons with playoff contention",
       "2024–present: Continued focus on youth and squad balance"
     ],
-
     "key_eras": [
       {
         "period": "2008–2009",
@@ -83,15 +89,15 @@
       }
     ]
   },
-
   "honours": {
     "ipl_titles": 0,
     "title_years": [],
     "finals": 1,
-    "final_years": [2020],
+    "final_years": [
+      2020
+    ],
     "playoff_appearances": 6
   },
-
   "performance": {
     "overall": {
       "matches": 240,
@@ -100,7 +106,6 @@
       "no_result": 5,
       "win_pct": 45.8
     },
-
     "season_highlights": [
       {
         "season": 2020,
@@ -113,27 +118,23 @@
         "note": "Strong performance with balanced squad"
       }
     ],
-
     "strengths": [
       "Strong young core of players",
       "Aggressive batting approach",
       "Balanced team composition",
       "Good pace bowling attack"
     ],
-
     "weaknesses": [
       "Lack of IPL title despite strong squads",
       "Inconsistency in earlier seasons",
       "Occasional middle-order instability"
     ],
-
     "records": [
       "First IPL final appearance in 2020",
       "Known for developing young Indian talent",
       "Significant improvement post rebranding"
     ]
   },
-
   "rivalries": [
     {
       "team": "Mumbai Indians",
@@ -144,7 +145,6 @@
       "details": "Frequent competitive encounters"
     }
   ],
-
   "notable_players": [
     "Rishabh Pant",
     "Virender Sehwag",

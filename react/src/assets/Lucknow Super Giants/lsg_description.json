@@ -24,10 +24,17 @@
   },
 
   "management": {
-    "captain": "KL Rahul",
+    "captain": "Rishabh Pant",
     "coach": "Justin Langer",
     "notable_captains": [
-      "KL Rahul"
+      "KL Rahul: 3 years (2022–2024)",
+      "Krunal Pandya: Stand-in (2023)",
+      "Nicholas Pooran: Stand-in (2024)",
+      "Rishabh Pant: 2 years (2025–2026)"
+    ],
+    "notable_coaches": [
+      "Andy Flower: 2 years (2022–2023)",
+      "Justin Langer: 3 years (2024–2026)"
     ]
   },
 

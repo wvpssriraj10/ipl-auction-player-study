@@ -6,8 +6,7 @@
   "basic_info": {
     "city": "Rajkot, Gujarat, India",
     "founded": 2016,
-    "status": "defunct",
-    "active_years": [2016, 2017]
+    "status": "active"
   },
 
   "identity": {
@@ -28,7 +27,11 @@
     "captain": "Suresh Raina",
     "coach": "Brad Hodge",
     "notable_captains": [
-      "Suresh Raina"
+      "Suresh Raina: 2 years (2016–2017)",
+      "Brendon McCullum: Stand-in (2016)"
+    ],
+    "notable_coaches": [
+      "Brad Hodge: 2 years (2016–2017)"
     ]
   },
 
@@ -42,6 +45,7 @@
     {
       "name": "Green Park Stadium",
       "location": "Kanpur",
+      "capacity": 33000,
       "primary": false
     }
   ],

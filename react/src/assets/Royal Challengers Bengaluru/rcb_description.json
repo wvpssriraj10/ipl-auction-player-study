@@ -27,9 +27,23 @@
     "captain": "Faf du Plessis",
     "coach": "Andy Flower",
     "notable_captains": [
-      "Virat Kohli",
-      "Anil Kumble",
-      "Daniel Vettori"
+      "Rahul Dravid: 1 year (2008)",
+      "Kevin Pietersen: 1 year (2009)",
+      "Anil Kumble: 2 years (2009–2010)",
+      "Daniel Vettori: 2 years (2011–2012)",
+      "Virat Kohli: 11 years (2011–2021)",
+      "Shane Watson: 1 year (2017)",
+      "Faf du Plessis: 3 years (2022–2024)",
+      "Rajat Patidar: 2 years (2025–2026)"
+    ],
+    "notable_coaches": [
+      "Venkatesh Prasad / Martin Crowe: 1 year (2008)",
+      "Ray Jennings: 5 years (2009–2013)",
+      "Daniel Vettori: 5 years (2014–2018)",
+      "Gary Kirsten: 1 year (2019)",
+      "Simon Katich: 2 years (2020–2021)",
+      "Sanjay Bangar: 2 years (2022–2023)",
+      "Andy Flower: 3 years (2024–2026)"
     ]
   },
 
@@ -141,8 +155,8 @@
 
   "social_links": {
     "twitter": "https://x.com/RCBTweets",
-    "instagram": "https://www.instagram.com/royalchallengersbangalore/",
-    "youtube": "https://www.youtube.com/@RoyalChallengersBangalore"
+    "instagram": "https://www.instagram.com/royalchallengers.bengaluru/",
+    "youtube": "https://www.youtube.com/@royalchallengersbengaluruYT"
   },
 
   "notable_players": [

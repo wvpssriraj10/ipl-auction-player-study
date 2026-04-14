@@ -6,8 +6,7 @@
   "basic_info": {
     "city": "Pune, Maharashtra, India",
     "founded": 2016,
-    "status": "defunct",
-    "active_years": [2016, 2017]
+    "status": "active"
   },
 
   "identity": {
@@ -28,8 +27,12 @@
     "captain": "Steve Smith",
     "coach": "Stephen Fleming",
     "notable_captains": [
-      "MS Dhoni",
-      "Steve Smith"
+      "MS Dhoni: 1 year (2016)",
+      "Steve Smith: 1 year (2017)",
+      "Ajinkya Rahane: Stand-in (2017)"
+    ],
+    "notable_coaches": [
+      "Stephen Fleming: 2 years (2016–2017)"
     ]
   },
 

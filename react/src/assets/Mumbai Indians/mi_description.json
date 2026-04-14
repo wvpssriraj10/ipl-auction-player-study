@@ -25,10 +25,25 @@
 
   "management": {
     "captain": "Hardik Pandya",
-    "coach": "Mark Boucher",
+    "coach": "Mahela Jayawardene",
     "notable_captains": [
-      "Rohit Sharma",
-      "Sachin Tendulkar"
+      "Shaun Pollock: 1 year (2008)",
+      "Harbhajan Singh: 5 years (2008–2012)",
+      "Sachin Tendulkar: 4 years (2008–2011)",
+      "Ricky Ponting: 1 year (2013)",
+      "Rohit Sharma: 11 years (2013–2023)",
+      "Kieron Pollard: Stand-in (2014–2021)",
+      "Suryakumar Yadav: 1 year (2023)",
+      "Hardik Pandya: 3 years (2024–2026)"
+    ],
+    "notable_coaches": [
+      "Lalchand Rajput: 1 year (2008)",
+      "Shaun Pollock: 1 year (2009)",
+      "Robin Singh: 3 years (2010–2012)",
+      "John Wright: 2 years (2013–2014)",
+      "Ricky Ponting: 2 years (2015–2016)",
+      "Mahela Jayawardene: 8 years (2017–2022, 2025–2026)",
+      "Mark Boucher: 2 years (2023–2024)"
     ]
   },
 

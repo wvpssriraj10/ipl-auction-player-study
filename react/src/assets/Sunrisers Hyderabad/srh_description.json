@@ -24,12 +24,25 @@
   },
 
   "management": {
-    "captain": "Ishan Kishan",
+    "captain": "Pat Cummins",
     "coach": "Daniel Vettori",
     "notable_captains": [
-      "David Warner",
-      "Kane Williamson",
-      "Pat Cummins"
+      "Kumar Sangakkara: 1 year (2013)",
+      "Cameron White: 1 year (2013)",
+      "Shikhar Dhawan: 2 years (2013–2014)",
+      "Darren Sammy: 1 year (2014)",
+      "David Warner: 6 years (2015–2019, 2021)",
+      "Kane Williamson: 4 years (2018–2019, 2021–2022)",
+      "Bhuvneshwar Kumar: Stand-in (2019–2023)",
+      "Manish Pandey: 1 year (2021)",
+      "Aiden Markram: 1 year (2023)",
+      "Pat Cummins: 3 years (2024–2026)"
+    ],
+    "notable_coaches": [
+      "Tom Moody: 8 years (2013–2019, 2022)",
+      "Trevor Bayliss: 2 years (2020–2021)",
+      "Brian Lara: 1 year (2023)",
+      "Daniel Vettori: 3 years (2024–2026)"
     ]
   },
 

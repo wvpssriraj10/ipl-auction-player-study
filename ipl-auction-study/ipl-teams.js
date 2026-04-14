@@ -227,9 +227,31 @@ function renderDetail(detailEl, team) {
   }
 
 
+  // Quality color map for IPL identities
+  const teamColorMap = {
+    csk: '#FDB913', // Classic CSK Yellow
+    mi: '#004BA0',  // Mumbai Blue
+    rcb: '#ED1B24', // RCB Red
+    kkr: '#3A225D', // KKR Purple
+    srh: '#FF822A', // SRH Orange
+    rr: '#EA1A85',  // RR Pink
+    dc: '#00008B',  // DC Blue
+    pbks: '#D31A24', // Punjab Red
+    gt: '#1B2133',  // GT Navy Blue
+    lsg: '#00ADEF', // LSG Light Blue
+    dcg: '#004BA0', // Deccan Blue
+    pwi: '#2E3192', // Pune Warriors Blue
+    ktk: '#FDB913', // Kochi Gold
+    rps: '#4B2682', // RPS Purple
+    gl: '#C1272D'   // Lions Orange-Red
+  };
+
+  const teamPrimaryColor = teamColorMap[team.id] || '#8b5cf6';
+
   const teamName = normalizeTeamText(team.name) || team.name || '';
   const finalHtml = normalizeTeamText(`
-    <div class="ipl-teams-detail-inner">
+    <div class="ipl-teams-detail-inner" style="--team-glow: ${teamPrimaryColor}">
+      <div class="ipl-teams-detail-bg-glow"></div>
       <header class="ipl-teams-detail-head">
         <div class="ipl-teams-detail-logo-pod">
           <img src="${team.logoUrl || ''}" alt="" class="ipl-teams-detail-logo">
@@ -275,6 +297,35 @@ function renderDetail(detailEl, team) {
           <strong>${escapeHtml(String(honours.playoff_appearances ?? 0))}</strong> playoff runs
         </p>
       </div>
+
+      <div class="ipl-teams-grid-sections">
+        <div class="ipl-teams-block">
+          <h4>Home Grounds</h4>
+          <ul class="ipl-teams-list">
+            ${(team.home_grounds || []).map(g => `
+              <li>
+                <strong>${escapeHtml(g.name)}</strong> (${escapeHtml(g.location)})
+                ${g.primary ? '<span class="ipl-teams-badge ipl-teams-badge--tiny">Primary</span>' : ''}
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="ipl-teams-block">
+          <h4>Notable Captains</h4>
+          <ul class="ipl-teams-list">
+            ${(team.management?.notable_captains || []).map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="ipl-teams-block">
+          <h4>Notable Coaches</h4>
+          <ul class="ipl-teams-list">
+            ${(team.management?.notable_coaches || []).map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+
       ${
         perf
           ? `<div class="ipl-teams-block">
@@ -283,10 +334,58 @@ function renderDetail(detailEl, team) {
       </div>`
           : ''
       }
+
+      <div class="ipl-teams-grid-sections">
+        <div class="ipl-teams-block">
+          <h4>Strengths</h4>
+          <ul class="ipl-teams-list ipl-teams-list--checks">
+            ${(team.performance?.strengths || []).map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="ipl-teams-block">
+          <h4>Weaknesses</h4>
+          <ul class="ipl-teams-list ipl-teams-list--crosses">
+            ${(team.performance?.weaknesses || []).map(w => `<li>${escapeHtml(w)}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+
       <div class="ipl-teams-story">
         <h4>History</h4>
         <div class="ipl-teams-story-text">${normalizeTeamText(team.history?.full_text ?? '').split('. ').map(s => s.trim() ? `<p>${escapeHtml(s.trim())}${s.trim().endsWith('.') ? '' : '.'}</p>` : '').join('')}</div>
       </div>
+
+      ${team.history?.timeline ? `
+        <div class="ipl-teams-block">
+          <h4>Timeline</h4>
+          <div class="ipl-teams-timeline">
+            ${team.history.timeline.map(item => {
+              const [year, ...txt] = item.split(': ');
+              return `
+                <div class="ipl-teams-timeline-item">
+                  <span class="ipl-teams-timeline-year">${escapeHtml(year)}</span>
+                  <span class="ipl-teams-timeline-text">${escapeHtml(txt.join(': '))}</span>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      ${team.rivalries?.length ? `
+        <div class="ipl-teams-block">
+          <h4>Key Rivalries</h4>
+          <div class="ipl-teams-rivalries">
+            ${team.rivalries.map(r => `
+              <div class="ipl-teams-rivalry-card">
+                <h5>${escapeHtml(r.team)}</h5>
+                <p>${escapeHtml(r.details)}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
       ${
         team.notable_players?.length
           ? `<div class="ipl-teams-block ipl-teams-block--players">

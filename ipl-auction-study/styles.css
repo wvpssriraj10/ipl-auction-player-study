@@ -2394,12 +2394,35 @@ body.ipl-teams-detail-open {
 .ipl-teams-detail-inner {
   position: relative;
   z-index: 10;
-  padding: 2.5rem 2rem 12rem !important; /* Increased padding to create a large gap at the end */
-  color: #f8fafc;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  padding: 2.5rem 2.5rem 12rem !important;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   background: transparent !important;
   flex: 1 !important;
   min-height: 0 !important;
+}
+
+.ipl-teams-detail-bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 50% 20%,
+    var(--team-glow) 0%,
+    rgba(6, 8, 12, 0) 75%
+  );
+  opacity: 0.35;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: ipl-teams-pulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes ipl-teams-pulse {
+  from { opacity: 0.25; transform: scale(1); }
+  to { opacity: 0.45; transform: scale(1.1); }
 }
 
 .ipl-teams-detail-tagline-row {
@@ -2442,3 +2465,139 @@ body.ipl-teams-detail-open {
   background-repeat: no-repeat;
   pointer-events: none;
 }
+
+/* ============================================
+   NEW TEAM DETAIL SECTIONS (Timeline, Rivalries, lists)
+   ============================================ */
+.ipl-teams-grid-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ipl-teams-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.ipl-teams-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.ipl-teams-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--team-glow);
+  font-weight: bold;
+}
+
+.ipl-teams-list--checks li::before {
+  content: '✓';
+  color: #22c55e;
+}
+
+.ipl-teams-list--crosses li::before {
+  content: '×';
+  color: #ef4444;
+  font-size: 1.2rem;
+  top: -2px;
+}
+
+.ipl-teams-badge--tiny {
+  font-size: 0.55rem;
+  padding: 1px 6px;
+  background: rgba(139, 92, 246, 0.3);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.ipl-teams-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-left: 2px solid rgba(139, 92, 246, 0.2);
+  padding-left: 1.5rem;
+}
+
+.ipl-teams-timeline-item {
+  position: relative;
+}
+
+.ipl-teams-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.5rem - 6px);
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--purple);
+  box-shadow: 0 0 10px var(--purple);
+}
+
+.ipl-teams-timeline-year {
+  display: block;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--purple-light);
+  margin-bottom: 0.2rem;
+}
+
+.ipl-teams-timeline-text {
+  font-size: 0.95rem;
+  color: rgba(248, 250, 252, 0.85);
+}
+
+.ipl-teams-rivalries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ipl-teams-rivalry-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ipl-teams-rivalry-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.ipl-teams-rivalry-card h5 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ipl-teams-rivalry-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(248, 250, 252, 0.7);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .ipl-teams-grid-sections {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+

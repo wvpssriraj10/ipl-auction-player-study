@@ -2,20 +2,24 @@
   "id": "pbks",
   "name": "Punjab Kings",
   "short_name": "PBKS",
-
   "basic_info": {
     "city": "Punjab, India",
     "founded": 2008,
     "status": "active"
   },
-
   "identity": {
-    "colors": ["red", "silver"],
-    "nicknames": ["PBKS"],
-    "previous_names": ["Kings XI Punjab"],
+    "colors": [
+      "red",
+      "silver"
+    ],
+    "nicknames": [
+      "PBKS"
+    ],
+    "previous_names": [
+      "Kings XI Punjab"
+    ],
     "meaning": "Represents the spirit, aggression, and pride of Punjab"
   },
-
   "ownership": {
     "current_owner": "KPH Dream Cricket Pvt. Ltd.",
     "ownership_history": [
@@ -24,19 +28,27 @@
       "Rebranded as Punjab Kings to reflect a fresh identity and new approach"
     ]
   },
-
   "management": {
-    "captain": "Shikhar Dhawan",
-    "coach": "Trevor Bayliss",
+    "captain": "Shreyas Iyer",
+    "coach": "Ricky Ponting",
     "notable_captains": [
-      "Yuvraj Singh",
-      "Adam Gilchrist",
-      "George Bailey",
-      "KL Rahul",
-      "Mayank Agarwal"
+      "Yuvraj Singh: 2 years (2008–2009)",
+      "Kumar Sangakkara: 1 year (2010)",
+      "Mahela Jayawardene: 1 year (2010)",
+      "Adam Gilchrist: 3 years (2011–2013)",
+      "David Hussey: Stand-in (2012–2013)",
+      "George Bailey: 2 years (2014–2015)",
+      "David Miller: 1 year (2016)",
+      "Murali Vijay: 1 year (2016)",
+      "Glenn Maxwell: 1 year (2017)",
+      "Ravichandran Ashwin: 2 years (2018–2019)",
+      "KL Rahul: 2 years (2020–2021)",
+      "Mayank Agarwal: 1 year (2022)",
+      "Shikhar Dhawan: 2 years (2023–2024)",
+      "Sam Curran: Stand-in (2023–2024)",
+      "Shreyas Iyer: 2 years (2025–2026)"
     ]
   },
-
   "home_grounds": [
     {
       "name": "Punjab Cricket Association IS Bindra Stadium",
@@ -50,10 +62,8 @@
       "primary": false
     }
   ],
-
   "history": {
     "full_text": "Punjab Kings (PBKS), formerly known as Kings XI Punjab, is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team has experienced a rollercoaster journey in the IPL, with flashes of brilliance but an overall lack of consistency. In its early years, the franchise showed promise but failed to convert strong squads into sustained success. The team's most successful season came in 2014 when they reached the IPL final under the captaincy of George Bailey, only to lose to Kolkata Knight Riders. Despite having several high-profile players over the years, Punjab has struggled to maintain consistent performances and frequently finished in the lower half of the table. In 2021, the franchise rebranded from Kings XI Punjab to Punjab Kings in an effort to redefine its identity and start a new chapter. Since then, PBKS has focused on building a balanced squad with a mix of experienced and young players, aiming to achieve stability and long-term success in the IPL.",
-
     "timeline": [
       "2008: Franchise established as Kings XI Punjab",
       "2008–2013: Inconsistent performances with occasional strong seasons",
@@ -62,7 +72,6 @@
       "2021: Rebranded as Punjab Kings",
       "2022–present: Rebuilding phase with focus on squad balance"
     ],
-
     "key_eras": [
       {
         "period": "2008–2013",
@@ -82,15 +91,15 @@
       }
     ]
   },
-
   "honours": {
     "ipl_titles": 0,
     "title_years": [],
     "finals": 1,
-    "final_years": [2014],
+    "final_years": [
+      2014
+    ],
     "playoff_appearances": 2
   },
-
   "performance": {
     "overall": {
       "matches": 240,
@@ -99,7 +108,6 @@
       "no_result": 5,
       "win_pct": 45.8
     },
-
     "season_highlights": [
       {
         "season": 2014,
@@ -112,26 +120,22 @@
         "note": "Strong comeback in second half of season"
       }
     ],
-
     "strengths": [
       "Explosive batting lineup",
       "Presence of experienced international players",
       "Ability to chase high totals"
     ],
-
     "weaknesses": [
       "Inconsistency across seasons",
       "Weak bowling performances in several years",
       "Failure to perform in crucial matches"
     ],
-
     "records": [
       "Highest IPL finish: Runners-up (2014)",
       "Known for high-scoring matches",
       "Frequent close matches but inconsistent outcomes"
     ]
   },
-
   "rivalries": [
     {
       "team": "Delhi Capitals",
@@ -142,7 +146,6 @@
       "details": "Regional rivalry with several close encounters"
     }
   ],
-
   "notable_players": [
     "Yuvraj Singh",
     "KL Rahul",
@@ -154,6 +157,6 @@
   "social_links": {
     "twitter": "https://x.com/PunjabKingsIPL",
     "instagram": "https://www.instagram.com/punjabkingsipl/",
-    "youtube": "https://www.youtube.com/@PunjabKingsIPL"
+    "youtube": "https://www.youtube.com/@PUNJABKINGSTV"
   }
 }
