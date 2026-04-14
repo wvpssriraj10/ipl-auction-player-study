@@ -1353,16 +1353,18 @@ body.ipl-teams-detail-open {
 
 @media (min-width: 960px) {
   .ipl-teams-grid--picker.ipl-teams-grid {
-    display: grid !important;
-    grid-template-columns: repeat(8, 1fr) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
     justify-content: center !important;
     padding: 2.5rem 1.5rem !important;
     gap: 1.5rem 1.25rem !important;
+    max-width: 1280px !important; /* Strictly calculated to fit 8 cards + 7 gaps */
+    margin: 0 auto;
   }
 
   .ipl-teams-grid--picker .ipl-teams-card {
-    width: 100%; /* Column takes care of width */
-    height: 220px; /* Increased height to accommodate all names comfortably */
+    flex: 0 0 140px !important; /* Fixed width to keep alignment predictable */
+    height: 230px; /* Comfortably fits names and abbreviation */
   }
 
   .ipl-teams-grid--picker .ipl-teams-card-inner {
