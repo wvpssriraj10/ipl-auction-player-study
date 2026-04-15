@@ -547,6 +547,10 @@ function renderPlayerCard(playerData, team = 'Unknown') {
     statsHtml += addStat('💎', playerData.value_score, 'Value Score', true);
   }
 
+  const archetype = getPlayerArchetype(playerData);
+  const verdict = getValueVerdict(num(playerData.value_score || 0));
+  const vClass = verdict.toLowerCase().replace(' ', '-');
+
   // Border accent uses canonical CSV franchise (stable CSS keys), not era display name
   const tClass =
     accentTeam == null || accentTeam === ""
@@ -558,6 +562,10 @@ function renderPlayerCard(playerData, team = 'Unknown') {
       <div class="player-card-header">
         ${img}
         <div class="player-info">
+          <div class="badge-row">
+            ${playerData.value_score ? `<div class="verdict-badge ${vClass}">${verdict}</div>` : ''}
+            <div class="archetype-badge">${archetype.icon} ${archetype.label}</div>
+          </div>
           <h4>${name}</h4>
           <p>${team}</p>
         </div>
