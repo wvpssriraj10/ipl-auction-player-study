@@ -849,13 +849,7 @@ input.player-search-input {
   height: 100% !important;
 }
 
-.chart-title {
-  font-family: 'Archivo', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
+/* Stats & Charts Dashboard */
 /* Stats & Charts Dashboard */
 .charts-dashboard-grid {
   display: flex;
