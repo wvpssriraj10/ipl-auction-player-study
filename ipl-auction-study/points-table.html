@@ -20,7 +20,7 @@
       filter: none !important;
     }
     .top-nav {
-      padding: 0.5rem 2rem !important; 
+      padding: 0.3rem 2rem !important; 
     }
     /* Custom Animated Dropdown */
     .custom-dropdown {
@@ -115,8 +115,8 @@
     .dropdown-item:nth-child(18) { transition-delay: 0.54s; }
     
     .standings-container {
-      margin-top: 130px; /* Increased from 85px to fix overlap */
-      padding-bottom: 20px;
+      margin-top: 90px;
+      padding-bottom: 5px;
       max-width: 1400px;
     }
     .standings-header {
@@ -142,17 +142,17 @@
     }
     th {
       background: rgba(139, 92, 246, 0.1);
-      padding: 0.8rem 1.2rem; /* Increased */
-      font-size: 0.85rem;
+      padding: 0.6rem 1.2rem; 
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--text-secondary);
       font-family: 'Archivo', sans-serif;
     }
     td {
-      padding: 0.65rem 1.2rem; /* Increased for that filled look */
+      padding: 0.45rem 1.2rem; 
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      font-size: 0.95rem; /* Matched to 110% zoom look */
+      font-size: 0.85rem; 
       color: var(--white);
     }
     .team-logo {
@@ -232,9 +232,9 @@
   </header>
 
   <div class="container standings-container">
-    <div class="standings-header" style="z-index: 99999;"> <!-- Removed reveal class to fix clipping -->
+    <div class="standings-header" style="z-index: 99999; margin-bottom: 0.8rem;"> <!-- Fixed overlap -->
       <div>
-        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.8rem;">IPL STANDINGS</h1>
+        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.5rem;">IPL STANDINGS</h1>
       </div>
       <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
         <div class="dropdown-btn" id="dropdownBtn">
