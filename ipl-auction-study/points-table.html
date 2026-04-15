@@ -52,13 +52,15 @@
       font-weight: 700;
       cursor: pointer;
       outline: none;
+      color-scheme: dark; /* Force dark background for dropdown options */
     }
     .table-card {
       background: rgba(15, 15, 25, 0.4);
-      backdrop-filter: blur(20px); /* Deep glass */
+      backdrop-filter: blur(20px);
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       margin-bottom: 0.5rem;
+      overflow: hidden;
     }
     table {
       width: 100%;
@@ -66,18 +68,28 @@
       text-align: left;
     }
     th {
-      background: rgba(139, 92, 246, 0.15);
-      padding: 1.2rem;
-      font-size: 0.85rem;
+      background: rgba(139, 92, 246, 0.1);
+      padding: 0.5rem 0.8rem; /* Condensed */
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--text-secondary);
       font-family: 'Archivo', sans-serif;
     }
     td {
-      padding: 0.9rem 1.2rem;
+      padding: 0.35rem 0.8rem; /* Condensed for zero-scroll */
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      color: var(--white);
+    }
+    .team-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 8px;
+    }
+    .team-name {
+      font-weight: 700;
       color: var(--white);
     }
     .nrr-positive { color: #10b981 !important; font-weight: 600; }
@@ -226,8 +238,16 @@
       }
 
       try {
-        const data = await fetchWithFallback('ipl-points-table.json');
+        const [data, teamsData] = await Promise.all([
+          fetchWithFallback('ipl-points-table.json'),
+          fetchWithFallback('ipl-teams-bundle.json')
+        ]);
+        
         const seasons = data.seasons;
+        const logoMap = {};
+        teamsData.teams.forEach(t => {
+            logoMap[t.short_name] = t.logoUrl;
+        });
 
         function render(year) {
             tbody.innerHTML = '';
@@ -245,13 +265,15 @@
                 const isWinner = row.team === champion; 
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
+                const logo = logoMap[row.team] || '';
                 
                 tr.innerHTML = `
                 <td class="rank-cell">${row.rank}</td>
                 <td>
                     <div class="team-cell">
                     ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner"></i>' : ''}
-                    ${row.team}
+                    ${logo ? `<img src="${logo}" class="team-logo" alt="" onerror="this.style.display='none'">` : ''}
+                    <span class="team-name">${row.team}</span>
                     ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
                     </div>
                 </td>
