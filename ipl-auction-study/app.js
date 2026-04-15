@@ -551,6 +551,10 @@ function renderPlayerCard(playerData, team = 'Unknown') {
   const verdict = getValueVerdict(num(playerData.value_score || 0));
   const vClass = verdict.toLowerCase().replace(' ', '-');
 
+  // XAI Layer
+  const xaiData = state.playerXAI[name] || state.auctionXAI[name] || null;
+  const xaiHtml = createXAICard(xaiData);
+
   // Border accent uses canonical CSV franchise (stable CSS keys), not era display name
   const tClass =
     accentTeam == null || accentTeam === ""
@@ -573,6 +577,7 @@ function renderPlayerCard(playerData, team = 'Unknown') {
       <div class="stats-grid">
         ${statsHtml}
       </div>
+      ${xaiHtml}
     </div>
   `;
 }
@@ -598,6 +603,10 @@ function renderAuctionResultCard(data) {
 
   const archetype = getPlayerArchetype(data);
   const tClass = String(rawTeam).split(' ')[0];
+  
+  // XAI Layer
+  const xaiData = state.auctionXAI[name] || state.playerXAI[name] || null;
+  const xaiHtml = createXAICard(xaiData);
 
   return `
     <div class="player-card ${tClass}">
@@ -616,10 +625,7 @@ function renderAuctionResultCard(data) {
       <div class="stats-grid">
         ${statsHtml}
       </div>
-      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
-        <strong>Insight:</strong> The <strong>Value Score</strong> reveals a player's true ROI. It is calculated by dividing their on-field productivity score by their auction price (in Crores). <br>
-        <em style="opacity:0.8; font-size: 12px;">Productivity Score = Batting [Runs × (Strike Rate / 100)] + Bowling [Wickets × (8 / Economy)]</em>
-      </div>
+      ${xaiHtml}
     </div>
   `;
 }
@@ -1540,6 +1546,20 @@ async function init() {
 
     state.teams = [...allTeams].sort();
 
+    // Load XAI layers
+    try {
+        const [tXAI, pXAI, aXAI] = await Promise.all([
+          fetch("/data/xai/team_explainability.json").then(r => r.json()),
+          fetch("/data/xai/player_explainability.json").then(r => r.json()),
+          fetch("/data/xai/auction_explainability.json").then(r => r.json())
+        ]).catch(() => [{}, {}, {}]);
+        state.teamXAI = tXAI || {};
+        state.playerXAI = pXAI || {};
+        state.auctionXAI = aXAI || {};
+    } catch (e) {
+        console.warn("XAI layers not found, proceeding without explainability.");
+    }
+
     // Update UI — season dropdown uses awards seasons (2008-2025)
     setOptions(seasonSelect, state.seasons);
     setOptions(teamSelect, state.teams);
@@ -1556,6 +1576,28 @@ async function init() {
     state.hasError = true;
     displayError(`Initialization failed: ${err.message}`);
   }
+}
+
+/**
+ * Creates an XAI Explainability Card
+ */
+function createXAICard(data) {
+  if (!data || !data.label) return "";
+  const confClass = `conf-${String(data.confidence).toLowerCase()}`;
+  
+  return `
+    <div class="xai-card">
+      <div class="xai-header">🧠 Intelligence Insight</div>
+      <div class="xai-label">${data.label}</div>
+      <div class="xai-header">📊 Data-Backed Reasoning</div>
+      <div class="xai-reason-item">
+        <div class="xai-reason-text">${data.reason}</div>
+      </div>
+      <div class="xai-confidence-wrap">
+        ⚡ Confidence: <span class="${confClass}">${data.confidence}</span>
+      </div>
+    </div>
+  `;
 }
 
 // ============================================

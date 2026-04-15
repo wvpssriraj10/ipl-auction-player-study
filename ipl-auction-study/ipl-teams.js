@@ -180,7 +180,7 @@ function renderGrid(gridEl, teams, onSelect, gridOpts = {}) {
   });
 }
 
-function renderDetail(detailEl, team) {
+function renderDetail(detailEl, team, xaiHtml = "") {
   const bgStyle = team.bgUrl
     ? `background-image:url(${JSON.stringify(team.bgUrl)})`
     : `background:${gradientFromColors(team.identity?.colors)}`;
@@ -448,6 +448,7 @@ function renderDetail(detailEl, team) {
             <div class="ipl-teams-intel-tag">
               <span class="ipl-teams-badge ipl-teams-badge--strategic">${team.intelligence.archetype}</span>
               <p class="ipl-teams-intel-insight">${team.intelligence.insight}</p>
+              ${xaiHtml}
             </div>
           </div>
 
@@ -546,6 +547,25 @@ export async function initIplTeamsSection(options = {}) {
   const useFullscreen =
     options.layout === 'fullscreen' && listStage && detailStage && backBtn;
 
+  let teamXAI = {};
+  function createXAICard(data) {
+    if (!data || !data.label) return "";
+    const confClass = `conf-${String(data.confidence).toLowerCase()}`;
+    return `
+      <div class="xai-card" style="margin-top: 1.5rem; background: rgba(139, 92, 246, 0.03); border-color: rgba(139, 92, 246, 0.3);">
+        <div class="xai-header">🧠 Strategic Intelligence Insight</div>
+        <div class="xai-label">${data.label}</div>
+        <div class="xai-header">📊 Data-Backed Reasoning</div>
+        <div class="xai-reason-item">
+          <div class="xai-reason-text">${data.reason}</div>
+        </div>
+        <div class="xai-confidence-wrap" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+          ⚡ Confidence: <span class="${confClass}">${data.confidence}</span>
+        </div>
+      </div>
+    `;
+  }
+
   grid.innerHTML = '';
   grid.setAttribute('aria-busy', 'true');
   if (useFullscreen) {
@@ -591,7 +611,8 @@ export async function initIplTeamsSection(options = {}) {
       }
       document.body.classList.add('ipl-teams-detail-open');
     }
-    renderDetail(detail, team);
+    const xaiData = teamXAI[team.name] || teamXAI[team.short_name] || null;
+    renderDetail(detail, team, createXAICard(xaiData));
     if (useFullscreen) {
       requestAnimationFrame(() => backBtn.focus());
       window.scrollTo({ top: 0, behavior: 'instant' });
@@ -599,6 +620,13 @@ export async function initIplTeamsSection(options = {}) {
   }
 
   try {
+    try {
+        const xaiRes = await fetch('/data/xai/team_explainability.json');
+        if (xaiRes.ok) teamXAI = await xaiRes.json();
+    } catch (e) {
+        console.warn("XAI data missing for teams, using default intelligence.");
+    }
+
     const res = await fetchBundle(bundleUrl);
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const data = await res.json();
@@ -620,7 +648,9 @@ export async function initIplTeamsSection(options = {}) {
     );
 
     if (!useFullscreen) {
-      renderDetail(detail, teams[0]);
+      const firstTeam = teams[0];
+      const xaiData = teamXAI[firstTeam.name] || teamXAI[firstTeam.short_name] || null;
+      renderDetail(detail, firstTeam, createXAICard(xaiData));
     }
 
     if (useFullscreen) {

@@ -2964,6 +2964,60 @@ body.ipl-teams-detail-open {
   text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
 }
 
+/* --- XAI Explainability Card Styles --- */
+.xai-card {
+  background: rgba(15, 15, 20, 0.8);
+  border-left: 4px solid var(--purple-light);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.xai-header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.xai-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.xai-reason-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.xai-reason-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.xai-confidence-wrap {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.conf-high { color: #10b981; }  /* Green */
+.conf-medium { color: #f59e0b; } /* Yellow */
+.conf-low { color: #ef4444; }    /* Red */
+
 @media (max-width: 640px) {
   .ipl-teams-grid-sections {
     grid-template-columns: 1fr;
