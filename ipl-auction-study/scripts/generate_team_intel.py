@@ -22,7 +22,7 @@ ACRONYM_TO_FULL = {
     "LSG": "Lucknow Super Giants",
     "DD": "Delhi Capitals",
     "KXIP": "Punjab Kings",
-    "DEC": "Sunrisers Hyderabad",
+    "DEC": "Deccan Chargers",
     "PWI": "Pune Warriors",
     "KTK": "Kochi Tuskers Kerala",
     "RPS": "Rising Pune Supergiant",
@@ -32,11 +32,12 @@ ACRONYM_TO_FULL = {
 def normalize_team(name):
     if not name or not isinstance(name, str): return "Unknown"
     name = name.strip()
+    # Check if it's an acronym
     if name in ACRONYM_TO_FULL:
         return ACRONYM_TO_FULL[name]
+    
     translations = {
         "Delhi Daredevils": "Delhi Capitals",
-        "Deccan Chargers": "Sunrisers Hyderabad",
         "Kings XI Punjab": "Punjab Kings",
         "Rising Pune Supergiants": "Rising Pune Supergiant"
     }

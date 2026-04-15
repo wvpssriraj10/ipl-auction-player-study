@@ -2161,8 +2161,8 @@
         "performance": {
           "best_season": 2018,
           "worst_season": 2023,
-          "avg_finish": 5.2,
-          "playoff_rate": 50
+          "avg_finish": 4.9,
+          "playoff_rate": 54
         },
         "auction_dna": {
           "highest_buy": "Unknown",
@@ -2344,26 +2344,26 @@
       "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg",
       "intelligence": {
         "performance": {
-          "best_season": 2018,
-          "worst_season": 2023,
-          "avg_finish": 5.2,
-          "playoff_rate": 50
+          "best_season": 2010,
+          "worst_season": 2012,
+          "avg_finish": 5.8,
+          "playoff_rate": 40
         },
         "auction_dna": {
           "highest_buy": "Unknown",
-          "best_value": "DA Warner",
-          "worst_value": "D Kalyankrishna",
+          "best_value": "N/A",
+          "worst_value": "N/A",
           "avg_spend_per_season": 0,
-          "strategy": "Bowling Heavy"
+          "strategy": "Balanced"
         },
         "records": {
-          "most_runs": "DA Warner",
-          "most_wickets": "B Kumar",
+          "most_runs": "N/A",
+          "most_wickets": "N/A",
           "highest_total": "Check Dashboard",
           "lowest_total": "Check Dashboard"
         },
         "archetype": "Balanced Team",
-        "insight": "Sunrisers Hyderabad is a Balanced Team with a Bowling Heavy auction strategy."
+        "insight": "Deccan Chargers is a Balanced Team with a Balanced auction strategy."
       }
     },
     {
