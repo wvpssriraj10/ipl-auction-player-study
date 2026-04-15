@@ -441,6 +441,54 @@ function renderDetail(detailEl, team) {
         </div>
       ` : ''}
 
+      ${team.intelligence ? `
+        <div class="ipl-teams-intel-section">
+          <div class="ipl-teams-block ipl-teams-block--intel">
+            <h4><i class="fa-solid fa-brain"></i> Team Intelligence Briefing</h4>
+            <div class="ipl-teams-intel-tag">
+              <span class="ipl-teams-badge ipl-teams-badge--strategic">${team.intelligence.archetype}</span>
+              <p class="ipl-teams-intel-insight">${team.intelligence.insight}</p>
+            </div>
+          </div>
+
+          <div class="ipl-teams-grid-sections">
+            <div class="ipl-teams-block">
+              <h4>📊 Performance Insights</h4>
+              <dl class="ipl-teams-facts ipl-teams-facts--grid">
+                <div><dt>Best Season</dt><dd>${team.intelligence.performance.best_season}</dd></div>
+                <div><dt>Worst Season</dt><dd>${team.intelligence.performance.worst_season}</dd></div>
+                <div><dt>Avg Finish</dt><dd>${team.intelligence.performance.avg_finish}</dd></div>
+                <div><dt>Playoff Rate</dt><dd>${team.intelligence.performance.playoff_rate}%</dd></div>
+              </dl>
+            </div>
+
+            <div class="ipl-teams-block">
+              <h4>💰 Auction DNA</h4>
+               <dl class="ipl-teams-facts ipl-teams-facts--grid">
+                <div><dt>Strategy</dt><dd>${team.intelligence.auction_dna.strategy}</dd></div>
+                <div><dt>Top Buy</dt><dd>${team.intelligence.auction_dna.highest_buy}</dd></div>
+                <div><dt>Value King</dt><dd>${team.intelligence.auction_dna.best_value}</dd></div>
+                <div><dt>Avg Spend</dt><dd>₹${team.intelligence.auction_dna.avg_spend_per_season} Cr</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="ipl-teams-block">
+            <h4>🏆 Record Holders</h4>
+            <div class="ipl-teams-stat-bar">
+              <div class="ipl-teams-stat-block">
+                <span class="ipl-teams-stat-label">Most Runs</span>
+                <span class="ipl-teams-stat-value ipl-teams-stat-value--small">${team.intelligence.records.most_runs}</span>
+              </div>
+              <div class="ipl-teams-stat-block">
+                <span class="ipl-teams-stat-label">Most Wickets</span>
+                <span class="ipl-teams-stat-value ipl-teams-stat-value--small">${team.intelligence.records.most_wickets}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
       ${
         team.notable_players?.length
           ? `<div class="ipl-teams-block ipl-teams-block--players">

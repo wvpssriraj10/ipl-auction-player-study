@@ -30,14 +30,14 @@
         "captain": "Ruturaj Gaikwad",
         "coach": "Stephen Fleming",
         "notable_captains": [
-          "MS Dhoni: 14 years (2008–2015, 2018–2023)",
-          "Suresh Raina: Stand-in (2010–2019)",
+          "MS Dhoni: 14 years (2008\u00e2\u20ac\u201c2015, 2018\u00e2\u20ac\u201c2023)",
+          "Suresh Raina: Stand-in (2010\u00e2\u20ac\u201c2019)",
           "Ravindra Jadeja: 1 year (2022)",
-          "Ruturaj Gaikwad: 3 years (2024–2026)"
+          "Ruturaj Gaikwad: 3 years (2024\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
           "Kepler Wessels: 1 year (2008)",
-          "Stephen Fleming: 16 years (2009–2015, 2018–2026)"
+          "Stephen Fleming: 16 years (2009\u00e2\u20ac\u201c2015, 2018\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -54,8 +54,8 @@
           "2008: Franchise established as part of original IPL teams",
           "2010: Won first IPL title",
           "2011: Won second consecutive IPL title",
-          "2012–2015: Continued strong performances with multiple finals",
-          "2016–2017: Suspended from IPL",
+          "2012\u00e2\u20ac\u201c2015: Continued strong performances with multiple finals",
+          "2016\u00e2\u20ac\u201c2017: Suspended from IPL",
           "2018: Comeback season, won IPL title",
           "2019: Reached final",
           "2021: Won IPL title",
@@ -63,19 +63,19 @@
         ],
         "key_eras": [
           {
-            "period": "2010–2013",
+            "period": "2010\u00e2\u20ac\u201c2013",
             "description": "Golden era with back-to-back titles and consistent finals"
           },
           {
-            "period": "2014–2015",
+            "period": "2014\u00e2\u20ac\u201c2015",
             "description": "Sustained success with playoff appearances"
           },
           {
-            "period": "2016–2017",
+            "period": "2016\u00e2\u20ac\u201c2017",
             "description": "Suspension period"
           },
           {
-            "period": "2018–2023",
+            "period": "2018\u00e2\u20ac\u201c2023",
             "description": "Comeback dominance with multiple titles and finals"
           }
         ]
@@ -173,7 +173,30 @@
         "youtube": "https://www.youtube.com/@ChennaiIPL"
       },
       "logoUrl": "/ipl-teams/csk/Chennai_Super_Kings_Logo.png",
-      "bgUrl": "/ipl-teams/csk/IPL%20Chepauk%20Stadium%204K%20wallpaper%20-%202268x4032.jpg"
+      "bgUrl": "/ipl-teams/csk/IPL%20Chepauk%20Stadium%204K%20wallpaper%20-%202268x4032.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2013,
+          "worst_season": 2025,
+          "avg_finish": 3.6,
+          "playoff_rate": 75
+        },
+        "auction_dna": {
+          "highest_buy": "Ravindra Jadeja (\u20b912.8 Cr)",
+          "best_value": "MEK Hussey",
+          "worst_value": "J Overton",
+          "avg_spend_per_season": 11.15,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "MS Dhoni",
+          "most_wickets": "RA Jadeja",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Batting Aggressive",
+        "insight": "Chennai Super Kings is a Batting Aggressive with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "dc",
@@ -209,17 +232,17 @@
         "captain": "Axar Patel",
         "coach": "Hemang Badani",
         "notable_captains": [
-          "Virender Sehwag: 4 years (2008–2009, 2011–2012)",
+          "Virender Sehwag: 4 years (2008\u00e2\u20ac\u201c2009, 2011\u00e2\u20ac\u201c2012)",
           "Gautam Gambhir: 2 years (2010, 2018)",
           "Mahela Jayawardene: 1 year (2012)",
           "David Warner: 2 years (2013, 2023)",
           "Kevin Pietersen: 1 year (2014)",
           "JP Duminy: 1 year (2015)",
-          "Zaheer Khan: 2 years (2016–2017)",
+          "Zaheer Khan: 2 years (2016\u00e2\u20ac\u201c2017)",
           "Karun Nair: Stand-in (2017)",
-          "Shreyas Iyer: 3 years (2018–2020)",
-          "Rishabh Pant: 3 years (2021–2022, 2024)",
-          "Axar Patel: 2 years (2025–2026)"
+          "Shreyas Iyer: 3 years (2018\u00e2\u20ac\u201c2020)",
+          "Rishabh Pant: 3 years (2021\u00e2\u20ac\u201c2022, 2024)",
+          "Axar Patel: 2 years (2025\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -230,7 +253,7 @@
           "primary": true
         },
         {
-          "name": "Dr. Y. S. Rajasekhara Reddy ACA–VDCA Cricket Stadium",
+          "name": "Dr. Y. S. Rajasekhara Reddy ACA\u00e2\u20ac\u201cVDCA Cricket Stadium",
           "location": "Visakhapatnam",
           "primary": false
         }
@@ -239,29 +262,29 @@
         "full_text": "Delhi Capitals (DC), formerly known as Delhi Daredevils, is one of the original franchises of the Indian Premier League (IPL), established in 2008. In its early years, the team featured several high-profile players and had a strong start, reaching the semi-finals in the first two seasons (2008 and 2009). However, the franchise struggled with inconsistency and failed to convert early promise into sustained success. Over the years, Delhi went through multiple leadership changes and team rebuilds, often failing to reach the playoffs. A major turning point came in 2018 when JSW Group acquired a 50% stake in the franchise, leading to a fresh approach in team management and strategy. In 2019, the team was rebranded as Delhi Capitals, marking a new era focused on youth and long-term development. Under the leadership of players like Shreyas Iyer and later Rishabh Pant, along with coaching from Ricky Ponting, DC became a competitive side. The team reached its first IPL final in 2020 but lost to Mumbai Indians. Since then, Delhi Capitals has remained a strong contender, known for its young core, aggressive gameplay, and balanced squad.",
         "timeline": [
           "2008: Franchise established as Delhi Daredevils",
-          "2008–2009: Strong start with semi-final appearances",
-          "2010–2017: Inconsistent performances and frequent rebuilding",
+          "2008\u00e2\u20ac\u201c2009: Strong start with semi-final appearances",
+          "2010\u00e2\u20ac\u201c2017: Inconsistent performances and frequent rebuilding",
           "2018: JSW Group acquires stake, strategic shift begins",
           "2019: Rebranded to Delhi Capitals",
           "2020: Reached first IPL final",
-          "2021–2023: Competitive seasons with playoff contention",
-          "2024–present: Continued focus on youth and squad balance"
+          "2021\u00e2\u20ac\u201c2023: Competitive seasons with playoff contention",
+          "2024\u00e2\u20ac\u201cpresent: Continued focus on youth and squad balance"
         ],
         "key_eras": [
           {
-            "period": "2008–2009",
+            "period": "2008\u00e2\u20ac\u201c2009",
             "description": "Early success with strong performances and semi-final appearances"
           },
           {
-            "period": "2010–2017",
+            "period": "2010\u00e2\u20ac\u201c2017",
             "description": "Struggling phase with inconsistent results and leadership changes"
           },
           {
-            "period": "2018–2020",
+            "period": "2018\u00e2\u20ac\u201c2020",
             "description": "Rebuilding phase leading to first IPL final"
           },
           {
-            "period": "2021–present",
+            "period": "2021\u00e2\u20ac\u201cpresent",
             "description": "Competitive phase with a strong young core and balanced team"
           }
         ]
@@ -336,7 +359,30 @@
         "youtube": "https://www.youtube.com/@delhicapitals"
       },
       "logoUrl": "/ipl-teams/dc/Delhi_Capitals.png",
-      "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png"
+      "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png",
+      "intelligence": {
+        "performance": {
+          "best_season": 2009,
+          "worst_season": 2011,
+          "avg_finish": 5.3,
+          "playoff_rate": 33
+        },
+        "auction_dna": {
+          "highest_buy": "Yuvraj Singh (\u20b916.0 Cr)",
+          "best_value": "RR Pant",
+          "worst_value": "AD Mathews",
+          "avg_spend_per_season": 16.0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "RR Pant",
+          "most_wickets": "A Mishra",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Delhi Capitals is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "gl",
@@ -361,18 +407,18 @@
         "current_owner": "Intex Technologies",
         "ownership_history": [
           "Franchise awarded to Intex Technologies as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016\u00e2\u20ac\u201c2017)"
         ]
       },
       "management": {
         "captain": "Suresh Raina",
         "coach": "Brad Hodge",
         "notable_captains": [
-          "Suresh Raina: 2 years (2016–2017)",
+          "Suresh Raina: 2 years (2016\u00e2\u20ac\u201c2017)",
           "Brendon McCullum: Stand-in (2016)"
         ],
         "notable_coaches": [
-          "Brad Hodge: 2 years (2016–2017)"
+          "Brad Hodge: 2 years (2016\u00e2\u20ac\u201c2017)"
         ]
       },
       "home_grounds": [
@@ -468,7 +514,30 @@
         "Aaron Finch"
       ],
       "logoUrl": "/ipl-teams/gl/Gujarat_Lions.png",
-      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png"
+      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png",
+      "intelligence": {
+        "performance": {
+          "best_season": 2016,
+          "worst_season": 2017,
+          "avg_finish": 4.0,
+          "playoff_rate": 50
+        },
+        "auction_dna": {
+          "highest_buy": "Unknown",
+          "best_value": "SK Raina",
+          "worst_value": "JJ Roy",
+          "avg_spend_per_season": 0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "SK Raina",
+          "most_wickets": "DS Kulkarni",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Gujarat Lions is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "gt",
@@ -500,12 +569,12 @@
         "captain": "Shubman Gill",
         "coach": "Ashish Nehra",
         "notable_captains": [
-          "Hardik Pandya: 2 years (2022–2023)",
-          "Rashid Khan: Stand-in (2022–2023)",
-          "Shubman Gill: 3 years (2024–2026)"
+          "Hardik Pandya: 2 years (2022\u00e2\u20ac\u201c2023)",
+          "Rashid Khan: Stand-in (2022\u00e2\u20ac\u201c2023)",
+          "Shubman Gill: 3 years (2024\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
-          "Ashish Nehra: 5 years (2022–2026)"
+          "Ashish Nehra: 5 years (2022\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -522,7 +591,7 @@
           "2021: Franchise announced as part of IPL expansion",
           "2022: Debut season, won IPL title",
           "2023: Reached IPL final",
-          "2024–present: Continued competitive performances with strong squad"
+          "2024\u00e2\u20ac\u201cpresent: Continued competitive performances with strong squad"
         ],
         "key_eras": [
           {
@@ -534,7 +603,7 @@
             "description": "Sustained success with another final appearance"
           },
           {
-            "period": "2024–present",
+            "period": "2024\u00e2\u20ac\u201cpresent",
             "description": "Emerging as a consistent and competitive team"
           }
         ]
@@ -610,7 +679,30 @@
         "youtube": "https://www.youtube.com/@GujaratTitans"
       },
       "logoUrl": "/ipl-teams/gt/Gujarat_Titans_Logo.png",
-      "bgUrl": "/ipl-teams/gt/gujurat%20titans%20bg.jpg"
+      "bgUrl": "/ipl-teams/gt/gujurat%20titans%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2022,
+          "worst_season": 2024,
+          "avg_finish": 3.2,
+          "playoff_rate": 75
+        },
+        "auction_dna": {
+          "highest_buy": "Unknown",
+          "best_value": "Shubman Gill",
+          "worst_value": "MJ Suthar",
+          "avg_spend_per_season": 0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "Shubman Gill",
+          "most_wickets": "Rashid Khan",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Batting Aggressive",
+        "insight": "Gujarat Titans is a Batting Aggressive with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "kkr",
@@ -644,12 +736,12 @@
         "notable_captains": [
           "Sourav Ganguly: 2 years (2008, 2010)",
           "Brendon McCullum: 1 year (2009)",
-          "Gautam Gambhir: 7 years (2011–2017)",
-          "Dinesh Karthik: 3 years (2018–2020)",
-          "Eoin Morgan: 2 years (2020–2021)",
+          "Gautam Gambhir: 7 years (2011\u00e2\u20ac\u201c2017)",
+          "Dinesh Karthik: 3 years (2018\u00e2\u20ac\u201c2020)",
+          "Eoin Morgan: 2 years (2020\u00e2\u20ac\u201c2021)",
           "Shreyas Iyer: 2 years (2022, 2024)",
           "Nitish Rana: 1 year (2023)",
-          "Ajinkya Rahane: 2 years (2025–2026)"
+          "Ajinkya Rahane: 2 years (2025\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -664,29 +756,29 @@
         "full_text": "Kolkata Knight Riders (KKR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely recognized for its strong brand value and association with Bollywood through its ownership. In the early years of the IPL, KKR struggled with inconsistent performances and frequent leadership changes. However, the team underwent a major transformation under the captaincy of Gautam Gambhir, who led the franchise to its first IPL title in 2012. KKR continued its success by winning a second IPL title in 2014, establishing itself as a competitive force in the league. The franchise has been known for its aggressive style of play, innovative strategies, and the ability to nurture match-winning players. Over the years, KKR has experienced phases of rebuilding and resurgence, remaining a competitive side in multiple seasons. The team is also known for its passionate fan base and the iconic Eden Gardens stadium, which serves as one of the most vibrant venues in IPL.",
         "timeline": [
           "2008: Franchise established",
-          "2008–2010: Struggled with inconsistent performances",
+          "2008\u00e2\u20ac\u201c2010: Struggled with inconsistent performances",
           "2011: Rebuilding phase begins",
           "2012: Won first IPL title under Gautam Gambhir",
           "2014: Won second IPL title",
-          "2015–2017: Competitive but inconsistent seasons",
-          "2018–2021: Playoff appearances and rebuilding",
-          "2022–present: Transition phase with new leadership"
+          "2015\u00e2\u20ac\u201c2017: Competitive but inconsistent seasons",
+          "2018\u00e2\u20ac\u201c2021: Playoff appearances and rebuilding",
+          "2022\u00e2\u20ac\u201cpresent: Transition phase with new leadership"
         ],
         "key_eras": [
           {
-            "period": "2008–2010",
+            "period": "2008\u00e2\u20ac\u201c2010",
             "description": "Initial struggling phase with inconsistent performances"
           },
           {
-            "period": "2011–2014",
+            "period": "2011\u00e2\u20ac\u201c2014",
             "description": "Golden era under Gautam Gambhir with two IPL titles"
           },
           {
-            "period": "2015–2019",
+            "period": "2015\u00e2\u20ac\u201c2019",
             "description": "Competitive phase with playoff appearances"
           },
           {
-            "period": "2020–present",
+            "period": "2020\u00e2\u20ac\u201cpresent",
             "description": "Transition and rebuilding phase with emerging players"
           }
         ]
@@ -774,7 +866,30 @@
         "youtube": "https://www.youtube.com/@kolkataknightriders"
       },
       "logoUrl": "/ipl-teams/kkr/Kolkata_Knight_Riders_Logo.png",
-      "bgUrl": "/ipl-teams/kkr/kkr%20bg.png"
+      "bgUrl": "/ipl-teams/kkr/kkr%20bg.png",
+      "intelligence": {
+        "performance": {
+          "best_season": 2024,
+          "worst_season": 2025,
+          "avg_finish": 4.9,
+          "playoff_rate": 44
+        },
+        "auction_dna": {
+          "highest_buy": "Mitchell Starc (\u20b924.75 Cr)",
+          "best_value": "AD Russell",
+          "worst_value": "CA Lynn",
+          "avg_spend_per_season": 18.38,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "G Gambhir",
+          "most_wickets": "SP Narine",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Kolkata Knight Riders is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "lsg",
@@ -806,14 +921,14 @@
         "captain": "Rishabh Pant",
         "coach": "Justin Langer",
         "notable_captains": [
-          "KL Rahul: 3 years (2022–2024)",
+          "KL Rahul: 3 years (2022\u00e2\u20ac\u201c2024)",
           "Krunal Pandya: Stand-in (2023)",
           "Nicholas Pooran: Stand-in (2024)",
-          "Rishabh Pant: 2 years (2025–2026)"
+          "Rishabh Pant: 2 years (2025\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
-          "Andy Flower: 2 years (2022–2023)",
-          "Justin Langer: 3 years (2024–2026)"
+          "Andy Flower: 2 years (2022\u00e2\u20ac\u201c2023)",
+          "Justin Langer: 3 years (2024\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -830,15 +945,15 @@
           "2021: Franchise announced as part of IPL expansion",
           "2022: Debut season, qualified for playoffs",
           "2023: Qualified for playoffs again",
-          "2024–present: Continued competitive performances and squad development"
+          "2024\u00e2\u20ac\u201cpresent: Continued competitive performances and squad development"
         ],
         "key_eras": [
           {
-            "period": "2022–2023",
+            "period": "2022\u00e2\u20ac\u201c2023",
             "description": "Strong start with back-to-back playoff qualifications"
           },
           {
-            "period": "2024–present",
+            "period": "2024\u00e2\u20ac\u201cpresent",
             "description": "Development phase aiming for first IPL title"
           }
         ]
@@ -909,7 +1024,30 @@
         "youtube": "https://www.youtube.com/@LucknowSuperGiants"
       },
       "logoUrl": "/ipl-teams/lsg/Lucknow_Super_Giants_Logo.png",
-      "bgUrl": "/ipl-teams/lsg/lsg%20bg.jpg"
+      "bgUrl": "/ipl-teams/lsg/lsg%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2022,
+          "worst_season": 2025,
+          "avg_finish": 5.0,
+          "playoff_rate": 50
+        },
+        "auction_dna": {
+          "highest_buy": "Rishabh Pant (\u20b927.0 Cr)",
+          "best_value": "N Pooran",
+          "worst_value": "AA Kulkarni",
+          "avg_spend_per_season": 27.0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "KL Rahul",
+          "most_wickets": "Ravi Bishnoi",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Batting Aggressive",
+        "insight": "Lucknow Super Giants is a Batting Aggressive with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "mi",
@@ -929,7 +1067,7 @@
           "MI",
           "Paltan"
         ],
-        "meaning": "Represents Mumbai’s spirit, unity, and resilience"
+        "meaning": "Represents Mumbai\u00e2\u20ac\u2122s spirit, unity, and resilience"
       },
       "ownership": {
         "current_owner": "Reliance Industries",
@@ -943,22 +1081,22 @@
         "coach": "Mahela Jayawardene",
         "notable_captains": [
           "Shaun Pollock: 1 year (2008)",
-          "Harbhajan Singh: 5 years (2008–2012)",
-          "Sachin Tendulkar: 4 years (2008–2011)",
+          "Harbhajan Singh: 5 years (2008\u00e2\u20ac\u201c2012)",
+          "Sachin Tendulkar: 4 years (2008\u00e2\u20ac\u201c2011)",
           "Ricky Ponting: 1 year (2013)",
-          "Rohit Sharma: 11 years (2013–2023)",
-          "Kieron Pollard: Stand-in (2014–2021)",
+          "Rohit Sharma: 11 years (2013\u00e2\u20ac\u201c2023)",
+          "Kieron Pollard: Stand-in (2014\u00e2\u20ac\u201c2021)",
           "Suryakumar Yadav: 1 year (2023)",
-          "Hardik Pandya: 3 years (2024–2026)"
+          "Hardik Pandya: 3 years (2024\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
           "Lalchand Rajput: 1 year (2008)",
           "Shaun Pollock: 1 year (2009)",
-          "Robin Singh: 3 years (2010–2012)",
-          "John Wright: 2 years (2013–2014)",
-          "Ricky Ponting: 2 years (2015–2016)",
-          "Mahela Jayawardene: 8 years (2017–2022, 2025–2026)",
-          "Mark Boucher: 2 years (2023–2024)"
+          "Robin Singh: 3 years (2010\u00e2\u20ac\u201c2012)",
+          "John Wright: 2 years (2013\u00e2\u20ac\u201c2014)",
+          "Ricky Ponting: 2 years (2015\u00e2\u20ac\u201c2016)",
+          "Mahela Jayawardene: 8 years (2017\u00e2\u20ac\u201c2022, 2025\u00e2\u20ac\u201c2026)",
+          "Mark Boucher: 2 years (2023\u00e2\u20ac\u201c2024)"
         ]
       },
       "home_grounds": [
@@ -973,30 +1111,30 @@
         "full_text": "Mumbai Indians (MI) is one of the most successful franchises in the history of the Indian Premier League (IPL). Established in 2008 and owned by Reliance Industries, the team initially struggled in the early seasons before transforming into a dominant force in the league. Under the leadership of Rohit Sharma, who took over as captain in 2013, Mumbai Indians entered a golden era, winning multiple IPL titles and establishing themselves as a powerhouse. The team won its first IPL title in 2013 and went on to win additional championships in 2015, 2017, 2019, and 2020. Known for their strong scouting system, MI has consistently developed young talent while maintaining a core group of experienced match-winners. Their balanced team composition, strong bowling attack, and ability to perform under pressure have been key to their sustained success. The franchise has also been known for its dominance in high-pressure matches, including finals, where they have often outperformed opponents. Mumbai Indians share one of the fiercest rivalries in IPL history with Chennai Super Kings, with several iconic encounters between the two teams.",
         "timeline": [
           "2008: Franchise established as part of original IPL teams",
-          "2008–2012: Mixed performances with gradual team building",
+          "2008\u00e2\u20ac\u201c2012: Mixed performances with gradual team building",
           "2013: Won first IPL title under Rohit Sharma",
           "2015: Won second IPL title",
           "2017: Won third IPL title",
           "2019: Won fourth IPL title in a close final",
           "2020: Won fifth IPL title, dominating the season",
-          "2021–2023: Performance dip and transition phase",
-          "2024–present: Squad restructuring and leadership changes"
+          "2021\u00e2\u20ac\u201c2023: Performance dip and transition phase",
+          "2024\u00e2\u20ac\u201cpresent: Squad restructuring and leadership changes"
         ],
         "key_eras": [
           {
-            "period": "2008–2012",
+            "period": "2008\u00e2\u20ac\u201c2012",
             "description": "Initial years with inconsistent performance but gradual team development"
           },
           {
-            "period": "2013–2020",
+            "period": "2013\u00e2\u20ac\u201c2020",
             "description": "Golden era under Rohit Sharma with five IPL titles and dominance in finals"
           },
           {
-            "period": "2021–2023",
+            "period": "2021\u00e2\u20ac\u201c2023",
             "description": "Decline phase with inconsistent results and squad transition"
           },
           {
-            "period": "2024–present",
+            "period": "2024\u00e2\u20ac\u201cpresent",
             "description": "Rebuilding phase with new leadership and young players"
           }
         ]
@@ -1091,7 +1229,30 @@
         "youtube": "https://www.youtube.com/@mumbaiindians"
       },
       "logoUrl": "/ipl-teams/mi/Mumbai_Indians_Logo.png",
-      "bgUrl": "/ipl-teams/mi/mumbai-indians-bg.webp"
+      "bgUrl": "/ipl-teams/mi/mumbai-indians-bg.webp",
+      "intelligence": {
+        "performance": {
+          "best_season": 2010,
+          "worst_season": 2024,
+          "avg_finish": 4.1,
+          "playoff_rate": 61
+        },
+        "auction_dna": {
+          "highest_buy": "Ishan Kishan (\u20b915.25 Cr)",
+          "best_value": "SA Yadav",
+          "worst_value": "PVSN Raju",
+          "avg_spend_per_season": 8.78,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "RG Sharma",
+          "most_wickets": "JJ Bumrah",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Mumbai Indians is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "pbks",
@@ -1127,21 +1288,21 @@
         "captain": "Shreyas Iyer",
         "coach": "Ricky Ponting",
         "notable_captains": [
-          "Yuvraj Singh: 2 years (2008–2009)",
+          "Yuvraj Singh: 2 years (2008\u00e2\u20ac\u201c2009)",
           "Kumar Sangakkara: 1 year (2010)",
           "Mahela Jayawardene: 1 year (2010)",
-          "Adam Gilchrist: 3 years (2011–2013)",
-          "David Hussey: Stand-in (2012–2013)",
-          "George Bailey: 2 years (2014–2015)",
+          "Adam Gilchrist: 3 years (2011\u00e2\u20ac\u201c2013)",
+          "David Hussey: Stand-in (2012\u00e2\u20ac\u201c2013)",
+          "George Bailey: 2 years (2014\u00e2\u20ac\u201c2015)",
           "David Miller: 1 year (2016)",
           "Murali Vijay: 1 year (2016)",
           "Glenn Maxwell: 1 year (2017)",
-          "Ravichandran Ashwin: 2 years (2018–2019)",
-          "KL Rahul: 2 years (2020–2021)",
+          "Ravichandran Ashwin: 2 years (2018\u00e2\u20ac\u201c2019)",
+          "KL Rahul: 2 years (2020\u00e2\u20ac\u201c2021)",
           "Mayank Agarwal: 1 year (2022)",
-          "Shikhar Dhawan: 2 years (2023–2024)",
-          "Sam Curran: Stand-in (2023–2024)",
-          "Shreyas Iyer: 2 years (2025–2026)"
+          "Shikhar Dhawan: 2 years (2023\u00e2\u20ac\u201c2024)",
+          "Sam Curran: Stand-in (2023\u00e2\u20ac\u201c2024)",
+          "Shreyas Iyer: 2 years (2025\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -1161,15 +1322,15 @@
         "full_text": "Punjab Kings (PBKS), formerly known as Kings XI Punjab, is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team has experienced a rollercoaster journey in the IPL, with flashes of brilliance but an overall lack of consistency. In its early years, the franchise showed promise but failed to convert strong squads into sustained success. The team's most successful season came in 2014 when they reached the IPL final under the captaincy of George Bailey, only to lose to Kolkata Knight Riders. Despite having several high-profile players over the years, Punjab has struggled to maintain consistent performances and frequently finished in the lower half of the table. In 2021, the franchise rebranded from Kings XI Punjab to Punjab Kings in an effort to redefine its identity and start a new chapter. Since then, PBKS has focused on building a balanced squad with a mix of experienced and young players, aiming to achieve stability and long-term success in the IPL.",
         "timeline": [
           "2008: Franchise established as Kings XI Punjab",
-          "2008–2013: Inconsistent performances with occasional strong seasons",
+          "2008\u00e2\u20ac\u201c2013: Inconsistent performances with occasional strong seasons",
           "2014: Reached IPL final, best performance in franchise history",
-          "2015–2020: Decline with frequent bottom-half finishes",
+          "2015\u00e2\u20ac\u201c2020: Decline with frequent bottom-half finishes",
           "2021: Rebranded as Punjab Kings",
-          "2022–present: Rebuilding phase with focus on squad balance"
+          "2022\u00e2\u20ac\u201cpresent: Rebuilding phase with focus on squad balance"
         ],
         "key_eras": [
           {
-            "period": "2008–2013",
+            "period": "2008\u00e2\u20ac\u201c2013",
             "description": "Early years with mixed results and potential"
           },
           {
@@ -1177,11 +1338,11 @@
             "description": "Peak season reaching IPL final"
           },
           {
-            "period": "2015–2020",
+            "period": "2015\u00e2\u20ac\u201c2020",
             "description": "Decline phase with inconsistent performances"
           },
           {
-            "period": "2021–present",
+            "period": "2021\u00e2\u20ac\u201cpresent",
             "description": "Rebuilding phase after rebranding with focus on long-term success"
           }
         ]
@@ -1255,7 +1416,30 @@
         "youtube": "https://www.youtube.com/@PUNJABKINGSTV"
       },
       "logoUrl": "/ipl-teams/pbks/Punjab_Kings_Logo.png",
-      "bgUrl": "/ipl-teams/pbks/pbks%20bg.jpg"
+      "bgUrl": "/ipl-teams/pbks/pbks%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2014,
+          "worst_season": 2024,
+          "avg_finish": 5.7,
+          "playoff_rate": 17
+        },
+        "auction_dna": {
+          "highest_buy": "Sam Curran (\u20b918.5 Cr)",
+          "best_value": "SS Iyer",
+          "worst_value": "MJ Owen",
+          "avg_spend_per_season": 18.5,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "KL Rahul",
+          "most_wickets": "Arshdeep Singh",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Punjab Kings is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "rr",
@@ -1288,20 +1472,20 @@
         "captain": "Riyan Parag",
         "coach": "Rahul Dravid",
         "notable_captains": [
-          "Shane Warne: 4 years (2008–2011)",
-          "Rahul Dravid: 2 years (2012–2013)",
-          "Shane Watson: 2 years (2014–2015)",
-          "Steve Smith: 4 years (2014–2015, 2019–2020)",
-          "Ajinkya Rahane: 2 years (2018–2019)",
-          "Sanju Samson: 6 years (2021–2025)",
+          "Shane Warne: 4 years (2008\u00e2\u20ac\u201c2011)",
+          "Rahul Dravid: 2 years (2012\u00e2\u20ac\u201c2013)",
+          "Shane Watson: 2 years (2014\u00e2\u20ac\u201c2015)",
+          "Steve Smith: 4 years (2014\u00e2\u20ac\u201c2015, 2019\u00e2\u20ac\u201c2020)",
+          "Ajinkya Rahane: 2 years (2018\u00e2\u20ac\u201c2019)",
+          "Sanju Samson: 6 years (2021\u00e2\u20ac\u201c2025)",
           "Riyan Parag: 1 year (2026)"
         ],
         "notable_coaches": [
-          "Shane Warne: 4 years (2008–2011)",
-          "Rahul Dravid: 6 years (2012–2015, 2025–2026)",
+          "Shane Warne: 4 years (2008\u00e2\u20ac\u201c2011)",
+          "Rahul Dravid: 6 years (2012\u00e2\u20ac\u201c2015, 2025\u00e2\u20ac\u201c2026)",
           "Paddy Upton: 2 years (2013, 2019)",
           "Andrew McDonald: 1 year (2020)",
-          "Kumar Sangakkara: 4 years (2021–2024)"
+          "Kumar Sangakkara: 4 years (2021\u00e2\u20ac\u201c2024)"
         ]
       },
       "home_grounds": [
@@ -1322,13 +1506,13 @@
         "full_text": "Rajasthan Royals (RR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely known for its underdog success story, having won the inaugural IPL season in 2008 under the leadership of Shane Warne. Unlike many other franchises, RR built its early success on a strategy of identifying and nurturing young and relatively unknown talent rather than relying heavily on big-name players. This approach helped the team establish a reputation for developing future stars. Following their early success, Rajasthan Royals experienced a mix of performances, often fluctuating between strong seasons and periods of inconsistency. The franchise was suspended for two seasons (2016 and 2017) due to administrative issues, similar to Chennai Super Kings. After returning in 2018, RR has continued to focus on youth development and strategic gameplay, occasionally reaching the playoffs and even the final in 2022. The team is also known for its innovative approach to analytics and talent scouting, making it one of the most unique franchises in the IPL.",
         "timeline": [
           "2008: Franchise established and won inaugural IPL title",
-          "2009–2013: Mixed performances with occasional playoff contention",
-          "2014–2015: Competitive seasons",
-          "2016–2017: Suspended from IPL",
+          "2009\u00e2\u20ac\u201c2013: Mixed performances with occasional playoff contention",
+          "2014\u00e2\u20ac\u201c2015: Competitive seasons",
+          "2016\u00e2\u20ac\u201c2017: Suspended from IPL",
           "2018: Returned to IPL",
-          "2019–2021: Inconsistent performances",
+          "2019\u00e2\u20ac\u201c2021: Inconsistent performances",
           "2022: Reached IPL final",
-          "2023–present: Competitive rebuilding phase"
+          "2023\u00e2\u20ac\u201cpresent: Competitive rebuilding phase"
         ],
         "key_eras": [
           {
@@ -1336,15 +1520,15 @@
             "description": "Historic inaugural IPL title under Shane Warne"
           },
           {
-            "period": "2009–2015",
+            "period": "2009\u00e2\u20ac\u201c2015",
             "description": "Inconsistent but competitive performances"
           },
           {
-            "period": "2016–2017",
+            "period": "2016\u00e2\u20ac\u201c2017",
             "description": "Suspension period"
           },
           {
-            "period": "2018–present",
+            "period": "2018\u00e2\u20ac\u201cpresent",
             "description": "Return phase focusing on youth development and analytics-driven strategy"
           }
         ]
@@ -1422,7 +1606,30 @@
         "Steve Smith"
       ],
       "logoUrl": "/ipl-teams/rr/rajasthan-royals-logo.png",
-      "bgUrl": "/ipl-teams/rr/rr%20bg.jpg"
+      "bgUrl": "/ipl-teams/rr/rr%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2008,
+          "worst_season": 2025,
+          "avg_finish": 5.2,
+          "playoff_rate": 38
+        },
+        "auction_dna": {
+          "highest_buy": "Chris Morris (\u20b916.25 Cr)",
+          "best_value": "JC Buttler",
+          "worst_value": "R Bhatia",
+          "avg_spend_per_season": 12.38,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "SV Samson",
+          "most_wickets": "YS Chahal",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Rajasthan Royals is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "rps",
@@ -1447,7 +1654,7 @@
         "current_owner": "RPSG Group (Sanjiv Goenka)",
         "ownership_history": [
           "Franchise awarded to RPSG Group as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016\u00e2\u20ac\u201c2017)"
         ]
       },
       "management": {
@@ -1459,7 +1666,7 @@
           "Ajinkya Rahane: Stand-in (2017)"
         ],
         "notable_coaches": [
-          "Stephen Fleming: 2 years (2016–2017)"
+          "Stephen Fleming: 2 years (2016\u00e2\u20ac\u201c2017)"
         ]
       },
       "home_grounds": [
@@ -1560,7 +1767,30 @@
         "Faf du Plessis"
       ],
       "logoUrl": "/ipl-teams/rps/Rising_Pune_Supergiant%20logo.png",
-      "bgUrl": "/ipl-teams/rps/rps%20bg.png"
+      "bgUrl": "/ipl-teams/rps/rps%20bg.png",
+      "intelligence": {
+        "performance": {
+          "best_season": 2017,
+          "worst_season": 2016,
+          "avg_finish": 4.5,
+          "playoff_rate": 50
+        },
+        "auction_dna": {
+          "highest_buy": "Ben Stokes (\u20b914.5 Cr)",
+          "best_value": "AM Rahane",
+          "worst_value": "IK Pathan",
+          "avg_spend_per_season": 14.5,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "AM Rahane",
+          "most_wickets": "JD Unadkat",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Bowling Dominant",
+        "insight": "Rising Pune Supergiant is a Bowling Dominant with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "rcb",
@@ -1596,21 +1826,21 @@
         "notable_captains": [
           "Rahul Dravid: 1 year (2008)",
           "Kevin Pietersen: 1 year (2009)",
-          "Anil Kumble: 2 years (2009–2010)",
-          "Daniel Vettori: 2 years (2011–2012)",
-          "Virat Kohli: 11 years (2011–2021)",
+          "Anil Kumble: 2 years (2009\u00e2\u20ac\u201c2010)",
+          "Daniel Vettori: 2 years (2011\u00e2\u20ac\u201c2012)",
+          "Virat Kohli: 11 years (2011\u00e2\u20ac\u201c2021)",
           "Shane Watson: 1 year (2017)",
-          "Faf du Plessis: 3 years (2022–2024)",
-          "Rajat Patidar: 2 years (2025–2026)"
+          "Faf du Plessis: 3 years (2022\u00e2\u20ac\u201c2024)",
+          "Rajat Patidar: 2 years (2025\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
           "Venkatesh Prasad / Martin Crowe: 1 year (2008)",
-          "Ray Jennings: 5 years (2009–2013)",
-          "Daniel Vettori: 5 years (2014–2018)",
+          "Ray Jennings: 5 years (2009\u00e2\u20ac\u201c2013)",
+          "Daniel Vettori: 5 years (2014\u00e2\u20ac\u201c2018)",
           "Gary Kirsten: 1 year (2019)",
-          "Simon Katich: 2 years (2020–2021)",
-          "Sanjay Bangar: 2 years (2022–2023)",
-          "Andy Flower: 3 years (2024–2026)"
+          "Simon Katich: 2 years (2020\u00e2\u20ac\u201c2021)",
+          "Sanjay Bangar: 2 years (2022\u00e2\u20ac\u201c2023)",
+          "Andy Flower: 3 years (2024\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -1627,26 +1857,26 @@
           "2008: Franchise established",
           "2009: Reached first IPL final",
           "2011: Reached IPL final again",
-          "2016: Reached final, Virat Kohli’s record-breaking season",
-          "2017–2021: Inconsistent performances and rebuilding phase",
-          "2022–2024: Competitive seasons with playoff appearances",
+          "2016: Reached final, Virat Kohli\u00e2\u20ac\u2122s record-breaking season",
+          "2017\u00e2\u20ac\u201c2021: Inconsistent performances and rebuilding phase",
+          "2022\u00e2\u20ac\u201c2024: Competitive seasons with playoff appearances",
           "2025: Won first IPL title"
         ],
         "key_eras": [
           {
-            "period": "2008–2011",
+            "period": "2008\u00e2\u20ac\u201c2011",
             "description": "Early competitive years with multiple finals appearances"
           },
           {
-            "period": "2012–2016",
+            "period": "2012\u00e2\u20ac\u201c2016",
             "description": "Star-driven era with peak performances including 2016 season"
           },
           {
-            "period": "2017–2021",
+            "period": "2017\u00e2\u20ac\u201c2021",
             "description": "Struggles and rebuilding phase with inconsistent results"
           },
           {
-            "period": "2022–present",
+            "period": "2022\u00e2\u20ac\u201cpresent",
             "description": "Resurgence leading to first IPL title in 2025"
           }
         ]
@@ -1728,7 +1958,30 @@
         "Anil Kumble"
       ],
       "logoUrl": "/ipl-teams/rcb/Royal_Challengers_Bengaluru_Logo.png",
-      "bgUrl": "/ipl-teams/rcb/rcb%20bg.jpg"
+      "bgUrl": "/ipl-teams/rcb/rcb%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2011,
+          "worst_season": 2019,
+          "avg_finish": 4.6,
+          "playoff_rate": 56
+        },
+        "auction_dna": {
+          "highest_buy": "Yuvraj Singh (\u20b914.0 Cr)",
+          "best_value": "V Kohli",
+          "worst_value": "CJ Anderson",
+          "avg_spend_per_season": 11.1,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "V Kohli",
+          "most_wickets": "YS Chahal",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Royal Challengers Bengaluru is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "srh",
@@ -1762,20 +2015,20 @@
         "notable_captains": [
           "Kumar Sangakkara: 1 year (2013)",
           "Cameron White: 1 year (2013)",
-          "Shikhar Dhawan: 2 years (2013–2014)",
+          "Shikhar Dhawan: 2 years (2013\u00e2\u20ac\u201c2014)",
           "Darren Sammy: 1 year (2014)",
-          "David Warner: 6 years (2015–2019, 2021)",
-          "Kane Williamson: 4 years (2018–2019, 2021–2022)",
-          "Bhuvneshwar Kumar: Stand-in (2019–2023)",
+          "David Warner: 6 years (2015\u00e2\u20ac\u201c2019, 2021)",
+          "Kane Williamson: 4 years (2018\u00e2\u20ac\u201c2019, 2021\u00e2\u20ac\u201c2022)",
+          "Bhuvneshwar Kumar: Stand-in (2019\u00e2\u20ac\u201c2023)",
           "Manish Pandey: 1 year (2021)",
           "Aiden Markram: 1 year (2023)",
-          "Pat Cummins: 3 years (2024–2026)"
+          "Pat Cummins: 3 years (2024\u00e2\u20ac\u201c2026)"
         ],
         "notable_coaches": [
-          "Tom Moody: 8 years (2013–2019, 2022)",
-          "Trevor Bayliss: 2 years (2020–2021)",
+          "Tom Moody: 8 years (2013\u00e2\u20ac\u201c2019, 2022)",
+          "Trevor Bayliss: 2 years (2020\u00e2\u20ac\u201c2021)",
           "Brian Lara: 1 year (2023)",
-          "Daniel Vettori: 3 years (2024–2026)"
+          "Daniel Vettori: 3 years (2024\u00e2\u20ac\u201c2026)"
         ]
       },
       "home_grounds": [
@@ -1786,7 +2039,7 @@
           "primary": true
         },
         {
-          "name": "ACA–VDCA Cricket Stadium",
+          "name": "ACA\u00e2\u20ac\u201cVDCA Cricket Stadium",
           "location": "Visakhapatnam",
           "primary": false
         }
@@ -1795,30 +2048,30 @@
         "full_text": "Sunrisers Hyderabad (SRH) is a franchise cricket team based in Hyderabad, Telangana, India, that competes in the Indian Premier League (IPL). The team was established in 2013 after the Deccan Chargers franchise was terminated due to financial issues. The Sun Group, a major media conglomerate, acquired the franchise and introduced Sunrisers Hyderabad as a new entity. From the beginning, SRH built a reputation as a team heavily reliant on disciplined bowling attacks. Over the years, the team evolved significantly, transitioning into a high-powered batting unit while still maintaining its bowling strength. SRH achieved its greatest success in 2016 when it won the IPL title under the captaincy of David Warner. The team consistently remained competitive between 2016 and 2018, reaching multiple playoffs and finals. However, the franchise experienced a dip in performance between 2021 and 2023. In recent seasons, SRH has re-emerged as an aggressive batting side, setting multiple high-scoring records including one of the highest team totals in IPL history.",
         "timeline": [
           "2013: Franchise established after Deccan Chargers termination",
-          "2014–2015: Mid-table finishes, building squad core",
+          "2014\u00e2\u20ac\u201c2015: Mid-table finishes, building squad core",
           "2016: Won first IPL title under David Warner",
           "2017: Strong season, playoff appearance",
           "2018: Reached IPL final under Kane Williamson",
-          "2019–2020: Competitive seasons with playoff contention",
-          "2021–2023: Performance decline and team restructuring",
+          "2019\u00e2\u20ac\u201c2020: Competitive seasons with playoff contention",
+          "2021\u00e2\u20ac\u201c2023: Performance decline and team restructuring",
           "2024: Return to finals with aggressive batting approach",
-          "2025–present: Focus on explosive batting and new leadership"
+          "2025\u00e2\u20ac\u201cpresent: Focus on explosive batting and new leadership"
         ],
         "key_eras": [
           {
-            "period": "2016–2018",
+            "period": "2016\u00e2\u20ac\u201c2018",
             "description": "Golden phase with strong bowling attack and consistent playoff appearances including a title and finals"
           },
           {
-            "period": "2019–2020",
+            "period": "2019\u00e2\u20ac\u201c2020",
             "description": "Transitional phase with competitive but inconsistent performances"
           },
           {
-            "period": "2021–2023",
+            "period": "2021\u00e2\u20ac\u201c2023",
             "description": "Decline phase marked by poor team balance and leadership instability"
           },
           {
-            "period": "2024–present",
+            "period": "2024\u00e2\u20ac\u201cpresent",
             "description": "Revival phase characterized by aggressive batting strategy and record-breaking totals"
           }
         ]
@@ -1903,7 +2156,30 @@
         "youtube": "https://www.youtube.com/@SunrisersIPL"
       },
       "logoUrl": "/ipl-teams/srh/Sunrisers_Hyderabad_Logo.png",
-      "bgUrl": "/ipl-teams/srh/srh%20bg.jpg"
+      "bgUrl": "/ipl-teams/srh/srh%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2018,
+          "worst_season": 2023,
+          "avg_finish": 5.2,
+          "playoff_rate": 50
+        },
+        "auction_dna": {
+          "highest_buy": "Unknown",
+          "best_value": "DA Warner",
+          "worst_value": "D Kalyankrishna",
+          "avg_spend_per_season": 0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "DA Warner",
+          "most_wickets": "B Kumar",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Sunrisers Hyderabad is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "dcg",
@@ -1943,7 +2219,7 @@
           "Rejected sole bid from PVP Ventures",
           "Franchise terminated by BCCI on 14 September 2012",
           "Sun TV Network later acquired Hyderabad franchise and formed Sunrisers Hyderabad",
-          "In 2020, tribunal ruled termination illegal and awarded ₹4814.67 crore compensation"
+          "In 2020, tribunal ruled termination illegal and awarded \u00e2\u201a\u00b94814.67 crore compensation"
         ]
       },
       "management": {
@@ -1951,13 +2227,13 @@
         "coach": "Darren Lehmann",
         "notable_captains": [
           "VVS Laxman: 1 year (2008)",
-          "Adam Gilchrist: 3 years (2008–2010)",
-          "Kumar Sangakkara: 2 years (2011–2012)",
+          "Adam Gilchrist: 3 years (2008\u00e2\u20ac\u201c2010)",
+          "Kumar Sangakkara: 2 years (2011\u00e2\u20ac\u201c2012)",
           "Cameron White: 1 year (2012)"
         ],
         "notable_coaches": [
           "Robin Singh: 1 year (2008)",
-          "Darren Lehmann: 4 years (2009–2012)"
+          "Darren Lehmann: 4 years (2009\u00e2\u20ac\u201c2012)"
         ]
       },
       "home_grounds": [
@@ -1983,11 +2259,11 @@
             "description": "Poor debut season finishing last"
           },
           {
-            "period": "2009–2010",
+            "period": "2009\u00e2\u20ac\u201c2010",
             "description": "Golden phase with IPL title and playoff appearance"
           },
           {
-            "period": "2011–2012",
+            "period": "2011\u00e2\u20ac\u201c2012",
             "description": "Decline phase with inconsistency and financial issues"
           }
         ]
@@ -2065,7 +2341,30 @@
         "Kumar Sangakkara"
       ],
       "logoUrl": "/ipl-teams/dcg/HyderabadDeccanChargerslogo.png",
-      "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg"
+      "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg",
+      "intelligence": {
+        "performance": {
+          "best_season": 2018,
+          "worst_season": 2023,
+          "avg_finish": 5.2,
+          "playoff_rate": 50
+        },
+        "auction_dna": {
+          "highest_buy": "Unknown",
+          "best_value": "DA Warner",
+          "worst_value": "D Kalyankrishna",
+          "avg_spend_per_season": 0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "DA Warner",
+          "most_wickets": "B Kumar",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Balanced Team",
+        "insight": "Sunrisers Hyderabad is a Balanced Team with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "ktk",
@@ -2190,7 +2489,30 @@
         "S Sreesanth"
       ],
       "logoUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala_Logo.png",
-      "bgUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala%20bg.png"
+      "bgUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala%20bg.png",
+      "intelligence": {
+        "performance": {
+          "best_season": 2011,
+          "worst_season": 2011,
+          "avg_finish": 8.0,
+          "playoff_rate": 0
+        },
+        "auction_dna": {
+          "highest_buy": "Unknown",
+          "best_value": "BB McCullum",
+          "worst_value": "Y Gnaneswara Rao",
+          "avg_spend_per_season": 0,
+          "strategy": "Bowling Heavy"
+        },
+        "records": {
+          "most_runs": "BB McCullum",
+          "most_wickets": "RP Singh",
+          "highest_total": "Check Dashboard",
+          "lowest_total": "Check Dashboard"
+        },
+        "archetype": "Bowling Dominant",
+        "insight": "Kochi Tuskers Kerala is a Bowling Dominant with a Bowling Heavy auction strategy."
+      }
     },
     {
       "id": "pwi",
@@ -2270,7 +2592,7 @@
             "description": "Debut season with moderate performance"
           },
           {
-            "period": "2012–2013",
+            "period": "2012\u00e2\u20ac\u201c2013",
             "description": "Decline phase with poor results and instability"
           }
         ]

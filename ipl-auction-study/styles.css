@@ -2921,6 +2921,49 @@ body.ipl-teams-detail-open {
   filter: drop-shadow(0 0 5px rgba(167, 139, 250, 0.5));
 }
 
+/* Team Intelligence Styles */
+.ipl-teams-intel-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ipl-teams-block--intel {
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.ipl-teams-intel-tag {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.ipl-teams-intel-insight {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+  border-left: 3px solid var(--purple-light);
+  padding-left: 15px;
+}
+
+.ipl-teams-facts--grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.ipl-teams-stat-value--small {
+  font-size: 1.25rem !important;
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
 @media (max-width: 640px) {
   .ipl-teams-grid-sections {
     grid-template-columns: 1fr;
