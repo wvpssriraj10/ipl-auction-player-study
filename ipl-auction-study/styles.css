@@ -3024,3 +3024,107 @@ body.ipl-teams-detail-open {
     gap: 1.5rem;
   }
 }
+/* ============================================
+   IPL TEAMS RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* ===== SM =600px ===== */
+@media (min-width: 600px) {
+  .ipl-teams {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .ipl-teams-grid--picker {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem 0.75rem;
+  }
+
+  .ipl-teams-card-logo-wrap {
+    width: 72px;
+    height: 72px;
+  }
+
+  .ipl-teams-detail-head {
+    gap: 1.25rem;
+  }
+}
+
+/* ===== MD =900px ===== */
+@media (min-width: 900px) {
+  .ipl-teams {
+    padding: 3rem 2rem 5rem;
+  }
+
+  .ipl-teams-grid--picker {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.2rem 1rem;
+  }
+
+  .ipl-teams-card-inner {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .ipl-teams-card-logo-wrap {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ipl-teams-detail-inner {
+    padding: 2.5rem 2.5rem 5rem;
+  }
+
+  .ipl-teams-detail-head {
+    align-items: center;
+  }
+
+  .ipl-teams-detail-logo-pod {
+    width: 110px;
+    height: 110px;
+  }
+
+  .ipl-teams-facts {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* ===== LG =1200px ===== */
+@media (min-width: 1200px) {
+  .ipl-teams {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ipl-teams-grid--picker {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem 1.2rem;
+  }
+
+  .ipl-teams-card {
+    border-radius: 16px;
+  }
+
+  .ipl-teams-detail-inner {
+    padding: 3rem 4rem 6rem;
+  }
+
+  .ipl-teams-detail-title {
+    font-size: 3rem;
+  }
+}
+
+/* ===== XL =1536px ===== */
+@media (min-width: 1536px) {
+  .ipl-teams {
+    max-width: 1440px;
+  }
+
+  .ipl-teams-grid--picker {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .ipl-teams-detail-inner {
+    padding: 3.5rem 5rem 7rem;
+  }
+}
