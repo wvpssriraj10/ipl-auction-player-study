@@ -238,8 +238,9 @@
       </div>
       <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
         <div class="dropdown-btn" id="dropdownBtn">
-          <span id="selectedLabel"><i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> 2024 Season</span>
-          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-calendar-days" style="color: var(--purple-light); margin-right: 10px;"></i>
+          <span id="selectedLabel">2024 Season</span>
+          <i class="fa-solid fa-chevron-down" style="margin-left: auto;"></i>
         </div>
         <div class="dropdown-menu" id="dropdownMenu">
           <div class="dropdown-item" data-value="2025">2025 Season</div>
@@ -389,7 +390,7 @@
         dropdownItems.forEach(item => {
           item.addEventListener('click', () => {
              const val = item.getAttribute('data-value');
-             selectedLabel.innerHTML = `<i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> ${val} Season`;
+             selectedLabel.textContent = `${val} Season`;
              render(val);
              dropdown.classList.remove('open');
           });
