@@ -20,7 +20,9 @@
       filter: none !important;
     }
     .top-nav {
-      padding: 0.3rem 2rem !important; 
+      padding: 12px 28px !important;
+      min-height: 60px;
+      align-items: center;
     }
     /* Custom Animated Dropdown */
     .custom-dropdown {
@@ -115,17 +117,26 @@
     .dropdown-item:nth-child(18) { transition-delay: 0.54s; }
     
     .standings-container {
-      margin-top: 115px; /* Boosted for absolute clearance */
-      padding-bottom: 5px;
-      max-width: 1400px;
+      margin-top: 88px;
+      padding-bottom: 8px;
+      max-width: 1280px;
     }
     .standings-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       flex-wrap: wrap;
       gap: 1rem;
+    }
+    .standings-title {
+      margin: 0;
+      font-family: "Archivo", sans-serif;
+      font-size: clamp(1.85rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #f8fafc;
     }
     .table-card {
       background: rgba(15, 15, 25, 0.4);
@@ -211,6 +222,12 @@
       margin-left: 8px;
     }
     @media (max-width: 768px) {
+      .top-nav {
+        padding: 10px 14px !important;
+      }
+      .standings-container {
+        margin-top: 78px;
+      }
       .standings-header { flex-direction: column; align-items: flex-start; }
       th:nth-child(4), td:nth-child(4),
       th:nth-child(5), td:nth-child(5) { display: none; }
@@ -232,11 +249,11 @@
   </header>
 
   <div class="container standings-container">
-    <div class="standings-header" style="z-index: 99999; margin-bottom: 0.5rem;"> 
+    <div class="standings-header">
       <div>
-        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.4rem;">IPL STANDINGS</h1>
+        <h1 class="standings-title">IPL STANDINGS</h1>
       </div>
-      <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
+      <div class="custom-dropdown" id="seasonDropdown">
         <div class="dropdown-btn" id="dropdownBtn">
           <i class="fa-solid fa-calendar-days" style="color: var(--purple-light); margin-right: 10px;"></i>
           <span id="selectedLabel">2025 Season</span>
