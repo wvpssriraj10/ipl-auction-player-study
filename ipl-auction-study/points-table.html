@@ -23,36 +23,53 @@
       padding: 0.5rem 2rem !important; 
     }
     .standings-container {
-      margin-top: 100px; /* Increased to clear fixed nav bar */
-      padding-bottom: 30px;
+      margin-top: 110px; /* Enhanced clearance */
+      padding-bottom: 40px;
     }
     .standings-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.4rem; /* Ultra tight */
+      align-items: flex-end;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 1.5rem;
     }
     .season-selector-wrap {
       display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .selector-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--purple-light);
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .custom-select-btn {
+      display: flex;
       align-items: center;
-      gap: 1rem;
-      background: rgba(139, 92, 246, 0.1); /* Brighter */
-      padding: 10px 20px;
-      border-radius: 14px;
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+      gap: 12px;
+      background: rgba(139, 92, 246, 0.15);
+      padding: 8px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .custom-select-btn:hover {
+      background: rgba(139, 92, 246, 0.25);
+      border-color: var(--purple-light);
     }
     #seasonFilter {
       background: transparent;
       border: none;
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 800;
       cursor: pointer;
       outline: none;
-      text-transform: uppercase;
     }
     .table-card {
       background: rgba(15, 15, 20, 0.6);
@@ -149,11 +166,14 @@
   <div class="container standings-container">
     <div class="standings-header reveal">
       <div>
-        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.5rem;">IPL STANDINGS</h1>
+        <h1 class="section-title" style="margin-bottom: 0.5rem; font-size: 2.2rem; letter-spacing: -1px;">IPL STANDINGS</h1>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Historical season rankings and performance metrics.</p>
       </div>
       <div class="season-selector-wrap">
-        <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
-        <select id="seasonFilter">
+        <span class="selector-label">View Season</span>
+        <div class="custom-select-btn">
+          <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
+          <select id="seasonFilter">
           <option value="2025">2025 Season</option>
           <option value="2024">2024 Season</option>
           <option value="2023">2023 Season</option>
@@ -173,6 +193,7 @@
           <option value="2009">2009 Season</option>
           <option value="2008">2008 Season</option>
         </select>
+        </div>
       </div>
     </div>
 
@@ -235,12 +256,12 @@
             seasonRows.forEach((row, idx) => {
                 const tr = document.createElement('tr');
                 const isTop4 = idx < 4;
-                const isWinner = row.rank == 1;
+                const isWinner = idx === 0; // The first row in sorted standings is the winner
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
                 
                 tr.innerHTML = `
-                <td class="rank-cell">${row.rank}</td>
+                <td class="rank-cell">${idx + 1}</td>
                 <td>
                     <div class="team-cell">
                     ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner"></i>' : ''}
