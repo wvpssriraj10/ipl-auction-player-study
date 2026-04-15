@@ -142,8 +142,19 @@ function renderGrid(gridEl, teams, onSelect, gridOpts = {}) {
     teams.forEach(team => {
       const canvas = document.getElementById(`spark-${team.id}`);
       if (canvas) {
-        // Mock historical ranks for demo
-        const ranks = team.id === 'csk' ? [1, 2, 1, 2, 9, 1] : [4, 8, 3, 5, 2, 7];
+        // Generate unique historical trajectories for major teams
+        const mockData = {
+          'csk': [2, 1, 2, 1, 4, 1, 2, 9, 1, 2], // Consistent top finisher
+          'mi': [7, 3, 1, 4, 1, 1, 5, 1, 10, 4], // Boom and bust dynasty
+          'rcb': [7, 2, 4, 5, 2, 8, 3, 4, 6, 4], // The 'Always Close' trend
+          'kkr': [6, 8, 4, 1, 7, 1, 5, 2, 7, 1], // The comeback kings
+          'srh': [1, 4, 3, 2, 1, 4, 3, 8, 10, 2], // Mid-era dominance
+          'rr': [1, 6, 7, 7, 3, 6, 4, 7, 2, 5], // The underdog path
+          'gt': [1, 2, 8], // The new power surge
+          'lsg': [3, 4, 7]  // Consistent playoff contender
+        };
+        const ranks = mockData[team.id] || [4, 8, 3, 5, 2, 7, 5, 3];
+
         new Chart(canvas.getContext('2d'), {
           type: 'line',
           data: {
