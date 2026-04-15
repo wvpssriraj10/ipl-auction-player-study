@@ -933,6 +933,28 @@ input.player-search-input {
   font-size: 16px;
 }
 
+.charts-insight-text {
+  text-align: center;
+  font-family: 'Archivo', sans-serif;
+  font-size: 12px;
+  color: var(--purple-light);
+  margin: 0px 0 40px;
+  padding: 12px 20px;
+  background: rgba(139, 92, 246, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--purple-light);
+  line-height: 1.6;
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.charts-insight-text strong {
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 8px;
+}
+
 /* Glassmorphism Results Box */
 .price-tag {
   font-family: 'Archivo', sans-serif;
