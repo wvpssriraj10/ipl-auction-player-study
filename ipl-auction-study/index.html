@@ -164,9 +164,19 @@
   <section id="numbers" class="container section numbers reveal" aria-labelledby="stats-heading">
     <h2 id="stats-heading" class="section-title">BY THE NUMBERS</h2>
     <div class="card reveal-fast">
-      <h3 class="chart-title"><span class="label-icon">📊</span> Market Efficiency Pulse</h3>
-      <div class="market-chart-container">
-         <canvas id="marketChart"></canvas>
+      <div class="charts-dashboard-grid">
+        <div class="chart-wrapper">
+          <h3 class="chart-title"><span class="label-icon">🌌</span> Market Galaxy (Player ROI)</h3>
+          <div class="market-chart-container">
+            <canvas id="marketChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <h3 class="chart-title"><span class="label-icon">🧠</span> Strategy IQ (Team ROI)</h3>
+          <div class="market-chart-container">
+            <canvas id="teamIQChart"></canvas>
+          </div>
+        </div>
       </div>
       <div class="numbers-grid" role="region" aria-label="Key Statistics">
         <div class="number-box">

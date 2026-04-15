@@ -344,17 +344,14 @@ function renderMarketEfficiencyChart() {
   const ctx = document.getElementById('marketChart').getContext('2d');
   if (!ctx) return;
 
+  // Option A (The Galaxy): Every player is a star. Supersignings are highlights.
   const validData = state.values
     .filter(r => num(r.price_cr) > 0 && num(r.value_score) > 0)
     .map(r => {
       const price = num(r.price_cr);
       const score = num(r.value_score);
       const roi = score / price;
-      
-      // Dynamic coloring: Green (High ROI) -> Yellow -> Red (Low ROI)
-      let color = 'rgba(167, 139, 250, 0.7)'; // Default violet
-      if (roi > 20) color = 'rgba(34, 197, 94, 0.7)'; // High efficiency green
-      else if (roi < 5) color = 'rgba(239, 68, 68, 0.7)'; // Low efficiency red
+      const isBigBuy = r.is_big_buy === true || r.is_big_buy === "True";
 
       return {
         x: price,
@@ -362,11 +359,14 @@ function renderMarketEfficiencyChart() {
         player: r.player,
         season: r.season,
         roi: roi,
-        backgroundColor: color
+        isBig: isBigBuy,
+        // Small, ghost dots for regular players; large glow for big buys
+        radius: isBigBuy ? 8 : 2,
+        opacity: isBigBuy ? 0.9 : 0.15,
+        color: isBigBuy ? (roi > 15 ? '#22c55e' : (roi < 5 ? '#ef4444' : '#a78bfa')) : 'rgba(255,255,255,0.4)'
       };
-    });
-
-  if (validData.length === 0) return;
+    })
+    .sort((a, b) => a.isBig - b.isBig); // Draw big buys on top
 
   new Chart(ctx, {
     type: 'scatter',
@@ -374,10 +374,9 @@ function renderMarketEfficiencyChart() {
       datasets: [{
         label: 'Players',
         data: validData,
-        backgroundColor: validData.map(d => d.backgroundColor),
-        borderColor: 'rgba(255,255,255,0.1)',
-        borderWidth: 1,
-        pointRadius: 7,
+        backgroundColor: validData.map(d => d.color),
+        pointRadius: validData.map(d => d.radius),
+        borderColor: 'transparent',
         pointHoverRadius: 10,
         pointHoverBackgroundColor: '#fff'
       }]
@@ -390,58 +389,75 @@ function renderMarketEfficiencyChart() {
         tooltip: {
           backgroundColor: 'rgba(10, 10, 15, 0.95)',
           padding: 12,
-          titleFont: { family: 'Archivo', size: 14 },
-          bodyFont: { family: 'Inter', size: 12 },
           callbacks: {
-            label: function(context) {
-              const p = context.raw;
-              return [
-                `${p.player} (${p.season})`,
-                `Price: ₹${p.x} Cr`,
-                `Value Score: ${p.y.toFixed(0)}`,
-                `ROI Index: ${p.roi.toFixed(1)}x`
-              ];
+            label: (ctx) => {
+              const p = ctx.raw;
+              return [`${p.player} (${p.season})`, `ROI Index: ${p.roi.toFixed(1)}x`, `Price: ₹${p.x} Cr` ];
             }
           }
         }
       },
       scales: {
-        x: {
-          title: { display: true, text: 'Auction Price (Cr)', color: 'rgba(255,255,255,0.4)', font: { size: 10, family: 'Archivo' } },
-          grid: { color: 'rgba(255,255,255,0.05)' },
-          ticks: { color: 'rgba(255,255,255,0.5)' }
-        },
-        y: {
-          title: { display: true, text: 'Value Score', color: 'rgba(255,255,255,0.4)', font: { size: 10, family: 'Archivo' } },
-          grid: { color: 'rgba(255,255,255,0.05)' },
-          ticks: { color: 'rgba(255,255,255,0.5)' }
-        }
+        x: { title: { display: true, text: 'Price (Cr)', color: 'rgba(255,255,255,0.3)', font: { size: 9 } }, grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.4)' } },
+        y: { title: { display: true, text: 'Value Score', color: 'rgba(255,255,255,0.3)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.4)' } }
       }
+    }
+  });
+}
+
+/**
+ * Renders a bar chart showing average Strategy IQ (Score per Rupee) per Team
+ */
+function renderTeamIQChart() {
+  const ctx = document.getElementById('teamIQChart').getContext('2d');
+  if (!ctx) return;
+
+  // Group by team and calculate average ROI
+  const teamMap = {};
+  state.values.forEach(r => {
+    const price = num(r.price_cr);
+    if (price > 0 && r.team && r.team !== "Unknown") {
+      if (!teamMap[r.team]) teamMap[r.team] = { totalRoi: 0, count: 0 };
+      teamMap[r.team].totalRoi += num(r.value_score) / price;
+      teamMap[r.team].count++;
+    }
+  });
+
+  const sortedTeams = Object.keys(teamMap)
+    .map(name => ({
+      name,
+      avgRoi: teamMap[name].totalRoi / teamMap[name].count
+    }))
+    .sort((a, b) => b.avgRoi - a.avgRoi);
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sortedTeams.map(t => t.name),
+      datasets: [{
+        label: 'Strategy IQ',
+        data: sortedTeams.map(t => t.avgRoi),
+        backgroundColor: sortedTeams.map((t, i) => i < 3 ? 'rgba(167, 139, 250, 0.8)' : 'rgba(167, 139, 250, 0.3)'),
+        borderRadius: 4,
+        borderWidth: 0
+      }]
     },
-    plugins: [{
-      id: 'quadrantLabels',
-      beforeDraw: (chart) => {
-        const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
-        ctx.save();
-        ctx.font = 'bold 10px Archivo';
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-        ctx.textAlign = 'center';
-        
-        // Quad 1: Top Left (Value Steals)
-        ctx.fillText('VALUE STEALS', left + width * 0.15, top + 20);
-        
-        // Quad 2: Top Right (Elite Impact)
-        ctx.fillText('ELITE IMPACT', right - width * 0.15, top + 20);
-        
-        // Quad 3: Bottom Left (Budget Roles)
-        ctx.fillText('BUDGET ROLES', left + width * 0.15, bottom - 20);
-        
-        // Quad 4: Bottom Right (Underperforming)
-        ctx.fillText('ROI DEFICIT', right - width * 0.15, bottom - 20);
-        
-        ctx.restore();
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(10, 10, 15, 0.95)',
+          callbacks: { label: (ctx) => `Efficiency Index: ${ctx.raw.toFixed(1)}x` }
+        }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.4)' } },
+        y: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.6)', font: { family: 'Archivo', size: 10 } } }
       }
-    }]
+    }
   });
 }
 
@@ -1359,8 +1375,9 @@ function renderTopNumbers() {
     statPlayers.textContent = `${players.length}`;
     statHitRate.textContent = `${hitRate.toFixed(1)}`;
 
-    // Render the summary chart
+    // Render the analytics dashboard
     renderMarketEfficiencyChart();
+    renderTeamIQChart();
   } catch (err) {
     console.error("Error rendering statistics:", err);
   }

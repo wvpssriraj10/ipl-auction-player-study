@@ -856,20 +856,61 @@ input.player-search-input {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted);
-  margin-bottom: 20px;
+/* Stats & Charts Dashboard */
+.charts-dashboard-grid {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .charts-dashboard-grid {
+    flex-direction: row;
+  }
+  .chart-wrapper {
+    flex: 1;
+    min-width: 0; /* Prevents chart from overflowing flex container */
+  }
+}
+
+.chart-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.chart-wrapper:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(139, 92, 246, 0.2);
 }
 
 .market-chart-container {
-  height: 380px;
+  height: 340px;
   width: 100%;
-  margin-bottom: 30px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
+  position: relative;
 }
 
+.chart-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.8;
+}
+
+.label-icon {
+  font-size: 16px;
+}
+
+/* Glassmorphism Results Box */
 .price-tag {
   font-family: 'Archivo', sans-serif;
   color: #facc15;
