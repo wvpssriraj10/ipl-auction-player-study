@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
+    /* Force instant visibility */
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      filter: none !important;
+    }
     .standings-container {
       margin-top: 100px;
       padding-bottom: 80px;
@@ -114,7 +120,7 @@
 
   <header class="top-nav">
     <div class="brand">
-        <img src="/favicon.svg" alt="" style="width: 32px; height: 32px; border-radius: 50%;"> 
+        <img src="./favicon.svg" alt="" style="width: 32px; height: 32px; border-radius: 50%;"> 
         IPL AUCTION INTELLIGENCE
     </div>
     <nav>
@@ -189,68 +195,54 @@
   </footer>
 
   <script>
-    function handleReveal() {
-        document.querySelectorAll('.reveal').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 1.5) { 
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }
-        });
-    }
-
     async function loadStandings() {
+      const tbody = document.getElementById('standingsBody');
+      const seasonFilter = document.getElementById('seasonFilter');
+
       try {
         const resp = await fetch('./public/data/ipl-points-table.json');
         if (!resp.ok) throw new Error("Data not found");
-        const allData = await resp.json();
-        
-        const seasonFilter = document.getElementById('seasonFilter');
-        const tbody = document.getElementById('standingsBody');
+        const data = await resp.json();
+        const seasons = data.seasons;
 
         function render(year) {
             tbody.innerHTML = '';
-            const seasonData = allData.find(s => s.season == year);
-            if (!seasonData || !seasonData.table) {
+            const seasonRows = seasons[year];
+            
+            if (!seasonRows) {
                 tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
                 return;
             }
 
-            seasonData.table.forEach((row, idx) => {
+            seasonRows.forEach((row, idx) => {
                 const tr = document.createElement('tr');
                 const isTop4 = idx < 4;
                 tr.innerHTML = `
-                <td class="rank-cell">${idx + 1}</td>
+                <td class="rank-cell">${row.rank}</td>
                 <td>
                     <div class="team-cell">
                     ${row.team}
                     ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
                     </div>
                 </td>
-                <td>${row.played}</td>
-                <td>${row.won}</td>
-                <td>${row.lost}</td>
+                <td>${row.m}</td>
+                <td>${row.w}</td>
+                <td>${row.l}</td>
                 <td class="nrr-cell">${row.nrr}</td>
-                <td class="pts-cell">${row.points}</td>
+                <td class="pts-cell">${row.pts}</td>
                 `;
                 tbody.appendChild(tr);
             });
-            handleReveal();
         }
 
         seasonFilter.addEventListener('change', (e) => render(e.target.value));
         render(seasonFilter.value);
       } catch (err) {
-        console.error(err);
+        console.error("Standings Error:", err);
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        loadStandings();
-        handleReveal();
-    });
-
-    window.addEventListener('scroll', handleReveal);
+    document.addEventListener('DOMContentLoaded', loadStandings);
   </script>
 </body>
 </html>
