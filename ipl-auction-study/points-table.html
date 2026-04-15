@@ -232,11 +232,11 @@
   </header>
 
   <div class="container standings-container">
-    <div class="standings-header reveal">
+    <div class="standings-header" style="z-index: 99999;"> <!-- Removed reveal class to fix clipping -->
       <div>
         <h1 class="section-title" style="margin-bottom: 0; font-size: 1.8rem;">IPL STANDINGS</h1>
       </div>
-      <div class="custom-dropdown" id="seasonDropdown">
+      <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
         <div class="dropdown-btn" id="dropdownBtn">
           <span id="selectedLabel"><i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> 2025 Season</span>
           <i class="fa-solid fa-chevron-down"></i>
