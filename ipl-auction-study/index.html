@@ -18,6 +18,7 @@
   
   <!-- External Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles.css" />
@@ -146,6 +147,9 @@
       <!-- Result Display -->
       <section class="results-container" aria-labelledby="result-heading" aria-live="polite" aria-atomic="true">
         <h3 id="result-heading" class="visually-hidden">Query Results</h3>
+        <div id="analyticsSlot" class="analytics-slot hidden">
+           <canvas id="pulseChart"></canvas>
+        </div>
         <div id="resultBox" class="result-box" role="status" aria-label="Query Result Output">
           <div class="empty-state-start">
             <span class="empty-icon">✨</span>
@@ -160,6 +164,10 @@
   <section id="numbers" class="container section numbers reveal" aria-labelledby="stats-heading">
     <h2 id="stats-heading" class="section-title">BY THE NUMBERS</h2>
     <div class="card reveal-fast">
+      <h3 class="chart-title"><span class="label-icon">📊</span> Market Efficiency Pulse</h3>
+      <div class="market-chart-container">
+         <canvas id="marketChart"></canvas>
+      </div>
       <div class="numbers-grid" role="region" aria-label="Key Statistics">
         <div class="number-box">
           <span id="statSeasons" aria-label="Total Seasons">--</span>

@@ -42,6 +42,8 @@ const state = {
 let playerNamesList = [];
 let playerSuggestActiveIndex = -1;
 const MAX_PLAYER_SUGGESTIONS = 12;
+let pulseChartInstance = null;
+const analyticsSlot = document.getElementById("analyticsSlot");
 
 // ============================================
 // QUERY CONFIGURATION
@@ -248,6 +250,159 @@ function getMedalEmoji(rank) {
   if (rank === 2) return '🥈';
   if (rank === 3) return '🥉';
   return `${rank}`;
+}
+
+/**
+ * Destroys existing chart instance
+ */
+function destroyPulseChart() {
+  if (pulseChartInstance) {
+    pulseChartInstance.destroy();
+    pulseChartInstance = null;
+  }
+}
+
+/**
+ * Renders a "Performance Pulse" chart for a player across all seasons.
+ */
+function renderPlayerPulseChart(playerName, dataType = 'runs') {
+  destroyPulseChart();
+  analyticsSlot.classList.remove("hidden");
+  
+  const label = dataType === 'runs' ? 'Runs Scored' : 'Wickets Taken';
+  const dataSrc = dataType === 'runs' ? state.batting : state.bowling;
+  const dataKey = dataType === 'runs' ? 'total_runs' : 'wickets';
+  const color = dataType === 'runs' ? '#a78bfa' : '#60a5fa';
+
+  // Extract season data for the player
+  const history = dataSrc
+    .filter(r => String(r.player) === playerName)
+    .sort((a,b) => Number(a.season) - Number(b.season));
+
+  if (history.length < 2) {
+    // Only one season or no data, hide chart area
+    analyticsSlot.classList.add("hidden");
+    return;
+  }
+
+  const labels = history.map(h => h.season);
+  const values = history.map(h => num(h[dataKey]));
+
+  const ctx = document.getElementById('pulseChart').getContext('2d');
+  
+  pulseChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: label,
+        data: values,
+        borderColor: color,
+        backgroundColor: 'transparent',
+        borderWidth: 3,
+        pointBackgroundColor: color,
+        pointBorderColor: '#000',
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        tension: 0.35,
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(10, 10, 15, 0.9)',
+          titleFont: { family: 'Archivo', size: 14 },
+          bodyFont: { family: 'Inter', size: 13 },
+          padding: 12,
+          borderColor: 'rgba(139, 92, 246, 0.3)',
+          borderWidth: 1
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: { color: 'rgba(255, 255, 255, 0.05)' },
+          ticks: { color: 'rgba(255, 255, 255, 0.5)', font: { size: 11 } }
+        },
+        x: {
+          grid: { color: 'rgba(255, 255, 255, 0.05)' },
+          ticks: { color: 'rgba(255, 255, 255, 0.5)', font: { size: 11 } }
+        }
+      }
+    }
+  });
+}
+
+/**
+ * Renders a scatter plot showing Price vs Value Score for all entries in state.awards
+ */
+function renderMarketEfficiencyChart() {
+  const ctx = document.getElementById('marketChart').getContext('2d');
+  
+  // Filter for valid price/value entries
+  const validData = state.awards
+    .filter(r => num(r.price_cr) > 0 && num(r.value_score) > 0)
+    .map(r => ({
+      x: num(r.price_cr),
+      y: num(r.value_score),
+      player: r.highest_buy_player,
+      season: r.season
+    }));
+
+  new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        label: 'Players',
+        data: validData,
+        backgroundColor: 'rgba(139, 92, 246, 0.6)',
+        borderColor: '#a78bfa',
+        borderWidth: 1,
+        pointRadius: 6,
+        pointHoverRadius: 9,
+        pointHoverBackgroundColor: '#fff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(10, 10, 15, 0.95)',
+          padding: 12,
+          titleFont: { family: 'Archivo', size: 14 },
+          bodyFont: { family: 'Inter', size: 12 },
+          callbacks: {
+            label: function(context) {
+              const p = context.raw;
+              return [
+                `${p.player} (${p.season})`,
+                `Price: ₹${p.x} Cr`,
+                `Efficiency Score: ${p.y}`
+              ];
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'Auction Price (Cr)', color: 'rgba(255,255,255,0.4)', font: { size: 10, family: 'Archivo' } },
+          grid: { color: 'rgba(255,255,255,0.05)' },
+          ticks: { color: 'rgba(255,255,255,0.5)' }
+        },
+        y: {
+          title: { display: true, text: 'Value Score', color: 'rgba(255,255,255,0.4)', font: { size: 10, family: 'Archivo' } },
+          grid: { color: 'rgba(255,255,255,0.05)' },
+          ticks: { color: 'rgba(255,255,255,0.5)' }
+        }
+      }
+    }
+  });
 }
 
 /**
@@ -764,6 +919,7 @@ function handleBattingQuery() {
       { label: "SR", key: "strike_rate", formatter: (v) => formatStats(v, 1) },
       { label: "Balls", key: "balls_faced" },
     ]);
+    renderPlayerPulseChart(player, 'runs');
     displayHtmlResult(
       `<h4>🏏 Batting — ${selectedSeason}</h4><p style="opacity:0.85;font-size:14px;margin:0 0 12px;">Runs by selected player</p>${table}`
     );
@@ -858,6 +1014,7 @@ function handleBowlingQuery() {
       displayResult(`No bowling record found for ${player} in ${selectedSeason}.`);
       return;
     }
+    renderPlayerPulseChart(player, 'wickets');
     displayHtmlResult(
       renderPlayerCard(r, displayTeamName(r.team, r.season))
     );
@@ -1078,6 +1235,8 @@ function handleTeamQuery() {
 function runQuery() {
   try {
     const category = categorySelect.value;
+    destroyPulseChart();
+    analyticsSlot.classList.add("hidden");
 
     if (category === "Other") {
       displayResult("Other is reserved for future expansion.");
@@ -1159,6 +1318,9 @@ function renderTopNumbers() {
     statSeasons.textContent = `${seasons.length}`;
     statPlayers.textContent = `${players.length}`;
     statHitRate.textContent = `${hitRate.toFixed(1)}`;
+
+    // Render the summary chart
+    renderMarketEfficiencyChart();
   } catch (err) {
     console.error("Error rendering statistics:", err);
   }

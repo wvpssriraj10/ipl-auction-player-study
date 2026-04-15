@@ -818,6 +818,58 @@ input.player-search-input {
 .verdict-badge.average { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
 .verdict-badge.overpriced { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
 
+.analytics-slot {
+  margin-bottom: 24px;
+  background: rgba(14, 14, 20, 0.45);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  backdrop-filter: blur(12px);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.analytics-slot::after {
+  content: 'LIVE DATA PULSE';
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--purple-light);
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+}
+
+#pulseChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.market-chart-container {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
 .price-tag {
   font-family: 'Archivo', sans-serif;
   color: #facc15;
