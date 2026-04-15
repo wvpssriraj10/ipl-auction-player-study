@@ -363,9 +363,9 @@
                 <td>
                     <div class="team-cell">
                     ${logo ? `<img src="${logo}" class="team-logo" alt="" onerror="this.style.display='none'">` : ''}
-                    <span class="team-name">${row.team}</span>
-                    ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
-                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion" style="margin-left: 12px; margin-right: 0;"></i>' : ''}
+                    <span class="team-name" style="margin-right: 10px; font-weight: 700;">${row.team}</span>
+                    ${isTop4 ? '<span class="status-qualify" style="margin-right: 10px;">Q</span>' : ''}
+                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion" style="margin-left: 5px;"></i>' : ''}
                     </div>
                 </td>
                 <td>${row.m}</td>
