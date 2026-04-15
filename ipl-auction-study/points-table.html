@@ -60,20 +60,21 @@
       top: 50px;
       left: 0;
       width: 100%;
-      background: rgba(15, 15, 25, 0.95);
-      backdrop-filter: blur(25px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0f0f19; /* Solid for visibility */
+      border: 1px solid rgba(139, 92, 246, 0.3);
       border-radius: 12px;
-      overflow: hidden;
+      overflow-y: auto;
+      max-height: 400px;
       opacity: 0;
-      transform: translateY(-10px) scale(0.95);
+      transform: translateY(-10px);
       pointer-events: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: all 0.25s ease;
+      z-index: 9999; /* Max priority */
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
     }
     .custom-dropdown.open .dropdown-menu {
       opacity: 1;
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
       pointer-events: all;
     }
     .dropdown-item {
@@ -95,11 +96,24 @@
       color: #fff;
     }
     /* Staggered entry */
-    .dropdown-item:nth-child(1) { transition-delay: 0.05s; }
-    .dropdown-item:nth-child(2) { transition-delay: 0.1s; }
-    .dropdown-item:nth-child(3) { transition-delay: 0.15s; }
-    .dropdown-item:nth-child(4) { transition-delay: 0.2s; }
-    .dropdown-item:nth-child(5) { transition-delay: 0.25s; }
+    .dropdown-item:nth-child(1) { transition-delay: 0.03s; }
+    .dropdown-item:nth-child(2) { transition-delay: 0.06s; }
+    .dropdown-item:nth-child(3) { transition-delay: 0.09s; }
+    .dropdown-item:nth-child(4) { transition-delay: 0.12s; }
+    .dropdown-item:nth-child(5) { transition-delay: 0.15s; }
+    .dropdown-item:nth-child(6) { transition-delay: 0.18s; }
+    .dropdown-item:nth-child(7) { transition-delay: 0.21s; }
+    .dropdown-item:nth-child(8) { transition-delay: 0.24s; }
+    .dropdown-item:nth-child(9) { transition-delay: 0.27s; }
+    .dropdown-item:nth-child(10) { transition-delay: 0.30s; }
+    .dropdown-item:nth-child(11) { transition-delay: 0.33s; }
+    .dropdown-item:nth-child(12) { transition-delay: 0.36s; }
+    .dropdown-item:nth-child(13) { transition-delay: 0.39s; }
+    .dropdown-item:nth-child(14) { transition-delay: 0.42s; }
+    .dropdown-item:nth-child(15) { transition-delay: 0.45s; }
+    .dropdown-item:nth-child(16) { transition-delay: 0.48s; }
+    .dropdown-item:nth-child(17) { transition-delay: 0.51s; }
+    .dropdown-item:nth-child(18) { transition-delay: 0.54s; }
     
     .standings-container {
       margin-top: 85px; 
@@ -307,9 +321,21 @@
         
         const seasons = data.seasons;
         const logoMap = {};
+        const teamAlias = {
+          'DEC': 'dcg', 'DD': 'dc', 'PK': 'pbks', 'KXIP': 'pbks', 
+          'GL': 'gl', 'RPS': 'rps', 'KTK': 'ktk', 'PWI': 'pwi'
+        };
+
         teamsData.teams.forEach(t => {
-            logoMap[t.short_name] = t.logoUrl;
+            const short = t.short_name.toUpperCase();
+            logoMap[short] = t.logoUrl;
+            logoMap[t.id.toUpperCase()] = t.logoUrl;
         });
+
+        function getLogo(team) {
+            const upper = team.toUpperCase();
+            return logoMap[upper] || logoMap[teamAlias[upper]] || '';
+        }
 
         function render(year) {
             tbody.innerHTML = '';
@@ -324,16 +350,16 @@
             seasonRows.forEach((row, idx) => {
                 const tr = document.createElement('tr');
                 const isTop4 = idx < 4;
-                const isWinner = row.team === champion; 
+                const isWinner = row.team.toUpperCase() === (champion || '').toUpperCase(); 
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
-                const logo = logoMap[row.team] || '';
+                const logo = getLogo(row.team);
                 
                 tr.innerHTML = `
                 <td class="rank-cell">${row.rank}</td>
                 <td>
                     <div class="team-cell">
-                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner"></i>' : ''}
+                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion"></i>' : ''}
                     ${logo ? `<img src="${logo}" class="team-logo" alt="" onerror="this.style.display='none'">` : ''}
                     <span class="team-name">${row.team}</span>
                     ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
