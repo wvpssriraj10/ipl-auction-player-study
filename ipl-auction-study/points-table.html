@@ -60,17 +60,16 @@
       top: 50px;
       left: 0;
       width: 100%;
-      background: #0f0f19; /* Solid for visibility */
+      background: #0f0f19;
       border: 1px solid rgba(139, 92, 246, 0.3);
       border-radius: 12px;
-      overflow-y: auto;
-      max-height: 400px;
       opacity: 0;
       transform: translateY(-10px);
       pointer-events: none;
       transition: all 0.25s ease;
-      z-index: 9999; /* Max priority */
+      z-index: 9999;
       box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      padding: 4px 0;
     }
     .custom-dropdown.open .dropdown-menu {
       opacity: 1;
@@ -78,10 +77,10 @@
       pointer-events: all;
     }
     .dropdown-item {
-      padding: 10px 16px;
+      padding: 6px 16px; /* Reduced for compactness */
       color: rgba(255, 255, 255, 0.7);
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 0.8rem; /* Reduced font size */
       transition: all 0.2s;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       opacity: 0;
