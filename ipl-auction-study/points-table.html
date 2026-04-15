@@ -115,7 +115,7 @@
     .dropdown-item:nth-child(18) { transition-delay: 0.54s; }
     
     .standings-container {
-      margin-top: 90px;
+      margin-top: 115px; /* Boosted for absolute clearance */
       padding-bottom: 5px;
       max-width: 1400px;
     }
@@ -150,7 +150,7 @@
       font-family: 'Archivo', sans-serif;
     }
     td {
-      padding: 0.45rem 1.2rem; 
+      padding: 0.38rem 1.2rem; /* Shaved 1px more to compensate for margin */
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       font-size: 0.85rem; 
       color: var(--white);
@@ -232,9 +232,9 @@
   </header>
 
   <div class="container standings-container">
-    <div class="standings-header" style="z-index: 99999; margin-bottom: 0.8rem;"> <!-- Fixed overlap -->
+    <div class="standings-header" style="z-index: 99999; margin-bottom: 0.5rem;"> 
       <div>
-        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.5rem;">IPL STANDINGS</h1>
+        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.4rem;">IPL STANDINGS</h1>
       </div>
       <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
         <div class="dropdown-btn" id="dropdownBtn">
