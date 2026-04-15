@@ -344,20 +344,29 @@ function renderMarketEfficiencyChart() {
   const ctx = document.getElementById('marketChart').getContext('2d');
   if (!ctx) return;
 
-  // Filter state.values for players who have an auction price listed
   const validData = state.values
     .filter(r => num(r.price_cr) > 0 && num(r.value_score) > 0)
-    .map(r => ({
-      x: num(r.price_cr),
-      y: num(r.value_score),
-      player: r.player,
-      season: r.season
-    }));
+    .map(r => {
+      const price = num(r.price_cr);
+      const score = num(r.value_score);
+      const roi = score / price;
+      
+      // Dynamic coloring: Green (High ROI) -> Yellow -> Red (Low ROI)
+      let color = 'rgba(167, 139, 250, 0.7)'; // Default violet
+      if (roi > 20) color = 'rgba(34, 197, 94, 0.7)'; // High efficiency green
+      else if (roi < 5) color = 'rgba(239, 68, 68, 0.7)'; // Low efficiency red
 
-  if (validData.length === 0) {
-    console.warn("No valid ROI data found for Market Efficiency Chart.");
-    return;
-  }
+      return {
+        x: price,
+        y: score,
+        player: r.player,
+        season: r.season,
+        roi: roi,
+        backgroundColor: color
+      };
+    });
+
+  if (validData.length === 0) return;
 
   new Chart(ctx, {
     type: 'scatter',
@@ -365,11 +374,11 @@ function renderMarketEfficiencyChart() {
       datasets: [{
         label: 'Players',
         data: validData,
-        backgroundColor: 'rgba(139, 92, 246, 0.6)',
-        borderColor: '#a78bfa',
+        backgroundColor: validData.map(d => d.backgroundColor),
+        borderColor: 'rgba(255,255,255,0.1)',
         borderWidth: 1,
-        pointRadius: 6,
-        pointHoverRadius: 9,
+        pointRadius: 7,
+        pointHoverRadius: 10,
         pointHoverBackgroundColor: '#fff'
       }]
     },
@@ -389,7 +398,8 @@ function renderMarketEfficiencyChart() {
               return [
                 `${p.player} (${p.season})`,
                 `Price: ₹${p.x} Cr`,
-                `Efficiency Score: ${p.y}`
+                `Value Score: ${p.y.toFixed(0)}`,
+                `ROI Index: ${p.roi.toFixed(1)}x`
               ];
             }
           }
@@ -407,7 +417,31 @@ function renderMarketEfficiencyChart() {
           ticks: { color: 'rgba(255,255,255,0.5)' }
         }
       }
-    }
+    },
+    plugins: [{
+      id: 'quadrantLabels',
+      beforeDraw: (chart) => {
+        const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+        ctx.save();
+        ctx.font = 'bold 10px Archivo';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+        ctx.textAlign = 'center';
+        
+        // Quad 1: Top Left (Value Steals)
+        ctx.fillText('VALUE STEALS', left + width * 0.15, top + 20);
+        
+        // Quad 2: Top Right (Elite Impact)
+        ctx.fillText('ELITE IMPACT', right - width * 0.15, top + 20);
+        
+        // Quad 3: Bottom Left (Budget Roles)
+        ctx.fillText('BUDGET ROLES', left + width * 0.15, bottom - 20);
+        
+        // Quad 4: Bottom Right (Underperforming)
+        ctx.fillText('ROI DEFICIT', right - width * 0.15, bottom - 20);
+        
+        ctx.restore();
+      }
+    }]
   });
 }
 
