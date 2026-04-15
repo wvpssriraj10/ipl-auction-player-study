@@ -412,14 +412,33 @@ function renderTeamIQChart() {
   const ctx = document.getElementById('teamIQChart').getContext('2d');
   if (!ctx) return;
 
-  // Group by team and calculate average ROI
+  // 1. Build a lookup map of Player+Season -> Team from batting stats
+  const teamLookup = {};
+  state.batting.forEach(r => {
+    if (r.player && r.season && r.team && r.team !== 'Unknown') {
+      teamLookup[`${r.player}|${r.season}`] = r.team;
+    }
+  });
+  // Complement with bowling stats for bowling-only specialists
+  state.bowling.forEach(r => {
+    const key = `${r.player}|${r.season}`;
+    if (!teamLookup[key] && r.team && r.team !== 'Unknown') {
+      teamLookup[key] = r.team;
+    }
+  });
+
+  // 2. Group by team and calculate average ROI
   const teamMap = {};
   state.values.forEach(r => {
     const price = num(r.price_cr);
-    if (price > 0 && r.team && r.team !== "Unknown") {
-      if (!teamMap[r.team]) teamMap[r.team] = { totalRoi: 0, count: 0 };
-      teamMap[r.team].totalRoi += num(r.value_score) / price;
-      teamMap[r.team].count++;
+    const score = num(r.value_score);
+    if (price > 0 && score > 0) {
+      const team = teamLookup[`${r.player}|${r.season}`];
+      if (team) {
+        if (!teamMap[team]) teamMap[team] = { totalRoi: 0, count: 0 };
+        teamMap[team].totalRoi += (score / price);
+        teamMap[team].count++;
+      }
     }
   });
 
@@ -430,6 +449,11 @@ function renderTeamIQChart() {
     }))
     .sort((a, b) => b.avgRoi - a.avgRoi);
 
+  if (sortedTeams.length === 0) {
+    console.warn("No team ROI data found.");
+    return;
+  }
+
   new Chart(ctx, {
     type: 'bar',
     data: {
@@ -437,9 +461,10 @@ function renderTeamIQChart() {
       datasets: [{
         label: 'Strategy IQ',
         data: sortedTeams.map(t => t.avgRoi),
-        backgroundColor: sortedTeams.map((t, i) => i < 3 ? 'rgba(167, 139, 250, 0.8)' : 'rgba(167, 139, 250, 0.3)'),
-        borderRadius: 4,
-        borderWidth: 0
+        backgroundColor: sortedTeams.map((t, i) => i < 3 ? 'rgba(34, 197, 94, 0.7)' : 'rgba(167, 139, 250, 0.4)'),
+        borderRadius: { topLeft: 0, topRight: 10, bottomLeft: 0, bottomRight: 10 },
+        borderWidth: 0,
+        barPercentage: 0.7
       }]
     },
     options: {
@@ -450,12 +475,23 @@ function renderTeamIQChart() {
         legend: { display: false },
         tooltip: {
           backgroundColor: 'rgba(10, 10, 15, 0.95)',
-          callbacks: { label: (ctx) => `Efficiency Index: ${ctx.raw.toFixed(1)}x` }
+          padding: 10,
+          callbacks: { 
+            title: (items) => items[0].label,
+            label: (ctx) => `Efficiency Index: ${ctx.raw.toFixed(1)}x` 
+          }
         }
       },
       scales: {
-        x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.4)' } },
-        y: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.6)', font: { family: 'Archivo', size: 10 } } }
+        x: { 
+          title: { display: true, text: 'Value per Cr spent', color: 'rgba(255,255,255,0.2)', font: { size: 9 } },
+          grid: { color: 'rgba(255,255,255,0.05)' }, 
+          ticks: { color: 'rgba(255,255,255,0.4)' } 
+        },
+        y: { 
+          grid: { display: false }, 
+          ticks: { color: 'rgba(255,255,255,0.7)', font: { family: 'Archivo', size: 10, weight: 'bold' } } 
+        }
       }
     }
   });
