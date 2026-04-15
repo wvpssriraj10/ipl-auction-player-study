@@ -817,7 +817,6 @@ input.player-search-input {
 }
 
 /* Verdict Badges for Auction results */
-.verdict-badge {
 .badge-row {
   display: flex;
   gap: 8px;
