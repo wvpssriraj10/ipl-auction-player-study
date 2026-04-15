@@ -8,47 +8,51 @@ INPUT_DIR = "data/processed"
 OUTPUT_DIR = "public/data/xai"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+# THRESHOLDS
+MIN_MATCHES_PLAYER = 5
+MIN_SEASONS_TEAM = 1
+
 # --- REUSABLE CORE UTILITIES ---
 
-def generate_reason(metric_name, value, league_avg):
-    if league_avg == 0: return f"{metric_name} is being evaluated"
-    diff = ((value - league_avg) / league_avg) * 100
-    if diff > 10:
-        return f"{metric_name} is {abs(diff):.1f}% above league average"
-    elif diff < -10:
-        return f"{metric_name} is {abs(diff):.1f}% below league average"
+def get_confidence(diff, sample_size=10, threshold=5):
+    """
+    Computes confidence based on delta from average + sample size.
+    Degrades confidence if sample size is below threshold.
+    """
+    abs_diff = abs(diff)
+    if abs_diff >= 20: 
+        level = "High"
+    elif abs_diff >= 10:
+        level = "Medium"
     else:
-        return f"{metric_name} is close to league average"
-
-def get_confidence(diff):
-    if abs(diff) > 20:
-        return "High"
-    elif abs(diff) > 10:
-        return "Medium"
-    else:
-        return "Low"
-
-def get_multi_signal_reason(signals):
-    """Combines multiple metric signals into a readable string."""
-    parts = []
-    for metric, val, avg in signals:
-        diff = ((val - avg) / avg) * 100 if avg != 0 else 0
-        if abs(diff) > 10:
-            direction = "lower" if diff < 0 else "higher"
-            parts.append(f"{metric} is {abs(diff):.1f}% {direction}")
+        level = "Low"
     
-    if not parts: return "Performance follows league standard trends"
-    return " and ".join(parts[:2])
+    # Sample Size Degradation
+    if sample_size < threshold:
+        if level == "High": level = "Medium"
+        elif level == "Medium": level = "Low"
+    
+    return level
+
+def create_tagged_insight(label, metric_name, value, league_avg, sample_size, threshold):
+    """Reusable helper to wrap any metric comparison into a tagged insight object."""
+    diff = ((value - league_avg) / league_avg) * 100 if league_avg != 0 else 0
+    
+    direction = "higher" if diff > 0 else "lower"
+    reason = f"{metric_name} is {abs(diff):.1f}% {direction} than league average"
+    
+    return {
+        "label": label,
+        "reason": reason,
+        "confidence": get_confidence(diff, sample_size, threshold)
+    }
 
 # --- FEATURE 1: TEAM EXPLAINABILITY ---
 
 def compute_team_xai(batting, bowling):
-    print("Computing Team XAI...")
-    # Benchmarks
+    print("Computing Team Reliability Layers...")
     l_econ = bowling['economy'].mean()
-    l_wkts = bowling['wickets'].sum() / len(bowling['team'].unique())
     l_sr = batting['strike_rate'].mean()
-    l_runs = batting['total_runs'].sum() / len(batting['team'].unique())
 
     team_xai = {}
     teams = batting['team'].unique()
@@ -56,28 +60,20 @@ def compute_team_xai(batting, bowling):
     for team in teams:
         t_bat = batting[batting['team'] == team]
         t_bowl = bowling[bowling['team'] == team]
-        
         t_econ = t_bowl['economy'].mean()
-        t_wkts = t_bowl['wickets'].sum()
         t_sr = t_bat['strike_rate'].mean()
         
-        # Archetype Logic
-        if t_econ < l_econ * 0.95: 
-            label = "Bowling Dominant"
-            signals = [("Economy rate", t_econ, l_econ), ("Wicket taking", t_wkts, l_wkts)]
-        elif t_sr > l_sr * 1.05:
-            label = "Batting Aggressive"
-            signals = [("Strike rate", t_sr, l_sr), ("Run production", t_bat['total_runs'].sum(), l_runs)]
-        else:
-            label = "Balanced Tactical"
-            signals = [("Economy rate", t_econ, l_econ), ("Strike rate", t_sr, l_sr)]
+        # Team sample size = seasons active
+        seasons = len(t_bat['season'].unique())
 
-        diff_primary = ((signals[0][1] - signals[0][2]) / signals[0][2]) * 100
-        team_xai[team] = {
-            "label": label,
-            "reason": get_multi_signal_reason(signals),
-            "confidence": get_confidence(diff_primary)
-        }
+        if t_econ < l_econ * 0.98: 
+            label = "Bowling Dominant"
+            team_xai[team] = create_tagged_insight(label, "Economy rate", t_econ, l_econ, seasons, MIN_SEASONS_TEAM)
+        elif t_sr > l_sr * 1.02:
+            label = "Batting Aggressive"
+            team_xai[team] = create_tagged_insight(label, "Strike rate", t_sr, l_sr, seasons, MIN_SEASONS_TEAM)
+        else:
+            team_xai[team] = create_tagged_insight("Balanced Tactical", "Performance balance", t_sr, l_sr, seasons, MIN_SEASONS_TEAM)
     
     with open(f"{OUTPUT_DIR}/team_explainability.json", 'w') as f:
         json.dump(team_xai, f, indent=2)
@@ -85,49 +81,30 @@ def compute_team_xai(batting, bowling):
 # --- FEATURE 2: PLAYER ARCHETYPE EXPLAINABILITY ---
 
 def compute_player_xai(batting, bowling):
-    print("Computing Player XAI...")
+    print("Computing Player Reliability Layers...")
     l_sr = batting['strike_rate'].mean()
     l_avg = batting['batting_average'].mean()
     l_econ = bowling['economy'].mean()
     
     player_xai = {}
     
-    # Process Batters
     for _, p in batting.iterrows():
         name = p['player']
+        matches = p['matches']
         if p['strike_rate'] > l_sr * 1.2:
-            role = "Power Finisher"
-            metric, val, avg = "Strike rate", p['strike_rate'], l_sr
+            player_xai[name] = create_tagged_insight("Power Finisher", "Strike rate", p['strike_rate'], l_sr, matches, MIN_MATCHES_PLAYER)
         elif p['batting_average'] > l_avg * 1.2:
-            role = "Technical Anchor"
-            metric, val, avg = "Batting average", p['batting_average'], l_avg
+            player_xai[name] = create_tagged_insight("Technical Anchor", "Batting average", p['batting_average'], l_avg, matches, MIN_MATCHES_PLAYER)
         else:
-            role = "Reliable Rotator"
-            metric, val, avg = "Consistency", p['batting_average'], l_avg
-        
-        diff = ((val - avg) / avg) * 100
-        player_xai[name] = {
-            "label": role,
-            "reason": generate_reason(metric, val, avg),
-            "confidence": get_confidence(diff)
-        }
+            player_xai[name] = create_tagged_insight("Reliable Rotator", "Consistency", p['batting_average'], l_avg, matches, MIN_MATCHES_PLAYER)
 
-    # Process Bowlers (Overwriting/Updating if common)
     for _, p in bowling.iterrows():
         name = p['player']
+        matches = p['matches_bowled']
         if p['economy'] < l_econ * 0.9:
-            role = "Control Bowler"
-            metric, val, avg = "Economy rate", p['economy'], l_econ
+            player_xai[name] = create_tagged_insight("Control Bowler", "Economy rate", p['economy'], l_econ, matches, MIN_MATCHES_PLAYER)
         else:
-            role = "Wicket Hunter"
-            metric, val, avg = "Strike rate", p['bowling_strike_rate'], 20 
-
-        diff = ((val - avg) / avg) * 100 if avg != 0 else 0
-        player_xai[name] = {
-            "label": role,
-            "reason": generate_reason(metric, val, avg),
-            "confidence": get_confidence(diff)
-        }
+            player_xai[name] = create_tagged_insight("Wicket Hunter", "Economy rate", p['economy'], l_econ, matches, MIN_MATCHES_PLAYER)
 
     with open(f"{OUTPUT_DIR}/player_explainability.json", 'w') as f:
         json.dump(player_xai, f, indent=2)
@@ -135,9 +112,7 @@ def compute_player_xai(batting, bowling):
 # --- FEATURE 3: AUCTION VALUE EXPLAINABILITY ---
 
 def compute_auction_xai(values):
-    print("Computing Auction XAI...")
-    # efficiency = value_score / price
-    # Filter out 0 price to avoid inf
+    print("Computing Auction Value Reliability...")
     valid_values = values[values['price_cr'] > 0].copy()
     valid_values['efficiency'] = valid_values['value_score'] / valid_values['price_cr']
     l_eff = valid_values['efficiency'].mean()
@@ -145,26 +120,23 @@ def compute_auction_xai(values):
     auction_xai = {}
     for _, p in valid_values.iterrows():
         name = p['player']
+        # For auction value, sample size is total matches in that valuation cycle
+        # If matches are low, we don't fully trust the ROI score
+        matches = p['matches'] if 'matches' in p else 5
+        
         ratio = p['efficiency'] / l_eff
-        
-        if ratio > 1.5:
-            verdict = "High Value"
-        elif ratio < 0.7:
-            verdict = "Overpriced"
-        else:
-            verdict = "Fair Value"
-        
         diff = (ratio - 1) * 100
-        auction_xai[name] = {
-            "label": verdict,
-            "reason": f"Efficiency is {ratio:.1f}x higher than league average for similar price range",
-            "confidence": get_confidence(diff)
-        }
+        
+        if ratio > 1.5: label = "High Value"
+        elif ratio < 0.7: label = "Overpriced"
+        else: label = "Fair Value"
+        
+        auction_xai[name] = create_tagged_insight(label, "Efficiency", p['efficiency'], l_eff, matches, MIN_MATCHES_PLAYER)
+        # Update reason to mention ROI
+        auction_xai[name]['reason'] = f"ROI Efficiency is {ratio:.1f}x the league average"
     
     with open(f"{OUTPUT_DIR}/auction_explainability.json", 'w') as f:
         json.dump(auction_xai, f, indent=2)
-
-# --- RUN PIPELINE ---
 
 def main():
     batting = pd.read_csv(f"{INPUT_DIR}/batting_agg.csv")
@@ -174,7 +146,7 @@ def main():
     compute_team_xai(batting, bowling)
     compute_player_xai(batting, bowling)
     compute_auction_xai(values)
-    print("All XAI Layers Generated Successfully.")
+    print("Reliability Tags and XAI Layers Generated.")
 
 if __name__ == "__main__":
     main()

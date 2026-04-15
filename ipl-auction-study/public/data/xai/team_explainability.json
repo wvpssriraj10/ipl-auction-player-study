@@ -1,72 +1,72 @@
 {
   "Kolkata Knight Riders": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 1.0% higher than league average",
     "confidence": "Low"
   },
   "Royal Challengers Bengaluru": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 0.6% higher than league average",
     "confidence": "Low"
   },
   "Delhi Capitals": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 3.4% lower than league average",
     "confidence": "Low"
   },
   "Chennai Super Kings": {
     "label": "Batting Aggressive",
-    "reason": "Run production is 53.9% higher",
+    "reason": "Strike rate is 5.5% higher than league average",
     "confidence": "Low"
   },
   "Mumbai Indians": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 0.9% higher than league average",
     "confidence": "Low"
   },
   "Sunrisers Hyderabad": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 0.7% higher than league average",
     "confidence": "Low"
   },
   "Rajasthan Royals": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 3.3% lower than league average",
     "confidence": "Low"
   },
   "Punjab Kings": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 0.0% higher than league average",
     "confidence": "Low"
   },
   "Pune Warriors": {
     "label": "Bowling Dominant",
-    "reason": "Economy rate is 11.0% lower and Wicket taking is 75.7% lower",
+    "reason": "Economy rate is 11.0% lower than league average",
     "confidence": "Medium"
   },
   "Kochi Tuskers Kerala": {
-    "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "label": "Bowling Dominant",
+    "reason": "Economy rate is 3.7% lower than league average",
     "confidence": "Low"
   },
   "Rising Pune Supergiant": {
-    "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "label": "Bowling Dominant",
+    "reason": "Economy rate is 4.3% lower than league average",
     "confidence": "Low"
   },
   "Gujarat Lions": {
     "label": "Balanced Tactical",
-    "reason": "Performance follows league standard trends",
+    "reason": "Performance balance is 5.7% lower than league average",
     "confidence": "Low"
   },
   "Lucknow Super Giants": {
     "label": "Batting Aggressive",
-    "reason": "Run production is 61.9% lower",
+    "reason": "Strike rate is 8.6% higher than league average",
     "confidence": "Low"
   },
   "Gujarat Titans": {
     "label": "Batting Aggressive",
-    "reason": "Run production is 60.1% lower",
+    "reason": "Strike rate is 6.4% higher than league average",
     "confidence": "Low"
   }
 }

@@ -1,82 +1,82 @@
 {
   "KA Pollard": {
     "label": "High Value",
-    "reason": "Efficiency is 8.4x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 8.4x the league average",
     "confidence": "High"
   },
   "MS Dhoni": {
     "label": "High Value",
-    "reason": "Efficiency is 2.3x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 2.3x the league average",
     "confidence": "High"
   },
   "Yuvraj Singh": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.4x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.4x the league average",
     "confidence": "High"
   },
   "Ishan Kishan": {
     "label": "Fair Value",
-    "reason": "Efficiency is 0.8x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.8x the league average",
     "confidence": "High"
   },
   "BA Stokes": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.6x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.6x the league average",
     "confidence": "High"
   },
   "G Gambhir": {
     "label": "Fair Value",
-    "reason": "Efficiency is 0.8x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.8x the league average",
     "confidence": "High"
   },
   "SR Watson": {
     "label": "Fair Value",
-    "reason": "Efficiency is 1.1x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 1.1x the league average",
     "confidence": "Low"
   },
   "SM Curran": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.4x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.4x the league average",
     "confidence": "High"
   },
   "RA Jadeja": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.6x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.6x the league average",
     "confidence": "High"
   },
   "RR Pant": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.2x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.2x the league average",
     "confidence": "High"
   },
   "PJ Cummins": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.3x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.3x the league average",
     "confidence": "High"
   },
   "KP Pietersen": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.4x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.4x the league average",
     "confidence": "High"
   },
   "JD Unadkat": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.0x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.0x the league average",
     "confidence": "High"
   },
   "CH Morris": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.0x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.0x the league average",
     "confidence": "High"
   },
   "MA Starc": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.0x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.0x the league average",
     "confidence": "High"
   },
   "GJ Maxwell": {
     "label": "Overpriced",
-    "reason": "Efficiency is 0.0x higher than league average for similar price range",
+    "reason": "ROI Efficiency is 0.0x the league average",
     "confidence": "High"
   }
 }

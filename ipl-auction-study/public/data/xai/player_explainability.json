@@ -1,3837 +1,3837 @@
 {
   "A Chopra": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 40.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 40.3% lower than league average",
+    "confidence": "Medium"
   },
   "A Kumble": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 28.6% below league average",
+    "reason": "Economy rate is 28.6% lower than league average",
     "confidence": "High"
   },
   "A Mishra": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "A Mukund": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 3.2% higher than league average",
     "confidence": "Low"
   },
   "A Nehra": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.3% higher than league average",
+    "confidence": "Low"
   },
   "A Symonds": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 13.8% higher than league average",
+    "confidence": "Low"
   },
   "AA Noffke": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "AB Agarkar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 200.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.1% higher than league average",
+    "confidence": "Low"
   },
   "AB Dinda": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 200.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 32.1% higher than league average",
+    "confidence": "Medium"
   },
   "AB de Villiers": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 34.4% above league average",
+    "reason": "Strike rate is 34.4% higher than league average",
     "confidence": "High"
   },
   "AC Gilchrist": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "AD Mascarenhas": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 30.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 30.6% lower than league average",
+    "confidence": "Medium"
   },
   "AM Nayar": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 18.1% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 18.1% lower than league average",
+    "confidence": "Low"
   },
   "AM Rahane": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 44.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.5% lower than league average",
+    "confidence": "Medium"
   },
   "AS Yadav": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 46.8% below league average",
+    "reason": "Consistency is 46.8% lower than league average",
     "confidence": "High"
   },
   "Abdur Razzak": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.0% higher than league average",
+    "confidence": "Medium"
   },
   "B Akhil": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "B Chipli": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 122.0% higher than league average",
+    "confidence": "Medium"
   },
   "B Lee": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 20.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 20.4% lower than league average",
+    "confidence": "Medium"
   },
   "BB McCullum": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 30.7% above league average",
+    "reason": "Strike rate is 30.7% higher than league average",
     "confidence": "High"
   },
   "BJ Hodge": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 66.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 66.7% lower than league average",
+    "confidence": "Medium"
   },
   "CK Kapugedera": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
+    "reason": "Economy rate is 91.9% higher than league average",
     "confidence": "Medium"
   },
   "CL White": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "CRD Fernando": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 19.4% below league average",
+    "reason": "Economy rate is 19.4% lower than league average",
     "confidence": "Medium"
   },
   "D Kalyankrishna": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 20.8% higher than league average",
     "confidence": "Medium"
   },
   "D Salunkhe": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 135.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 10.6% higher than league average",
+    "confidence": "Medium"
   },
   "DB Das": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.5% below league average",
+    "reason": "Consistency is 18.5% lower than league average",
     "confidence": "Medium"
   },
   "DB Ravi Teja": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "DJ Bravo": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 35.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.3% lower than league average",
+    "confidence": "Low"
   },
   "DJ Hussey": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 57.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 48.9% higher than league average",
+    "confidence": "Medium"
   },
   "DJ Thornely": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 36.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 36.6% lower than league average",
+    "confidence": "Medium"
   },
   "DNT Zoysa": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 65.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "DP Vijaykumar": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.6% below league average",
+    "reason": "Economy rate is 12.6% lower than league average",
     "confidence": "Medium"
   },
   "DPMD Jayawardene": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 19.8% above league average",
+    "reason": "Consistency is 19.8% higher than league average",
     "confidence": "Medium"
   },
   "DR Smith": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% above league average",
+    "reason": "Economy rate is 26.3% higher than league average",
     "confidence": "High"
   },
   "DS Kulkarni": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 33.2% higher than league average",
     "confidence": "Medium"
   },
   "DS Lehmann": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 51.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 51.1% lower than league average",
+    "confidence": "Medium"
   },
   "DT Patil": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 64.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 64.7% lower than league average",
+    "confidence": "Medium"
   },
   "DW Steyn": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 250.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.6% higher than league average",
+    "confidence": "Medium"
   },
   "G Gambhir": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 7.7% lower than league average",
     "confidence": "Low"
   },
   "GC Smith": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 43.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 43.0% lower than league average",
+    "confidence": "Medium"
   },
   "GD McGrath": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 26.6% below league average",
+    "reason": "Economy rate is 26.6% lower than league average",
     "confidence": "High"
   },
   "H Das": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 89.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 89.1% lower than league average",
+    "confidence": "Medium"
   },
   "HH Gibbs": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 119.9% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 119.9% higher than league average",
+    "confidence": "Medium"
   },
   "Harbhajan Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "I Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 37.5% above league average",
+    "reason": "Economy rate is 24.1% higher than league average",
     "confidence": "High"
   },
   "IK Pathan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "Iqbal Abdulla": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "J Arunkumar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 58.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 58.4% lower than league average",
+    "confidence": "Medium"
   },
   "JA Morkel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 46.5% higher than league average",
+    "confidence": "Medium"
   },
   "JDP Oram": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 38.9% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 38.9% lower than league average",
+    "confidence": "Medium"
   },
   "JH Kallis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 65.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.2% lower than league average",
+    "confidence": "Low"
   },
   "JR Hopes": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 37.1% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "Joginder Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 25.8% higher than league average",
+    "confidence": "Medium"
   },
   "K Goel": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "KC Sangakkara": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 27.6% below league average",
+    "reason": "Consistency is 27.6% lower than league average",
     "confidence": "High"
   },
   "KD Karthik": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 70.2% above league average",
+    "reason": "Strike rate is 70.2% higher than league average",
     "confidence": "High"
   },
   "Kamran Akmal": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 48.6% above league average",
+    "reason": "Strike rate is 48.6% higher than league average",
     "confidence": "High"
   },
   "L Balaji": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.4% lower than league average",
+    "confidence": "Low"
   },
   "L Ronchi": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "LA Pomersbach": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 57.5% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 57.5% higher than league average",
+    "confidence": "Medium"
   },
   "LPC Silva": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 133.1% higher than league average",
+    "confidence": "Medium"
   },
   "LR Shukla": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 180.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.3% lower than league average",
+    "confidence": "Low"
   },
   "LRPL Taylor": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "M Kaif": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 24.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 24.0% lower than league average",
+    "confidence": "Medium"
   },
   "M Kartik": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.3% higher than league average",
+    "confidence": "Medium"
   },
   "M Muralitharan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 14.0% below league average",
+    "reason": "Economy rate is 14.0% lower than league average",
     "confidence": "Medium"
   },
   "M Ntini": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 23.3% below league average",
+    "reason": "Economy rate is 23.3% lower than league average",
     "confidence": "High"
   },
   "M Rawat": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 72.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 72.8% lower than league average",
+    "confidence": "Medium"
   },
   "MA Khote": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.2% higher than league average",
+    "confidence": "Low"
   },
   "MEK Hussey": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 4.5% higher than league average",
     "confidence": "Low"
   },
   "MF Maharoof": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.8% lower than league average",
     "confidence": "Low"
   },
   "MK Pandey": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 28.2% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 28.2% higher than league average",
+    "confidence": "Medium"
   },
   "MK Tiwary": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "ML Hayden": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 10.5% above league average",
+    "reason": "Consistency is 10.5% higher than league average",
     "confidence": "Medium"
   },
   "MM Patel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.6% lower than league average",
+    "confidence": "Low"
   },
   "MS Dhoni": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 22.4% above league average",
+    "reason": "Strike rate is 22.4% higher than league average",
     "confidence": "High"
   },
   "MS Gony": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "MV Boucher": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "Misbah-ul-Haq": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 30.8% above league average",
+    "reason": "Strike rate is 30.8% higher than league average",
     "confidence": "High"
   },
   "Mohammad Asif": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.7% higher than league average",
+    "confidence": "Low"
   },
   "Mohammad Hafeez": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 24.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 24.5% lower than league average",
+    "confidence": "Medium"
   },
   "NK Patel": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 51.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 51.1% lower than league average",
+    "confidence": "Medium"
   },
   "P Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 18.4% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.6% higher than league average",
+    "confidence": "Low"
   },
   "PA Patel": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 26.1% above league average",
+    "reason": "Strike rate is 26.1% higher than league average",
     "confidence": "High"
   },
   "PJ Sangwan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 19.9% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 19.9% lower than league average",
+    "confidence": "Low"
   },
   "PM Sarvesh Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.8% lower than league average",
+    "confidence": "Low"
   },
   "PP Chawla": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 19.3% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.1% lower than league average",
+    "confidence": "Low"
   },
   "PP Ojha": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.7% higher than league average",
+    "confidence": "Medium"
   },
   "PR Shah": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 72.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 72.8% lower than league average",
+    "confidence": "Medium"
   },
   "Pankaj Singh": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 10.1% below league average",
+    "reason": "Economy rate is 10.1% lower than league average",
     "confidence": "Medium"
   },
   "R Bhatia": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.7% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.7% lower than league average",
+    "confidence": "Low"
   },
   "R Dravid": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 59.9% above league average",
+    "reason": "Batting average is 59.9% higher than league average",
     "confidence": "High"
   },
   "R Vinay Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 42.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 88.3% higher than league average",
+    "confidence": "Medium"
   },
   "RA Jadeja": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 13.5% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 5.0% lower than league average",
+    "confidence": "Low"
   },
   "RG Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 65.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 23.7% higher than league average",
+    "confidence": "Medium"
   },
   "RP Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.7% higher than league average",
+    "confidence": "Low"
   },
   "RR Powar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 18.4% higher than league average",
     "confidence": "Low"
   },
   "RR Raje": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 105.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 17.0% higher than league average",
+    "confidence": "Low"
   },
   "RR Sarwan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 0.9% lower than league average",
     "confidence": "Low"
   },
   "RT Ponting": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 43.5% below league average",
+    "reason": "Consistency is 43.5% lower than league average",
     "confidence": "High"
   },
   "RV Uthappa": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 22.0% above league average",
+    "reason": "Strike rate is 22.0% higher than league average",
     "confidence": "High"
   },
   "S Anirudha": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 83.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 83.7% lower than league average",
+    "confidence": "Medium"
   },
   "S Badrinath": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 3.8% lower than league average",
     "confidence": "Low"
   },
   "S Chanderpaul": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 54.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 54.8% lower than league average",
+    "confidence": "Medium"
   },
   "S Dhawan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.8% higher than league average",
+    "confidence": "Low"
   },
   "S Sohal": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 35.2% above league average",
+    "reason": "Batting average is 35.2% higher than league average",
     "confidence": "High"
   },
   "S Sreesanth": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.5% below league average",
+    "reason": "Economy rate is 16.5% lower than league average",
     "confidence": "Medium"
   },
   "S Vidyut": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "SA Asnodkar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 51.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 51.1% lower than league average",
+    "confidence": "Medium"
   },
   "SB Bangar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 87.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.8% lower than league average",
+    "confidence": "Low"
   },
   "SB Joshi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 175.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.6% lower than league average",
+    "confidence": "Low"
   },
   "SB Styris": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "SC Ganguly": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.5% higher than league average",
+    "confidence": "Low"
   },
   "SD Chitnis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 11.0% higher than league average",
     "confidence": "Low"
   },
   "SE Marsh": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 23.3% above league average",
+    "reason": "Strike rate is 23.3% higher than league average",
     "confidence": "High"
   },
   "SK Raina": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "SK Trivedi": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 24.0% below league average",
+    "reason": "Economy rate is 24.0% lower than league average",
     "confidence": "High"
   },
   "SK Warne": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.8% below league average",
+    "reason": "Economy rate is 29.8% lower than league average",
     "confidence": "High"
   },
   "SM Katich": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 12.5% below league average",
+    "reason": "Consistency is 12.5% lower than league average",
     "confidence": "Medium"
   },
   "SM Pollock": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.4% below league average",
+    "reason": "Economy rate is 27.4% lower than league average",
     "confidence": "High"
   },
   "SP Fleming": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.3% above league average",
+    "reason": "Consistency is 18.3% higher than league average",
     "confidence": "Medium"
   },
   "SP Goswami": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "SR Tendulkar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 7.3% higher than league average",
+    "confidence": "Low"
   },
   "SR Watson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.5% lower than league average",
+    "confidence": "Low"
   },
   "SS Tiwary": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 212.2% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 212.2% higher than league average",
+    "confidence": "Medium"
   },
   "ST Jayasuriya": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.1% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.1% lower than league average",
+    "confidence": "Low"
   },
   "Salman Butt": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 49.7% above league average",
+    "reason": "Batting average is 49.7% higher than league average",
     "confidence": "High"
   },
   "Shahid Afridi": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.7% below league average",
+    "reason": "Economy rate is 16.7% lower than league average",
     "confidence": "Medium"
   },
   "Shoaib Akhtar": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 14.4% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 14.4% lower than league average",
+    "confidence": "Low"
   },
   "Shoaib Malik": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 27.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Medium"
   },
   "Sohail Tanvir": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 28.3% below league average",
+    "reason": "Economy rate is 28.3% lower than league average",
     "confidence": "High"
   },
   "T Kohli": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "T Taibu": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 43.9% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 43.9% lower than league average",
+    "confidence": "Medium"
   },
   "TM Dilshan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "TM Srivastava": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "U Kaul": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "Umar Gul": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 43.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.2% lower than league average",
+    "confidence": "Low"
   },
   "V Kohli": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "V Sehwag": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "VRV Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 48.0% higher than league average",
+    "confidence": "Medium"
   },
   "VS Yeligati": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 31.0% higher than league average",
+    "confidence": "Medium"
   },
   "VVS Laxman": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 20.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 20.3% lower than league average",
+    "confidence": "Medium"
   },
   "VY Mahesh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 3.6% lower than league average",
     "confidence": "Low"
   },
   "W Jaffer": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 59.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 59.3% lower than league average",
+    "confidence": "Medium"
   },
   "WA Mota": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 24.7% below league average",
+    "reason": "Economy rate is 24.7% lower than league average",
     "confidence": "High"
   },
   "WP Saha": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.0% below league average",
+    "reason": "Consistency is 18.0% lower than league average",
     "confidence": "Medium"
   },
   "WPUJC Vaas": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.8% below league average",
+    "reason": "Economy rate is 29.8% lower than league average",
     "confidence": "High"
   },
   "Y Venugopal Rao": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "YK Pathan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "YV Takawale": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 12.9% above league average",
+    "reason": "Consistency is 12.9% higher than league average",
     "confidence": "Medium"
   },
   "Younis Khan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 83.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 83.7% lower than league average",
+    "confidence": "Medium"
   },
   "Yuvraj Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.7% higher than league average",
+    "confidence": "Medium"
   },
   "Z Khan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 13.5% below league average",
+    "reason": "Economy rate is 13.5% lower than league average",
     "confidence": "Medium"
   },
   "A Flintoff": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 65.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.0% higher than league average",
+    "confidence": "Low"
   },
   "A Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.8% higher than league average",
     "confidence": "Low"
   },
   "AA Bilakhia": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 89.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 89.1% lower than league average",
+    "confidence": "Medium"
   },
   "AB McDonald": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "AD Mathews": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 24.3% higher than league average",
+    "confidence": "Medium"
   },
   "AN Ghosh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 81.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 81.0% lower than league average",
+    "confidence": "Medium"
   },
   "AS Raut": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "BAW Mendis": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.8% lower than league average",
+    "confidence": "Medium"
   },
   "C Nanda": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 21.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 21.0% lower than league average",
+    "confidence": "Medium"
   },
   "CH Gayle": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "D du Preez": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "DA Warner": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "DL Vettori": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 25.2% below league average",
+    "reason": "Economy rate is 25.2% lower than league average",
     "confidence": "High"
   },
   "FH Edwards": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 26.7% below league average",
+    "reason": "Economy rate is 26.7% lower than league average",
     "confidence": "High"
   },
   "GJ Bailey": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 14.0% above league average",
+    "reason": "Consistency is 14.0% higher than league average",
     "confidence": "Medium"
   },
   "GR Napier": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 25.1% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 25.1% lower than league average",
+    "confidence": "Medium"
   },
   "J Botha": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 10.1% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 10.1% lower than league average",
+    "confidence": "Low"
   },
   "JD Ryder": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "JP Duminy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "KP Appanna": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 3.3% lower than league average",
+    "confidence": "Low"
   },
   "KP Pietersen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.0% lower than league average",
+    "confidence": "Low"
   },
   "KV Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 35.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.3% lower than league average",
+    "confidence": "Low"
   },
   "Kamran Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 74.0% higher than league average",
+    "confidence": "Medium"
   },
   "LA Carseldine": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "M Manhas": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "M Morkel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.1% lower than league average",
     "confidence": "Low"
   },
   "M Vijay": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "MC Henriques": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 50.0% below league average",
+    "reason": "Economy rate is 50.0% lower than league average",
     "confidence": "High"
   },
   "MN van Wyk": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 202.3% above league average",
+    "reason": "Batting average is 202.3% higher than league average",
     "confidence": "High"
   },
   "Mashrafe Mortaza": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 61.0% higher than league average",
     "confidence": "Medium"
   },
   "Mohammad Ashraful": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 89.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 89.1% lower than league average",
+    "confidence": "Medium"
   },
   "NV Ojha": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "PC Valthaty": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "R Ashwin": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 32.9% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.4% higher than league average",
+    "confidence": "Low"
   },
   "R Bishnoi": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 65.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 65.6% lower than league average",
+    "confidence": "Medium"
   },
   "RE van der Merwe": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 28.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 28.4% lower than league average",
+    "confidence": "Medium"
   },
   "RJ Harris": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "RJ Quiney": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 20.1% below league average",
+    "reason": "Consistency is 20.1% lower than league average",
     "confidence": "High"
   },
   "RS Bopara": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
+    "reason": "Economy rate is 11.2% lower than league average",
     "confidence": "Medium"
   },
   "SB Jakati": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 15.4% higher than league average",
+    "confidence": "Low"
   },
   "SL Malinga": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 16.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.5% higher than league average",
+    "confidence": "Low"
   },
   "SM Harwood": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 19.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 19.0% lower than league average",
+    "confidence": "Low"
   },
   "SS Shaikh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "Shoaib Ahmed": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.8% lower than league average",
     "confidence": "Low"
   },
   "T Henderson": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 26.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.0% lower than league average",
+    "confidence": "Medium"
   },
   "T Thushara": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.6% lower than league average",
+    "confidence": "Medium"
   },
   "TL Suman": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.7% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.7% lower than league average",
+    "confidence": "Low"
   },
   "Y Nagar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "Yashpal Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 36.2% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 36.2% lower than league average",
+    "confidence": "Medium"
   },
   "A Mithun": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.7% higher than league average",
+    "confidence": "Low"
   },
   "A Uniyal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "AA Jhunjhunwala": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.7% lower than league average",
+    "confidence": "Medium"
   },
   "AB Barath": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 14.0% above league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 14.0% higher than league average",
+    "confidence": "Low"
   },
   "AC Voges": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 170.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.3% lower than league average",
+    "confidence": "Low"
   },
   "AG Paunikar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 33.5% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 33.5% lower than league average",
+    "confidence": "Medium"
   },
   "AJ Finch": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 36.0% higher than league average",
     "confidence": "Medium"
   },
   "AN Ahmed": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 260.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 18.4% higher than league average",
+    "confidence": "Low"
   },
   "AP Dole": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 34.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.0% higher than league average",
+    "confidence": "Low"
   },
   "AP Tare": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "AT Rayudu": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 26.6% above league average",
+    "reason": "Strike rate is 26.6% higher than league average",
     "confidence": "High"
   },
   "Anirudh Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 14.5% below league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 14.5% lower than league average",
+    "confidence": "Low"
   },
   "B Sumanth": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 90.1% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 90.1% higher than league average",
+    "confidence": "Medium"
   },
   "Bipul Sharma": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.3% below league average",
+    "reason": "Economy rate is 12.3% lower than league average",
     "confidence": "Medium"
   },
   "C Madan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.5% below league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 18.5% lower than league average",
+    "confidence": "Low"
   },
   "CA Pujara": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 35.8% above league average",
+    "reason": "Batting average is 35.8% higher than league average",
     "confidence": "High"
   },
   "CK Langeveldt": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 15.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 15.2% lower than league average",
+    "confidence": "Low"
   },
   "DE Bollinger": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.2% lower than league average",
+    "confidence": "Low"
   },
   "DP Nannes": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.5% below league average",
+    "reason": "Economy rate is 11.5% lower than league average",
     "confidence": "Medium"
   },
   "DR Martyn": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 3.2% higher than league average",
     "confidence": "Low"
   },
   "EJG Morgan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 39.8% below league average",
+    "reason": "Consistency is 39.8% lower than league average",
     "confidence": "High"
   },
   "FY Fazal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "Harmeet Singh": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.4% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.4% lower than league average",
+    "confidence": "Low"
   },
   "J Theron": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "JM Kemp": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 18.3% below league average",
+    "reason": "Economy rate is 18.3% lower than league average",
     "confidence": "Medium"
   },
   "Jaskaran Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 10.2% higher than league average",
+    "confidence": "Medium"
   },
   "KA Pollard": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.9% lower than league average",
     "confidence": "Low"
   },
   "KAJ Roach": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "KB Arun Karthik": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 25.8% below league average",
+    "reason": "Consistency is 25.8% lower than league average",
     "confidence": "High"
   },
   "KM Jadhav": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 34.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 34.8% lower than league average",
+    "confidence": "Medium"
   },
   "MD Mishra": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "MJ Lumb": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "MR Marsh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 43.0% higher than league average",
+    "confidence": "Medium"
   },
   "MS Bisla": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 0.5% higher than league average",
     "confidence": "Low"
   },
   "Mandeep Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "OA Shah": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 32.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 32.1% lower than league average",
+    "confidence": "Medium"
   },
   "P Dogra": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 72.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 72.8% lower than league average",
+    "confidence": "Medium"
   },
   "PD Collingwood": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 24.4% below league average",
+    "reason": "Economy rate is 24.4% lower than league average",
     "confidence": "High"
   },
   "R McLaren": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.1% higher than league average",
+    "confidence": "Medium"
   },
   "R Sathish": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.1% higher than league average",
+    "confidence": "Low"
   },
   "R Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 20.2% higher than league average",
+    "confidence": "Medium"
   },
   "RS Gavaskar": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "RS Sodhi": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 81.1% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 81.1% higher than league average",
+    "confidence": "Medium"
   },
   "S Ladda": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 16.6% higher than league average",
+    "confidence": "Low"
   },
   "S Narwal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "S Sriram": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 177.5% higher than league average",
+    "confidence": "Medium"
   },
   "S Tyagi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 375.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.5% higher than league average",
+    "confidence": "Medium"
   },
   "SE Bond": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 19.7% below league average",
+    "reason": "Economy rate is 19.7% lower than league average",
     "confidence": "Medium"
   },
   "SJ Srivastava": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.2% higher than league average",
+    "confidence": "Low"
   },
   "STR Binny": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 30.2% below league average",
+    "reason": "Economy rate is 30.2% lower than league average",
     "confidence": "High"
   },
   "SW Tait": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 200.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 8.8% higher than league average",
+    "confidence": "Low"
   },
   "UT Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 21.2% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Medium"
   },
   "VS Malik": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.3% higher than league average",
     "confidence": "Low"
   },
   "YA Abdulla": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 105.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 7.2% higher than league average",
+    "confidence": "Low"
   },
   "AA Chavan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "AC Blizzard": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "AC Thomas": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 13.5% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 13.5% lower than league average",
+    "confidence": "Low"
   },
   "AG Murtaza": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.3% higher than league average",
     "confidence": "Low"
   },
   "AL Menaria": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 23.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 23.4% lower than league average",
+    "confidence": "Medium"
   },
   "AUK Pathan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 55.4% higher than league average",
+    "confidence": "Medium"
   },
   "B Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 3.1% higher than league average",
     "confidence": "Low"
   },
   "BA Bhatt": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.0% lower than league average",
+    "confidence": "Medium"
   },
   "BJ Haddin": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 48.2% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 48.2% higher than league average",
+    "confidence": "Medium"
   },
   "CA Ingram": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 0.1% lower than league average",
     "confidence": "Low"
   },
   "CJ Ferguson": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 32.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 32.1% lower than league average",
+    "confidence": "Medium"
   },
   "DH Yagnik": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "DJ Jacobs": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "DT Christian": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.2% higher than league average",
+    "confidence": "Low"
   },
   "Harpreet Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 26.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 26.7% lower than league average",
+    "confidence": "Medium"
   },
   "I Malhotra": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 155.3% higher than league average",
+    "confidence": "Medium"
   },
   "IR Jaggi": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 79.2% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 79.2% higher than league average",
+    "confidence": "Medium"
   },
   "J Syed Mohammad": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 1.0% higher than league average",
     "confidence": "Low"
   },
   "JE Taylor": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 10.6% below league average",
+    "reason": "Economy rate is 10.6% lower than league average",
     "confidence": "Medium"
   },
   "JEC Franklin": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 10.4% below league average",
+    "reason": "Economy rate is 10.4% lower than league average",
     "confidence": "Medium"
   },
   "JJ van der Wath": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 19.3% higher than league average",
+    "confidence": "Low"
   },
   "L Ablish": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "M Klinger": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 0.9% lower than league average",
     "confidence": "Low"
   },
   "MA Agarwal": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 34.4% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 34.4% higher than league average",
+    "confidence": "Medium"
   },
   "MS Wade": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "ND Doshi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 60.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.0% higher than league average",
+    "confidence": "Medium"
   },
   "NJ Rimmington": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.7% lower than league average",
+    "confidence": "Medium"
   },
   "NL McCullum": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 24.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 24.5% lower than league average",
+    "confidence": "Medium"
   },
   "NLTC Perera": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 10.5% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 9.1% higher than league average",
+    "confidence": "Low"
   },
   "P Parameswaran": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.4% lower than league average",
+    "confidence": "Low"
   },
   "R Ninan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 20.2% higher than league average",
+    "confidence": "Medium"
   },
   "RN ten Doeschate": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 55.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 55.6% lower than league average",
+    "confidence": "Medium"
   },
   "RV Gomez": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 44.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.5% lower than league average",
+    "confidence": "Medium"
   },
   "S Aravind": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 83.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% higher than league average",
+    "confidence": "Low"
   },
   "S Nadeem": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "S Rana": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "S Randiv": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 14.6% below league average",
+    "reason": "Economy rate is 14.6% lower than league average",
     "confidence": "Medium"
   },
   "SB Wagh": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.1% below league average",
+    "reason": "Economy rate is 16.1% lower than league average",
     "confidence": "Medium"
   },
   "Shakib Al Hasan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 20.2% below league average",
+    "reason": "Economy rate is 20.2% lower than league average",
     "confidence": "High"
   },
   "Sunny Singh": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 25.6% above league average",
+    "reason": "Strike rate is 25.6% higher than league average",
     "confidence": "High"
   },
   "TD Paine": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 72.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 72.8% lower than league average",
+    "confidence": "Medium"
   },
   "TR Birt": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.5% below league average",
+    "reason": "Consistency is 18.5% lower than league average",
     "confidence": "Medium"
   },
   "UBT Chand": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "VR Aaron": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 15.4% higher than league average",
+    "confidence": "Low"
   },
   "WD Parnell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 16.1% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 4.1% higher than league average",
+    "confidence": "Low"
   },
   "Y Gnaneswara Rao": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "A Ashish Reddy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.9% higher than league average",
+    "confidence": "Low"
   },
   "A Chandila": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 30.7% below league average",
+    "reason": "Economy rate is 30.7% lower than league average",
     "confidence": "High"
   },
   "AD Russell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 31.9% below league average",
+    "reason": "Economy rate is 32.5% higher than league average",
     "confidence": "High"
   },
   "AP Majumdar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.1% above league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 18.1% higher than league average",
+    "confidence": "Low"
   },
   "Ankit Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "Azhar Mahmood": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 51.7% higher than league average",
+    "confidence": "Medium"
   },
   "BB Samantray": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 33.6% above league average",
+    "reason": "Batting average is 33.6% higher than league average",
     "confidence": "High"
   },
   "CA Lynn": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 26.8% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 26.8% higher than league average",
+    "confidence": "Medium"
   },
   "CJ McKay": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.9% lower than league average",
+    "confidence": "Low"
   },
   "DA Miller": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 66.2% above league average",
+    "reason": "Batting average is 66.2% higher than league average",
     "confidence": "High"
   },
   "DAJ Bracewell": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "DJ Harris": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 3.8% lower than league average",
     "confidence": "Low"
   },
   "F du Plessis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "GB Hogg": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.4% lower than league average",
+    "confidence": "Low"
   },
   "GJ Maxwell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 6.1% lower than league average",
     "confidence": "Low"
   },
   "Gurkeerat Singh": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 14.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 14.0% lower than league average",
+    "confidence": "Low"
   },
   "HV Patel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 17.8% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.9% higher than league average",
+    "confidence": "Low"
   },
   "JP Faulkner": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 9.9% higher than league average",
     "confidence": "Low"
   },
   "K Upadhyay": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.6% higher than league average",
+    "confidence": "Low"
   },
   "KK Cooper": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 17.4% below league average",
+    "reason": "Economy rate is 17.4% lower than league average",
     "confidence": "Medium"
   },
   "KMDN Kulasekara": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 25.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 25.5% lower than league average",
+    "confidence": "Medium"
   },
   "MJ Clarke": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 32.4% below league average",
+    "reason": "Economy rate is 32.4% lower than league average",
     "confidence": "High"
   },
   "MN Samuels": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 25.8% higher than league average",
+    "confidence": "Medium"
   },
   "N Saini": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 24.0% below league average",
+    "reason": "Consistency is 24.0% lower than league average",
     "confidence": "High"
   },
   "P Awana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 15.8% higher than league average",
+    "confidence": "Medium"
   },
   "P Negi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 11.6% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.4% higher than league average",
+    "confidence": "Low"
   },
   "PA Reddy": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 29.4% below league average",
+    "reason": "Consistency is 29.4% lower than league average",
     "confidence": "High"
   },
   "RE Levi": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 24.9% below league average",
+    "reason": "Consistency is 24.9% lower than league average",
     "confidence": "High"
   },
   "RJ Peterson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.9% lower than league average",
+    "confidence": "Low"
   },
   "RR Bhatkal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 94.3% higher than league average",
+    "confidence": "Medium"
   },
   "SA Yadav": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "SP Narine": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 13.4% below league average",
+    "reason": "Economy rate is 13.4% lower than league average",
     "confidence": "Medium"
   },
   "SPD Smith": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 90.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 66.5% higher than league average",
+    "confidence": "Medium"
   },
   "Sunny Gupta": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 74.0% higher than league average",
+    "confidence": "Medium"
   },
   "V Pratap Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 3.3% lower than league average",
     "confidence": "Low"
   },
   "AS Rajpoot": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 155.0% above league average",
+    "reason": "Economy rate is 30.5% higher than league average",
     "confidence": "High"
   },
   "B Laughlin": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.6% higher than league average",
+    "confidence": "Medium"
   },
   "BJ Rohrer": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "BMAJ Mendis": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 20.1% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 20.1% lower than league average",
+    "confidence": "Medium"
   },
   "CH Morris": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 18.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.8% higher than league average",
+    "confidence": "Low"
   },
   "CM Gautam": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "DJG Sammy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.5% lower than league average",
     "confidence": "Low"
   },
   "GH Vihari": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "IC Pandey": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 20.2% below league average",
+    "reason": "Economy rate is 20.2% lower than league average",
     "confidence": "High"
   },
   "JD Unadkat": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 18.5% below league average",
+    "reason": "Economy rate is 18.5% lower than league average",
     "confidence": "Medium"
   },
   "KK Nair": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 55.9% above league average",
+    "reason": "Strike rate is 55.9% higher than league average",
     "confidence": "High"
   },
   "KL Rahul": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 36.2% above league average",
+    "reason": "Strike rate is 36.2% higher than league average",
     "confidence": "High"
   },
   "KW Richardson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.3% higher than league average",
     "confidence": "Low"
   },
   "LJ Wright": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 47.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.9% higher than league average",
+    "confidence": "Medium"
   },
   "M Vohra": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 45.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 45.7% lower than league average",
+    "confidence": "Medium"
   },
   "MC Juneja": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 3.0% lower than league average",
     "confidence": "Low"
   },
   "MDKJ Perera": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 62.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 62.0% lower than league average",
+    "confidence": "Medium"
   },
   "MG Johnson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 215.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 14.2% higher than league average",
+    "confidence": "Medium"
   },
   "MM Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 275.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 14.1% higher than league average",
+    "confidence": "Medium"
   },
   "Mohammed Shami": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
+    "reason": "Economy rate is 24.7% higher than league average",
     "confidence": "High"
   },
   "NM Coulter-Nile": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "PV Tambe": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.8% lower than league average",
     "confidence": "Low"
   },
   "Parvez Rasool": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 320.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.2% higher than league average",
+    "confidence": "Low"
   },
   "Q de Kock": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 17.9% above league average",
+    "reason": "Consistency is 17.9% higher than league average",
     "confidence": "Medium"
   },
   "R Dhawan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 29.5% higher than league average",
+    "confidence": "Medium"
   },
   "R Rampaul": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 31.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 31.5% lower than league average",
+    "confidence": "Medium"
   },
   "R Shukla": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 35.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 20.9% higher than league average",
+    "confidence": "Medium"
   },
   "S Kaul": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 19.3% higher than league average",
+    "confidence": "Low"
   },
   "SMSM Senanayake": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.5% below league average",
+    "reason": "Economy rate is 27.5% lower than league average",
     "confidence": "High"
   },
   "SV Samson": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 27.2% above league average",
+    "reason": "Strike rate is 27.2% higher than league average",
     "confidence": "High"
   },
   "Sachin Baby": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 46.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 46.7% lower than league average",
+    "confidence": "Medium"
   },
   "Sandeep Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 22.8% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.1% higher than league average",
+    "confidence": "Medium"
   },
   "UA Birla": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 62.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 62.0% lower than league average",
+    "confidence": "Medium"
   },
   "X Thalaivan Sargunam": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 45.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 45.7% lower than league average",
+    "confidence": "Medium"
   },
   "AR Patel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 116.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.5% lower than league average",
+    "confidence": "Low"
   },
   "BCJ Cutting": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.9% higher than league average",
+    "confidence": "Medium"
   },
   "BE Hendricks": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 22.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 7.0% lower than league average",
+    "confidence": "Low"
   },
   "BR Dunk": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 27.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 27.6% lower than league average",
+    "confidence": "Medium"
   },
   "CJ Anderson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 13.4% below league average",
+    "reason": "Economy rate is 47.3% higher than league average",
     "confidence": "Medium"
   },
   "Imran Tahir": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 55.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 55.6% lower than league average",
+    "confidence": "Medium"
   },
   "JDS Neesham": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.3% higher than league average",
     "confidence": "Low"
   },
   "JJ Bumrah": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 25.8% below league average",
+    "reason": "Economy rate is 25.8% lower than league average",
     "confidence": "High"
   },
   "JO Holder": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 113.8% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 10.6% higher than league average",
+    "confidence": "Medium"
   },
   "Karanveer Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 320.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 24.4% higher than league average",
+    "confidence": "Medium"
   },
   "LMP Simmons": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 25.8% higher than league average",
+    "confidence": "Medium"
   },
   "M de Lange": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.7% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.7% lower than league average",
+    "confidence": "Low"
   },
   "MA Starc": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 16.8% below league average",
+    "reason": "Economy rate is 14.3% higher than league average",
     "confidence": "Medium"
   },
   "NJ Maddinson": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "R Tewatia": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 23.2% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 23.2% lower than league average",
+    "confidence": "Medium"
   },
   "RR Rossouw": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 64.8% above league average",
+    "reason": "Strike rate is 64.8% higher than league average",
     "confidence": "High"
   },
   "S Gopal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.2% higher than league average",
+    "confidence": "Low"
   },
   "Shivam Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 62.9% higher than league average",
+    "confidence": "Medium"
   },
   "TG Southee": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 46.2% higher than league average",
+    "confidence": "Medium"
   },
   "VH Zol": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 21.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 21.3% lower than league average",
+    "confidence": "Medium"
   },
   "YS Chahal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.6% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 6.1% higher than league average",
+    "confidence": "Low"
   },
   "Anureet Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.6% higher than league average",
+    "confidence": "Low"
   },
   "D Wiese": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 40.6% higher than league average",
+    "confidence": "Medium"
   },
   "DJ Hooda": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 66.5% higher than league average",
+    "confidence": "Medium"
   },
   "DJ Muthuswami": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 20.0% below league average",
+    "reason": "Economy rate is 20.0% lower than league average",
     "confidence": "Medium"
   },
   "HH Pandya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 8.7% higher than league average",
+    "confidence": "Low"
   },
   "J Suchith": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 13.6% below league average",
+    "reason": "Economy rate is 13.6% lower than league average",
     "confidence": "Medium"
   },
   "KS Williamson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "MJ McClenaghan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.4% below league average",
+    "reason": "Economy rate is 12.4% lower than league average",
     "confidence": "Medium"
   },
   "PJ Cummins": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.6% higher than league average",
     "confidence": "Low"
   },
   "RG More": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 75.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.2% higher than league average",
+    "confidence": "Low"
   },
   "SA Abbott": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 30.4% higher than league average",
     "confidence": "Medium"
   },
   "SN Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 90.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 99.8% higher than league average",
+    "confidence": "Medium"
   },
   "SN Thakur": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 27.9% below league average",
+    "reason": "Economy rate is 23.0% higher than league average",
     "confidence": "High"
   },
   "SS Iyer": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "A Zampa": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 30.4% higher than league average",
     "confidence": "Medium"
   },
   "AD Nath": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 33.8% below league average",
+    "reason": "Consistency is 33.8% lower than league average",
     "confidence": "High"
   },
   "BB Sran": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 41.5% higher than league average",
     "confidence": "Medium"
   },
   "C Munro": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.7% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.7% lower than league average",
+    "confidence": "Low"
   },
   "CJ Jordan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 120.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 19.6% higher than league average",
+    "confidence": "Medium"
   },
   "CR Brathwaite": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.3% higher than league average",
     "confidence": "Low"
   },
   "ER Dwivedi": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 55.3% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 55.3% higher than league average",
+    "confidence": "Medium"
   },
   "F Behardien": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 62.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 62.0% lower than league average",
+    "confidence": "Medium"
   },
   "HM Amla": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 32.1% above league average",
+    "reason": "Strike rate is 32.1% higher than league average",
     "confidence": "High"
   },
   "Ishan Kishan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 166.4% higher than league average",
+    "confidence": "Medium"
   },
   "J Yadav": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.8% lower than league average",
+    "confidence": "Medium"
   },
   "JC Buttler": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 48.1% above league average",
+    "reason": "Strike rate is 48.1% higher than league average",
     "confidence": "High"
   },
   "KC Cariappa": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 88.7% higher than league average",
+    "confidence": "Medium"
   },
   "KH Pandya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 18.8% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.5% lower than league average",
+    "confidence": "Low"
   },
   "KJ Abbott": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
+    "reason": "Economy rate is 22.8% higher than league average",
     "confidence": "High"
   },
   "M Ashwin": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 47.1% higher than league average",
     "confidence": "Medium"
   },
   "MJ Guptill": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 37.5% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 37.5% higher than league average",
+    "confidence": "Medium"
   },
   "MP Stoinis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 325.0% above league average",
+    "reason": "Economy rate is 37.1% higher than league average",
     "confidence": "High"
   },
   "N Rana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "NS Naik": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "P Sahu": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 75.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 7.4% lower than league average",
+    "confidence": "Low"
   },
   "PSP Handscomb": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "RR Pant": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 20.6% above league average",
+    "reason": "Strike rate is 20.6% higher than league average",
     "confidence": "High"
   },
   "S Kaushik": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 230.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.0% higher than league average",
+    "confidence": "Low"
   },
   "SW Billings": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 31.1% above league average",
+    "reason": "Batting average is 31.1% higher than league average",
     "confidence": "High"
   },
   "Swapnil Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.5% lower than league average",
+    "confidence": "Low"
   },
   "TM Head": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 113.1% higher than league average",
+    "confidence": "Medium"
   },
   "UT Khawaja": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 15.0% above league average",
+    "reason": "Consistency is 15.0% higher than league average",
     "confidence": "Medium"
   },
   "A Choudhary": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 5.1% lower than league average",
     "confidence": "Low"
   },
   "AF Milne": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 15.6% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 15.6% lower than league average",
+    "confidence": "Low"
   },
   "AJ Tye": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 65.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 8.0% higher than league average",
+    "confidence": "Low"
   },
   "AR Bawne": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 34.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 34.8% lower than league average",
+    "confidence": "Medium"
   },
   "Ankit Soni": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.0% below league average",
+    "reason": "Economy rate is 12.0% lower than league average",
     "confidence": "Medium"
   },
   "BA Stokes": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 99.8% higher than league average",
+    "confidence": "Medium"
   },
   "Basil Thampi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 5.5% higher than league average",
     "confidence": "Low"
   },
   "C de Grandhomme": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "CR Woakes": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 17.3% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 17.3% lower than league average",
+    "confidence": "Low"
   },
   "DL Chahar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 11.8% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.8% higher than league average",
+    "confidence": "Low"
   },
   "DM Bravo": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "JJ Roy": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 37.3% above league average",
+    "reason": "Strike rate is 37.3% higher than league average",
     "confidence": "High"
   },
   "K Rabada": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 28.4% higher than league average",
+    "confidence": "Medium"
   },
   "Kuldeep Yadav": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 18.3% below league average",
+    "reason": "Economy rate is 18.3% lower than league average",
     "confidence": "Medium"
   },
   "LH Ferguson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 43.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.9% higher than league average",
+    "confidence": "Low"
   },
   "Mohammad Nabi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 85.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.9% lower than league average",
+    "confidence": "Low"
   },
   "RA Tripathi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "RD Chahar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "Rashid Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 83.4% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.8% higher than league average",
+    "confidence": "Low"
   },
   "S Badree": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 16.5% below league average",
+    "reason": "Economy rate is 16.5% lower than league average",
     "confidence": "Medium"
   },
   "SP Jackson": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 68.8% below league average",
+    "reason": "Consistency is 68.8% lower than league average",
     "confidence": "High"
   },
   "TA Boult": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 21.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.4% lower than league average",
+    "confidence": "Low"
   },
   "TS Mills": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 24.1% higher than league average",
+    "confidence": "High"
   },
   "V Shankar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 55.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "Vishnu Vinod": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 33.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 33.0% lower than league average",
+    "confidence": "Medium"
   },
   "Washington Sundar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 62.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.8% higher than league average",
+    "confidence": "Medium"
   },
   "A Dananjaya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 30.4% higher than league average",
     "confidence": "Medium"
   },
   "AD Hales": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 34.0% above league average",
+    "reason": "Batting average is 34.0% higher than league average",
     "confidence": "High"
   },
   "Abhishek Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 230.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.0% higher than league average",
+    "confidence": "Medium"
   },
   "B Stanlake": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 9.9% lower than league average",
     "confidence": "Low"
   },
   "DJM Short": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.7% lower than league average",
+    "confidence": "Medium"
   },
   "DR Shorey": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 72.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 72.8% lower than league average",
+    "confidence": "Medium"
   },
   "E Lewis": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 32.1% above league average",
+    "reason": "Batting average is 32.1% higher than league average",
     "confidence": "High"
   },
   "H Klaasen": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 56.4% above league average",
+    "reason": "Strike rate is 56.4% higher than league average",
     "confidence": "High"
   },
   "IS Sodhi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 46.2% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.8% higher than league average",
+    "confidence": "Low"
   },
   "JC Archer": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 24.1% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.1% higher than league average",
+    "confidence": "Low"
   },
   "JPR Scantlebury-Searles": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 41.1% higher than league average",
+    "confidence": "Medium"
   },
   "K Gowtham": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.0% higher than league average",
+    "confidence": "Medium"
   },
   "LE Plunkett": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 87.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "M Markande": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 17.5% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 30.7% higher than league average",
+    "confidence": "High"
   },
   "M Prasidh Krishna": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 29.2% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 8.2% lower than league average",
+    "confidence": "Low"
   },
   "MA Wood": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 56.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.9% lower than league average",
+    "confidence": "Low"
   },
   "MK Lomror": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 99.8% higher than league average",
+    "confidence": "Medium"
   },
   "MM Ali": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "Mohammed Siraj": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 2.7% higher than league average",
     "confidence": "Low"
   },
   "Mujeeb Ur Rahman": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 55.4% higher than league average",
+    "confidence": "Medium"
   },
   "Mustafizur Rahman": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.2% lower than league average",
+    "confidence": "Low"
   },
   "P Chopra": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 20.8% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 20.8% higher than league average",
+    "confidence": "Medium"
   },
   "PP Shaw": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 48.2% above league average",
+    "reason": "Strike rate is 48.2% higher than league average",
     "confidence": "High"
   },
   "RK Bhui": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 91.9% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 91.9% lower than league average",
+    "confidence": "Medium"
   },
   "RK Singh": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 39.2% above league average",
+    "reason": "Strike rate is 39.2% higher than league average",
     "confidence": "High"
   },
   "Shivam Mavi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 32.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 14.6% higher than league average",
+    "confidence": "Medium"
   },
   "Shubman Gill": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 41.2% above league average",
+    "reason": "Strike rate is 41.2% higher than league average",
     "confidence": "High"
   },
   "TK Curran": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.9% higher than league average",
+    "confidence": "Low"
   },
   "AJ Turner": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 43.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 43.0% lower than league average",
+    "confidence": "Medium"
   },
   "AS Joseph": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 190.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 32.1% higher than league average",
+    "confidence": "Medium"
   },
   "Avesh Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 14.2% higher than league average",
+    "confidence": "Medium"
   },
   "GC Viljoen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.1% higher than league average",
     "confidence": "Low"
   },
   "HF Gurney": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.7% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.2% lower than league average",
+    "confidence": "Low"
   },
   "Harpreet Brar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 34.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.1% lower than league average",
+    "confidence": "Low"
   },
   "JL Denly": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "JM Bairstow": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 67.4% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 67.4% higher than league average",
+    "confidence": "Medium"
   },
   "KK Ahmed": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 6.3% higher than league average",
     "confidence": "Low"
   },
   "KMA Paul": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 3.2% lower than league average",
     "confidence": "Low"
   },
   "LS Livingstone": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 35.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.3% lower than league average",
+    "confidence": "Low"
   },
   "MJ Santner": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.1% below league average",
+    "reason": "Economy rate is 12.1% lower than league average",
     "confidence": "Medium"
   },
   "N Pooran": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 77.8% above league average",
+    "reason": "Strike rate is 77.8% higher than league average",
     "confidence": "High"
   },
   "Navdeep Saini": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 60.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "P Ray Barman": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 55.4% higher than league average",
     "confidence": "Medium"
   },
   "P Simran Singh": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 46.6% above league average",
+    "reason": "Strike rate is 46.6% higher than league average",
     "confidence": "High"
   },
   "R Parag": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 100.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "Rasikh Salam": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.5% higher than league average",
+    "confidence": "Medium"
   },
   "S Dube": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 83.2% higher than league average",
+    "confidence": "Medium"
   },
   "S Lamichhane": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 13.8% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.4% higher than league average",
+    "confidence": "Low"
   },
   "SD Lad": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 18.5% below league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 18.5% lower than league average",
+    "confidence": "Low"
   },
   "SE Rutherford": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 105.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.2% lower than league average",
+    "confidence": "Low"
   },
   "SM Curran": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 260.0% above league average",
+    "reason": "Economy rate is 23.0% higher than league average",
     "confidence": "High"
   },
   "SO Hetmyer": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 32.1% above league average",
+    "reason": "Strike rate is 32.1% higher than league average",
     "confidence": "High"
   },
   "Y Prithvi Raj": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.6% higher than league average",
+    "confidence": "Medium"
   },
   "A Nortje": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 31.7% higher than league average",
+    "confidence": "Medium"
   },
   "AT Carey": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 13.1% below league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 13.1% lower than league average",
+    "confidence": "Low"
   },
   "Abdul Samad": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 90.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 99.8% higher than league average",
+    "confidence": "Medium"
   },
   "Arshdeep Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 16.6% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.4% lower than league average",
+    "confidence": "Low"
   },
   "CV Varun": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 15.0% below league average",
+    "reason": "Economy rate is 15.0% lower than league average",
     "confidence": "Medium"
   },
   "D Padikkal": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 36.4% above league average",
+    "reason": "Strike rate is 36.4% higher than league average",
     "confidence": "High"
   },
   "DR Sams": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 2.1% lower than league average",
     "confidence": "Low"
   },
   "I Udana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.9% higher than league average",
     "confidence": "Low"
   },
   "JL Pattinson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.0% higher than league average",
     "confidence": "Low"
   },
   "JR Philippe": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 5.9% higher than league average",
     "confidence": "Low"
   },
   "KL Nagarkoti": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.0% higher than league average",
+    "confidence": "Medium"
   },
   "Kartik Tyagi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 41.5% higher than league average",
     "confidence": "Medium"
   },
   "N Jagadeesan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 19.5% below league average",
+    "reason": "Consistency is 19.5% lower than league average",
     "confidence": "Medium"
   },
   "P Dubey": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "PK Garg": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 40.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 40.3% lower than league average",
+    "confidence": "Medium"
   },
   "RD Gaikwad": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 36.4% above league average",
+    "reason": "Strike rate is 36.4% higher than league average",
     "confidence": "High"
   },
   "Ravi Bishnoi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 23.4% above league average",
+    "reason": "Economy rate is 20.3% higher than league average",
     "confidence": "High"
   },
   "SS Cottrell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 2.3% lower than league average",
     "confidence": "Low"
   },
   "Shahbaz Ahmed": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 155.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "T Banton": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 51.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 51.1% lower than league average",
+    "confidence": "Medium"
   },
   "T Natarajan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 41.2% higher than league average",
+    "confidence": "Medium"
   },
   "TU Deshpande": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 17.9% higher than league average",
+    "confidence": "Medium"
   },
   "YBK Jaiswal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 299.6% higher than league average",
+    "confidence": "Medium"
   },
   "AK Markram": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 17.5% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.9% higher than league average",
+    "confidence": "Low"
   },
   "Anmolpreet Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 86.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 86.4% lower than league average",
+    "confidence": "Medium"
   },
   "Anuj Rawat": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 33.0% above league average",
+    "reason": "Batting average is 33.0% higher than league average",
     "confidence": "High"
   },
   "C Sakariya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "DJ Malan": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 41.2% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 41.2% higher than league average",
+    "confidence": "Medium"
   },
   "FA Allen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 27.7% higher than league average",
     "confidence": "Medium"
   },
   "GD Phillips": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 26.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.0% lower than league average",
+    "confidence": "Medium"
   },
   "GHS Garton": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "JA Richardson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "K Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.8% higher than league average",
     "confidence": "Low"
   },
   "KA Jamieson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 8.8% higher than league average",
     "confidence": "Low"
   },
   "KS Bharat": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "Lalit Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 107.3% higher than league average",
+    "confidence": "Medium"
   },
   "M Jansen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 11.5% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 2.4% higher than league average",
+    "confidence": "Low"
   },
   "M Shahrukh Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "NT Ellis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 5.5% higher than league average",
+    "confidence": "Low"
   },
   "PWH de Silva": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 11.8% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 0.5% higher than league average",
+    "confidence": "Low"
   },
   "RM Patidar": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 30.2% above league average",
+    "reason": "Strike rate is 30.2% higher than league average",
     "confidence": "High"
   },
   "RV Patel": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 18.6% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 18.6% lower than league average",
+    "confidence": "Low"
   },
   "T Shamsi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "TH David": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 67.7% above league average",
+    "reason": "Strike rate is 67.7% higher than league average",
     "confidence": "High"
   },
   "TL Seifert": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 34.8% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 34.8% lower than league average",
+    "confidence": "Medium"
   },
   "VR Iyer": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 210.8% higher than league average",
+    "confidence": "Medium"
   },
   "Virat Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 59.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 59.3% lower than league average",
+    "confidence": "Medium"
   },
   "A Badoni": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 13.4% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 13.4% lower than league average",
+    "confidence": "Low"
   },
   "A Manohar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 33.8% below league average",
+    "reason": "Consistency is 33.8% lower than league average",
     "confidence": "High"
   },
   "A Tomar": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "AS Roy": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 25.1% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 25.1% lower than league average",
+    "confidence": "Medium"
   },
   "Akash Deep": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 90.0% above league average",
+    "reason": "Economy rate is 33.8% higher than league average",
     "confidence": "High"
   },
   "Aman Hakim Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "B Indrajith": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 62.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 62.0% lower than league average",
+    "confidence": "Medium"
   },
   "B Sai Sudharsan": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 41.5% above league average",
+    "reason": "Strike rate is 41.5% higher than league average",
     "confidence": "High"
   },
   "D Brevis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 85.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "D Pretorius": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "DJ Mitchell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.5% higher than league average",
+    "confidence": "Medium"
   },
   "DJ Willey": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "DP Conway": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 41.2% above league average",
+    "reason": "Batting average is 41.2% higher than league average",
     "confidence": "High"
   },
   "Fazalhaq Farooqi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 410.0% above league average",
+    "reason": "Economy rate is 37.1% higher than league average",
     "confidence": "High"
   },
   "HE van der Dussen": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 40.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 40.3% lower than league average",
+    "confidence": "Medium"
   },
   "HR Shokeen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 90.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.2% higher than league average",
+    "confidence": "Low"
   },
   "Harshit Rana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 12.0% below league average",
+    "reason": "Economy rate is 13.0% higher than league average",
     "confidence": "Medium"
   },
   "JM Sharma": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 59.7% above league average",
+    "reason": "Strike rate is 59.7% higher than league average",
     "confidence": "High"
   },
   "JR Hazlewood": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.6% lower than league average",
+    "confidence": "Low"
   },
   "K Kartikeya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.2% higher than league average",
+    "confidence": "Low"
   },
   "KR Sen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.9% higher than league average",
+    "confidence": "Low"
   },
   "KS Sharma": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "M Theekshana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 14.6% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.3% higher than league average",
+    "confidence": "Low"
   },
   "Mohsin Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 14.0% above league average",
+    "reason": "Economy rate is 12.5% higher than league average",
     "confidence": "Medium"
   },
   "Mukesh Choudhary": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 31.3% higher than league average",
+    "confidence": "Medium"
   },
   "OC McCoy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "OF Smith": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
+    "reason": "Economy rate is 31.8% higher than league average",
     "confidence": "High"
   },
   "PBB Rajapaksa": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is close to league average",
+    "reason": "Consistency is 3.6% lower than league average",
     "confidence": "Low"
   },
   "PN Mankad": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 68.3% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 68.3% higher than league average",
+    "confidence": "Medium"
   },
   "PVD Chameera": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 27.5% above league average",
+    "reason": "Economy rate is 29.3% higher than league average",
     "confidence": "High"
   },
   "R Powell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "R Sanjay Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.7% higher than league average",
+    "confidence": "Medium"
   },
   "R Shepherd": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 19.8% higher than league average",
+    "confidence": "Medium"
   },
   "RA Bawa": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 81.1% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 81.1% higher than league average",
+    "confidence": "Medium"
   },
   "RP Meredith": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.7% below league average",
+    "reason": "Economy rate is 16.9% higher than league average",
     "confidence": "Medium"
   },
   "Ramandeep Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.9% higher than league average",
+    "confidence": "Medium"
   },
   "SS Prabhudessai": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 20.8% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 20.8% higher than league average",
+    "confidence": "Medium"
   },
   "Shashank Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.9% higher than league average",
+    "confidence": "Medium"
   },
   "Simarjeet Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 56.5% higher than league average",
+    "confidence": "Medium"
   },
   "T Stubbs": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 122.0% higher than league average",
+    "confidence": "Medium"
   },
   "Tilak Varma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "Umran Malik": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 66.5% higher than league average",
+    "confidence": "Medium"
   },
   "VG Arora": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.5% higher than league average",
+    "confidence": "Medium"
   },
   "Yash Dayal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 13.1% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 6.5% higher than league average",
+    "confidence": "Low"
   },
   "AJ Hosein": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "AU Rashid": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 11.2% lower than league average",
+    "confidence": "Low"
   },
   "Abdul Basith": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "Abishek Porel": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 33.0% above league average",
+    "reason": "Strike rate is 33.0% higher than league average",
     "confidence": "High"
   },
   "Arjun Tendulkar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.7% higher than league average",
+    "confidence": "Low"
   },
   "Arshad Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 14.7% higher than league average",
+    "confidence": "Medium"
   },
   "Atharva Taide": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 166.4% higher than league average",
+    "confidence": "Medium"
   },
   "C Green": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.3% lower than league average",
     "confidence": "Low"
   },
   "DG Nalkande": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 51.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 3.3% higher than league average",
+    "confidence": "Low"
   },
   "Dhruv Jurel": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 41.6% above league average",
+    "reason": "Strike rate is 41.6% higher than league average",
     "confidence": "High"
   },
   "HC Brook": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 14.6% above league average",
+    "reason": "Consistency is 14.6% higher than league average",
     "confidence": "Medium"
   },
   "JE Root": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 22.3% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.3% lower than league average",
+    "confidence": "Medium"
   },
   "JP Behrendorff": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 2.2% higher than league average",
     "confidence": "Low"
   },
   "KM Asif": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 10.2% higher than league average",
+    "confidence": "Low"
   },
   "KR Mayers": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 110.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.4% lower than league average",
+    "confidence": "Low"
   },
   "Liton Das": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 78.3% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 78.3% lower than league average",
+    "confidence": "Medium"
   },
   "MD Shanaka": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 29.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 29.4% lower than league average",
+    "confidence": "Medium"
   },
   "MG Bracewell": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 45.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.1% lower than league average",
+    "confidence": "Low"
   },
   "MW Short": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 30.6% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 30.6% lower than league average",
+    "confidence": "Medium"
   },
   "Mohit Rathee": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.0% higher than league average",
+    "confidence": "Medium"
   },
   "Mukesh Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 14.7% higher than league average",
+    "confidence": "Medium"
   },
   "N Wadhera": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 75.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 19.9% higher than league average",
+    "confidence": "Low"
   },
   "Naveen-ul-Haq": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 21.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.1% higher than league average",
+    "confidence": "Medium"
   },
   "Noor Ahmad": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 37.5% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.4% lower than league average",
+    "confidence": "Low"
   },
   "PD Salt": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 59.4% above league average",
+    "reason": "Strike rate is 59.4% higher than league average",
     "confidence": "High"
   },
   "Rahmanullah Gurbaz": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 26.5% above league average",
+    "reason": "Strike rate is 26.5% higher than league average",
     "confidence": "High"
   },
   "Sanvir Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 24.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 24.0% lower than league average",
+    "confidence": "Medium"
   },
   "Sikandar Raza": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "Vijaykumar Vyshak": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 27.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 18.2% higher than league average",
+    "confidence": "Medium"
   },
   "Vivrant Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 36.9% higher than league average",
+    "confidence": "Medium"
   },
   "YV Dhull": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 71.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 71.1% lower than league average",
+    "confidence": "Medium"
   },
   "Yudhvir Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 17.5% below league average",
+    "reason": "Economy rate is 33.2% higher than league average",
     "confidence": "Medium"
   },
   "A Kamboj": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 11.2% below league average",
+    "reason": "Economy rate is 11.2% lower than league average",
     "confidence": "Medium"
   },
   "A Raghuvanshi": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 26.4% above league average",
+    "reason": "Strike rate is 26.4% higher than league average",
     "confidence": "High"
   },
   "AA Kulkarni": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 75.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 75.6% lower than league average",
+    "confidence": "Medium"
   },
   "Akash Madhwal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 12.5% above league average",
+    "reason": "Economy rate is 22.9% higher than league average",
     "confidence": "Medium"
   },
   "Arshad Khan (2)": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "Ashutosh Sharma": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 45.9% above league average",
+    "reason": "Strike rate is 45.9% higher than league average",
     "confidence": "High"
   },
   "Azmatullah Omarzai": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 14.7% higher than league average",
+    "confidence": "Medium"
   },
   "BR Sharath": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 89.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 89.1% lower than league average",
+    "confidence": "Medium"
   },
   "D Ferreira": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "G Coetzee": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 21.2% higher than league average",
+    "confidence": "Medium"
   },
   "Gulbadin Naib": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "J Fraser-McGurk": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 50.2% below league average",
+    "reason": "Consistency is 50.2% lower than league average",
     "confidence": "High"
   },
   "KA Maharaj": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.8% lower than league average",
+    "confidence": "Medium"
   },
   "Kumar Kushagra": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "L Wood": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 72.1% higher than league average",
+    "confidence": "Medium"
   },
   "LB Williams": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 35.1% higher than league average",
+    "confidence": "Medium"
   },
   "MJ Suthar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "Mayank Dagar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 255.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.6% higher than league average",
+    "confidence": "Medium"
   },
   "Naman Dhir": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 41.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 41.7% lower than league average",
+    "confidence": "Medium"
   },
   "Nithish Kumar Reddy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.3% higher than league average",
+    "confidence": "Low"
   },
   "R Ravindra": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 61.1% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.1% lower than league average",
+    "confidence": "Medium"
   },
   "R Sai Kishore": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 32.9% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 2.7% higher than league average",
+    "confidence": "Low"
   },
   "RJ Gleeson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 23.7% higher than league average",
+    "confidence": "Medium"
   },
   "RJW Topley": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 48.0% higher than league average",
+    "confidence": "Medium"
   },
   "SB Dubey": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 45.5% above league average",
+    "reason": "Strike rate is 45.5% higher than league average",
     "confidence": "High"
   },
   "SD Hope": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 35.9% above league average",
+    "reason": "Strike rate is 35.9% higher than league average",
     "confidence": "High"
   },
   "SH Johnson": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 240.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 30.3% higher than league average",
+    "confidence": "Medium"
   },
   "SZ Mulani": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.6% higher than league average",
+    "confidence": "Medium"
   },
   "Sameer Rizvi": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 38.7% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 38.7% higher than league average",
+    "confidence": "Medium"
   },
   "Saurav Chauhan": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 67.4% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 67.4% lower than league average",
+    "confidence": "Medium"
   },
   "Shivam Singh": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 89.1% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 89.1% lower than league average",
+    "confidence": "Medium"
   },
   "Sumit Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 26.6% higher than league average",
+    "confidence": "Medium"
   },
   "T Kohler-Cadmore": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 13.1% below league average",
-    "confidence": "Medium"
+    "reason": "Consistency is 13.1% lower than league average",
+    "confidence": "Low"
   },
   "Tanush Kotian": {
     "label": "Technical Anchor",
-    "reason": "Batting average is 30.3% above league average",
-    "confidence": "High"
+    "reason": "Batting average is 30.3% higher than league average",
+    "confidence": "Medium"
   },
   "V Viyaskanth": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 200.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.5% lower than league average",
+    "confidence": "Low"
   },
   "WG Jacks": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 30.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 4.9% lower than league average",
+    "confidence": "Low"
   },
   "A Mhatre": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 71.2% above league average",
+    "reason": "Strike rate is 71.2% higher than league average",
     "confidence": "High"
   },
   "Aniket Verma": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 50.5% above league average",
+    "reason": "Strike rate is 50.5% higher than league average",
     "confidence": "High"
   },
   "BKG Mendis": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 81.1% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 81.1% higher than league average",
+    "confidence": "Medium"
   },
   "C Bosch": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.7% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.7% lower than league average",
+    "confidence": "Low"
   },
   "DS Rathi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 11.4% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.4% lower than league average",
+    "confidence": "Low"
   },
   "J Overton": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 53.5% higher than league average",
+    "confidence": "Medium"
   },
   "JG Bethell": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 55.6% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 55.6% higher than league average",
+    "confidence": "Medium"
   },
   "JP Inglis": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 47.2% above league average",
+    "reason": "Strike rate is 47.2% higher than league average",
     "confidence": "High"
   },
   "KS Rathore": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "KT Maphaka": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 19.9% higher than league average",
+    "confidence": "Low"
   },
   "L Ngidi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 12.3% higher than league average",
+    "confidence": "Low"
   },
   "M Tiwari": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 55.4% higher than league average",
+    "confidence": "Medium"
   },
   "MJ Owen": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 100.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 100.0% lower than league average",
+    "confidence": "Medium"
   },
   "MP Breetzke": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 24.0% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 24.0% lower than league average",
+    "confidence": "Medium"
   },
   "MS Bhandage": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 94.6% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 94.6% lower than league average",
+    "confidence": "Medium"
   },
   "Musheer Khan": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.9% higher than league average",
+    "confidence": "Medium"
   },
   "PHKD Mendis": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.9% lower than league average",
     "confidence": "Low"
   },
   "PVSN Raju": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 47.1% higher than league average",
     "confidence": "Medium"
   },
   "PWA Mulder": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 77.6% higher than league average",
+    "confidence": "Medium"
   },
   "Prince Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 128.4% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.3% higher than league average",
+    "confidence": "Low"
   },
   "Priyansh Arya": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 65.1% above league average",
+    "reason": "Strike rate is 65.1% higher than league average",
     "confidence": "High"
   },
   "R Minz": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 83.7% below league average",
-    "confidence": "High"
+    "reason": "Consistency is 83.7% lower than league average",
+    "confidence": "Medium"
   },
   "RD Rickelton": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 36.7% above league average",
+    "reason": "Strike rate is 36.7% higher than league average",
     "confidence": "High"
   },
   "SK Rasheed": {
     "label": "Reliable Rotator",
-    "reason": "Consistency is 22.9% below league average",
+    "reason": "Consistency is 22.9% lower than league average",
     "confidence": "High"
   },
   "Sediqullah Atal": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 24.5% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 24.5% higher than league average",
+    "confidence": "Medium"
   },
   "Suryansh Shedge": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 48.0% higher than league average",
+    "confidence": "Medium"
   },
   "Urvil Patel": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 92.5% above league average",
-    "confidence": "High"
+    "reason": "Strike rate is 92.5% higher than league average",
+    "confidence": "Medium"
   },
   "V Nigam": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 1.4% higher than league average",
     "confidence": "Low"
   },
   "V Suryavanshi": {
     "label": "Power Finisher",
-    "reason": "Strike rate is 87.1% above league average",
+    "reason": "Strike rate is 87.1% higher than league average",
     "confidence": "High"
   },
   "XC Bartlett": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 50.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 6.6% higher than league average",
+    "confidence": "Low"
   },
   "A Nel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 14.7% higher than league average",
     "confidence": "Low"
   },
   "B Geeves": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 26.3% higher than league average",
+    "confidence": "Medium"
   },
   "Gagandeep Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.8% higher than league average",
+    "confidence": "Low"
   },
   "P Amarnath": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 19.1% higher than league average",
+    "confidence": "Medium"
   },
   "AM Salvi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.4% lower than league average",
+    "confidence": "Low"
   },
   "RA Shaikh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "RR Bose": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.2% higher than league average",
+    "confidence": "Medium"
   },
   "SS Sarkar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 25.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.4% lower than league average",
+    "confidence": "Low"
   },
   "C Ganapathy": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 44.3% higher than league average",
+    "confidence": "Medium"
   },
   "MB Parmar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "AA Kazi": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 16.6% higher than league average",
+    "confidence": "Low"
   },
   "Anand Rajan": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 41.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 41.7% lower than league average",
+    "confidence": "Medium"
   },
   "P Prasanth": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 99.8% higher than league average",
+    "confidence": "Medium"
   },
   "RW Price": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 22.1% higher than league average",
+    "confidence": "Medium"
   },
   "SS Mundhe": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 33.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 33.4% lower than league average",
+    "confidence": "Medium"
   },
   "BW Hilfenhaus": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 2.4% lower than league average",
     "confidence": "Low"
   },
   "TP Sudhindra": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 250.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.4% higher than league average",
+    "confidence": "Medium"
   },
   "MG Neser": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 72.1% higher than league average",
     "confidence": "Medium"
   },
   "P Suyal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 200.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.5% higher than league average",
+    "confidence": "Low"
   },
   "JW Hastings": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 38.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 38.4% lower than league average",
+    "confidence": "Medium"
   },
   "K Santokie": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% below league average",
+    "reason": "Economy rate is 24.9% higher than league average",
     "confidence": "Medium"
   },
   "GS Sandhu": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 140.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 13.8% higher than league average",
+    "confidence": "Low"
   },
   "SM Boland": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 14.4% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 14.4% lower than league average",
+    "confidence": "Low"
   },
   "MJ Henry": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 260.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.8% higher than league average",
+    "confidence": "Low"
   },
   "NB Singh": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 58.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 58.4% lower than league average",
+    "confidence": "Medium"
   },
   "SS Agarwal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 16.6% higher than league average",
+    "confidence": "Low"
   },
   "Tejas Baroka": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 4.7% higher than league average",
     "confidence": "Low"
   },
   "CJ Dala": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 25.8% higher than league average",
+    "confidence": "Medium"
   },
   "K Khejroliya": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 7.3% higher than league average",
     "confidence": "Low"
   },
   "O Thomas": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 12.3% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 12.3% lower than league average",
+    "confidence": "Low"
   },
   "S Midhun": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 49.9% higher than league average",
+    "confidence": "Medium"
   },
   "S Sandeep Warrier": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 45.0% below league average",
+    "reason": "Economy rate is 20.1% higher than league average",
     "confidence": "High"
   },
   "SC Kuggeleijn": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.4% lower than league average",
+    "confidence": "Low"
   },
   "CJ Green": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 6.0% lower than league average",
+    "confidence": "Low"
   },
   "Monu Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "Akash Singh": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 16.2% below league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 1.5% lower than league average",
+    "confidence": "Low"
   },
   "IC Porel": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.2% higher than league average",
+    "confidence": "Low"
   },
   "Jalaj S Saxena": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 0.1% lower than league average",
     "confidence": "Low"
   },
   "LI Meriwala": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 18.4% higher than league average",
     "confidence": "Low"
   },
   "M Pathirana": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 13.0% higher than league average",
+    "confidence": "Medium"
   },
   "PH Solanki": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 29.7% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 29.7% lower than league average",
+    "confidence": "Medium"
   },
   "D Jansen": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 47.1% higher than league average",
     "confidence": "Medium"
   },
   "Gurnoor Brar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
-    "confidence": "Low"
+    "reason": "Economy rate is 55.4% higher than league average",
+    "confidence": "Medium"
   },
   "H Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 61.0% higher than league average",
+    "confidence": "Medium"
   },
   "J Little": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 24.9% higher than league average",
+    "confidence": "Medium"
   },
   "NA Saini": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 88.7% higher than league average",
+    "confidence": "Medium"
   },
   "R Goyal": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 8.4% lower than league average",
+    "confidence": "Low"
   },
   "RS Hangargekar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 11.0% higher than league average",
+    "confidence": "Low"
   },
   "SSB Magala": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 80.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.6% lower than league average",
+    "confidence": "Low"
   },
   "Suyash Sharma": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 87.5% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 1.9% lower than league average",
+    "confidence": "Low"
   },
   "Yash Thakur": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 95.0% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 34.9% higher than league average",
+    "confidence": "Medium"
   },
   "M Siddharth": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is close to league average",
+    "reason": "Economy rate is 6.2% higher than league average",
     "confidence": "Low"
   },
   "MP Yadav": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 20.0% above league average",
+    "reason": "Economy rate is 38.8% higher than league average",
     "confidence": "Medium"
   },
   "N Burger": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 27.1% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 5.3% lower than league average",
+    "confidence": "Low"
   },
   "N Thushara": {
     "label": "Control Bowler",
-    "reason": "Economy rate is 27.8% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 27.8% lower than league average",
+    "confidence": "Medium"
   },
   "S Joseph": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 15.0% above league average",
-    "confidence": "Medium"
+    "reason": "Economy rate is 18.8% higher than league average",
+    "confidence": "Low"
   },
   "V Kaverappa": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.1% lower than league average",
+    "confidence": "Low"
   },
   "Ashwani Kumar": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 44.1% below league average",
+    "reason": "Economy rate is 25.7% higher than league average",
     "confidence": "High"
   },
   "E Malinga": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 38.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.9% lower than league average",
+    "confidence": "Low"
   },
   "Harsh Dubey": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 8.8% higher than league average",
+    "confidence": "Low"
   },
   "Karim Janat": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 70.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 233.0% higher than league average",
+    "confidence": "Medium"
   },
   "V Puthur": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 40.0% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 0.8% higher than league average",
+    "confidence": "Low"
   },
   "W O'Rourke": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 48.4% below league average",
-    "confidence": "High"
+    "reason": "Economy rate is 41.8% higher than league average",
+    "confidence": "Medium"
   },
   "Zeeshan Ansari": {
     "label": "Wicket Hunter",
-    "reason": "Strike rate is 69.1% above league average",
-    "confidence": "High"
+    "reason": "Economy rate is 9.2% higher than league average",
+    "confidence": "Low"
   }
 }
