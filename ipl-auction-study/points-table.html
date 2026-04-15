@@ -361,10 +361,10 @@
                 <td class="rank-cell">${row.rank}</td>
                 <td>
                     <div class="team-cell">
-                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion"></i>' : ''}
                     ${logo ? `<img src="${logo}" class="team-logo" alt="" onerror="this.style.display='none'">` : ''}
                     <span class="team-name">${row.team}</span>
                     ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
+                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion" style="margin-left: 12px; margin-right: 0;"></i>' : ''}
                     </div>
                 </td>
                 <td>${row.m}</td>
