@@ -117,13 +117,14 @@
     
     .standings-container {
       margin-top: 85px; 
-      padding-bottom: 20px;
+      padding-bottom: 10px;
+      max-width: 1300px;
     }
     .standings-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
       flex-wrap: wrap;
       gap: 1rem;
     }
@@ -133,7 +134,7 @@
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       margin-bottom: 0.5rem;
-      overflow: hidden;
+      overflow: visible; /* Allow dropdown to overflow */
     }
     table {
       width: 100%;
@@ -142,27 +143,28 @@
     }
     th {
       background: rgba(139, 92, 246, 0.1);
-      padding: 0.5rem 0.8rem; /* Condensed */
-      font-size: 0.75rem;
+      padding: 0.8rem 1.2rem; /* Increased */
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--text-secondary);
       font-family: 'Archivo', sans-serif;
     }
     td {
-      padding: 0.35rem 0.8rem; /* Condensed for zero-scroll */
+      padding: 0.65rem 1.2rem; /* Increased for that filled look */
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      font-size: 0.8rem;
+      font-size: 0.95rem; /* Matched to 110% zoom look */
       color: var(--white);
     }
     .team-logo {
-      width: 20px;
-      height: 20px;
+      width: 32px; /* Sized up */
+      height: 32px;
       object-fit: contain;
-      margin-right: 8px;
+      margin-right: 12px;
     }
     .team-name {
       font-weight: 700;
+      font-size: 1rem;
       color: var(--white);
     }
     .nrr-positive { color: #10b981 !important; font-weight: 600; }
