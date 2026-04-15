@@ -238,7 +238,7 @@
       </div>
       <div class="custom-dropdown" id="seasonDropdown" style="z-index: 99999;">
         <div class="dropdown-btn" id="dropdownBtn">
-          <span id="selectedLabel"><i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> 2025 Season</span>
+          <span id="selectedLabel"><i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> 2024 Season</span>
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="dropdown-menu" id="dropdownMenu">
@@ -351,7 +351,7 @@
             seasonRows.forEach((row, idx) => {
                 const tr = document.createElement('tr');
                 const isTop4 = idx < 4;
-                const isWinner = row.team.toUpperCase() === (champion || '').toUpperCase(); 
+                const isWinner = row.team.trim().toUpperCase() === (champion || '').trim().toUpperCase(); 
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
                 const logo = getLogo(row.team);
@@ -401,7 +401,7 @@
           }
         });
 
-        render('2025');
+        render('2024');
       } catch (err) {
         console.error("Standings Error:", err);
       }
