@@ -2904,6 +2904,23 @@ body.ipl-teams-detail-open {
   line-height: 1.5;
 }
 
+.ipl-teams-badge--strategic {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  font-weight: 800;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.ipl-teams-card-spark-wrap {
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+.team-sparkline {
+  filter: drop-shadow(0 0 5px rgba(167, 139, 250, 0.5));
+}
+
 @media (max-width: 640px) {
   .ipl-teams-grid-sections {
     grid-template-columns: 1fr;

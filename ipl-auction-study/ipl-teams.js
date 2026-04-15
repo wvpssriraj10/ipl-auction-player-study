@@ -105,13 +105,19 @@ function renderGrid(gridEl, teams, onSelect, gridOpts = {}) {
 
     const meta = document.createElement('span');
     meta.className = 'ipl-teams-card-meta';
+    
+    // Add Sparkline Canvas
+    const sparkWrap = document.createElement('div');
+    sparkWrap.className = 'ipl-teams-card-spark-wrap';
+    sparkWrap.innerHTML = `<canvas id="spark-${team.id}" class="team-sparkline" width="100" height="30"></canvas>`;
+    
     const name = document.createElement('span');
     name.className = 'ipl-teams-card-name';
     name.textContent = normalizeTeamText(team.name) || '';
     const abbr = document.createElement('span');
     abbr.className = 'ipl-teams-card-abbr';
     abbr.textContent = team.short_name || '';
-    meta.append(name, abbr);
+    meta.append(sparkWrap, name, abbr);
 
     inner.append(wrap, meta);
     const visual = document.createElement('span');
@@ -126,12 +132,40 @@ function renderGrid(gridEl, teams, onSelect, gridOpts = {}) {
         b.classList.toggle('ipl-teams-card--active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       });
-      // Switch to detail view mode
-      document.body.classList.add('ipl-teams-showing-detail');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
       onSelect(team.id);
     });
     gridEl.appendChild(btn);
+  });
+
+  // After grid is rendered, populate sparklines
+  requestAnimationFrame(() => {
+    teams.forEach(team => {
+      const canvas = document.getElementById(`spark-${team.id}`);
+      if (canvas) {
+        // Mock historical ranks for demo
+        const ranks = team.id === 'csk' ? [1, 2, 1, 2, 9, 1] : [4, 8, 3, 5, 2, 7];
+        new Chart(canvas.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: ranks.map((_, i) => i),
+            datasets: [{
+              data: ranks,
+              borderColor: 'rgba(128, 92, 230, 0.4)',
+              borderWidth: 1.5,
+              pointRadius: 0,
+              fill: false,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            scales: { x: { display: false }, y: { display: false, reverse: true } },
+            plugins: { legend: { display: false }, tooltip: { enabled: false } }
+          }
+        });
+      }
+    });
   });
 }
 
@@ -247,6 +281,14 @@ function renderDetail(detailEl, team) {
   };
 
   const teamPrimaryColor = teamColorMap[team.id] || '#8b5cf6';
+  const titles = honours.ipl_titles || 0;
+  const winPct = perf?.win_pct || 0;
+
+  let narrativeStr = "Competitive Franchise";
+  if (titles >= 3) narrativeStr = "Legendary Dynasty";
+  else if (titles > 0) narrativeStr = "Proven Champion";
+  else if (winPct > 50) narrativeStr = "Strategic Heavyweight";
+  else narrativeStr = "Market Challenger";
 
   const teamName = normalizeTeamText(team.name) || team.name || '';
   const finalHtml = normalizeTeamText(`
@@ -258,6 +300,8 @@ function renderDetail(detailEl, team) {
         </div>
         <div class="ipl-teams-detail-titling">
           <div class="ipl-teams-detail-top-meta">
+            <span class="ipl-teams-badge ipl-teams-badge--strategic">${narrativeStr}</span>
+            <span class="ipl-teams-dot"> · </span>
             <span class="ipl-teams-detail-abbr">${escapeHtml(team.short_name)}</span>
             <span class="ipl-teams-dot"> · </span>
             <span class="ipl-teams-badge ipl-teams-badge--${team.basic_info?.status === 'active' ? 'success' : 'danger'}">
