@@ -23,60 +23,42 @@
       padding: 0.5rem 2rem !important; 
     }
     .standings-container {
-      margin-top: 110px; /* Enhanced clearance */
-      padding-bottom: 40px;
+      margin-top: 85px; 
+      padding-bottom: 20px;
     }
     .standings-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 1.5rem;
+      align-items: center;
+      margin-bottom: 0.8rem;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1rem;
     }
     .season-selector-wrap {
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .selector-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--purple-light);
-      font-weight: 700;
-      margin-left: 4px;
-    }
-    .custom-select-btn {
-      display: flex;
       align-items: center;
-      gap: 12px;
-      background: rgba(139, 92, 246, 0.15);
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.05); /* Glass capsule */
+      backdrop-filter: blur(12px);
       padding: 8px 16px;
       border-radius: 12px;
-      border: 1px solid rgba(139, 92, 246, 0.4);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .custom-select-btn:hover {
-      background: rgba(139, 92, 246, 0.25);
-      border-color: var(--purple-light);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     #seasonFilter {
       background: transparent;
       border: none;
-      color: #fff;
+      color: var(--white);
       font-size: 1.1rem;
-      font-weight: 800;
+      font-weight: 700;
       cursor: pointer;
       outline: none;
     }
     .table-card {
-      background: rgba(15, 15, 20, 0.6);
-      backdrop-filter: blur(20px);
+      background: rgba(15, 15, 25, 0.4);
+      backdrop-filter: blur(20px); /* Deep glass */
       border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      margin-bottom: 0.5rem;
     }
     table {
       width: 100%;
@@ -166,14 +148,11 @@
   <div class="container standings-container">
     <div class="standings-header reveal">
       <div>
-        <h1 class="section-title" style="margin-bottom: 0.5rem; font-size: 2.2rem; letter-spacing: -1px;">IPL STANDINGS</h1>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Historical season rankings and performance metrics.</p>
+        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.8rem;">IPL STANDINGS</h1>
       </div>
       <div class="season-selector-wrap">
-        <span class="selector-label">View Season</span>
-        <div class="custom-select-btn">
-          <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
-          <select id="seasonFilter">
+        <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
+        <select id="seasonFilter">
           <option value="2025">2025 Season</option>
           <option value="2024">2024 Season</option>
           <option value="2023">2023 Season</option>
@@ -191,9 +170,7 @@
           <option value="2011">2011 Season</option>
           <option value="2010">2010 Season</option>
           <option value="2009">2009 Season</option>
-          <option value="2008">2008 Season</option>
         </select>
-        </div>
       </div>
     </div>
 
@@ -228,6 +205,14 @@
     async function loadStandings() {
       const tbody = document.getElementById('standingsBody');
       const seasonFilter = document.getElementById('seasonFilter');
+      
+      // Actual IPL Champions mapping
+      const championsMap = {
+        "2024": "KKR", "2023": "CSK", "2022": "GT", "2021": "CSK", "2020": "MI", 
+        "2019": "MI", "2018": "CSK", "2017": "MI", "2016": "SRH", "2015": "MI", 
+        "2014": "KKR", "2013": "MI", "2012": "KKR", "2011": "CSK", "2010": "CSK", 
+        "2009": "DEC", "2008": "RR"
+      };
 
       async function fetchWithFallback(filename) {
         const paths = [`./data/${filename}`, `/data/${filename}`, `./public/data/${filename}`];
@@ -247,6 +232,7 @@
         function render(year) {
             tbody.innerHTML = '';
             const seasonRows = seasons[year];
+            const champion = championsMap[year];
             
             if (!seasonRows) {
                 tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
@@ -256,12 +242,12 @@
             seasonRows.forEach((row, idx) => {
                 const tr = document.createElement('tr');
                 const isTop4 = idx < 4;
-                const isWinner = idx === 0; // The first row in sorted standings is the winner
+                const isWinner = row.team === champion; 
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
                 
                 tr.innerHTML = `
-                <td class="rank-cell">${idx + 1}</td>
+                <td class="rank-cell">${row.rank}</td>
                 <td>
                     <div class="team-cell">
                     ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner"></i>' : ''}
