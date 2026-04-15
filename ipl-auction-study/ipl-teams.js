@@ -620,15 +620,27 @@ export async function initIplTeamsSection(options = {}) {
   }
 
   try {
-    try {
-        const xaiRes = await fetch('./public/data/xai/team_explainability.json');
-        if (xaiRes.ok) teamXAI = await xaiRes.json();
-    } catch (e) {
-        console.warn("XAI data missing for teams, using default intelligence.");
+    const xaiPaths = ['./data/xai/team_explainability.json', '/data/xai/team_explainability.json', './public/data/xai/team_explainability.json'];
+    for (const p of xaiPaths) {
+        try {
+            const xaiRes = await fetch(p);
+            if (xaiRes.ok) {
+                teamXAI = await xaiRes.json();
+                break;
+            }
+        } catch (e) {}
     }
 
-    const res = await fetchBundle(bundleUrl);
-    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    const bundlePaths = ['./data/ipl-teams-bundle.json', '/data/ipl-teams-bundle.json', './public/data/ipl-teams-bundle.json'];
+    let res;
+    for (const p of bundlePaths) {
+        try {
+            res = await fetch(p);
+            if (res.ok) break;
+        } catch (e) {}
+    }
+
+    if (!res || !res.ok) throw new Error("Could not find team bundle in any path.");
     const data = await res.json();
     const teams = data.teams || [];
     console.log(`[IPL Intelligence] Loaded ${teams.length} teams. Build: 2026-04-12-Immersive`);

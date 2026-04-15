@@ -199,10 +199,19 @@
       const tbody = document.getElementById('standingsBody');
       const seasonFilter = document.getElementById('seasonFilter');
 
+      async function fetchWithFallback(filename) {
+        const paths = [`./data/${filename}`, `/data/${filename}`, `./public/data/${filename}`];
+        for (const path of paths) {
+          try {
+            const resp = await fetch(path);
+            if (resp.ok) return await resp.json();
+          } catch (e) {}
+        }
+        throw new Error(`Data file ${filename} not found in any known path.`);
+      }
+
       try {
-        const resp = await fetch('./public/data/ipl-points-table.json');
-        if (!resp.ok) throw new Error("Data not found");
-        const data = await resp.json();
+        const data = await fetchWithFallback('ipl-points-table.json');
         const seasons = data.seasons;
 
         function render(year) {

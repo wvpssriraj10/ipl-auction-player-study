@@ -1568,12 +1568,30 @@ async function init() {
     state.isLoading = true;
     displayResult("Loading data...");
 
+    async function resolvePath(filename) {
+        const paths = [`./data/${filename}`, `/data/${filename}`, `./public/data/${filename}`];
+        for (const path of paths) {
+            try {
+                const head = await fetch(path, { method: 'HEAD' });
+                if (head.ok) return path;
+            } catch (e) {}
+        }
+        return `./public/data/${filename}`; // Default to local dev path as fallback
+    }
+
     // Load all required datasets
+    const [bPath, blPath, vPath, aPath] = await Promise.all([
+        resolvePath("processed/batting_agg.csv"),
+        resolvePath("processed/bowling_agg.csv"),
+        resolvePath("processed/player_value_scores.csv"),
+        resolvePath("processed/ipl_awards_prices.csv")
+    ]);
+
     const [batting, bowling, values, awards] = await Promise.all([
-      loadCSV("./public/data/processed/batting_agg.csv"),
-      loadCSV("./public/data/processed/bowling_agg.csv"),
-      loadCSV("./public/data/processed/player_value_scores.csv"),
-      loadCSV("./public/data/processed/ipl_awards_prices.csv"),
+      loadCSV(bPath),
+      loadCSV(blPath),
+      loadCSV(vPath),
+      loadCSV(aPath),
     ]);
 
     // Populate state
@@ -1600,10 +1618,16 @@ async function init() {
 
     // Load XAI layers
     try {
+        const [txPath, pxPath, axPath] = await Promise.all([
+            resolvePath("xai/team_explainability.json"),
+            resolvePath("xai/player_explainability.json"),
+            resolvePath("xai/auction_explainability.json")
+        ]);
+
         const [tXAI, pXAI, aXAI] = await Promise.all([
-          fetch("./public/data/xai/team_explainability.json").then(r => r.json()),
-          fetch("./public/data/xai/player_explainability.json").then(r => r.json()),
-          fetch("./public/data/xai/auction_explainability.json").then(r => r.json())
+          fetch(txPath).then(r => r.json()),
+          fetch(pxPath).then(r => r.json()),
+          fetch(axPath).then(r => r.json())
         ]).catch(() => [{}, {}, {}]);
         state.teamXAI = tXAI || {};
         state.playerXAI = pXAI || {};
