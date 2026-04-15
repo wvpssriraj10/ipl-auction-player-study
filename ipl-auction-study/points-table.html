@@ -22,6 +22,85 @@
     .top-nav {
       padding: 0.5rem 2rem !important; 
     }
+    /* Custom Animated Dropdown */
+    .custom-dropdown {
+      position: relative;
+      width: 200px;
+      z-index: 1000;
+    }
+    .dropdown-btn {
+      width: 100%;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: #fff;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .dropdown-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(139, 92, 246, 0.4);
+    }
+    .dropdown-btn i {
+      transition: transform 0.3s ease;
+      color: var(--purple-light);
+    }
+    .custom-dropdown.open .dropdown-btn i {
+      transform: rotate(180deg);
+    }
+    .dropdown-menu {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 15, 25, 0.95);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-10px) scale(0.95);
+      pointer-events: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .custom-dropdown.open .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+    .dropdown-item {
+      padding: 10px 16px;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    .custom-dropdown.open .dropdown-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .dropdown-item:hover {
+      background: rgba(139, 92, 246, 0.1);
+      color: #fff;
+    }
+    /* Staggered entry */
+    .dropdown-item:nth-child(1) { transition-delay: 0.05s; }
+    .dropdown-item:nth-child(2) { transition-delay: 0.1s; }
+    .dropdown-item:nth-child(3) { transition-delay: 0.15s; }
+    .dropdown-item:nth-child(4) { transition-delay: 0.2s; }
+    .dropdown-item:nth-child(5) { transition-delay: 0.25s; }
+    
     .standings-container {
       margin-top: 85px; 
       padding-bottom: 20px;
@@ -33,26 +112,6 @@
       margin-bottom: 0.8rem;
       flex-wrap: wrap;
       gap: 1rem;
-    }
-    .season-selector-wrap {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: rgba(255, 255, 255, 0.05); /* Glass capsule */
-      backdrop-filter: blur(12px);
-      padding: 8px 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    #seasonFilter {
-      background: transparent;
-      border: none;
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      outline: none;
-      color-scheme: dark; /* Force dark background for dropdown options */
     }
     .table-card {
       background: rgba(15, 15, 25, 0.4);
@@ -162,27 +221,31 @@
       <div>
         <h1 class="section-title" style="margin-bottom: 0; font-size: 1.8rem;">IPL STANDINGS</h1>
       </div>
-      <div class="season-selector-wrap">
-        <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
-        <select id="seasonFilter">
-          <option value="2025">2025 Season</option>
-          <option value="2024">2024 Season</option>
-          <option value="2023">2023 Season</option>
-          <option value="2022">2022 Season</option>
-          <option value="2021">2021 Season</option>
-          <option value="2020">2020 Season</option>
-          <option value="2019">2019 Season</option>
-          <option value="2018">2018 Season</option>
-          <option value="2017">2017 Season</option>
-          <option value="2016">2016 Season</option>
-          <option value="2015">2015 Season</option>
-          <option value="2014">2014 Season</option>
-          <option value="2013">2013 Season</option>
-          <option value="2012">2012 Season</option>
-          <option value="2011">2011 Season</option>
-          <option value="2010">2010 Season</option>
-          <option value="2009">2009 Season</option>
-        </select>
+      <div class="custom-dropdown" id="seasonDropdown">
+        <div class="dropdown-btn" id="dropdownBtn">
+          <span id="selectedLabel"><i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> 2025 Season</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-item" data-value="2025">2025 Season</div>
+          <div class="dropdown-item" data-value="2024">2024 Season</div>
+          <div class="dropdown-item" data-value="2023">2023 Season</div>
+          <div class="dropdown-item" data-value="2022">2022 Season</div>
+          <div class="dropdown-item" data-value="2021">2021 Season</div>
+          <div class="dropdown-item" data-value="2020">2020 Season</div>
+          <div class="dropdown-item" data-value="2019">2019 Season</div>
+          <div class="dropdown-item" data-value="2018">2018 Season</div>
+          <div class="dropdown-item" data-value="2017">2017 Season</div>
+          <div class="dropdown-item" data-value="2016">2016 Season</div>
+          <div class="dropdown-item" data-value="2015">2015 Season</div>
+          <div class="dropdown-item" data-value="2014">2014 Season</div>
+          <div class="dropdown-item" data-value="2013">2013 Season</div>
+          <div class="dropdown-item" data-value="2012">2012 Season</div>
+          <div class="dropdown-item" data-value="2011">2011 Season</div>
+          <div class="dropdown-item" data-value="2010">2010 Season</div>
+          <div class="dropdown-item" data-value="2009">2009 Season</div>
+          <div class="dropdown-item" data-value="2008">2008 Season</div>
+        </div>
       </div>
     </div>
 
@@ -216,7 +279,6 @@
   <script>
     async function loadStandings() {
       const tbody = document.getElementById('standingsBody');
-      const seasonFilter = document.getElementById('seasonFilter');
       
       // Actual IPL Champions mapping
       const championsMap = {
@@ -287,8 +349,32 @@
             });
         }
 
-        seasonFilter.addEventListener('change', (e) => render(e.target.value));
-        render(seasonFilter.value);
+        const dropdown = document.getElementById('seasonDropdown');
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const selectedLabel = document.getElementById('selectedLabel');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        dropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('open');
+        });
+
+        dropdownItems.forEach(item => {
+          item.addEventListener('click', () => {
+             const val = item.getAttribute('data-value');
+             selectedLabel.innerHTML = `<i class="fa-solid fa-calendar-days" style="margin-right: 8px; color: var(--purple-light);"></i> ${val} Season`;
+             render(val);
+             dropdown.classList.remove('open');
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+          }
+        });
+
+        render('2025');
       } catch (err) {
         console.error("Standings Error:", err);
       }
