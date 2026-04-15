@@ -342,16 +342,22 @@ function renderPlayerPulseChart(playerName, dataType = 'runs') {
  */
 function renderMarketEfficiencyChart() {
   const ctx = document.getElementById('marketChart').getContext('2d');
-  
-  // Filter for valid price/value entries
-  const validData = state.awards
+  if (!ctx) return;
+
+  // Filter state.values for players who have an auction price listed
+  const validData = state.values
     .filter(r => num(r.price_cr) > 0 && num(r.value_score) > 0)
     .map(r => ({
       x: num(r.price_cr),
       y: num(r.value_score),
-      player: r.highest_buy_player,
+      player: r.player,
       season: r.season
     }));
+
+  if (validData.length === 0) {
+    console.warn("No valid ROI data found for Market Efficiency Chart.");
+    return;
+  }
 
   new Chart(ctx, {
     type: 'scatter',
