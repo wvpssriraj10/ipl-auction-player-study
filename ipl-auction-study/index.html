@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="IPL Auction Intelligence - Data-driven analytics for cricket investment decisions." />
   <meta name="theme-color" content="#8b5cf6" />
-  <title>IPL Auction Intelligence | Cinematic Demo</title>
+  
+  <!-- SEO & Open Graph Tags -->
+  <meta property="og:title" content="IPL Auction Intelligence | Strategic Decision Portal" />
+  <meta property="og:description" content="High-performance cricket analytics decoding the intersection of auction market value and on-field reality." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <title>IPL Auction Intelligence | Cinematic Decision Suite</title>
   
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏏%3C/text%3E%3C/svg%3E">
-  <link rel="alternate icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3233/3233483.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   
   <!-- External Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
@@ -22,6 +29,7 @@
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <!-- Skip to main content link for accessibility -->
@@ -29,30 +37,32 @@
 
   <!-- Navigation Header -->
   <header class="top-nav" role="banner">
-    <div class="brand">IPL AUCTION INTELLIGENCE</div>
+    <div class="brand">
+        <img src="/favicon.svg" alt="" style="width: 32px; height: 32px; border-radius: 50%;"> 
+        IPL AUCTION INTELLIGENCE
+    </div>
     <nav aria-label="Main Navigation">
-      <a href="#services">Services</a>
+      <a href="/index.html" class="active">Home</a>
       <a href="#query">Console</a>
-      <a href="/teams">IPL Teams</a>
-      <a href="/points-table" class="nav-highlight">🏆 Points Table</a>
-      <a href="#numbers">By The Numbers</a>
+      <a href="/teams.html">Franchises</a>
+      <a href="/points-table.html" class="nav-highlight">🏆 Standings</a>
     </nav>
+    <button class="mobile-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" aria-label="Hero Section">
-    <video class="hero-video parallax" autoplay muted loop playsinline
-      src="https://cdn.coverr.co/videos/coverr-working-on-a-shipping-port-1579/1080p.mp4"
-      aria-hidden="true"></video>
+    <div class="hero-overlay-bg parallax" style="background-image: linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.9)), url('https://images.unsplash.com/photo-1540749142441-b7f16735336d?q=80&w=2060&auto=format&fit=crop');"></div>
     <div class="grain" aria-hidden="true"></div>
     <div class="hero-content reveal">
-      <p class="hero-kicker">Decision Intelligence System</p>
+      <p class="hero-kicker">Data-Driven Auction Intelligence</p>
       <h1>AUCTION PRICING<br/>MEETS ON-FIELD REALITY</h1>
-      <p class="hero-sub">Gritty, data-first analytics for IPL investment decisions.</p>
+      <p class="hero-sub">Gritty, data-first analytics for professional IPL investment decisions.</p>
       <div class="hero-actions" role="group" aria-label="Primary actions">
         <a href="#query" class="pill-btn">Enter Demo Console</a>
-        <a href="/teams" class="pill-btn pill-btn--ghost">IPL Teams</a>
-        <a href="/points-table" class="pill-btn pill-btn--ghost">Points Table</a>
+        <a href="/teams" class="pill-btn pill-btn--ghost">IPL Franchises</a>
       </div>
     </div>
   </section>

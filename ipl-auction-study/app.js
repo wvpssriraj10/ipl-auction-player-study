@@ -1357,6 +1357,10 @@ function runQuery() {
     const category = categorySelect.value;
     destroyPulseChart();
     analyticsSlot.classList.add("hidden");
+    
+    // UI Feedback: Show loader and scroll
+    resultBox.innerHTML = '<div style="display:flex; justify-content:center; padding: 4rem; width: 100%;"><div class="loading-spinner"></div></div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     if (category === "Other") {
       displayResult("Other is reserved for future expansion.");
@@ -1435,9 +1439,12 @@ function renderTopNumbers() {
     ).length;
     const hitRate = seasons.length ? (hit / seasons.length) * 100 : 0;
 
-    statSeasons.textContent = `${seasons.length}`;
-    statPlayers.textContent = `${players.length}`;
-    statHitRate.textContent = `${hitRate.toFixed(1)}`;
+  statSeasons.setAttribute('data-target', seasons.length);
+    statPlayers.setAttribute('data-target', players.length);
+    statHitRate.setAttribute('data-target', hitRate.toFixed(1));
+
+    // Trigger animation
+    animateStatsCounters();
 
     // Render the analytics dashboard
     renderMarketEfficiencyChart();
@@ -1456,6 +1463,51 @@ function renderTopNumbers() {
     console.error("Error rendering statistics:", err);
   }
 }
+
+/**
+ * Animates numbers in the By The Numbers section
+ */
+function animateStatsCounters() {
+  const statValues = [statSeasons, statPlayers, statHitRate];
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseFloat(el.getAttribute('data-target'));
+        let count = 0;
+        const speed = target / 100;
+        
+        const updateCount = () => {
+          if (count < target) {
+            count += speed;
+            el.innerText = Math.ceil(count);
+            setTimeout(updateCount, 15);
+          } else {
+            el.innerText = target % 1 === 0 ? target : target.toFixed(1);
+          }
+        };
+        updateCount();
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statValues.forEach(val => val && observer.observe(val));
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
 /**
  * Renders tiny mini-charts for each team to show historical rank trends
@@ -1700,3 +1752,30 @@ window.addEventListener("scroll", applyScrollEffects, { passive: true });
 // APPLICATION START
 // ============================================
 document.addEventListener("DOMContentLoaded", init);
+
+// Mobile Toggle Handler
+const mobileToggle = document.querySelector('.mobile-toggle');
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        const nav = document.querySelector('.top-nav nav');
+        if (nav) {
+            const isVisible = nav.classList.contains('mobile-active');
+            if (isVisible) {
+                nav.classList.remove('mobile-active');
+                nav.style.display = 'none';
+            } else {
+                nav.classList.add('mobile-active');
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = 'rgba(10, 10, 15, 0.98)';
+                nav.style.padding = '20px';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+                nav.style.gap = '20px';
+            }
+        }
+    });
+}
