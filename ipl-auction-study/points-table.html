@@ -19,17 +19,20 @@
       transform: translateY(0) !important;
       filter: none !important;
     }
+    .top-nav {
+      padding: 0.5rem 2rem !important; 
+    }
     .standings-container {
-      margin-top: 60px; /* Even tighter */
-      padding-bottom: 20px;
+      margin-top: 20px; 
+      padding-bottom: 5px;
     }
     .standings-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.8rem; /* Tight header */
+      margin-bottom: 0.4rem; /* Ultra tight */
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.8rem;
     }
     .season-selector-wrap {
       display: flex;
@@ -133,8 +136,7 @@
   <div class="container standings-container">
     <div class="standings-header reveal">
       <div>
-        <h1 class="section-title" style="margin-bottom: 0;">IPL STANDINGS</h1>
-        <p class="hero-sub" style="font-size: 1rem; opacity: 0.6;">Historical league positions and Net Run Rates (NRR).</p>
+        <h1 class="section-title" style="margin-bottom: 0; font-size: 1.5rem;">IPL STANDINGS</h1>
       </div>
       <div class="season-selector-wrap">
         <i class="fa-solid fa-calendar-days" style="color: var(--purple-light);"></i>
@@ -180,19 +182,13 @@
       </table>
     </div>
 
-    <div class="reveal" style="padding: 1.5rem; background: rgba(139, 92, 246, 0.05); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.1);">
-        <p style="font-size: 0.85rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
+    <div class="reveal" style="padding: 0.8rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.1); margin-top: 0.5rem;">
+        <p style="font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; margin: 0;">
             <i class="fa-solid fa-circle-info" style="color: var(--purple-light);"></i>
-            Top 4 teams in each season qualified for the Playoffs / Semi-Finals.
+            Top 4 teams qualified for Playoffs.
         </p>
     </div>
   </div>
-
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 IPL Auction Intelligence. Data-driven sport analysis.</p>
-    </div>
-  </footer>
 
   <script>
     async function loadStandings() {
