@@ -4,38 +4,38 @@ A professional-grade, data-driven intelligence console designed to decode the in
 
 ## 🚀 Key Features
 
-### 1. 🌌 Market Galaxy (Auction ROI Maps)
+### 1. 🧠 Explainability Layer (XAI)
+Every insight is now backed by a "Glass Box" reasoning engine. 
+*   **Context-Aware Labels**: Instead of just seeing "Power Finisher," users see *why* (e.g., "Strike rate is 18.2% higher than league average").
+*   **Benchmarking**: Real-time comparisons against historical league-wide baselines (2008–2025).
+
+### 2. ⚡ Reliability & Confidence Tags
+Statistical integrity is ensured through a proactive reliability scoring system.
+*   **Sample-Size Awareness**: Insights derived from small datasets (e.g., < 5 matches) are automatically demoted in confidence.
+*   **Confidence Scoring**: Every insight is scored as 🟢 **High**, 🟡 **Medium**, or 🔴 **Low** based on performance variance and data volume.
+
+### 3. 🌌 Market Galaxy (Auction ROI Maps)
 A high-performance scatter plot mapping every player's **Auction Price** against their **Value Score**.
 *   **Ghost Clusters**: Visualizes the league-wide baseline in the background.
-*   **Star Highlighting**: Record-breaking signings glow with high-intensity identifiers to show if they delivered on the investment.
-
-### 2. 🤖 AI Player Archetypes
-An automated classification engine that analyzes career DNA to assign tactical roles:
-*   🔥 **Power Finisher**: High SR + High Sixes.
-*   🎯 **Death Specialist**: Low Economy + High Wickets in crucial overs.
-*   🛡️ **Technical Anchor**: High Average + Low Dot Ball %.
-*   ⚡ **Impact Specialist**: High match-winning contributions relative to playtime.
-
-### 3. 🧠 Live Auction Intelligence Panel
-A narrative-first insight engine that generates real-time strategic takeaways:
-*   **Market Steals**: Identifies players who provided maximum output for minimum cost.
-*   **Franchise ROI**: Ranks teams by their "Efficiency Index" (Performance per Crore).
-*   **Dynasty Intelligence**: Deep-dives into the patterns of winning franchises.
+*   **Star Highlighting**: Record-breaking signings glow with identifiers to show if they delivered on the investment.
 
 ### 4. 📈 Historical Heartbeat (Sparklines)
 Every franchise profile features a micro-trend line showing their rank fluctuations from 2008 to 2025, allowing for instant "slump vs. surge" detection.
 
-### 5. 💎 Terminal-Grade UI/UX
-*   **Bloomberg Aesthetic**: Glassmorphic, dark-mode interface with violet accents.
-*   **Responsive Analytics**: Tables and charts that adapt from mobile browsing to big-screen deep dives.
-*   **Cinematic Parallax**: Immersive background layers and smooth transitions.
+### 5. 🤖 Automated Intelligence Pipeline
+A custom Python engine (`generate_team_intel.py`) that performs high-speed joins across batting, bowling, and auction datasets to compute:
+*   **Playoff Qualification Rates**
+*   **Auction Strategy (Batting vs. Bowling Heavy)**
+*   **Franchise ROI Benchmarks**
+
+### 📱 Responsive Framework (MUI v5 Standad)
+Fully responsive architecture built on Material UI v5 breakpoints (`XS` through `XL`), ensuring the "Intelligence Dashboard" remains readable from mobile phones to ultra-wide monitors.
 
 ## 🛠️ Technology Stack
-
-*   **Logic**: Narrative Insight Engine (Custom JS)
+*   **Analytical Kernel**: Python / Pandas (XAI Calculation & Reliability Scoring)
 *   **Visuals**: Chart.js 4.4.2 (High-density rendering)
-*   **Styling**: Vanilla CSS (Glassmorphism + Modern Grid)
-*   **Structure**: Semantic HTML5 (SEO & Accessibility Optimized)
+*   **Styling**: Vanilla CSS + MUI v5 Responsive Standards
+*   **Infrastructure**: Narrative Insight Engine (Custom JS)
 
 ---
 
