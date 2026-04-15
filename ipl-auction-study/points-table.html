@@ -189,57 +189,68 @@
   </footer>
 
   <script>
-    async function loadStandings() {
-      const resp = await fetch('/data/ipl-points-table.json');
-      const allData = await resp.json();
-      const seasonFilter = document.getElementById('seasonFilter');
-      const tbody = document.getElementById('standingsBody');
-
-      function render(year) {
-        tbody.innerHTML = '';
-        const seasonData = allData.find(s => s.season == year);
-        if (!seasonData || !seasonData.table) {
-          tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 3rem;">No data available for this season.</td></tr>';
-          return;
-        }
-
-        seasonData.table.forEach((row, idx) => {
-          const tr = document.createElement('tr');
-          const isTop4 = idx < 4;
-          tr.innerHTML = `
-            <td class="rank-cell">${idx + 1}</td>
-            <td>
-              <div class="team-cell">
-                ${row.team}
-                ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
-              </div>
-            </td>
-            <td>${row.played}</td>
-            <td>${row.won}</td>
-            <td>${row.lost}</td>
-            <td class="nrr-cell">${row.nrr}</td>
-            <td class="pts-cell">${row.points}</td>
-          `;
-          tbody.appendChild(tr);
-        });
-      }
-
-      seasonFilter.addEventListener('change', (e) => render(e.target.value));
-      render(seasonFilter.value);
-    }
-
-    document.addEventListener('DOMContentLoaded', loadStandings);
-
-    // Initial reveal animation logic
-    window.addEventListener('scroll', () => {
+    function handleReveal() {
         document.querySelectorAll('.reveal').forEach(el => {
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.9) {
+            if (rect.top < window.innerHeight * 1.5) { 
                 el.style.opacity = '1';
                 el.style.transform = 'translateY(0)';
             }
         });
+    }
+
+    async function loadStandings() {
+      try {
+        const resp = await fetch('./public/data/ipl-points-table.json');
+        if (!resp.ok) throw new Error("Data not found");
+        const allData = await resp.json();
+        
+        const seasonFilter = document.getElementById('seasonFilter');
+        const tbody = document.getElementById('standingsBody');
+
+        function render(year) {
+            tbody.innerHTML = '';
+            const seasonData = allData.find(s => s.season == year);
+            if (!seasonData || !seasonData.table) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
+                return;
+            }
+
+            seasonData.table.forEach((row, idx) => {
+                const tr = document.createElement('tr');
+                const isTop4 = idx < 4;
+                tr.innerHTML = `
+                <td class="rank-cell">${idx + 1}</td>
+                <td>
+                    <div class="team-cell">
+                    ${row.team}
+                    ${isTop4 ? '<span class="status-qualify">Q</span>' : ''}
+                    </div>
+                </td>
+                <td>${row.played}</td>
+                <td>${row.won}</td>
+                <td>${row.lost}</td>
+                <td class="nrr-cell">${row.nrr}</td>
+                <td class="pts-cell">${row.points}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+            handleReveal();
+        }
+
+        seasonFilter.addEventListener('change', (e) => render(e.target.value));
+        render(seasonFilter.value);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        loadStandings();
+        handleReveal();
     });
+
+    window.addEventListener('scroll', handleReveal);
   </script>
 </body>
 </html>

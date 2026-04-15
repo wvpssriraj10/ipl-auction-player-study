@@ -510,9 +510,9 @@ function renderDetail(detailEl, team, xaiHtml = "") {
  */
 function defaultBundleUrl() {
   if (typeof window !== 'undefined' && window.location?.origin) {
-    return new URL('/data/ipl-teams-bundle.json', window.location.origin).href;
+    return new URL('./public/data/ipl-teams-bundle.json', window.location.origin).href;
   }
-  return '/data/ipl-teams-bundle.json';
+  return './public/data/ipl-teams-bundle.json';
 }
 
 async function fetchBundle(primaryUrl) {
@@ -621,7 +621,7 @@ export async function initIplTeamsSection(options = {}) {
 
   try {
     try {
-        const xaiRes = await fetch('/data/xai/team_explainability.json');
+        const xaiRes = await fetch('./public/data/xai/team_explainability.json');
         if (xaiRes.ok) teamXAI = await xaiRes.json();
     } catch (e) {
         console.warn("XAI data missing for teams, using default intelligence.");

@@ -1570,10 +1570,10 @@ async function init() {
 
     // Load all required datasets
     const [batting, bowling, values, awards] = await Promise.all([
-      loadCSV("/data/processed/batting_agg.csv"),
-      loadCSV("/data/processed/bowling_agg.csv"),
-      loadCSV("/data/processed/player_value_scores.csv"),
-      loadCSV("/data/processed/ipl_awards_prices.csv"),
+      loadCSV("./public/data/processed/batting_agg.csv"),
+      loadCSV("./public/data/processed/bowling_agg.csv"),
+      loadCSV("./public/data/processed/player_value_scores.csv"),
+      loadCSV("./public/data/processed/ipl_awards_prices.csv"),
     ]);
 
     // Populate state
@@ -1601,9 +1601,9 @@ async function init() {
     // Load XAI layers
     try {
         const [tXAI, pXAI, aXAI] = await Promise.all([
-          fetch("/data/xai/team_explainability.json").then(r => r.json()),
-          fetch("/data/xai/player_explainability.json").then(r => r.json()),
-          fetch("/data/xai/auction_explainability.json").then(r => r.json())
+          fetch("./public/data/xai/team_explainability.json").then(r => r.json()),
+          fetch("./public/data/xai/player_explainability.json").then(r => r.json()),
+          fetch("./public/data/xai/auction_explainability.json").then(r => r.json())
         ]).catch(() => [{}, {}, {}]);
         state.teamXAI = tXAI || {};
         state.playerXAI = pXAI || {};
