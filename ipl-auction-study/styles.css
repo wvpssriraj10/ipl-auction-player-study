@@ -367,21 +367,21 @@ body {
 }
 
 .teams-main {
-  padding-top: 120px;
+  padding-top: 84px;
   /* Safe harbor for the fixed topbar on desktop */
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .teams-page-h1 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .teams-page-lede {
-  margin-bottom: 2rem;
+  margin-bottom: 0.85rem;
 }
 
 .teams-page-layout {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 /* ============================================
@@ -1574,8 +1574,8 @@ input.player-search-input {
 .ipl-teams-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1.5rem;
-  padding: 3rem 1.5rem;
+  gap: 1rem;
+  padding: 1.15rem 1rem;
   align-items: stretch;
 }
 
@@ -1655,13 +1655,13 @@ body.ipl-teams-detail-open {
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
   justify-content: center !important;
   align-items: stretch !important;
-  gap: 1.5rem 1rem !important;
+  gap: 1rem 0.8rem !important;
   max-height: none;
   overflow: visible;
   width: 100%;
   max-width: 1300px !important;
   margin: 0 auto;
-  padding: 3rem 1rem !important;
+  padding: 0.9rem 0.8rem 1.2rem !important;
 }
 
 @media (min-width: 480px) {
@@ -1675,9 +1675,9 @@ body.ipl-teams-detail-open {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    padding: 2.5rem 1rem 10rem !important;
+    padding: 0.65rem 0.8rem 1.2rem !important;
     /* Large gap at bottom of grid */
-    gap: 1.5rem 1.25rem !important;
+    gap: 1rem 0.95rem !important;
     max-width: 1320px !important;
     /* Forces 8 in row 1 and 7 in row 2 */
     margin: 0 auto;
