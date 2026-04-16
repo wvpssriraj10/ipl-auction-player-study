@@ -349,7 +349,7 @@ body {
 }
 
 .teams-back-link:hover {
-  color: var(--purple-light);
+  color: var(--purple);
 }
 
 .teams-topbar-brand {
@@ -1418,7 +1418,7 @@ input.player-search-input {
 }
 
 .teams-page-title--gradient {
-  background: linear-gradient(135deg, #fff 0%, #a78bfa 60%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #fff 0%, #8b5cf6 60%, #6d28d9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1780,7 +1780,7 @@ body.ipl-teams-detail-open {
 }
 
 .nav-highlight {
-  color: var(--purple-light) !important;
+  color: var(--purple) !important;
   font-weight: 800 !important;
   display: inline-flex;
   align-items: center;
@@ -1788,7 +1788,7 @@ body.ipl-teams-detail-open {
 }
 
 .nav-highlight:hover {
-  text-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
 }
 
 .nav-link {
@@ -1801,7 +1801,7 @@ body.ipl-teams-detail-open {
 }
 
 .nav-link:hover {
-  color: var(--purple-light);
+  color: var(--purple);
 }
 
 /* Detail Header Social Links */
