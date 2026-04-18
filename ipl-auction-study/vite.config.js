@@ -14,7 +14,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         teams: 'teams.html',
-        points: 'points-table.html'
+        points: 'points-table.html',
+        squads: 'squad-list.html'
       }
     }
   },
