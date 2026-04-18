@@ -5,219 +5,309 @@
     "squad": [
       {
         "name": "Mahela Jayawardene",
-        "role": "Unknown",
-        "category": "Other",
+        "role": "Batter",
+        "category": "Batter",
         "is_captain": true,
         "is_overseas": true,
-        "country": "SL"
-      },
-      {
-        "name": "Brendon McCullum",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": true,
-        "country": "NZ"
-      },
-      {
-        "name": "Parthiv Patel",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Sushant Marathe",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Chandan Madan",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "VVS Laxman",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Brad Hodge",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": true,
-        "country": "AUS"
-      },
-      {
-        "name": "Michael Klinger",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": true,
-        "country": "AUS"
-      },
-      {
-        "name": "Tanmay Srivastava",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Kedar Jadhav",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Yashpal Singh",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
+        "country": "SL",
+        "age": "33y 343d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium"
       },
       {
         "name": "Deepak Chougule",
-        "role": "Unknown",
-        "category": "Other",
+        "role": "Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": false,
-        "country": "IND"
+        "country": "IND",
+        "age": "27y 34d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
       },
       {
-        "name": "Ravindra Jadeja",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Thisara Perera",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "Brad Hodge",
+        "role": "Top order Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": true,
-        "country": "SL"
+        "country": "AUS",
+        "age": "36y 127d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
       },
       {
-        "name": "John Hastings",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "Michael Klinger",
+        "role": "Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": true,
-        "country": "AUS"
+        "country": "AUS",
+        "age": "30y 305d",
+        "batting_style": "Right hand Bat"
       },
       {
-        "name": "Raiphi Gomez",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "VVS Laxman",
+        "role": "Top order Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": false,
-        "country": "IND"
+        "country": "IND",
+        "age": "36y 185d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
       },
       {
-        "name": "Prasanth Padmanabhan",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "Chandan Madan",
+        "role": "Wicketkeeper",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": false,
-        "country": "IND"
+        "country": "IND",
+        "age": "28y 202d",
+        "batting_style": "Right hand Bat"
       },
       {
-        "name": "Steve O'Keefe",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "Sushant Marathe",
+        "role": "Wicketkeeper",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "25y 201d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Legbreak Googly"
+      },
+      {
+        "name": "Brendon McCullum",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": true,
-        "country": "AUS"
+        "country": "NZ",
+        "age": "29y 220d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium, Right arm Offbreak"
       },
       {
-        "name": "Sreesanth",
-        "role": "Unknown",
-        "category": "Other",
+        "name": "Parthiv Patel",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "R. Vinay Kumar",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "RP Singh",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Ramesh Powar",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Muttiah Muralitharan",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": true,
-        "country": "SL"
-      },
-      {
-        "name": "Prasanth Parameswaran",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Akhil Balachandra",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
-      },
-      {
-        "name": "Steven Smith",
-        "role": "Unknown",
-        "category": "Other",
-        "is_captain": false,
-        "is_overseas": false,
-        "country": "IND"
+        "country": "IND",
+        "age": "26y 57d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Right arm Offbreak"
       },
       {
         "name": "Owais Shah",
-        "role": "Unknown",
-        "category": "Other",
+        "role": "Batter",
+        "category": "Batter",
         "is_captain": false,
         "is_overseas": true,
-        "country": "ENG"
+        "country": "ENG",
+        "age": "32y 195d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
+      },
+      {
+        "name": "Steven Smith",
+        "role": "Top order Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS",
+        "age": "21y 337d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Legbreak Googly"
+      },
+      {
+        "name": "Tanmay Srivastava",
+        "role": "Top order Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "21y 179d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Right arm Medium"
+      },
+      {
+        "name": "Yashpal Singh",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "29y 159d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium"
+      },
+      {
+        "name": "Gnaneswara Rao",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "26y 253d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium"
+      },
+      {
+        "name": "Raiphi Gomez",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "25y 201d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium"
+      },
+      {
+        "name": "John Hastings",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS",
+        "age": "25y 182d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Fast medium"
+      },
+      {
+        "name": "Ravindra Jadeja",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "22y 150d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Slow Left arm Orthodox"
+      },
+      {
+        "name": "Kedar Jadhav",
+        "role": "Batting Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "26y 40d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
+      },
+      {
+        "name": "Steve O'Keefe",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS",
+        "age": "26y 147d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Slow Left arm Orthodox"
+      },
+      {
+        "name": "Thisara Perera",
+        "role": "Bowling Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL",
+        "age": "22y 32d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Right arm Medium fast"
+      },
+      {
+        "name": "Padmanabhan Prasanth",
+        "role": "Allrounder",
+        "category": "Allrounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "25y 244d",
+        "batting_style": "Left hand Bat",
+        "bowling_style": "Slow Left arm Orthodox"
+      },
+      {
+        "name": "Balachandra Akhil",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "33y 210d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium fast"
+      },
+      {
+        "name": "Muthiah Muralidaran",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL",
+        "age": "39y 18d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
+      },
+      {
+        "name": "Ramesh Powar",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "32y 350d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Offbreak"
+      },
+      {
+        "name": "RP Singh",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "25y 150d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Left arm Fast medium"
+      },
+      {
+        "name": "Sreesanth",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "28y 88d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Fast medium"
+      },
+      {
+        "name": "Vinay Kumar",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "27y 82d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Right arm Medium"
+      },
+      {
+        "name": "Prasanth Parameswaran",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND",
+        "age": "25y 340d",
+        "batting_style": "Right hand Bat",
+        "bowling_style": "Left arm Medium"
       }
     ]
   }
