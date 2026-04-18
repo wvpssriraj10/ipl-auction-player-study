@@ -346,10 +346,9 @@ async function loadSquadPage() {
     const teamBg = teamInfo?.bgUrl || urlParams.get('bg');
     const possibleBgs = [
       teamBg,
-      `/ipl-teams/${teamId}/mumbai-indians-bg.jpg`,
       `/ipl-teams/${teamId}/${teamId}-bg.jpg`,
       `./assets/team-backgrounds/${teamId}-bg.jpg`,
-      `./public/assets/team-backgrounds/csk-chepauk.jpg`
+      `./assets/team-backgrounds/${teamId}-bg.png`
     ].filter(Boolean);
     
     for (const bgPath of possibleBgs) {
