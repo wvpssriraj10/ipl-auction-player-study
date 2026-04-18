@@ -302,6 +302,7 @@ function renderDetail(detailEl, team, xaiHtml = "") {
   else narrativeStr = "Market Challenger";
 
   const teamName = normalizeTeamText(team.name) || team.name || '';
+  const squadListUrl = `./squad-list.html?team=${encodeURIComponent(team.id || '')}&name=${encodeURIComponent(teamName)}&bg=${encodeURIComponent(team.bgUrl || '')}`;
   const finalHtml = normalizeTeamText(`
     <div class="ipl-teams-detail-inner" style="--team-glow: ${teamPrimaryColor}">
       <div class="ipl-teams-detail-bg-glow"></div>
@@ -325,6 +326,9 @@ function renderDetail(detailEl, team, xaiHtml = "") {
             <span class="ipl-teams-dot"> · </span>
             Since <strong>${escapeHtml(String(team.basic_info?.founded))}</strong>
           </p>
+          <div class="ipl-teams-detail-actions">
+            <a href="${squadListUrl}" class="ipl-teams-squad-link">Squads List</a>
+          </div>
           ${socialHtml}
         </div>
       </header>

@@ -1,0 +1,1090 @@
+[
+  {
+    "team": "LSG",
+    "season": 2022,
+    "squad": [
+      {
+        "name": "KL Rahul",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 29,
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ayush Badoni",
+        "role": "Batter",
+        "category": "Batter",
+        "age": 22,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Quinton de Kock",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 29,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Evin Lewis",
+        "role": "Opening Batter",
+        "category": "Batter",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Manish Pandey",
+        "role": "Top order Batter",
+        "category": "Batter",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Manan Vohra",
+        "role": "Opening Batter",
+        "category": "Batter",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Krishnappa Gowtham",
+        "role": "Bowling Allrounder",
+        "category": "All-rounder",
+        "age": 33,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Jason Holder",
+        "role": "Bowling Allrounder",
+        "category": "All-rounder",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Deepak Hooda",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 26,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Kyle Mayers",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 29,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Krunal Pandya",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Karan Sharma",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Marcus Stoinis",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Avesh Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Dushmantha Chameera",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Mohsin Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Shahbaz Nadeem",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ankit Rajpoot",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 21,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Andrew Tye",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 35,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Mayank Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 19,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mark Wood",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      }
+    ]
+  },
+  {
+    "team": "LSG",
+    "season": 2023,
+    "squad": [
+      {
+        "name": "KL Rahul",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 30,
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Nicholas Pooran",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 27,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Quinton de Kock",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Ayush Badoni",
+        "role": "Batter",
+        "category": "Batter",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Deepak Hooda",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 27,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Krunal Pandya",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 31,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Marcus Stoinis",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 33,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Kyle Mayers",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Amit Mishra",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 40,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Avesh Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 26,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mark Wood",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 33,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 22,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Naveen-ul-Haq",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AFG"
+      },
+      {
+        "name": "Jaydev Unadkat",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 31,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Daniel Sams",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Romario Shepherd",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Swapnil Singh",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Krishnappa Gowtham",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 34,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Prerak Mankad",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Karan Sharma",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Manan Vohra",
+        "role": "Batter",
+        "category": "Batter",
+        "age": 29,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Yash Thakur",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mayank Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 20,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mohsin Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Yudhvir Singh",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  },
+  {
+    "team": "LSG",
+    "season": 2024,
+    "squad": [
+      {
+        "name": "KL Rahul",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 31,
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ayush Badoni",
+        "role": "Batter",
+        "category": "Batter",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Quinton de Kock",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 31,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Devdutt Padikkal",
+        "role": "Top order Batter",
+        "category": "Batter",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Nicholas Pooran",
+        "role": "Wicketkeeper Batter",
+        "category": "Batter",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Ashton Turner",
+        "role": "Middle order Batter",
+        "category": "Batter",
+        "age": 30,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Krishnappa Gowtham",
+        "role": "Bowling Allrounder",
+        "category": "All-rounder",
+        "age": 35,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Deepak Hooda",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 28,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Arshin Kulkarni",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 18,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Prerak Mankad",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 29,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Kyle Mayers",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 31,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Krunal Pandya",
+        "role": "Allrounder",
+        "category": "All-rounder",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Marcus Stoinis",
+        "role": "Batting Allrounder",
+        "category": "All-rounder",
+        "age": 34,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Shivam Mavi",
+        "role": "Bowling Allrounder",
+        "category": "All-rounder",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "David Willey",
+        "role": "Bowling Allrounder",
+        "category": "All-rounder",
+        "age": 33,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Arshad Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Matt Henry",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 32,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Shamar Joseph",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Amit Mishra",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 41,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mohsin Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Naveen-ul-Haq",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AFG"
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 23,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Manimaran Siddharth",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 25,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mayank Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 21,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Yash Thakur",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 24,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Yudhvir Singh",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 26,
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mark Wood",
+        "role": "Bowler",
+        "category": "Bowler",
+        "age": 33,
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      }
+    ]
+  },
+  {
+    "team": "LSG",
+    "season": 2025,
+    "squad": [
+      {
+        "name": "Rishabh Pant",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Nicholas Pooran",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Mayank Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ravi Bishnoi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Avesh Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Akash Deep",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "David Miller",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Abdul Samad",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ayush Badoni",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mohsin Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mitchell Marsh",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Shahbaz Ahmed",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Aiden Markram",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Matthew Breetzke",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Shamar Joseph",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Manimaran Siddharth",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Himmat Singh",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Arshin Kulkarni",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Digvesh Rathi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Prince Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Yuvraj Chaudhary",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Akash Singh",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rajvardhan Hangargekar",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Aryan Juyal",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  },
+  {
+    "team": "LSG",
+    "season": 2026,
+    "squad": [
+      {
+        "name": "Rishabh Pant",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Nicholas Pooran",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Mayank Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mohammed Shami",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Avesh Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Josh Inglis",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Abdul Samad",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ayush Badoni",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mohsin Khan",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mitchell Marsh",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Mukul Choudhary",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Shahbaz Ahmed",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Akshat Raghuwanshi",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Wanindu Hasaranga",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Aiden Markram",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Anrich Nortje",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Naman Tiwari",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Matthew Breetzke",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Manimaran Siddharth",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Himmat Singh",
+        "role": "Batter",
+        "category": "Batter",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Digvesh Rathi",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Arshin Kulkarni",
+        "role": "All-rounder",
+        "category": "All-rounder",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Prince Yadav",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Akash Singh",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Arjun Tendulkar",
+        "role": "Bowler",
+        "category": "Bowler",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  }
+]

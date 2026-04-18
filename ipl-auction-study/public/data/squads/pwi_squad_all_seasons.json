@@ -1,0 +1,500 @@
+[
+  {
+    "team": "PWI",
+    "season": 2011,
+    "squad": [
+      {
+        "name": "Yuvraj Singh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Graeme Smith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Robin Uthappa",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Tim Paine",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Angelo Mathews",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Ashish Nehra",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Nathan McCullum",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Callum Ferguson",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Wayne Parnell",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Mitchell Marsh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Jerome Taylor",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Alfonso Thomas",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Jesse Ryder",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Murali Kartik",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Dheeraj Jadhav",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Manish Pandey",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rahul Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Bhuvneshwar Kumar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Abhishek Jhunjhunwala",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mithun Manhas",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Kamran Khan",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  },
+  {
+    "team": "PWI",
+    "season": 2012,
+    "squad": [
+      {
+        "name": "Sourav Ganguly",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Michael Clarke",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Steve Smith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Marlon Samuels",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Luke Wright",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Tamim Iqbal",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "BAN"
+      },
+      {
+        "name": "James Hopes",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Jesse Ryder",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Angelo Mathews",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Callum Ferguson",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Robin Uthappa",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Manish Pandey",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mithun Manhas",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ashok Dinda",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ashish Nehra",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Bhuvneshwar Kumar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rahul Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Murali Kartik",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Wayne Parnell",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Alfonso Thomas",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      }
+    ]
+  },
+  {
+    "team": "PWI",
+    "season": 2013,
+    "squad": [
+      {
+        "name": "Yuvraj Singh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Robin Uthappa",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Steve Smith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Angelo Mathews",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Ross Taylor",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Tamim Iqbal",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "BAN"
+      },
+      {
+        "name": "Marlon Samuels",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "WI"
+      },
+      {
+        "name": "Michael Clarke",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Luke Wright",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Ajantha Mendis",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Kane Richardson",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Bhuvneshwar Kumar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ashok Dinda",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rahul Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Abhishek Nayar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Tirumalasetti Suman",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ishwar Pandey",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Parvez Rasool",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Wayne Parnell",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      }
+    ]
+  }
+]

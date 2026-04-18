@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Auction Intelligence - Chennai Super Kings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #0a0e1a; --bg-card: #1a1f35; --csk-yellow: #FFCB05; --csk-blue: #004BA0;
+            --purple: #8b5cf6; --blue: #3b82f6; --green: #10b981; --red: #ef4444; --orange: #f59e0b; --pink: #ec4899;
+            --text-primary: #ffffff; --text-secondary: #94a3b8; --text-muted: #64748b; --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 203, 5, 0.3); --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text-primary); min-height: 100vh; overflow-x: hidden; background: var(--bg-primary); }
+        .squad-bg { position: fixed; inset: 0; z-index: -2; background: url("./public/assets/team-backgrounds/csk-chepauk.jpg") center top/cover no-repeat; }
+        .squad-bg::before { content: ""; position: absolute; inset: 0; background: inherit; filter: blur(22px) saturate(1.04); transform: scale(1.05); opacity: .66; }
+        .squad-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(8, 12, 24, 0.64), rgba(8, 10, 18, 0.78)); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #0b1020; } ::-webkit-scrollbar-thumb { background: #2b3354; border-radius: 4px; }
+
+        .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(10, 14, 26, 0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-color); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-left { display: flex; align-items: center; gap: 12px; }
+        .nav-logo { width: 36px; height: 36px; background: linear-gradient(135deg, var(--purple), var(--blue)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; flex-shrink: 0; }
+        .nav-brand { font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: 0.05em; color: var(--text-primary); }
+        .nav-right { display: flex; align-items: center; gap: 4px; }
+        .nav-link { display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: var(--transition); }
+        .nav-link:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+        .nav-link.active { color: var(--csk-yellow); background: rgba(255, 203, 5, 0.1); }
+        .nav-mobile-toggle { display: none; background: none; border: none; color: var(--text-secondary); font-size: 18px; cursor: pointer; }
+
+        .main-content { max-width: 1280px; margin: 0 auto; padding: 24px 24px 60px; position: relative; z-index: 1; }
+        .team-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; gap: 20px; flex-wrap: wrap; }
+        .team-header-left { display: flex; align-items: center; gap: 20px; }
+        .team-logo-container { width: 80px; height: 80px; background: linear-gradient(135deg, var(--csk-yellow), var(--csk-blue)); border-radius: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .team-logo-text { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 900; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .team-info { display: flex; flex-direction: column; gap: 6px; }
+        .team-name { font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 900; background: linear-gradient(90deg, var(--csk-yellow), #fff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.01em; }
+        .team-subtitle { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .team-subtitle span { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+        .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.3px; }
+        .badge-yellow { background: rgba(255, 203, 5, 0.15); color: var(--csk-yellow); border: 1px solid rgba(255, 203, 5, 0.2); }
+        .badge-blue { background: rgba(59, 130, 246, 0.15); color: var(--blue); border: 1px solid rgba(59, 130, 246, 0.2); }
+        .go-back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-size: 13px; font-weight: 500; transition: var(--transition); text-decoration: none; }
+        .go-back-btn:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.15); transform: translateX(-3px); }
+
+        .stats-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 24px; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px 18px; position: relative; transition: var(--transition); }
+        .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+        .stat-card:hover { transform: translateY(-2px); } .stat-card.blue::before { background: var(--blue); } .stat-card.green::before { background: var(--green); } .stat-card.orange::before { background: var(--orange); } .stat-card.purple::before { background: var(--purple); } .stat-card.pink::before { background: var(--pink); }
+        .stat-number { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; } .stat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+
+        .controls-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+        .controls-left, .controls-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .season-dropdown-wrapper { position: relative; }
+        .season-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 13px; font-weight: 500; cursor: pointer; transition: var(--transition); white-space: nowrap; }
+        .season-btn i.fa-calendar { color: var(--csk-yellow); } .season-btn .chevron { transition: transform 0.3s ease; color: var(--text-muted); font-size: 10px; } .season-btn.open .chevron { transform: rotate(180deg); }
+        .season-dropdown { position: absolute; top: calc(100% + 6px); left: 0; min-width: 180px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 6px; z-index: 100; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: var(--transition); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .season-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .season-option { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 8px; font-size: 13px; color: var(--text-secondary); cursor: pointer; transition: var(--transition); }
+        .season-option:hover { background: rgba(255,255,255,.05); color: var(--text-primary); } .season-option.selected { color: var(--csk-yellow); background: rgba(255, 203, 5, 0.08); }
+        .season-option .check { display: none; color: var(--csk-yellow); font-size: 11px; } .season-option.selected .check { display: block; }
+
+        .search-wrapper { position: relative; } .search-wrapper i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 13px; transition: color .3s ease; }
+        .search-input { padding: 10px 16px 10px 38px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 13px; width: 220px; outline: none; transition: var(--transition); font-family: inherit; }
+        .search-input::placeholder { color: var(--text-muted); } .search-input:focus { border-color: var(--csk-yellow); box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.1); }
+        .search-wrapper:focus-within i { color: var(--csk-yellow); }
+
+        .filter-pills { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding: 2px; } .filter-pills::-webkit-scrollbar { display: none; }
+        .filter-pill { display: inline-flex; align-items: center; gap: 5px; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; cursor: pointer; transition: var(--transition); white-space: nowrap; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); }
+        .filter-pill:hover { border-color: var(--csk-yellow); color: var(--csk-yellow); } .filter-pill.active { background: var(--csk-yellow); color: #0a0e1a; border-color: var(--csk-yellow); font-weight: 600; }
+        .view-toggle { display: flex; align-items: center; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; }
+        .view-btn { display: flex; align-items: center; justify-content: center; width: 38px; height: 36px; background: transparent; border: none; color: var(--text-muted); cursor: pointer; transition: var(--transition); font-size: 13px; }
+        .view-btn.active { background: rgba(255, 203, 5, 0.15); color: var(--csk-yellow); }
+
+        .sections-wrap.list-view .player-grid { grid-template-columns: 1fr; }
+        .player-section { margin-bottom: 36px; } .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .section-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 14px; } .section-icon.blue { background: rgba(59,130,246,.15); color: var(--blue); } .section-icon.green { background: rgba(16,185,129,.15); color: var(--green); } .section-icon.red { background: rgba(239,68,68,.15); color: var(--red); }
+        .section-title { font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); } .section-count { padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; color: var(--text-muted); background: rgba(255,255,255,.05); border: 1px solid var(--border-color); }
+        .section-divider { height: 1px; background: var(--border-color); margin-bottom: 16px; opacity: 0.5; } .player-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+        .player-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: var(--transition); position: relative; overflow: hidden; opacity: 0; transform: translateY(12px); }
+        .player-card.visible { opacity: 1 !important; transform: translateY(0) !important; } .player-card:hover { transform: translateY(-3px); border-color: var(--border-hover); box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(255, 203, 5, 0.05); }
+        .player-card.captain-card { border-color: rgba(255, 203, 5, 0.2); background: linear-gradient(135deg, var(--bg-card), rgba(255, 203, 5, 0.03)); }
+        .player-card .card-arrow { position: absolute; right: 16px; top: 50%; transform: translateY(-50%) translateX(10px); opacity: 0; color: var(--text-muted); font-size: 12px; transition: var(--transition); }
+        .player-card:hover .card-arrow { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .player-avatar { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; position: relative; flex-shrink: 0; border: 2px solid transparent; }
+        .player-avatar.batter { background: linear-gradient(135deg, rgba(59,130,246,.2), rgba(59,130,246,.05)); color: var(--blue); border-color: rgba(59,130,246,.25); }
+        .player-avatar.allrounder { background: linear-gradient(135deg, rgba(16,185,129,.2), rgba(16,185,129,.05)); color: var(--green); border-color: rgba(16,185,129,.25); }
+        .player-avatar.bowler { background: linear-gradient(135deg, rgba(239,68,68,.2), rgba(239,68,68,.05)); color: var(--red); border-color: rgba(239,68,68,.25); }
+        .captain-badge { position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; background: var(--csk-yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; color: #0a0e1a; box-shadow: 0 0 8px rgba(255, 203, 5, 0.5); }
+        .overseas-badge { position: absolute; bottom: -3px; right: -3px; width: 16px; height: 16px; background: var(--purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7px; color: white; }
+        .player-details { flex: 1; min-width: 0; } .player-name { font-size: 14px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
+        .player-role { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+        .role-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; } .role-dot.blue { background: var(--blue); } .role-dot.green { background: var(--green); } .role-dot.red { background: var(--red); }
+        .player-meta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin-right: 20px; } .player-flag { font-size: 18px; line-height: 1; }
+        .hidden-section, .hidden-card { display: none !important; }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 0 16px; } .nav-brand { font-size: 11px; } .nav-right { display: none; } .nav-mobile-toggle { display: block; }
+            .main-content { padding: 16px 16px 40px; } .team-header { flex-direction: column; align-items: flex-start; } .team-name { font-size: 20px; } .team-logo-container { width: 60px; height: 60px; }
+            .stats-bar { grid-template-columns: repeat(3, 1fr); } .controls-bar { flex-direction: column; align-items: flex-start; } .controls-right, .filter-pills, .search-wrapper, .search-input { width: 100%; }
+            .player-grid { grid-template-columns: 1fr; } .go-back-btn { align-self: flex-end; }
+        }
+        @media (max-width: 480px) {
+            .stats-bar { grid-template-columns: repeat(2, 1fr); } .stat-card:last-child { grid-column: span 2; }
+            .team-logo-container { width: 52px; height: 52px; border-radius: 14px; } .team-logo-text { font-size: 16px; } .team-name { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="squadPageBg" class="squad-bg" aria-hidden="true"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo"><i class="fa-solid fa-bolt"></i></div>
+            <span class="nav-brand">IPL AUCTION INTELLIGENCE</span>
+        </div>
+        <div class="nav-right">
+            <a href="/index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/teams.html" class="nav-link active"><i class="fa-solid fa-shield-halved"></i> Franchises</a>
+            <a href="/points-table.html" class="nav-link"><i class="fa-solid fa-ranking-star"></i> Standings</a>
+            <a href="#" class="nav-link"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        </div>
+        <button class="nav-mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <main class="main-content">
+        <section class="team-header">
+            <div class="team-header-left">
+                <div class="team-logo-container"><span class="team-logo-text">CSK</span></div>
+                <div class="team-info">
+                    <h1 class="team-name" id="squadTitle">CHENNAI SUPER KINGS</h1>
+                    <div class="team-subtitle">
+                        <span>Squad List</span>
+                        <span class="badge badge-yellow"><i class="fa-solid fa-trophy" style="font-size:9px;"></i> 5x Champions</span>
+                        <span class="badge badge-blue"><i class="fa-solid fa-calendar" style="font-size:9px;"></i> <span id="seasonBadgeText">2020 Season</span></span>
+                    </div>
+                </div>
+            </div>
+            <a href="/teams.html" class="go-back-btn"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+        </section>
+
+
+        <section class="controls-bar">
+            <div class="controls-left">
+                <div class="season-dropdown-wrapper">
+                    <button class="season-btn" id="seasonBtn">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span id="seasonText">2020 Season</span>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </button>
+                    <div class="season-dropdown" id="seasonDropdown"></div>
+                </div>
+                <div class="search-wrapper">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search players...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="controls-right">
+                <div class="filter-pills">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="batter"><span class="emoji">🏏</span> Batters</button>
+                    <button class="filter-pill" data-filter="allrounder"><span class="emoji">⚡</span> All-Rounders</button>
+                    <button class="filter-pill" data-filter="bowler"><span class="emoji">🎯</span> Bowlers</button>
+                    <button class="filter-pill" data-filter="overseas"><span class="emoji">🌍</span> Overseas</button>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" title="Grid View"><i class="fa-solid fa-grid-2"></i></button>
+                    <button class="view-btn" data-view="list" title="List View"><i class="fa-solid fa-list"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <div class="sections-wrap" id="sectionsWrap"></div>
+    </main>
+
+    <script type="module" src="./squad-list.js"></script>
+</body>
+</html>

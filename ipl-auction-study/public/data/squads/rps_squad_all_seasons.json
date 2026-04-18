@@ -1,0 +1,422 @@
+[
+  {
+    "team": "RPS",
+    "season": 2016,
+    "squad": [
+      {
+        "name": "MS Dhoni",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": true,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ajinkya Rahane",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Steve Smith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Faf du Plessis",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Kevin Pietersen",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Mitchell Marsh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Thisara Perera",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SL"
+      },
+      {
+        "name": "Albie Morkel",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Irfan Pathan",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "M. Ashwin",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Adam Zampa",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Ishant Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "RP Singh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ashok Dinda",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Scott Boland",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Ishwar Pandey",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Deepak Chahar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rajat Bhatia",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ankit Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Baba Aparajith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ankush Bains",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Peter Handscomb",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Sourabh Tiwary",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Jaskaran Singh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  },
+  {
+    "team": "RPS",
+    "season": 2017,
+    "squad": [
+      {
+        "name": "Steve Smith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": true,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "MS Dhoni",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ajinkya Rahane",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Faf du Plessis",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "SA"
+      },
+      {
+        "name": "Manoj Tiwary",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Mayank Agarwal",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ben Stokes",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "ENG"
+      },
+      {
+        "name": "Dan Christian",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Rajat Bhatia",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Adam Zampa",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "AUS"
+      },
+      {
+        "name": "Ashok Dinda",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Jaydev Unadkat",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Shardul Thakur",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Lockie Ferguson",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": true,
+        "country": "NZ"
+      },
+      {
+        "name": "Rahul Chahar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Deepak Chahar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ankit Sharma",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ishwar Pandey",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Jaskaran Singh",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Baba Aparajith",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Ankush Bains",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Milind Tandon",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Rahul Tripathi",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Saurabh Kumar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      },
+      {
+        "name": "Washington Sundar",
+        "role": "Unknown",
+        "category": "Other",
+        "is_captain": false,
+        "is_overseas": false,
+        "country": "IND"
+      }
+    ]
+  }
+]
