@@ -311,6 +311,11 @@ function renderSections(players) {
         cardNode.dataset.role = roleKey;
         cardNode.dataset.overseas = String(Boolean(player.is_overseas));
         cardNode.dataset.name = player.name || "";
+        
+        // Add randomized impact for tactical feel
+        const impact = Math.floor(Math.random() * (95 - 65 + 1)) + 65;
+        cardNode.style.setProperty('--impact', `${impact}%`);
+
         cardNode.innerHTML = `
           <div class="player-avatar ${meta.avatarClass}">
             ${getInitials(player.name)}
@@ -319,10 +324,12 @@ function renderSections(players) {
           </div>
           <div class="player-details">
             <div class="player-name">${player.name || ""}</div>
-            <div class="player-role"><span class="role-dot ${meta.dotClass}"></span>${player.role || player.category || "Player"}</div>
+            <div class="player-role">${player.role || player.category || "Player"}</div>
+            <div class="card-impact-bar">
+                <div class="card-impact-fill"></div>
+            </div>
           </div>
-          <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
-          <i class="fa-solid fa-chevron-right card-arrow"></i>
+          <div class="player-meta">${player.country || getFlag(player.name, player.is_overseas)}</div>
         `;
         cardNode.onclick = () => {
           if (window.showPlayerModal) window.showPlayerModal(player);

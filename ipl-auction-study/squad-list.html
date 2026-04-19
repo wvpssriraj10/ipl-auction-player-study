@@ -98,39 +98,72 @@
         .section-title { font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); } .section-count { padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; color: var(--text-muted); background: rgba(255,255,255,.05); border: 1px solid var(--border-color); }
         .section-divider { height: 1px; background: var(--border-color); margin-bottom: 16px; opacity: 0.5; } .player-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
         .player-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); position: relative; overflow: hidden; opacity: 0; transform: translateY(20px) scale(0.98); }
-        .player-card.visible { opacity: 1 !important; transform: translateY(0) scale(1) !important; } .player-card:hover { transform: translateY(-4px) scale(1.02); border-color: var(--border-hover); box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255, 203, 5, 0.1); }
-        
-        /* Cinematic Transitions */
-        .sections-wrap { transition: opacity 0.4s ease, transform 0.4s ease; }
-        .sections-wrap.switching { opacity: 0; transform: translateY(10px) scale(0.99); pointer-events: none; }
-        
-        .loading-pulse {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            display: none; flex-direction: column; align-items: center; gap: 12px; z-index: 50;
+        .player-card { 
+            background: rgba(26, 31, 53, 0.45); 
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06); 
+            border-radius: 20px; 
+            padding: 24px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+            transition: var(--transition); 
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
-        .sections-wrap.switching + .loading-pulse { display: flex; }
-        .pulse-icon { font-size: 24px; color: var(--csk-yellow); animation: pulse-glow 1.5s infinite ease-in-out; }
-        .pulse-text { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
-        
-        @keyframes pulse-glow {
-            0% { transform: scale(1); opacity: 0.5; filter: drop-shadow(0 0 0 rgba(255,203,5,0)); }
-            50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 15px rgba(255,203,5,0.4)); }
-            100% { transform: scale(1); opacity: 0.5; filter: drop-shadow(0 0 0 rgba(255,203,5,0)); }
+        .player-card::after {
+            content: ''; position: absolute; top: 0; right: 0; width: 60px; height: 60px;
+            background: radial-gradient(circle at top right, var(--role-color), transparent 70%);
+            opacity: 0.15; pointer-events: none; transition: var(--transition);
         }
-        .player-card.captain-card { border-color: rgba(255, 203, 5, 0.4); background: linear-gradient(135deg, var(--bg-card), rgba(255, 203, 5, 0.05)); }
-        .view-btn.active { background: var(--csk-yellow) !important; color: #0a0e1a !important; }
-        .player-card .card-arrow { position: absolute; right: 16px; top: 50%; transform: translateY(-50%) translateX(10px); opacity: 0; color: var(--text-muted); font-size: 12px; transition: var(--transition); }
-        .player-card:hover .card-arrow { opacity: 1; transform: translateY(-50%) translateX(0); }
-        .player-avatar { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; position: relative; flex-shrink: 0; border: 2px solid transparent; }
-        .player-avatar.batter { background: linear-gradient(135deg, rgba(59,130,246,.2), rgba(59,130,246,.05)); color: var(--blue); border-color: rgba(59,130,246,.25); }
-        .player-avatar.allrounder { background: linear-gradient(135deg, rgba(16,185,129,.2), rgba(16,185,129,.05)); color: var(--green); border-color: rgba(16,185,129,.25); }
-        .player-avatar.bowler { background: linear-gradient(135deg, rgba(239,68,68,.2), rgba(239,68,68,.05)); color: var(--red); border-color: rgba(239,68,68,.25); }
-        .captain-badge { position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; background: var(--csk-yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; color: #0a0e1a; box-shadow: 0 0 8px rgba(255, 203, 5, 0.5); }
-        .overseas-badge { position: absolute; bottom: -3px; right: -3px; width: 16px; height: 16px; background: var(--purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7px; color: white; }
-        .player-details { flex: 1; min-width: 0; } .player-name { font-size: 14px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
-        .player-role { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
-        .role-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; } .role-dot.blue { background: var(--blue); } .role-dot.green { background: var(--green); } .role-dot.red { background: var(--red); }
-        .player-meta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin-right: 20px; } .player-flag { font-size: 18px; line-height: 1; }
+        .player-card.visible { opacity: 1 !important; transform: translateY(0) scale(1) !important; } 
+        .player-card:hover { 
+            transform: translateY(-6px) scale(1.02); 
+            border-color: rgba(255, 255, 255, 0.2); 
+            background: rgba(26, 31, 53, 0.65);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px var(--role-color-dim); 
+        }
+        .player-card:hover::after { opacity: 0.35; width: 100px; height: 100px; }
+
+        .player-avatar { 
+            width: 56px; height: 56px; border-radius: 16px; 
+            display: flex; align-items: center; justify-content: center; 
+            font-weight: 800; font-size: 18px; position: relative; flex-shrink: 0; 
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            font-family: 'Outfit', sans-serif;
+        }
+        .player-avatar.batter { 
+            --role-color: var(--blue); --role-color-dim: rgba(59,130,246,0.3);
+            background: linear-gradient(135deg, rgba(59,130,246,.3), rgba(59,130,246,.1)); 
+            color: #fff; border-color: rgba(59,130,246,.4); 
+        }
+        .player-avatar.allrounder { 
+            --role-color: var(--green); --role-color-dim: rgba(16,185,129,0.3);
+            background: linear-gradient(135deg, rgba(16,185,129,.3), rgba(16,185,129,.1)); 
+            color: #fff; border-color: rgba(16,185,129,.4); 
+        }
+        .player-avatar.bowler { 
+            --role-color: var(--red); --role-color-dim: rgba(239,68,68,0.3);
+            background: linear-gradient(135deg, rgba(239,68,68,.3), rgba(239,68,68,.1)); 
+            color: #fff; border-color: rgba(239,68,68,.4); 
+        }
+        
+        .card-impact-bar {
+            height: 3px; width: 100%; background: rgba(255,255,255,0.05); border-radius: 2px; margin-top: 12px; position: relative; overflow: hidden;
+        }
+        .card-impact-fill {
+            position: absolute; left: 0; top: 0; height: 100%; border-radius: 2px;
+            background: var(--role-color); opacity: 0.6;
+            animation: impact-fill 1.5s ease-out forwards;
+        }
+        @keyframes impact-fill { from { width: 0; } to { width: var(--impact, 70%); } }
+
+        .player-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; font-family: 'Outfit', sans-serif; letter-spacing: -0.01em; }
+        .player-role { font-size: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600; opacity: 0.8; }
+        .player-meta { font-size: 12px; color: var(--text-muted); font-weight: 700; margin-top: auto; letter-spacing: 1px; }
+
         .hidden-section, .hidden-card { display: none !important; }
 
         @media (max-width: 768px) {
