@@ -102,7 +102,8 @@
             50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 15px rgba(255,203,5,0.4)); }
             100% { transform: scale(1); opacity: 0.5; filter: drop-shadow(0 0 0 rgba(255,203,5,0)); }
         }
-        .player-card.captain-card { border-color: rgba(255, 203, 5, 0.2); background: linear-gradient(135deg, var(--bg-card), rgba(255, 203, 5, 0.03)); }
+        .player-card.captain-card { border-color: rgba(255, 203, 5, 0.4); background: linear-gradient(135deg, var(--bg-card), rgba(255, 203, 5, 0.05)); }
+        .view-btn.active { background: var(--csk-yellow) !important; color: #0a0e1a !important; }
         .player-card .card-arrow { position: absolute; right: 16px; top: 50%; transform: translateY(-50%) translateX(10px); opacity: 0; color: var(--text-muted); font-size: 12px; transition: var(--transition); }
         .player-card:hover .card-arrow { opacity: 1; transform: translateY(-50%) translateX(0); }
         .player-avatar { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; position: relative; flex-shrink: 0; border: 2px solid transparent; }
@@ -182,6 +183,7 @@
         .modal-tag { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; color: white; }
         #modalCaptainTag { background: rgba(255, 203, 5, 0.15); color: var(--csk-yellow); border: 1px solid rgba(255, 203, 5, 0.3); }
         #modalOverseasTag { background: rgba(139, 92, 246, 0.15); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.3); }
+        html, body { overscroll-behavior-y: none; }
     </style>
 </head>
 <body>
@@ -269,6 +271,29 @@
                 </div>
             </div>
             <a href="/teams.html" class="go-back-btn"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+        </section>
+
+        <section class="stats-bar" id="analyticsBar">
+            <div class="stat-card blue">
+                <div class="stat-number" id="statTotal">0</div>
+                <div class="stat-label">Total Squad</div>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-number" id="statOverseas">0</div>
+                <div class="stat-label">Overseas</div>
+            </div>
+            <div class="stat-card orange">
+                <div class="stat-number" id="statAge">0</div>
+                <div class="stat-label">Avg Age</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-number" id="statCaptains">0</div>
+                <div class="stat-label">Captains</div>
+            </div>
+            <div class="stat-card pink">
+                <div class="stat-number" id="statBalance">0</div>
+                <div class="stat-label">Ratio (B/B/A)</div>
+            </div>
         </section>
 
 

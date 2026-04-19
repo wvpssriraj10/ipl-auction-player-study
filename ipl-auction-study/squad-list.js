@@ -223,6 +223,45 @@ function animateCards() {
   });
 }
 
+function parseAge(age) {
+  if (typeof age === "number") return age;
+  if (typeof age === "string") {
+    const match = age.match(/^(\d+)/);
+    if (match) return parseInt(match[1]);
+  }
+  return 0;
+}
+
+function updateAnalytics(players) {
+  const stats = computeStats(players);
+  let totalAge = 0;
+  let ageCount = 0;
+  let captains = 0;
+
+  players.forEach((p) => {
+    const age = parseAge(p.age);
+    if (age > 0) {
+      totalAge += age;
+      ageCount++;
+    }
+    if (p.is_captain) captains++;
+  });
+
+  const avgAge = ageCount > 0 ? (totalAge / ageCount).toFixed(1) : "N/A";
+
+  const totalEl = document.getElementById("statTotal");
+  const overseasEl = document.getElementById("statOverseas");
+  const ageEl = document.getElementById("statAge");
+  const captainsEl = document.getElementById("statCaptains");
+  const balanceEl = document.getElementById("statBalance");
+
+  if (totalEl) totalEl.textContent = stats.total;
+  if (overseasEl) overseasEl.textContent = stats.overseas;
+  if (ageEl) ageEl.textContent = avgAge;
+  if (captainsEl) captainsEl.textContent = captains;
+  if (balanceEl) balanceEl.textContent = `${stats.batter}/${stats.bowler}/${stats.allrounder}`;
+}
+
 function renderSections(players) {
   const wrap = document.getElementById("sectionsWrap");
   if (!wrap) return;
@@ -300,6 +339,7 @@ function renderSections(players) {
 
     // Cinematic: End switching state and fade-in new content
     wrap.classList.remove("switching");
+    updateAnalytics(players);
     animateCards();
   }, 450); // Slightly more than the 0.4s CSS transition for extra smoothness
 }
