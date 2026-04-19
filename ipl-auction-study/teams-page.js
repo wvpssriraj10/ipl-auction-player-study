@@ -1,5 +1,15 @@
 import { initIplTeamsSection } from './ipl-teams.js';
 
+// Navbar Scroll Intelligence
+const topNav = document.getElementById('topNav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    topNav?.classList.add('scrolled');
+  } else {
+    topNav?.classList.remove('scrolled');
+  }
+});
+
 function setupRevealAnimations() {
   const observer = new IntersectionObserver(
     (entries) => {

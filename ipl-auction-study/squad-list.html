@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -258,18 +259,20 @@
         </div>
     </div>
 
-    <nav class="navbar">
-        <div class="nav-left">
-            <div class="nav-logo"><i class="fa-solid fa-bolt"></i></div>
-            <span class="nav-brand">IPL AUCTION INTELLIGENCE</span>
-        </div>
-        <div class="nav-right">
-            <a href="/index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="/teams.html" class="nav-link active"><i class="fa-solid fa-shield-halved"></i> Franchises</a>
-            <a href="/points-table.html" class="nav-link"><i class="fa-solid fa-ranking-star"></i> Standings</a>
-        </div>
-        <button class="nav-mobile-toggle"><i class="fa-solid fa-bars"></i></button>
-    </nav>
+    <header class="top-nav" id="topNav">
+        <a href="/index.html" class="brand">
+            <img src="/favicon.svg" alt=""> 
+            IPL INTELLIGENCE
+        </a>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/teams.html" class="active">Franchises</a>
+            <a href="/points-table.html" class="nav-highlight">🏆 Standings</a>
+        </nav>
+        <button class="mobile-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
 
     <main class="main-content">
         <section class="team-header">
@@ -348,6 +351,17 @@
         </div>
     </main>
 
+    <script>
+        // Navbar Scroll Intelligence
+        const topNav = document.getElementById('topNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                topNav?.classList.add('scrolled');
+            } else {
+                topNav?.classList.remove('scrolled');
+            }
+        });
+    </script>
     <script type="module" src="./squad-list.js"></script>
 </body>
 </html>

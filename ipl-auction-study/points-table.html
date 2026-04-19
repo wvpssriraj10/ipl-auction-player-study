@@ -239,16 +239,19 @@
   <!-- Cinematic Background -->
   <div class="cinematic-bg" aria-hidden="true"></div>
 
-  <header class="top-nav">
-    <div class="brand">
-        <img src="./favicon.svg" alt="" style="width: 32px; height: 32px; border-radius: 50%;"> 
-        IPL AUCTION INTELLIGENCE
-    </div>
+  <header class="top-nav" id="topNav">
+    <a href="/index.html" class="brand">
+        <img src="/favicon.svg" alt=""> 
+        IPL INTELLIGENCE
+    </a>
     <nav>
       <a href="/index.html">Home</a>
       <a href="/teams.html">Franchises</a>
       <a href="/points-table.html" class="active nav-highlight">🏆 Standings</a>
     </nav>
+    <button class="mobile-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
 
   <div class="container standings-container">
@@ -313,6 +316,16 @@
   </div>
 
   <script>
+    // Navbar Scroll Intelligence
+    const topNav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        topNav?.classList.add('scrolled');
+      } else {
+        topNav?.classList.remove('scrolled');
+      }
+    });
+
     async function loadStandings() {
       const tbody = document.getElementById('standingsBody');
       

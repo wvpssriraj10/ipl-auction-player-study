@@ -1,4 +1,16 @@
 // ============================================
+// NAVBAR SCROLL INTELLIGENCE
+// ============================================
+const topNav = document.getElementById('topNav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    topNav?.classList.add('scrolled');
+  } else {
+    topNav?.classList.remove('scrolled');
+  }
+});
+
+// ============================================
 // DOM ELEMENT REFERENCES
 // ============================================
 const categorySelect = document.getElementById("categorySelect");
