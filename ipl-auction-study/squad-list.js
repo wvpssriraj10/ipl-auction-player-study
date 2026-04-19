@@ -227,72 +227,81 @@ function renderSections(players) {
   const wrap = document.getElementById("sectionsWrap");
   if (!wrap) return;
 
-  const visible = getVisiblePlayers(players);
-  const grouped = {
-    batter: [],
-    allrounder: [],
-    bowler: []
-  };
-  visible.forEach((player) => grouped[toRoleKey(player)].push(player));
+  // Cinematic: Trigger fade-out and pulse
+  wrap.classList.add("switching");
 
-  wrap.classList.toggle("list-view", appState.view === "list");
-  wrap.innerHTML = "";
+  // Brief delay to allow fade-out and pulse to be seen
+  setTimeout(() => {
+    const visible = getVisiblePlayers(players);
+    const grouped = {
+      batter: [],
+      allrounder: [],
+      bowler: []
+    };
+    visible.forEach((player) => grouped[toRoleKey(player)].push(player));
 
-  const rolesInOrder = ["batter", "allrounder", "bowler"];
-  let visibleSectionCount = 0;
-  rolesInOrder.forEach((roleKey) => {
-    const rolePlayers = grouped[roleKey];
-    if (rolePlayers.length === 0) return;
-    visibleSectionCount += 1;
+    wrap.classList.toggle("list-view", appState.view === "list");
+    wrap.innerHTML = "";
 
-    const meta = ROLE_META[roleKey];
-    const sectionNode = document.createElement("section");
-    sectionNode.className = "player-section";
-    sectionNode.dataset.section = roleKey;
-    sectionNode.innerHTML = `
-      <div class="section-header">
-        <div class="section-icon ${meta.iconColorClass}"><i class="${meta.icon}"></i></div>
-        <span class="section-title">${meta.title}</span>
-        <span class="section-count">${rolePlayers.length} Players</span>
-      </div>
-      <div class="section-divider"></div>
-      <div class="player-grid"></div>
-    `;
-    const gridEl = sectionNode.querySelector(".player-grid");
-    if (!gridEl) return;
+    const rolesInOrder = ["batter", "allrounder", "bowler"];
+    let visibleSectionCount = 0;
+    rolesInOrder.forEach((roleKey) => {
+      const rolePlayers = grouped[roleKey];
+      if (rolePlayers.length === 0) return;
+      visibleSectionCount += 1;
 
-    rolePlayers.forEach((player) => {
-      const cardNode = document.createElement("div");
-      cardNode.className = `player-card${player.is_captain ? " captain-card" : ""}`;
-      cardNode.dataset.role = roleKey;
-      cardNode.dataset.overseas = String(Boolean(player.is_overseas));
-      cardNode.dataset.name = player.name || "";
-      cardNode.innerHTML = `
-        <div class="player-avatar ${meta.avatarClass}">
-          ${getInitials(player.name)}
-          ${player.is_captain ? '<div class="captain-badge">C</div>' : ""}
-          ${player.is_overseas ? '<div class="overseas-badge"><i class="fa-solid fa-plane"></i></div>' : ""}
+      const meta = ROLE_META[roleKey];
+      const sectionNode = document.createElement("section");
+      sectionNode.className = "player-section";
+      sectionNode.dataset.section = roleKey;
+      sectionNode.innerHTML = `
+        <div class="section-header">
+          <div class="section-icon ${meta.iconColorClass}"><i class="${meta.icon}"></i></div>
+          <span class="section-title">${meta.title}</span>
+          <span class="section-count">${rolePlayers.length} Players</span>
         </div>
-        <div class="player-details">
-          <div class="player-name">${player.name || ""}</div>
-          <div class="player-role"><span class="role-dot ${meta.dotClass}"></span>${player.role || player.category || "Player"}</div>
-        </div>
-        <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
-        <i class="fa-solid fa-chevron-right card-arrow"></i>
+        <div class="section-divider"></div>
+        <div class="player-grid"></div>
       `;
-      cardNode.onclick = () => {
-        if (window.showPlayerModal) window.showPlayerModal(player);
-      };
-      gridEl.appendChild(cardNode);
+      const gridEl = sectionNode.querySelector(".player-grid");
+      if (!gridEl) return;
+
+      rolePlayers.forEach((player) => {
+        const cardNode = document.createElement("div");
+        cardNode.className = `player-card${player.is_captain ? " captain-card" : ""}`;
+        cardNode.dataset.role = roleKey;
+        cardNode.dataset.overseas = String(Boolean(player.is_overseas));
+        cardNode.dataset.name = player.name || "";
+        cardNode.innerHTML = `
+          <div class="player-avatar ${meta.avatarClass}">
+            ${getInitials(player.name)}
+            ${player.is_captain ? '<div class="captain-badge">C</div>' : ""}
+            ${player.is_overseas ? '<div class="overseas-badge"><i class="fa-solid fa-plane"></i></div>' : ""}
+          </div>
+          <div class="player-details">
+            <div class="player-name">${player.name || ""}</div>
+            <div class="player-role"><span class="role-dot ${meta.dotClass}"></span>${player.role || player.category || "Player"}</div>
+          </div>
+          <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
+          <i class="fa-solid fa-chevron-right card-arrow"></i>
+        `;
+        cardNode.onclick = () => {
+          if (window.showPlayerModal) window.showPlayerModal(player);
+        };
+        gridEl.appendChild(cardNode);
+      });
+
+      wrap.appendChild(sectionNode);
     });
 
-    wrap.appendChild(sectionNode);
-  });
+    if (visibleSectionCount === 0) {
+      wrap.innerHTML = '<p style="color:#fca5a5;font-size:13px">No players match your filters.</p>';
+    }
 
-  if (visibleSectionCount === 0) {
-    wrap.innerHTML = '<p style="color:#fca5a5;font-size:13px">No players match your filters.</p>';
-  }
-  animateCards();
+    // Cinematic: End switching state and fade-in new content
+    wrap.classList.remove("switching");
+    animateCards();
+  }, 450); // Slightly more than the 0.4s CSS transition for extra smoothness
 }
 
 function renderDropdown(seasons) {
