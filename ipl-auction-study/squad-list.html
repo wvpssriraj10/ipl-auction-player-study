@@ -68,8 +68,13 @@
         .season-dropdown-wrapper { position: relative; }
         .season-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; color: var(--text-primary); font-size: 13px; font-weight: 500; cursor: pointer; transition: var(--transition); white-space: nowrap; }
         .season-btn i.fa-calendar { color: var(--csk-yellow); } .season-btn .chevron { transition: transform 0.3s ease; color: var(--text-muted); font-size: 10px; } .season-btn.open .chevron { transform: rotate(180deg); }
-        .season-dropdown { position: absolute; top: calc(100% + 6px); left: 0; min-width: 180px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 6px; z-index: 100; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: var(--transition); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .season-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+        .season-dropdown { position: absolute; top: calc(100% + 8px); left: 0; min-width: 180px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 6px; z-index: 100; display: none; flex-direction: column; gap: 2px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(12px); max-height: 320px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border-color) transparent; }
+        .season-dropdown.open { display: flex; animation: dropdown-fade 0.2s ease-out; }
+        
+        .season-dropdown::-webkit-scrollbar { width: 4px; }
+        .season-dropdown::-webkit-scrollbar-track { background: transparent; }
+        .season-dropdown::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
+        .season-dropdown::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
         .season-option { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 8px; font-size: 13px; color: var(--text-secondary); cursor: pointer; transition: var(--transition); }
         .season-option:hover { background: rgba(255,255,255,.05); color: var(--text-primary); } .season-option.selected { color: var(--csk-yellow); background: rgba(255, 203, 5, 0.08); }
         .season-option .check { display: none; color: var(--csk-yellow); font-size: 11px; } .season-option.selected .check { display: block; }
