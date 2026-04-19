@@ -49,10 +49,19 @@
         .go-back-btn:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.15); transform: translateX(-3px); }
 
         .stats-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 24px; }
-        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px 18px; position: relative; transition: var(--transition); }
-        .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-        .stat-card:hover { transform: translateY(-2px); } .stat-card.blue::before { background: var(--blue); } .stat-card.green::before { background: var(--green); } .stat-card.orange::before { background: var(--orange); } .stat-card.purple::before { background: var(--purple); } .stat-card.pink::before { background: var(--pink); }
-        .stat-number { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 4px; font-family: 'Outfit', sans-serif; } .stat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 18px 20px; position: relative; transition: var(--transition); overflow: hidden; }
+        .stat-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.15); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+        
+        /* Blended Accents */
+        .stat-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 40px; opacity: 0.12; pointer-events: none; background: linear-gradient(to bottom, var(--accent-color), transparent); }
+        .stat-card.blue { --accent-color: var(--blue); }
+        .stat-card.green { --accent-color: var(--green); }
+        .stat-card.orange { --accent-color: var(--orange); }
+        .stat-card.purple { --accent-color: var(--purple); }
+        .stat-card.pink { --accent-color: var(--pink); }
+
+        .stat-number { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 6px; font-family: 'Outfit', sans-serif; position: relative; z-index: 1; } 
+        .stat-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); position: relative; z-index: 1; }
 
         .controls-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
         .controls-left, .controls-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
