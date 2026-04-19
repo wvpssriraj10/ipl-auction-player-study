@@ -105,6 +105,14 @@ let appState = {
   seasons: []
 };
 
+function setLoadingState(isLoading, message = "Analyzing Squad...") {
+  const loadingEl = document.getElementById("loadingPulse");
+  if (!loadingEl) return;
+  const textEl = loadingEl.querySelector(".pulse-text");
+  if (textEl) textEl.textContent = message;
+  loadingEl.style.display = isLoading ? "flex" : "none";
+}
+
 function getVisiblePlayers(players) {
   const q = appState.search.trim().toLowerCase();
   return players.filter((player) => {
@@ -305,6 +313,7 @@ function bindControls() {
 }
 
 async function loadSquadPage() {
+  setLoadingState(true, "Analyzing Squad...");
   const urlParams = new URLSearchParams(window.location.search);
   const teamId = (urlParams.get('team') || 'csk').toLowerCase();
   
@@ -405,9 +414,11 @@ async function loadSquadPage() {
     renderDropdown(appState.seasons);
     renderSections(appState.currentPlayers);
     bindControls();
+    setLoadingState(false);
 
   } catch (error) {
     console.error("[Squad List]", error);
+    setLoadingState(false);
     const wrap = document.getElementById("sectionsWrap");
     if (wrap) wrap.innerHTML = `<div style="padding:40px; text-align:center; color:#fca5a5;">
       <i class="fa-solid fa-circle-exclamation" style="font-size:24px; margin-bottom:12px;"></i>
