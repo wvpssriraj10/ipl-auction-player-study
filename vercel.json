@@ -1,7 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "vite",
-  "installCommand": "cd ipl-auction-study && npm ci",
-  "buildCommand": "cd ipl-auction-study && npm run build",
-  "outputDirectory": "ipl-auction-study/demo/dist"
-}
