@@ -105,6 +105,76 @@ let appState = {
   seasons: []
 };
 
+function generateScoutReport(player) {
+  const name = player.name || "This player";
+  const role = toRoleKey(player);
+  const isOverseas = player.is_overseas;
+  const isCaptain = player.is_captain;
+
+  const templates = {
+    batter: [
+      `${name} is a vital cog in the top order, known for their tactical versatility and ability to anchor the innings.`,
+      `A primary ball-striker who specializes in powerplay acceleration and maintaining a high strike rate.`,
+      `A technically sound batter capable of handling both pace and spin with high efficiency.`
+    ],
+    allrounder: [
+      `A versatile tactical asset providing critical balance with both bat and ball in high-pressure scenarios.`,
+      `A multi-dimensional player who offers strategic depth, often used as a finisher or a partnership breaker.`,
+      `A high-impact utility player known for their athletic fielding and match-winning contributions in both departments.`
+    ],
+    bowler: [
+      `A strategic strike-bowler capable of delivering high-velocity variations and maintaining strict economy rates.`,
+      `Specializes in death-overs execution with a wide array of deceptive variations and tactical precision.`,
+      `An opening-spell specialist known for their ability to extract movement and provide early breakthroughs.`
+    ]
+  };
+
+  const pool = templates[role] || templates.batter;
+  let report = pool[Math.floor(Math.random() * pool.length)];
+
+  if (isCaptain) report = `The architectural lead of the squad. ` + report;
+  if (isOverseas) report += ` A marquee international signing with extensive global league experience.`;
+
+  return report;
+}
+
+function initModal() {
+  const modal = document.getElementById("playerModal");
+  const closeBtn = document.getElementById("modalClose");
+  if (!modal || !closeBtn) return;
+
+  const close = () => modal.classList.remove("open");
+  closeBtn.onclick = close;
+  modal.onclick = (e) => { if (e.target === modal) close(); };
+
+  window.showPlayerModal = (player) => {
+    const roleKey = toRoleKey(player);
+    const meta = ROLE_META[roleKey];
+
+    document.getElementById("modalName").textContent = player.name;
+    document.getElementById("modalSubtitle").innerHTML = `
+      <span class="role-dot ${meta.dotClass}"></span>
+      ${player.role || player.category || "Player"}
+    `;
+
+    const avatar = document.getElementById("modalAvatar");
+    avatar.className = `modal-avatar ${meta.avatarClass}`;
+    avatar.textContent = getInitials(player.name);
+
+    document.getElementById("modalBatting").textContent = player.batting_style || "Right-Hand Bat";
+    document.getElementById("modalBowling").textContent = player.bowling_style || "N/A";
+    document.getElementById("modalAge").textContent = player.age || "Professional";
+    document.getElementById("modalOrigin").textContent = player.country || (player.is_overseas ? "International" : "India");
+
+    document.getElementById("modalScoutText").textContent = generateScoutReport(player);
+
+    document.getElementById("modalCaptainTag").style.display = player.is_captain ? "flex" : "none";
+    document.getElementById("modalOverseasTag").style.display = player.is_overseas ? "flex" : "none";
+
+    modal.classList.add("open");
+  };
+}
+
 function getVisiblePlayers(players) {
   const q = appState.search.trim().toLowerCase();
   return players.filter((player) => {
@@ -210,6 +280,9 @@ function renderSections(players) {
         <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
         <i class="fa-solid fa-chevron-right card-arrow"></i>
       `;
+      cardNode.onclick = () => {
+        if (window.showPlayerModal) window.showPlayerModal(player);
+      };
       gridEl.appendChild(cardNode);
     });
 
@@ -405,6 +478,7 @@ async function loadSquadPage() {
     renderDropdown(appState.seasons);
     renderSections(appState.currentPlayers);
     bindControls();
+    initModal();
 
   } catch (error) {
     console.error("[Squad List]", error);
