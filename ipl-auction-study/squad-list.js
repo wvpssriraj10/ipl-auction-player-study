@@ -105,76 +105,6 @@ let appState = {
   seasons: []
 };
 
-function generateScoutReport(player) {
-  const name = player.name || "This player";
-  const role = toRoleKey(player);
-  const isOverseas = player.is_overseas;
-  const isCaptain = player.is_captain;
-
-  const templates = {
-    batter: [
-      `${name} is a vital cog in the top order, known for their tactical versatility and ability to anchor the innings.`,
-      `A primary ball-striker who specializes in powerplay acceleration and maintaining a high strike rate.`,
-      `A technically sound batter capable of handling both pace and spin with high efficiency.`
-    ],
-    allrounder: [
-      `A versatile tactical asset providing critical balance with both bat and ball in high-pressure scenarios.`,
-      `A multi-dimensional player who offers strategic depth, often used as a finisher or a partnership breaker.`,
-      `A high-impact utility player known for their athletic fielding and match-winning contributions in both departments.`
-    ],
-    bowler: [
-      `A strategic strike-bowler capable of delivering high-velocity variations and maintaining strict economy rates.`,
-      `Specializes in death-overs execution with a wide array of deceptive variations and tactical precision.`,
-      `An opening-spell specialist known for their ability to extract movement and provide early breakthroughs.`
-    ]
-  };
-
-  const pool = templates[role] || templates.batter;
-  let report = pool[Math.floor(Math.random() * pool.length)];
-
-  if (isCaptain) report = `The architectural lead of the squad. ` + report;
-  if (isOverseas) report += ` A marquee international signing with extensive global league experience.`;
-
-  return report;
-}
-
-function initModal() {
-  const modal = document.getElementById("playerModal");
-  const closeBtn = document.getElementById("modalClose");
-  if (!modal || !closeBtn) return;
-
-  const close = () => modal.classList.remove("open");
-  closeBtn.onclick = close;
-  modal.onclick = (e) => { if (e.target === modal) close(); };
-
-  window.showPlayerModal = (player) => {
-    const roleKey = toRoleKey(player);
-    const meta = ROLE_META[roleKey];
-
-    document.getElementById("modalName").textContent = player.name;
-    document.getElementById("modalSubtitle").innerHTML = `
-      <span class="role-dot ${meta.dotClass}"></span>
-      ${player.role || player.category || "Player"}
-    `;
-
-    const avatar = document.getElementById("modalAvatar");
-    avatar.className = `modal-avatar ${meta.avatarClass}`;
-    avatar.textContent = getInitials(player.name);
-
-    document.getElementById("modalBatting").textContent = player.batting_style || "Right-Hand Bat";
-    document.getElementById("modalBowling").textContent = player.bowling_style || "N/A";
-    document.getElementById("modalAge").textContent = player.age || "Professional";
-    document.getElementById("modalOrigin").textContent = player.country || (player.is_overseas ? "International" : "India");
-
-    document.getElementById("modalScoutText").textContent = generateScoutReport(player);
-
-    document.getElementById("modalCaptainTag").style.display = player.is_captain ? "flex" : "none";
-    document.getElementById("modalOverseasTag").style.display = player.is_overseas ? "flex" : "none";
-
-    modal.classList.add("open");
-  };
-}
-
 function getVisiblePlayers(players) {
   const q = appState.search.trim().toLowerCase();
   return players.filter((player) => {
@@ -223,125 +153,73 @@ function animateCards() {
   });
 }
 
-function parseAge(age) {
-  if (typeof age === "number") return age;
-  if (typeof age === "string") {
-    const match = age.match(/^(\d+)/);
-    if (match) return parseInt(match[1]);
-  }
-  return 0;
-}
-
-function updateAnalytics(players) {
-  const stats = computeStats(players);
-  let totalAge = 0;
-  let ageCount = 0;
-  let captains = 0;
-
-  players.forEach((p) => {
-    const age = parseAge(p.age);
-    if (age > 0) {
-      totalAge += age;
-      ageCount++;
-    }
-    if (p.is_captain) captains++;
-  });
-
-  const avgAge = ageCount > 0 ? (totalAge / ageCount).toFixed(1) : "N/A";
-
-  const totalEl = document.getElementById("statTotal");
-  const overseasEl = document.getElementById("statOverseas");
-  const ageEl = document.getElementById("statAge");
-  const captainsEl = document.getElementById("statCaptains");
-  const balanceEl = document.getElementById("statBalance");
-
-  if (totalEl) totalEl.textContent = stats.total;
-  if (overseasEl) overseasEl.textContent = stats.overseas;
-  if (ageEl) ageEl.textContent = avgAge;
-  if (captainsEl) captainsEl.textContent = captains;
-  if (balanceEl) balanceEl.textContent = `${stats.batter}/${stats.bowler}/${stats.allrounder}`;
-}
-
 function renderSections(players) {
   const wrap = document.getElementById("sectionsWrap");
   if (!wrap) return;
 
-  // Cinematic: Trigger fade-out and pulse
-  wrap.classList.add("switching");
+  const visible = getVisiblePlayers(players);
+  const grouped = {
+    batter: [],
+    allrounder: [],
+    bowler: []
+  };
+  visible.forEach((player) => grouped[toRoleKey(player)].push(player));
 
-  // Brief delay to allow fade-out and pulse to be seen
-  setTimeout(() => {
-    const visible = getVisiblePlayers(players);
-    const grouped = {
-      batter: [],
-      allrounder: [],
-      bowler: []
-    };
-    visible.forEach((player) => grouped[toRoleKey(player)].push(player));
+  wrap.classList.toggle("list-view", appState.view === "list");
+  wrap.innerHTML = "";
 
-    wrap.classList.toggle("list-view", appState.view === "list");
-    wrap.innerHTML = "";
+  const rolesInOrder = ["batter", "allrounder", "bowler"];
+  let visibleSectionCount = 0;
+  rolesInOrder.forEach((roleKey) => {
+    const rolePlayers = grouped[roleKey];
+    if (rolePlayers.length === 0) return;
+    visibleSectionCount += 1;
 
-    const rolesInOrder = ["batter", "allrounder", "bowler"];
-    let visibleSectionCount = 0;
-    rolesInOrder.forEach((roleKey) => {
-      const rolePlayers = grouped[roleKey];
-      if (rolePlayers.length === 0) return;
-      visibleSectionCount += 1;
+    const meta = ROLE_META[roleKey];
+    const sectionNode = document.createElement("section");
+    sectionNode.className = "player-section";
+    sectionNode.dataset.section = roleKey;
+    sectionNode.innerHTML = `
+      <div class="section-header">
+        <div class="section-icon ${meta.iconColorClass}"><i class="${meta.icon}"></i></div>
+        <span class="section-title">${meta.title}</span>
+        <span class="section-count">${rolePlayers.length} Players</span>
+      </div>
+      <div class="section-divider"></div>
+      <div class="player-grid"></div>
+    `;
+    const gridEl = sectionNode.querySelector(".player-grid");
+    if (!gridEl) return;
 
-      const meta = ROLE_META[roleKey];
-      const sectionNode = document.createElement("section");
-      sectionNode.className = "player-section";
-      sectionNode.dataset.section = roleKey;
-      sectionNode.innerHTML = `
-        <div class="section-header">
-          <div class="section-icon ${meta.iconColorClass}"><i class="${meta.icon}"></i></div>
-          <span class="section-title">${meta.title}</span>
-          <span class="section-count">${rolePlayers.length} Players</span>
+    rolePlayers.forEach((player) => {
+      const cardNode = document.createElement("div");
+      cardNode.className = `player-card${player.is_captain ? " captain-card" : ""}`;
+      cardNode.dataset.role = roleKey;
+      cardNode.dataset.overseas = String(Boolean(player.is_overseas));
+      cardNode.dataset.name = player.name || "";
+      cardNode.innerHTML = `
+        <div class="player-avatar ${meta.avatarClass}">
+          ${getInitials(player.name)}
+          ${player.is_captain ? '<div class="captain-badge">C</div>' : ""}
+          ${player.is_overseas ? '<div class="overseas-badge"><i class="fa-solid fa-plane"></i></div>' : ""}
         </div>
-        <div class="section-divider"></div>
-        <div class="player-grid"></div>
+        <div class="player-details">
+          <div class="player-name">${player.name || ""}</div>
+          <div class="player-role"><span class="role-dot ${meta.dotClass}"></span>${player.role || player.category || "Player"}</div>
+        </div>
+        <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
+        <i class="fa-solid fa-chevron-right card-arrow"></i>
       `;
-      const gridEl = sectionNode.querySelector(".player-grid");
-      if (!gridEl) return;
-
-      rolePlayers.forEach((player) => {
-        const cardNode = document.createElement("div");
-        cardNode.className = `player-card${player.is_captain ? " captain-card" : ""}`;
-        cardNode.dataset.role = roleKey;
-        cardNode.dataset.overseas = String(Boolean(player.is_overseas));
-        cardNode.dataset.name = player.name || "";
-        cardNode.innerHTML = `
-          <div class="player-avatar ${meta.avatarClass}">
-            ${getInitials(player.name)}
-            ${player.is_captain ? '<div class="captain-badge">C</div>' : ""}
-            ${player.is_overseas ? '<div class="overseas-badge"><i class="fa-solid fa-plane"></i></div>' : ""}
-          </div>
-          <div class="player-details">
-            <div class="player-name">${player.name || ""}</div>
-            <div class="player-role"><span class="role-dot ${meta.dotClass}"></span>${player.role || player.category || "Player"}</div>
-          </div>
-          <div class="player-meta"><span class="player-flag">${player.country || getFlag(player.name, player.is_overseas)}</span></div>
-          <i class="fa-solid fa-chevron-right card-arrow"></i>
-        `;
-        cardNode.onclick = () => {
-          if (window.showPlayerModal) window.showPlayerModal(player);
-        };
-        gridEl.appendChild(cardNode);
-      });
-
-      wrap.appendChild(sectionNode);
+      gridEl.appendChild(cardNode);
     });
 
-    if (visibleSectionCount === 0) {
-      wrap.innerHTML = '<p style="color:#fca5a5;font-size:13px">No players match your filters.</p>';
-    }
+    wrap.appendChild(sectionNode);
+  });
 
-    // Cinematic: End switching state and fade-in new content
-    wrap.classList.remove("switching");
-    updateAnalytics(players);
-    animateCards();
-  }, 450); // Slightly more than the 0.4s CSS transition for extra smoothness
+  if (visibleSectionCount === 0) {
+    wrap.innerHTML = '<p style="color:#fca5a5;font-size:13px">No players match your filters.</p>';
+  }
+  animateCards();
 }
 
 function renderDropdown(seasons) {
@@ -527,7 +405,6 @@ async function loadSquadPage() {
     renderDropdown(appState.seasons);
     renderSections(appState.currentPlayers);
     bindControls();
-    initModal();
 
   } catch (error) {
     console.error("[Squad List]", error);
