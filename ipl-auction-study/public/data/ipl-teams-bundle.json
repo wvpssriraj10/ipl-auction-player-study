@@ -49,7 +49,7 @@
         }
       ],
       "history": {
-        "full_text": "Chennai Super Kings (CSK) is one of the most successful and consistent franchises in the history of the Indian Premier League (IPL). Established in 2008 as one of the original eight teams, CSK quickly became a dominant force in the league. The team is widely known for its stability in leadership, especially under MS Dhoni, who served as captain for most of its history. CSK built a reputation for making it to the playoffs almost every season and maintaining a high win percentage. The franchise achieved early success by winning back-to-back IPL titles in 2010 and 2011. Despite being suspended for two seasons (2016 and 2017) due to administrative issues, CSK made a remarkable comeback by winning the IPL title in 2018. The team continued its dominance by winning additional titles in 2021 and 2023, cementing its legacy as one of the most successful teams in IPL history. CSK is also known for its loyal fan base and strong team culture, often emphasizing experienced players and strategic gameplay over aggressive auction spending.",
+        "full_text": "Chennai Super Kings (CSK) is one of the most successful and consistent franchises in the history of the Indian Premier League (IPL). Established in 2008 as one of the original eight teams, CSK quickly became a dominant force in the league. The team is widely known for its stability in leadership, especially under MS Dhoni, who served as captain for most of its history. CSK built a reputation for making it to the playoffs almost every season and maintaining a high win percentage. The franchise achieved early success by winning back-to-back IPL titles in 2010 and 2011. Despite being suspended for two seasons (2016 and 2017) due to the 2013 IPL spot-fixing and betting scandal, CSK made a remarkable comeback by winning the IPL title in 2018. The team continued its dominance by winning additional titles in 2021 and 2023, cementing its legacy as one of the most successful teams in IPL history. CSK is also known for its loyal fan base and strong team culture, often emphasizing experienced players and strategic gameplay over aggressive auction spending.",
         "timeline": [
           "2008: Franchise established as part of original IPL teams",
           "2010: Won first IPL title",
@@ -370,7 +370,7 @@
         "current_owner": "Intex Technologies",
         "ownership_history": [
           "Franchise awarded to Intex Technologies as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017) due to the spot-fixing scandal"
         ]
       },
       "management": {
@@ -399,7 +399,7 @@
         }
       ],
       "history": {
-        "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
+        "full_text": "Gujarat Lions (GL) was a temporary franchise that participated in the Indian Premier League (IPL) for two seasons in 2016 and 2017. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to the 2013 IPL spot-fixing and betting scandal. Owned by Intex Technologies, Gujarat Lions was based in Rajkot and quickly gained attention in its debut season. Under the captaincy of Suresh Raina, the team performed exceptionally well in 2016, finishing at the top of the league stage and qualifying for the playoffs. Despite their strong performance, Gujarat Lions were unable to win the title and were eliminated in the playoffs. In the following season (2017), the team struggled with consistency and finished near the bottom of the table. After the return of the suspended franchises (CSK and RR) in 2018, Gujarat Lions was dissolved, marking the end of its short-lived but memorable journey in the IPL.",
         "timeline": [
           "2016: Franchise introduced as replacement team",
           "2016: Finished top of league stage, qualified for playoffs",
@@ -1315,7 +1315,7 @@
         "ownership_history": [
           "Initially owned by Emerging Media IPL Ltd.",
           "Ownership transitioned to Royal Multisport Pvt. Ltd.",
-          "Experienced administrative issues leading to suspension"
+          "Experienced administrative issues and involvement in the 2013 spot-fixing scandal leading to suspension"
         ]
       },
       "management": {
@@ -1353,7 +1353,7 @@
         }
       ],
       "history": {
-        "full_text": "Rajasthan Royals (RR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely known for its underdog success story, having won the inaugural IPL season in 2008 under the leadership of Shane Warne. Unlike many other franchises, RR built its early success on a strategy of identifying and nurturing young and relatively unknown talent rather than relying heavily on big-name players. This approach helped the team establish a reputation for developing future stars. Following their early success, Rajasthan Royals experienced a mix of performances, often fluctuating between strong seasons and periods of inconsistency. The franchise was suspended for two seasons (2016 and 2017) due to administrative issues, similar to Chennai Super Kings. After returning in 2018, RR has continued to focus on youth development and strategic gameplay, occasionally reaching the playoffs and even the final in 2022. The team is also known for its innovative approach to analytics and talent scouting, making it one of the most unique franchises in the IPL.",
+        "full_text": "Rajasthan Royals (RR) is one of the original franchises of the Indian Premier League (IPL), established in 2008. The team is widely known for its underdog success story, having won the inaugural IPL season in 2008 under the leadership of Shane Warne. Unlike many other franchises, RR built its early success on a strategy of identifying and nurturing young and relatively unknown talent rather than relying heavily on big-name players. This approach helped the team establish a reputation for developing future stars. Following their early success, Rajasthan Royals experienced a mix of performances, often fluctuating between strong seasons and periods of inconsistency. The franchise was suspended for two seasons (2016 and 2017) due to the 2013 IPL spot-fixing and betting scandal, similar to Chennai Super Kings. After returning in 2018, RR has continued to focus on youth development and strategic gameplay, occasionally reaching the playoffs and even the final in 2022. The team is also known for its innovative approach to analytics and talent scouting, making it one of the most unique franchises in the IPL.",
         "timeline": [
           "2008: Franchise established and won inaugural IPL title",
           "2009–2013: Mixed performances with occasional playoff contention",
@@ -2262,7 +2262,7 @@
         "current_owner": "RPSG Group (Sanjiv Goenka)",
         "ownership_history": [
           "Franchise awarded to RPSG Group as a temporary replacement team",
-          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017)"
+          "Created to replace Chennai Super Kings and Rajasthan Royals during their suspension (2016–2017) due to the spot-fixing scandal"
         ]
       },
       "management": {
@@ -2291,7 +2291,7 @@
         }
       ],
       "history": {
-        "full_text": "Rising Pune Supergiant (RPS) was a temporary franchise that competed in the Indian Premier League (IPL) during the 2016 and 2017 seasons. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to administrative issues. Owned by the RPSG Group, the franchise brought together a mix of experienced international players and Indian stars. In its debut season in 2016, RPS had a disappointing campaign, finishing seventh in the league. The team struggled to find consistency and faced challenges with leadership and team balance. However, in the 2017 season, RPS underwent a remarkable transformation under the captaincy of Steve Smith. The team performed exceptionally well, reaching the IPL final after defeating Mumbai Indians in the playoffs. In a closely contested final, RPS narrowly lost to Mumbai Indians by just one run. Despite their strong performance in 2017, the franchise was dissolved after the return of Chennai Super Kings and Rajasthan Royals in 2018. Although short-lived, RPS left a lasting impact with its dramatic turnaround between its two seasons.",
+        "full_text": "Rising Pune Supergiant (RPS) was a temporary franchise that competed in the Indian Premier League (IPL) during the 2016 and 2017 seasons. The team was formed as a replacement for Chennai Super Kings and Rajasthan Royals, which were suspended due to the 2013 IPL spot-fixing and betting scandal. Owned by the RPSG Group, the franchise brought together a mix of experienced international players and Indian stars. In its debut season in 2016, RPS had a disappointing campaign, finishing seventh in the league. The team struggled to find consistency and faced challenges with leadership and team balance. However, in the 2017 season, RPS underwent a remarkable transformation under the captaincy of Steve Smith. The team performed exceptionally well, reaching the IPL final after defeating Mumbai Indians in the playoffs. In a closely contested final, RPS narrowly lost to Mumbai Indians by just one run. Despite their strong performance in 2017, the franchise was dissolved after the return of Chennai Super Kings and Rajasthan Royals in 2018. Although short-lived, RPS left a lasting impact with its dramatic turnaround between its two seasons.",
         "timeline": [
           "2016: Franchise introduced as replacement team",
           "2016: Poor debut season, finished 7th",

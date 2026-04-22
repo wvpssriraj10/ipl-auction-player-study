@@ -297,6 +297,7 @@
             <th>Pld</th>
             <th>W</th>
             <th>L</th>
+            <th>NR</th>
             <th>NRR</th>
             <th>Pts</th>
           </tr>
@@ -357,9 +358,10 @@
         
         const seasons = data.seasons;
         const logoMap = {};
+        // Map historical abbreviations to modern IDs in Uppercase
         const teamAlias = {
-          'DEC': 'dcg', 'DD': 'dc', 'PK': 'pbks', 'KXIP': 'pbks', 
-          'GL': 'gl', 'RPS': 'rps', 'KTK': 'ktk', 'PWI': 'pwi'
+          'DEC': 'DCG', 'DD': 'DC', 'PK': 'PBKS', 'KXIP': 'PBKS', 
+          'GL': 'GL', 'RPS': 'RPS', 'KTK': 'KTK', 'PWI': 'PWI'
         };
 
         teamsData.teams.forEach(t => {
@@ -369,7 +371,7 @@
         });
 
         function getLogo(team) {
-            const upper = team.toUpperCase();
+            const upper = team.trim().toUpperCase();
             return logoMap[upper] || logoMap[teamAlias[upper]] || '';
         }
 
@@ -379,7 +381,7 @@
             const champion = championsMap[year];
             
             if (!seasonRows) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
                 return;
             }
 
@@ -390,6 +392,9 @@
                 const nrrValue = parseFloat(row.nrr);
                 const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
                 const logo = getLogo(row.team);
+                
+                // Calculate NR (No Result) automatically if not explicitly provided
+                const nr = row.nr !== undefined ? row.nr : (row.m - (row.w + row.l));
                 
                 tr.innerHTML = `
                 <td class="rank-cell">${row.rank}</td>
@@ -404,6 +409,7 @@
                 <td>${row.m}</td>
                 <td>${row.w}</td>
                 <td>${row.l}</td>
+                <td style="color: var(--text-secondary); opacity: 0.8;">${nr}</td>
                 <td class="nrr-cell ${nrrClass}">${row.nrr}</td>
                 <td class="pts-cell">${row.pts}</td>
                 `;
@@ -436,7 +442,7 @@
           }
         });
 
-        render('2025');
+    render('2008'); // Default to 2008 as per your screenshot
       } catch (err) {
         console.error("Standings Error:", err);
       }
