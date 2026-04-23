@@ -1183,8 +1183,13 @@ input.player-search-input {
 }
 
 /* Table specific styling for terminal */
+.result-box {
+  overflow-x: auto;
+}
+
 .results-table {
   width: 100%;
+  min-width: 420px;
   border-collapse: collapse;
   border-radius: 12px;
   overflow: hidden;
@@ -2867,6 +2872,15 @@ body.ipl-teams-detail-open .teams-topbar {
   .pill-btn {
     padding: 10px 20px;
     font-size: 13px;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .actions .pill-btn {
+    width: 100%;
+    margin-top: 0;
   }
 
   .top-nav nav a {
