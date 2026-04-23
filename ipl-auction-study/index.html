@@ -5,268 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="IPL Auction Intelligence - Data-driven analytics for cricket investment decisions." />
   <meta name="theme-color" content="#8b5cf6" />
-  
-  <!-- SEO & Open Graph Tags -->
-  <meta property="og:title" content="IPL Auction Intelligence | Strategic Decision Portal" />
-  <meta property="og:description" content="High-performance cricket analytics decoding the intersection of auction market value and on-field reality." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/favicon.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <title>IPL Auction Intelligence | Cinematic Decision Suite</title>
-  
-  <!-- Preconnect for fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
-  <!-- External Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
-
-  <!-- Unified Intelligence Navbar -->
-  <header class="top-nav" id="topNav">
-    <a href="/index.html" class="brand">
-        <img src="/favicon.svg" alt=""> 
-        IPL INTELLIGENCE
-    </a>
-    <nav>
-      <a href="/index.html" class="active">Home</a>
-      <a href="/teams.html">Franchises</a>
-      <a href="/points-table.html" class="nav-highlight">🏆 Standings</a>
-    </nav>
-    <button class="mobile-toggle">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </header>
-
-  <!-- Cinematic Background -->
-  <div class="cinematic-bg" aria-hidden="true"></div>
-
-  <!-- Hero Section -->
-  <section class="hero" aria-label="Hero Section">
-    <div class="hero-content reveal">
-      <p class="hero-kicker">Data-Driven Auction Intelligence</p>
-      <h1>AUCTION PRICING<br/>MEETS ON-FIELD REALITY</h1>
-      <p class="hero-sub">Gritty, data-first analytics for professional IPL investment decisions.</p>
-      <div class="hero-actions" role="group" aria-label="Primary actions">
-        <a href="#query" class="pill-btn">Enter Demo Console</a>
-        <a href="/teams" class="pill-btn pill-btn--ghost">Franchises</a>
-        <a href="/points-table.html" class="pill-btn pill-btn--ghost">Standings</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="container services section" aria-labelledby="services-heading">
-    <div class="services-left reveal">
-      <h2 id="services-heading">SERVICES</h2>
-      <p>Sticky analytics core with high-speed, menu-driven exploration across player, team, and auction value layers.</p>
-    </div>
-    <div class="services-right">
-      <article class="service-card reveal">
-        <h3>Auction ROI Intelligence</h3>
-        <p>Measure value score and detect overpriced signings season-by-season.</p>
-      </article>
-      <article class="service-card reveal">
-        <h3>Batting/Bowling Profiling</h3>
-        <p>Slice by player and season with strike-rate and economy intelligence.</p>
-      </article>
-      <article class="service-card reveal">
-        <h3>Team-Level Readouts</h3>
-        <p>Track top outputs through highest-buy mappings and historical patterns.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Main Query Console Section -->
-  <main id="main-content">
-    <section id="query" class="container section reveal" aria-labelledby="console-heading">
-      <h2 id="console-heading" class="section-title">INTERACTIVE CONSOLE</h2>
-      
-      <!-- Query Form -->
-      <form class="card query-form" id="queryForm" aria-label="Data Query Form">
-        <fieldset>
-          <legend class="visually-hidden">Query Parameters</legend>
-          
-          <div class="grid">
-            <label for="categorySelect">
-              <span class="label-icon">🗂️</span> Category
-              <select id="categorySelect" aria-describedby="category-help">
-                <option>Team Records</option>
-                <option>Player Records - Batting</option>
-                <option>Player Records - Bowling</option>
-                <option>Auction Records</option>
-                <option>Other</option>
-              </select>
-            </label>
-
-            <label for="queryTypeSelect" id="queryTypeWrap">
-              <span class="label-icon">🔍</span> Query Type
-              <select id="queryTypeSelect" aria-describedby="query-type-help"></select>
-            </label>
-
-            <label for="teamSelect" id="teamWrap" class="hidden">
-              <span class="label-icon">🛡️</span> Team
-              <select id="teamSelect"></select>
-            </label>
-
-            <label for="seasonSelect" id="seasonWrap">
-              <span class="label-icon">📅</span> Season
-              <select id="seasonSelect"></select>
-            </label>
-
-            <label id="playerWrap" class="hidden">
-              <span class="label-icon">👤</span> Player
-              <div class="player-autocomplete">
-                <input
-                  type="text"
-                  id="playerInput"
-                  class="player-search-input"
-                  placeholder="Type player name…"
-                  autocomplete="off"
-                  spellcheck="false"
-                  role="combobox"
-                  aria-autocomplete="list"
-                  aria-expanded="false"
-                  aria-controls="playerSuggestionsList"
-                />
-                <ul id="playerSuggestionsList" class="player-suggestions" role="listbox" hidden></ul>
-              </div>
-            </label>
-          </div>
-
-          <div class="actions">
-            <button id="runBtn" type="button" class="pill-btn" aria-label="Execute Query">
-              Run Query
-            </button>
-          </div>
-        </fieldset>
-      </form>
-
-      <!-- Result Display -->
-      <section class="results-container" aria-labelledby="result-heading" aria-live="polite" aria-atomic="true">
-        <h3 id="result-heading" class="visually-hidden">Query Results</h3>
-        <div id="analyticsSlot" class="analytics-slot hidden">
-           <canvas id="pulseChart"></canvas>
-        </div>
-        <div id="resultBox" class="result-box" role="status" aria-label="Query Result Output">
-          <div class="empty-state-start">
-            <span class="empty-icon">✨</span>
-            <p>Data loaded successfully. Choose options and click Run Query.</p>
-          </div>
-        </div>
-      </section>
-    </section>
-  </main>
-
-  <!-- Statistics Section -->
-  <section id="numbers" class="container section numbers reveal" aria-labelledby="stats-heading">
-    <h2 id="stats-heading" class="section-title">BY THE NUMBERS</h2>
-    
-    <!-- Automated Insights Panel -->
-    <div id="insightPanel" class="insight-panel reveal-slow">
-      <div class="insight-header">
-        <span class="label-icon">💡</span> LIVE AUCTION INTELLIGENCE
-      </div>
-      <ul id="autoInsightsList" class="insight-list">
-        <!-- populated by app.js -->
-        <li>Calculating real-time ROI trends...</li>
-      </ul>
-    </div>
-
-    <div class="card reveal-fast">
-      <div class="charts-dashboard-grid">
-        <div class="chart-wrapper">
-          <h3 class="chart-title"><span class="label-icon">🌌</span> Market Galaxy (Player ROI)</h3>
-          <div class="market-chart-container">
-            <canvas id="marketChart"></canvas>
-          </div>
-          <div class="chart-insight-box">
-            <strong>GUIDE:</strong> Higher/Left = Best Value. This maps player cost vs points. Glowing dots are record-signings.
-          </div>
-        </div>
-        <div class="chart-wrapper">
-          <h3 class="chart-title"><span class="label-icon">🧠</span> Strategy IQ (Team ROI)</h3>
-          <div class="market-chart-container">
-            <canvas id="teamIQChart"></canvas>
-          </div>
-          <div class="chart-insight-box">
-            <strong>GUIDE:</strong> Rankings by 'Efficiency Index'. High bars show teams that get the most output per Crore spent.
-          </div>
-        </div>
-      </div>
-      <div class="numbers-grid" role="region" aria-label="Key Statistics">
-        <div class="number-box">
-          <span id="statSeasons" aria-label="Total Seasons">--</span>
-          <small>Seasons</small>
-          <p class="stat-desc">IPL seasons analyzed from 2008 onwards</p>
-        </div>
-        <div class="number-box">
-          <span id="statPlayers" aria-label="Total Players">--</span>
-          <small>Players</small>
-          <p class="stat-desc">Unique cricketers tracked across all seasons</p>
-        </div>
-        <div class="number-box">
-          <span id="statHitRate" aria-label="Hit Rate Percentage">--</span>
-          <small>Hit Rate %</small>
-          <p class="stat-desc">How often the costliest auction buy actually won an award</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer – Creator Section -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo" aria-label="Footer">
     <div class="footer-glow" aria-hidden="true"></div>
+
     <div class="footer-inner">
-      <!-- Creator Info -->
-      <div class="footer-creator">
-        <p class="footer-label">Built & Designed by</p>
-        <h2 class="footer-name">W V P S SRIRAJ</h2>
-        <p class="footer-tagline">Data-driven cricket analytics · IPL Auction Intelligence</p>
+      <!-- Left: Brand -->
+      <div class="footer-brand">
+        <a href="/index.html" class="footer-logo-link">
+          <img src="/favicon.svg" alt="IPL Intelligence" class="footer-logo-img">
+          <span class="footer-logo-name">IPL INTELLIGENCE</span>
+        </a>
+        <p class="footer-tagline">Data-driven cricket analytics.<br>Decoding auction value vs on-field reality.</p>
+        <p class="footer-byline">Built &amp; designed by <strong>W V P S Sriraj</strong></p>
       </div>
 
-      <!-- Social Links -->
-      <nav class="footer-socials" aria-label="Social Links">
-        <a href="https://www.instagram.com/w.v.p.s.sriraj_10/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <span>Instagram</span>
-        </a>
-        <a href="https://www.linkedin.com/in/sriraj-w-v-p-s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/wvpssriraj10/ipl-auction-player-study" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://wvpssriraj.in" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span>Portfolio</span>
-        </a>
-        <a href="mailto:wsriraj10@gmail.com" aria-label="Email" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Email</span>
-        </a>
-      </nav>
+      <!-- Right: Nav + Socials -->
+      <div class="footer-right">
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <p class="footer-nav-label">Explore</p>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/teams.html">Franchises</a></li>
+            <li><a href="/points-table.html">Standings</a></li>
+          </ul>
+        </nav>
 
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <p>IPL Auction Intelligence</p>
-        <p class="footer-tech">Built with vanilla HTML, CSS & JS · Powered by real IPL data</p>
+        <div class="footer-socials-col">
+          <p class="footer-nav-label">Connect</p>
+          <div class="footer-icons">
+            <a href="https://www.instagram.com/w.v.p.s.sriraj_10/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-icon-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sriraj-w-v-p-s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-icon-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/wvpssriraj10/ipl-auction-player-study" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-icon-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://wvpssriraj.in" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" class="footer-icon-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+            <a href="mailto:wsriraj10@gmail.com" aria-label="Email" class="footer-icon-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <p>&copy; 2025 IPL Auction Intelligence &middot; W V P S Sriraj</p>
+      <p class="footer-tech">Built with vanilla HTML, CSS &amp; JS &middot; Powered by real IPL data</p>
     </div>
   </footer>
 
