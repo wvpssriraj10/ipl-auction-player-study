@@ -350,20 +350,28 @@ async function loadSquadPage() {
     }
   }
 
-  // Update Background
+  // Update Background – preload to verify the image actually exists
   if (bgOverlay) {
     const teamBg = teamInfo?.bgUrl || urlParams.get('bg');
     const possibleBgs = [
       teamBg,
+      `/ipl-teams/${teamId}/${teamId}-chepauk.jpg`,
       `/ipl-teams/${teamId}/${teamId}-bg.jpg`,
-      `./assets/team-backgrounds/${teamId}-bg.jpg`,
-      `./assets/team-backgrounds/${teamId}-bg.png`
+      `/ipl-teams/${teamId}/${teamId} bg.jpg`,
+      `/ipl-teams/${teamId}/${teamId} bg.png`,
     ].filter(Boolean);
-    
-    for (const bgPath of possibleBgs) {
-      bgOverlay.style.backgroundImage = `url("${bgPath}")`;
-      if (bgPath === teamBg) break;
-    }
+
+    const tryLoadBg = (paths) => {
+      if (!paths.length) return;
+      const [first, ...rest] = paths;
+      const img = new Image();
+      img.onload = () => {
+        bgOverlay.style.backgroundImage = `url("${first}")`;
+      };
+      img.onerror = () => tryLoadBg(rest);
+      img.src = first;
+    };
+    tryLoadBg(possibleBgs);
   }
 
   // 2. SQUAD DATA LOADING
