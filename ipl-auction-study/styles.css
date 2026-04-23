@@ -1273,11 +1273,11 @@ input.player-search-input {
 }
 
 /* ============================================
-   FOOTER â€“ COMPACT GLASS
+   FOOTER – CREATOR SECTION
    ============================================ */
 .site-footer {
   position: relative;
-  padding: 48px 6vw 0;
+  padding: 80px 6vw 40px;
   background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 30%, rgba(139, 92, 246, 0.06) 100%);
   border-top: 1px solid rgba(139, 92, 246, 0.25);
   overflow: hidden;
@@ -1296,164 +1296,113 @@ input.player-search-input {
 }
 
 .footer-inner {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 48px;
+  text-align: center;
   position: relative;
   z-index: 1;
-  padding-bottom: 40px;
 }
 
-/* --- Brand (left) --- */
-.footer-brand {
-  flex: 0 0 auto;
-  max-width: 320px;
+/* Creator Info */
+.footer-creator {
+  margin-bottom: 40px;
 }
 
-.footer-logo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  margin-bottom: 14px;
-}
-
-.footer-logo-img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
-}
-
-.footer-logo-name {
-  font-family: "Outfit", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  color: var(--white);
-}
-
-.footer-tagline {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.65;
+.footer-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--purple-light);
+  font-weight: 600;
   margin: 0 0 12px;
 }
 
-.footer-byline {
-  font-size: 12px;
-  color: var(--text-secondary);
+.footer-name {
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 48px);
+  letter-spacing: 0.06em;
+  margin: 0 0 12px;
+  background: linear-gradient(135deg, var(--white) 0%, var(--purple-light) 50%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  font-size: 15px;
+  color: var(--muted);
   margin: 0;
-  opacity: 0.7;
+  letter-spacing: 0.02em;
 }
 
-.footer-byline strong {
-  color: var(--purple-light);
-  font-weight: 700;
-}
-
-/* --- Right column --- */
-.footer-right {
+/* Social Links */
+.footer-socials {
   display: flex;
-  gap: 48px;
-  align-items: flex-start;
-}
-
-/* Nav links */
-.footer-nav p.footer-nav-label,
-.footer-socials-col p.footer-nav-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--purple-light);
-  margin: 0 0 14px;
-}
-
-.footer-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-nav ul a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  transition: color 0.25s ease;
-}
-
-.footer-nav ul a:hover {
-  color: var(--white);
-}
-
-/* Icon buttons */
-.footer-icons {
-  display: flex;
-  gap: 10px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 
-.footer-icon-btn {
+.social-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  border: 1px solid rgba(139, 92, 246, 0.28);
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
   background: rgba(139, 92, 246, 0.06);
   color: var(--text-secondary);
   text-decoration: none;
-  transition: all 0.25s ease;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
   backdrop-filter: blur(4px);
 }
 
-.footer-icon-btn svg {
-  width: 17px;
-  height: 17px;
+.social-link svg {
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footer-icon-btn:hover {
-  background: rgba(139, 92, 246, 0.18);
+.social-link:hover {
+  background: rgba(139, 92, 246, 0.15);
   border-color: var(--purple);
   color: var(--white);
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
 }
 
-/* Bottom bar */
-.footer-bottom-bar {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 0 24px;
+.social-link:hover svg {
+  transform: scale(1.15);
+  color: var(--purple-light);
+}
+
+.social-link:active {
+  transform: translateY(-1px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 28px;
   border-top: 1px solid rgba(139, 92, 246, 0.12);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  z-index: 1;
 }
 
-.footer-bottom-bar p {
+.footer-bottom p {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   letter-spacing: 0.02em;
 }
 
 .footer-tech {
-  opacity: 0.55;
+  margin-top: 6px !important;
   font-size: 11px !important;
+  opacity: 0.6;
 }
 
 /* ============================================
@@ -1543,7 +1492,7 @@ input.player-search-input {
     gap: 1.5rem;
   }
 
-  /* Sidebar column only inside legacy two-column layout Ã¢â‚¬â€ not on standalone picker grids */
+  /* Sidebar column only inside legacy two-column layout — not on standalone picker grids */
   .ipl-teams-layout>.ipl-teams-grid {
     flex: 0 0 260px;
     flex-shrink: 0;
@@ -1673,7 +1622,7 @@ input.player-search-input {
   align-items: stretch;
 }
 
-/* IPL Teams page: icon grid Ã¢â€ â€™ full-screen profile (teams.html) */
+/* IPL Teams page: icon grid → full-screen profile (teams.html) */
 body.ipl-teams-detail-open {
   overflow: hidden;
 }
@@ -1991,7 +1940,7 @@ body.ipl-teams-detail-open .teams-topbar {
     transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Clip blurred/gradient bg to rounded corners only Ã¢â‚¬â€ keeps foreground (logos) from being cut off */
+/* Clip blurred/gradient bg to rounded corners only — keeps foreground (logos) from being cut off */
 .ipl-teams-card-visual {
   position: absolute;
   inset: 0;
@@ -2055,7 +2004,7 @@ body.ipl-teams-detail-open .teams-topbar {
   box-sizing: border-box;
 }
 
-/* Sidebar (desktop): horizontal pill rows Ã¢â‚¬â€ legacy layout only */
+/* Sidebar (desktop): horizontal pill rows — legacy layout only */
 @media (min-width: 960px) {
   .ipl-teams-layout>.ipl-teams-grid:not(.ipl-teams-grid--picker) .ipl-teams-card-inner {
     flex-direction: row;
@@ -2794,27 +2743,21 @@ body.ipl-teams-detail-open .teams-topbar {
   }
 
   .site-footer {
-    padding: 36px 5vw 0;
+    padding: 50px 4vw 30px;
   }
 
-  .footer-inner {
-    flex-direction: column;
-    gap: 28px;
+  .footer-socials {
+    gap: 8px;
   }
 
-  .footer-brand {
-    max-width: 100%;
+  .social-link {
+    padding: 8px 14px;
+    font-size: 12px;
   }
 
-  .footer-right {
-    gap: 28px;
-  }
-
-  .footer-bottom-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 4px;
-    padding: 14px 0 20px;
+  .social-link svg {
+    width: 16px;
+    height: 16px;
   }
 
   .result-box {
@@ -3003,7 +2946,7 @@ body.ipl-teams-detail-open .teams-topbar {
 }
 
 .ipl-teams-list li::before {
-  content: 'Ã¢â‚¬Â¢';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--team-glow);
@@ -3011,12 +2954,12 @@ body.ipl-teams-detail-open .teams-topbar {
 }
 
 .ipl-teams-list--checks li::before {
-  content: 'Ã¢Å“â€œ';
+  content: '✓';
   color: #22c55e;
 }
 
 .ipl-teams-list--crosses li::before {
-  content: 'Ãƒâ€”';
+  content: '×';
   color: #ef4444;
   font-size: 1.2rem;
   top: -2px;
