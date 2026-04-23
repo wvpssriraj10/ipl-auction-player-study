@@ -345,7 +345,7 @@
         "youtube": "https://www.youtube.com/@delhicapitals"
       },
       "logoUrl": "/ipl-teams/dc/Delhi_Capitals.png",
-      "bgUrl": "/ipl-teams/dc/Delhi%20Capitals%20bg.png"
+      "bgUrl": "/ipl-teams/dc/dc%20bg.png"
     },
     {
       "id": "gl",
@@ -477,7 +477,7 @@
         "Aaron Finch"
       ],
       "logoUrl": "/ipl-teams/gl/Gujarat_Lions.png",
-      "bgUrl": "/ipl-teams/gl/gujurat%20lions%20bg.png"
+      "bgUrl": "/ipl-teams/gl/gl%20bg.png"
     },
     {
       "id": "gt",
@@ -619,7 +619,7 @@
         "youtube": "https://www.youtube.com/@GujaratTitans"
       },
       "logoUrl": "/ipl-teams/gt/Gujarat_Titans_Logo.png",
-      "bgUrl": "/ipl-teams/gt/gujurat%20titans%20bg.jpg"
+      "bgUrl": "/ipl-teams/gt/gt%20bg.jpg"
     },
     {
       "id": "kkr",
@@ -1961,7 +1961,7 @@
         "Kumar Sangakkara"
       ],
       "logoUrl": "/ipl-teams/dcg/HyderabadDeccanChargerslogo.png",
-      "bgUrl": "/ipl-teams/dcg/dch%20bg.jpg"
+      "bgUrl": "/ipl-teams/dcg/dcg%20bg.jpg"
     },
     {
       "id": "ktk",
@@ -2086,7 +2086,7 @@
         "S Sreesanth"
       ],
       "logoUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala_Logo.png",
-      "bgUrl": "/ipl-teams/ktk/Kochi_Tuskers_Kerala%20bg.png"
+      "bgUrl": "/ipl-teams/ktk/ktk%20bg.png"
     },
     {
       "id": "pwi",
