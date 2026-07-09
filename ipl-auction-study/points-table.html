@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPL Points Table | Historical Standings 2008-2025</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* Force instant visibility */
+    .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      filter: none !important;
+    }
+    .top-nav {
+      padding: 12px 28px !important;
+      min-height: 60px;
+      align-items: center;
+    }
+    /* Custom Animated Dropdown */
+    .custom-dropdown {
+      position: relative;
+      width: 200px;
+      z-index: 1000;
+    }
+    .dropdown-btn {
+      width: 100%;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: #fff;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .dropdown-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(139, 92, 246, 0.4);
+    }
+    .dropdown-btn i {
+      transition: transform 0.3s ease;
+      color: var(--purple);
+    }
+    .custom-dropdown.open .dropdown-btn .dropdown-chevron {
+      transform: rotate(180deg);
+    }
+    .dropdown-menu {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: #0f0f19;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 12px;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 9999;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      padding: 4px 0;
+    }
+    .custom-dropdown.open .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    .dropdown-item {
+      padding: 6px 16px; /* Reduced for compactness */
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-size: 0.8rem; /* Reduced font size */
+      transition: all 0.2s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    .custom-dropdown.open .dropdown-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .dropdown-item:hover {
+      background: rgba(139, 92, 246, 0.1);
+      color: #fff;
+    }
+    /* Staggered entry */
+    .dropdown-item:nth-child(1) { transition-delay: 0.03s; }
+    .dropdown-item:nth-child(2) { transition-delay: 0.06s; }
+    .dropdown-item:nth-child(3) { transition-delay: 0.09s; }
+    .dropdown-item:nth-child(4) { transition-delay: 0.12s; }
+    .dropdown-item:nth-child(5) { transition-delay: 0.15s; }
+    .dropdown-item:nth-child(6) { transition-delay: 0.18s; }
+    .dropdown-item:nth-child(7) { transition-delay: 0.21s; }
+    .dropdown-item:nth-child(8) { transition-delay: 0.24s; }
+    .dropdown-item:nth-child(9) { transition-delay: 0.27s; }
+    .dropdown-item:nth-child(10) { transition-delay: 0.30s; }
+    .dropdown-item:nth-child(11) { transition-delay: 0.33s; }
+    .dropdown-item:nth-child(12) { transition-delay: 0.36s; }
+    .dropdown-item:nth-child(13) { transition-delay: 0.39s; }
+    .dropdown-item:nth-child(14) { transition-delay: 0.42s; }
+    .dropdown-item:nth-child(15) { transition-delay: 0.45s; }
+    .dropdown-item:nth-child(16) { transition-delay: 0.48s; }
+    .dropdown-item:nth-child(17) { transition-delay: 0.51s; }
+    .dropdown-item:nth-child(18) { transition-delay: 0.54s; }
+    
+    .standings-container {
+      margin-top: 0;
+      padding-top: 96px;
+      padding-bottom: 10px;
+      max-width: 1180px;
+    }
+    .standings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .standings-title {
+      margin: 0;
+      font-family: "Archivo", sans-serif;
+      font-size: clamp(1.8rem, 2.7vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #f8fafc;
+    }
+    .table-card {
+      background: rgba(15, 15, 25, 0.4);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      margin-bottom: 0.5rem;
+      overflow: visible; /* Allow dropdown to overflow */
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th {
+      background: rgba(139, 92, 246, 0.1);
+      padding: 0.7rem 1.05rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-secondary);
+      font-family: 'Archivo', sans-serif;
+    }
+    td {
+      padding: 0.45rem 1.05rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.84rem;
+      color: var(--white);
+    }
+    .team-logo {
+      width: 32px; /* Sized up */
+      height: 32px;
+      object-fit: contain;
+      margin-right: 12px;
+    }
+    .team-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+    }
+    .nrr-positive { color: #10b981 !important; font-weight: 600; }
+    .nrr-negative { color: #ef4444 !important; font-weight: 600; }
+    
+    .trophy-winner {
+      color: #fbbf24;
+      filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.6));
+      margin-right: 8px;
+      animation: trophyglow 2s infinite alternate;
+    }
+    @keyframes trophyglow {
+      from { filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.4)); }
+      to { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.9)); }
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .rank-cell {
+      font-weight: 800;
+      color: var(--purple);
+      width: 60px;
+    }
+    .team-cell {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+    .nrr-cell {
+      font-family: 'Courier New', monospace;
+      color: var(--text-secondary);
+    }
+    .pts-cell {
+      font-weight: 800;
+      color: var(--white);
+      font-size: 0.95rem; /* Shrunk from 1.1 */
+    }
+    .status-qualify {
+      color: #10b981;
+      font-size: 0.75rem;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    @media (max-width: 768px) {
+      .top-nav {
+        padding: 10px 14px !important;
+      }
+      .standings-container {
+        padding-top: 84px;
+      }
+      .standings-header { flex-direction: column; align-items: flex-start; }
+      th:nth-child(4), td:nth-child(4),
+      th:nth-child(5), td:nth-child(5) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cinematic Background -->
+  <div class="cinematic-bg" aria-hidden="true"></div>
+
+  <header class="top-nav" id="topNav">
+    <a href="/index.html" class="brand">
+        <img src="/favicon.svg" alt=""> 
+        IPL INTELLIGENCE
+    </a>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/teams.html">Franchises</a>
+      <a href="/points-table.html" class="active nav-highlight">🏆 Standings</a>
+    </nav>
+    <button class="mobile-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <div class="container standings-container">
+    <div class="standings-header">
+      <div>
+        <h1 class="standings-title">IPL STANDINGS</h1>
+      </div>
+      <div class="custom-dropdown" id="seasonDropdown">
+        <div class="dropdown-btn" id="dropdownBtn">
+          <i class="fa-solid fa-calendar-days" style="color: var(--purple); margin-right: 10px;"></i>
+          <span id="selectedLabel">2025 Season</span>
+          <i class="fa-solid fa-chevron-down dropdown-chevron" style="margin-left: auto;"></i>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-item" data-value="2025">2025 Season</div>
+          <div class="dropdown-item" data-value="2024">2024 Season</div>
+          <div class="dropdown-item" data-value="2023">2023 Season</div>
+          <div class="dropdown-item" data-value="2022">2022 Season</div>
+          <div class="dropdown-item" data-value="2021">2021 Season</div>
+          <div class="dropdown-item" data-value="2020">2020 Season</div>
+          <div class="dropdown-item" data-value="2019">2019 Season</div>
+          <div class="dropdown-item" data-value="2018">2018 Season</div>
+          <div class="dropdown-item" data-value="2017">2017 Season</div>
+          <div class="dropdown-item" data-value="2016">2016 Season</div>
+          <div class="dropdown-item" data-value="2015">2015 Season</div>
+          <div class="dropdown-item" data-value="2014">2014 Season</div>
+          <div class="dropdown-item" data-value="2013">2013 Season</div>
+          <div class="dropdown-item" data-value="2012">2012 Season</div>
+          <div class="dropdown-item" data-value="2011">2011 Season</div>
+          <div class="dropdown-item" data-value="2010">2010 Season</div>
+          <div class="dropdown-item" data-value="2009">2009 Season</div>
+          <div class="dropdown-item" data-value="2008">2008 Season</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card reveal">
+      <table id="pointsTable">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Team</th>
+            <th>Pld</th>
+            <th>W</th>
+            <th>L</th>
+            <th>NR</th>
+            <th>NRR</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody id="standingsBody">
+          <!-- Standings will be injected here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reveal" style="padding: 0.8rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.1); margin-top: 0.5rem;">
+        <p style="font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; margin: 0;">
+            <i class="fa-solid fa-circle-info" style="color: var(--purple);"></i>
+            Top 4 teams qualified for Playoffs.
+        </p>
+    </div>
+  </div>
+
+  <script>
+    // Navbar Scroll Intelligence
+    const topNav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        topNav?.classList.add('scrolled');
+      } else {
+        topNav?.classList.remove('scrolled');
+      }
+    });
+
+    async function loadStandings() {
+      const tbody = document.getElementById('standingsBody');
+      
+      // Actual IPL Champions mapping
+      const championsMap = {
+        "2025": "RCB",
+        "2024": "KKR", "2023": "CSK", "2022": "GT", "2021": "CSK", "2020": "MI", 
+        "2019": "MI", "2018": "CSK", "2017": "MI", "2016": "SRH", "2015": "MI", 
+        "2014": "KKR", "2013": "MI", "2012": "KKR", "2011": "CSK", "2010": "CSK", 
+        "2009": "DEC", "2008": "RR"
+      };
+
+      async function fetchWithFallback(filename) {
+        const paths = [`./data/${filename}`, `/data/${filename}`, `./public/data/${filename}`];
+        for (const path of paths) {
+          try {
+            const resp = await fetch(path);
+            if (resp.ok) return await resp.json();
+          } catch (e) {}
+        }
+        throw new Error(`Data file ${filename} not found in any known path.`);
+      }
+
+      try {
+        const [data, teamsData] = await Promise.all([
+          fetchWithFallback('ipl-points-table.json'),
+          fetchWithFallback('ipl-teams-bundle.json')
+        ]);
+        
+        const seasons = data.seasons;
+        const logoMap = {};
+        // Map historical abbreviations to modern IDs in Uppercase
+        const teamAlias = {
+          'DEC': 'DCG', 'DD': 'DC', 'PK': 'PBKS', 'KXIP': 'PBKS', 
+          'GL': 'GL', 'RPS': 'RPS', 'KTK': 'KTK', 'PWI': 'PWI'
+        };
+
+        teamsData.teams.forEach(t => {
+            const short = t.short_name.toUpperCase();
+            logoMap[short] = t.logoUrl;
+            logoMap[t.id.toUpperCase()] = t.logoUrl;
+        });
+
+        function getLogo(team) {
+            const upper = team.trim().toUpperCase();
+            return logoMap[upper] || logoMap[teamAlias[upper]] || '';
+        }
+
+        function render(year) {
+            tbody.innerHTML = '';
+            const seasonRows = seasons[year];
+            const champion = championsMap[year];
+            
+            if (!seasonRows) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding: 3rem;">No data available for ' + year + '</td></tr>';
+                return;
+            }
+
+            seasonRows.forEach((row, idx) => {
+                const tr = document.createElement('tr');
+                const isTop4 = idx < 4;
+                const isWinner = row.team.trim().toUpperCase() === (champion || '').trim().toUpperCase(); 
+                const nrrValue = parseFloat(row.nrr);
+                const nrrClass = nrrValue > 0 ? 'nrr-positive' : (nrrValue < 0 ? 'nrr-negative' : '');
+                const logo = getLogo(row.team);
+                
+                // Calculate NR (No Result) automatically if not explicitly provided
+                const nr = row.nr !== undefined ? row.nr : (row.m - (row.w + row.l));
+                
+                tr.innerHTML = `
+                <td class="rank-cell">${row.rank}</td>
+                <td>
+                    <div class="team-cell">
+                    ${logo ? `<img src="${logo}" class="team-logo" alt="" onerror="this.style.display='none'">` : ''}
+                    <span class="team-name" style="margin-right: 10px; font-weight: 700;">${row.team}</span>
+                    ${isTop4 ? '<span class="status-qualify" style="margin-right: 10px;">Q</span>' : ''}
+                    ${isWinner ? '<i class="fa-solid fa-trophy trophy-winner" title="Season Champion" style="margin-left: 5px;"></i>' : ''}
+                    </div>
+                </td>
+                <td>${row.m}</td>
+                <td>${row.w}</td>
+                <td>${row.l}</td>
+                <td style="color: var(--text-secondary); opacity: 0.8;">${nr}</td>
+                <td class="nrr-cell ${nrrClass}">${row.nrr}</td>
+                <td class="pts-cell">${row.pts}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        const dropdown = document.getElementById('seasonDropdown');
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const selectedLabel = document.getElementById('selectedLabel');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        dropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('open');
+        });
+
+        dropdownItems.forEach(item => {
+          item.addEventListener('click', () => {
+             const val = item.getAttribute('data-value');
+             selectedLabel.textContent = `${val} Season`;
+             render(val);
+             dropdown.classList.remove('open');
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+          }
+        });
+
+    render('2008'); // Default to 2008 as per your screenshot
+      } catch (err) {
+        console.error("Standings Error:", err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadStandings);
+  </script>
+</body>
+</html>
