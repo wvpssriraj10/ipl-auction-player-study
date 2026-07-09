@@ -1,0 +1,36 @@
+.app {
+  width: 100%;
+}
+
+.app__header {
+  padding: 2.25rem 1.25rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.app__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.app__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.85rem, 5vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.app__subtitle {
+  margin: 0 auto;
+  max-width: 36rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.app__subtitle code {
+  font-size: 0.88em;
+}
